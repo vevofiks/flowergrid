@@ -1,4 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+/* Gilroy Black Font */
+@font-face {
+  font-family: 'Gilroy-Black';
+  src: url('/fonts/gilroy-black/gilroy-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Neue Montreal Font Family */
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/neue-montreal/NeueMontreal-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/neue-montreal/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/neue-montreal/NeueMontreal-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/neue-montreal/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/neue-montreal/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --background: #F3E5CB;
@@ -12,8 +63,9 @@
   --color-text-heading: var(--text-heading);
   --color-text-body: var(--text-body);
   --color-primary: var(--primary);
-  --font-sans: var(--font-poppins), sans-serif;
-  --font-heading: var(--font-neue-montreal), sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Neue Montreal', sans-serif;
+  --font-gilroy-black: 'Gilroy-Black', sans-serif;
 }
 
 body {
