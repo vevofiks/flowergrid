@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 /* Gilroy Black Font */
 @font-face {
-  font-family: 'Gilroy-Black';
-  src: url('/fonts/gilroy-black/gilroy-black.ttf') format('truetype');
+  font-family: "Gilroy-Black";
+  src: url("/fonts/gilroy-black/gilroy-black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -12,50 +12,50 @@
 
 /* Neue Montreal Font Family */
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/neue-montreal/NeueMontreal-Light.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("/fonts/neue-montreal/NeueMontreal-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/neue-montreal/NeueMontreal-Regular.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("/fonts/neue-montreal/NeueMontreal-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/neue-montreal/NeueMontreal-Italic.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("/fonts/neue-montreal/NeueMontreal-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/neue-montreal/NeueMontreal-Medium.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("/fonts/neue-montreal/NeueMontreal-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('/fonts/neue-montreal/NeueMontreal-Bold.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("/fonts/neue-montreal/NeueMontreal-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --background: #F3E5CB;
+  --background: #f3e5cb;
   --text-heading: #171717;
-  --text-body: #5B5B5B;
-  --primary: #A7683A;
+  --text-body: #5b5b5b;
+  --primary: #a7683a;
 }
 
 @theme inline {
@@ -63,9 +63,10 @@
   --color-text-heading: var(--text-heading);
   --color-text-body: var(--text-body);
   --color-primary: var(--primary);
-  --font-sans: 'Poppins', sans-serif;
-  --font-heading: 'Neue Montreal', sans-serif;
-  --font-gilroy-black: 'Gilroy-Black', sans-serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-heading: "Neue Montreal", sans-serif;
+  --font-gilroy-black: "Gilroy-Black", sans-serif;
+  --font-playfair: "Playfair Display";
 }
 
 body {

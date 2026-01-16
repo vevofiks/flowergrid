@@ -47,8 +47,8 @@ const MaskScroll = () => {
         const texts = q(".reveal-text") as HTMLElement[];
 
         tl.to(bgImageRef.current, {
-            xPercent: 15,
-            yPercent: 15,
+            xPercent: 35,
+            yPercent: 35,
             scale: 2,
             duration: 1.5,
             ease: "power1.inOut"
@@ -64,8 +64,8 @@ const MaskScroll = () => {
         tl.to(texts[0], { y: -50, opacity: 0, duration: 0.5 }, "scene2");
 
         tl.to(bgImageRef.current, {
-            xPercent: -15,
-            yPercent: 15,
+            xPercent: -35,
+            yPercent: 35,
             scale: 2,
             duration: 1.5,
             ease: "power1.inOut"
@@ -81,8 +81,8 @@ const MaskScroll = () => {
         tl.to(texts[1], { y: -50, opacity: 0, duration: 0.5 }, "scene3");
 
         tl.to(bgImageRef.current, {
-            xPercent: 0,
-            yPercent: 0,
+            xPercent: 35,
+            yPercent: 35,
             scale: 1.8,
             duration: 1.5,
             ease: "power1.inOut"
@@ -98,8 +98,8 @@ const MaskScroll = () => {
         tl.to(texts[2], { y: -50, opacity: 0, duration: 0.5 }, "scene4");
 
         tl.to(bgImageRef.current, {
-            xPercent: 15,
-            yPercent: -15,
+            xPercent: 35,
+            yPercent: -35,
             scale: 2,
             duration: 1.5,
             ease: "power1.inOut"
@@ -115,8 +115,8 @@ const MaskScroll = () => {
         tl.to(texts[3], { y: -50, opacity: 0, duration: 0.5 }, "scene5");
 
         tl.to(bgImageRef.current, {
-            xPercent: -15,
-            yPercent: -15,
+            xPercent: -35,
+            yPercent: -35,
             scale: 2,
             duration: 1.5,
             ease: "power1.inOut"
@@ -163,7 +163,6 @@ const MaskScroll = () => {
                 </div>
             </div>
 
-            {/* 2. MASK LAYER */}
             <div ref={maskRef} className="absolute inset-0 flex items-center justify-center pointer-events-none origin-center w-screen h-screen"
                 style={{
                     willChange: "transform",
@@ -179,21 +178,17 @@ const MaskScroll = () => {
                 }}
             />
 
-            {/* 3. TEXT LAYER */}
             <div ref={textRef} className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none px-4">
 
 
-                {/* Text 1 */}
                 <h2 className="reveal-text absolute flex-nowrap text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
                     Transformation begins by aligning your mind, body and spirit.
                 </h2>
 
-                {/* Text 2 */}
                 <h2 className="reveal-text absolute text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
                     The Flowergrid philosophy is rooted in balance.
                 </h2>
 
-                {/* Text 3 */}
                 <h2 className="reveal-text absolute text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
                     We believe lasting change comes from nurturing every part of your being
                 </h2>
@@ -204,7 +199,6 @@ const MaskScroll = () => {
                     so that your energy, purpose, and peace are perfectly aligned.
                 </h2>
 
-                {/* Text with Button */}
                 <div className="reveal-text absolute flex flex-col items-center justify-center gap-6 opacity-0">
                     <h2 className="text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl font-gilroy-black">
                         See How We Help You Transform
