@@ -79,7 +79,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
     >
 
       <div className="mx-auto flex flex-col min-h-screen max-w-5xl items-center justify-center md:justify-start px-6 md:px-12
-          md:flex-col md:h-[800px] sm:h-[550px]
+          md:flex-col md:h-[800px] sm:h-[650px]
       ">
 
         <div
@@ -114,8 +114,6 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
         >
           <Image src="/about/lamp.png" alt="Lamp" width={360} height={200} className="object-contain" />
         </div>
-
-
 
         <div
           ref={imageRef}

@@ -9,10 +9,13 @@ import { getPersonBySlug } from '../data'
 import FlowerGridSection from '@/components/about/person/FlowerGridSection'
 import JourneySection from '@/components/about/person/JourneySection'
 import Connect from '@/components/about/person/Connect'
+import WorkSpecifications from '@/components/about/person/WorkSpecifications'
+import Vision from '@/components/about/person/Vision'
 
 const PersonPage = () => {
   const pathname = usePathname();
   const slug = pathname.split('/').pop();
+  const isPerson2 = slug === 'person2';
 
   // Get person data based on slug
   const personData = getPersonBySlug(slug || '');
@@ -55,12 +58,20 @@ const PersonPage = () => {
       />
 
       <FlowerGridSection />
+
+      {isPerson2 && (
+        <WorkSpecifications/>
+      )}
       {personData?.journeySection && (
         <JourneySection
           title={personData.journeySection.title}
           description={personData.journeySection.description}
           items={personData.journeySection.flowerWithCard}
         />
+      )}
+
+      {isPerson2 && (
+        <Vision/>
       )}
 
       <Connect

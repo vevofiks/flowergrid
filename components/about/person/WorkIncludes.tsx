@@ -10,7 +10,6 @@ if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-// Define the data interface
 interface StepData {
     title: string;
     image: string;
@@ -106,7 +105,7 @@ const WorkIncludes = ({
                             {title2}
                         </h2>
                         <p className='text-lg sm:text-xl md:text-2xl leading-relaxed text-[#5B5B5B] font-light'>
-                            {description2}
+                            {description2} 
                         </p>
                     </div>
                 </div>
