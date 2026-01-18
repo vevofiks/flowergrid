@@ -1,0 +1,61 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		"0xtanzim.filetree-pro",
+		"aeschli.vscode-css-formatter",
+		"akhail.save-typing",
+		"almahdi.code-django",
+		"bibhasdn.django-html",
+		"bigonesystems.django",
+		"bradlc.vscode-tailwindcss",
+		"burkeholland.simple-react-snippets",
+		"christian-kohler.npm-intellisense",
+		"ckolkman.vscode-postgres",
+		"clinyong.vscode-css-modules",
+		"cweijan.dbclient-jdbc",
+		"cweijan.vscode-database-client2",
+		"docker.docker",
+		"dsznajder.es7-react-js-snippets",
+		"ecmel.vscode-html-css",
+		"endormi.2077-theme",
+		"expo.vscode-expo-tools",
+		"formulahendry.code-runner",
+		"github.copilot",
+		"github.copilot-chat",
+		"hossaini.bootstrap-intellisense",
+		"johnpapa.winteriscoming",
+		"katsute.code-background",
+		"kevinrose.vsc-python-indent",
+		"lirobi.phone-preview",
+		"maxchamps.django-commands",
+		"mhutchie.git-graph",
+		"monokai.theme-monokai-pro-vscode",
+		"ms-azuretools.vscode-containers",
+		"ms-azuretools.vscode-docker",
+		"ms-python.debugpy",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-python.vscode-python-envs",
+		"planbcoding.vscode-react-refactor",
+		"qwtel.sqlite-viewer",
+		"rangav.vscode-thunder-client",
+		"redhat.vscode-yaml",
+		"ritwickdey.liveserver",
+		"rodrigovallades.es7-react-js-snippets",
+		"sanjulaganepola.github-local-actions",
+		"shamanu4.django-intellisense",
+		"stringham.move-ts",
+		"tal7aouy.icons",
+		"tomoki1207.pdf",
+		"torresgol10.bootstrap-class-autocomplete",
+		"xabikos.javascriptsnippets"
+	],
+
+	// List of extensions recommended by Antigravity that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+		
+	]
+}
