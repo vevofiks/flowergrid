@@ -6,25 +6,64 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ArrowRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const navLinks = [
   { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
+  {
+    title: "About",
+    href: "/about",
+    subLinks: [
+      {
+        title: "Samina Khan",
+        href: "/about/person1",
+        image: "/about/person1/1.png",
+      },
+      {
+        title: "Monira & Team",
+        href: "/about/person2",
+        image: "/about/person2/1.png",
+      },
+      {
+        title: "Team",
+        href: "/about/team",
+        image: "/B2B/4.jpg",
+      },
+    ],
+  },
   { title: "Services", href: "/services" },
+  { title: "Membership", href: "/membership" },
+  {
+    title: "Programs",
+    href: "/programs",
+    subLinks: [
+      {
+        title: "B2B",
+        href: "/programs/b2b",
+        image: "/B2B/1.jpg",
+      },
+    ],
+  },
   { title: "Blogs", href: "/blogs" },
-  { title: "Contact", href: "/contact" },
+  { title: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLunaHovered, setIsLunaHovered] = useState(false);
 
+
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
+
   const container = useRef<HTMLElement>(null);
   const menuRef = useRef(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const isMenuOpenRef = useRef(isOpen);
 
@@ -33,19 +72,29 @@ export default function Navbar() {
   }, [isOpen]);
 
   useGSAP(() => {
+
     tl.current = gsap.timeline({ paused: true })
       .to(menuRef.current, {
         y: 0,
-        duration: 0.5,
+        duration: 0.6,
         ease: "power3.inOut",
       })
+
       .from(".nav-item", {
         y: 50,
         opacity: 0,
-        duration: 0.4,
+        duration: 0.5,
         stagger: 0.05,
         ease: "power2.out",
-      }, "-=0.2");
+      }, "-=0.3")
+
+      .from(imageRef.current, {
+        opacity: 0,
+        x: 20,
+        duration: 0.5,
+        ease: "power2.out"
+      }, "-=0.4");
+
 
     ScrollTrigger.create({
       start: "top top",
@@ -58,38 +107,113 @@ export default function Navbar() {
             yPercent: 0,
             duration: 0.3,
             ease: "power2.out",
-            overwrite: true
+            overwrite: true,
           });
         } else if (self.direction === 1 && self.scroll() > 50) {
           gsap.to(container.current, {
             yPercent: -100,
             duration: 0.3,
             ease: "power2.out",
-            overwrite: true
+            overwrite: true,
           });
         }
-      }
+      },
     });
-
   }, { scope: container });
 
   const toggleMenu = () => {
     if (!tl.current) return;
     if (isOpen) {
       tl.current.reverse();
+
+      setTimeout(() => setActiveImage(null), 600);
     } else {
       tl.current.play();
     }
     setIsOpen(!isOpen);
   };
 
+  const handleLinkHover = (image?: string) => {
+    if (image) {
+      setActiveImage(image);
+    }
+  };
+
+  const handleLinkLeave = () => {
+
+
+
+  };
+
+
+  const prevSubmenuRef = useRef<number | null>(null);
+
+  useGSAP(() => {
+
+    if (prevSubmenuRef.current !== null && activeSubmenu === null) {
+      const closingIndex = prevSubmenuRef.current;
+
+      gsap.to(`.submenu-${closingIndex} .sublink-item`, {
+        x: -30,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: "expo.in",
+      });
+
+      gsap.to(`.submenu-${closingIndex}`, {
+        height: 0,
+        opacity: 0,
+        marginTop: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: 0.2,
+      });
+    }
+
+
+    if (activeSubmenu !== null) {
+      gsap.fromTo(
+        `.submenu-${activeSubmenu}`,
+        {
+          height: 0,
+          opacity: 0,
+          marginTop: 0,
+        },
+        {
+          height: "auto",
+          opacity: 1,
+          marginTop: 8,
+          duration: 0.5,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        `.submenu-${activeSubmenu} .sublink-item`,
+        {
+          x: -30,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "expo.out",
+        }
+      );
+    }
+
+    prevSubmenuRef.current = activeSubmenu;
+  }, [activeSubmenu]);
+
   return (
     <header
       ref={container}
-      className="fixed top-0 left-0 w-full z-50 px-10 py-4 flex justify-between items-center text-white bg-transparent transition-colors duration-300"
+      className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-4 flex justify-between items-center text-white bg-transparent transition-colors duration-300"
     >
-
-      <Link href="/" className="z-50 relative w-20 h-20">
+      <Link href="/" className="z-50 relative w-16 h-16 md:w-20 md:h-20">
         <Image
           src="/Logo/Flowergrid-logo.png"
           alt="Luna Logo"
@@ -109,7 +233,11 @@ export default function Navbar() {
             onMouseLeave={() => setIsLunaHovered(false)}
           >
             <Image
-              src={isLunaHovered ? "/Logo/Luna eyes open.png" : "/Logo/Header Luna.png"}
+              src={
+                isLunaHovered
+                  ? "/Logo/Luna eyes open.png"
+                  : "/Logo/Header Luna.png"
+              }
               alt="Luna Logo"
               width={60}
               height={60}
@@ -118,7 +246,10 @@ export default function Navbar() {
             />
           </div>
         </button>
-        <button className="hover:opacity-70 transition-opacity" aria-label="Search">
+        <button
+          className="hover:opacity-70 transition-opacity"
+          aria-label="Search"
+        >
           <Search size={24} strokeWidth={1.5} />
         </button>
 
@@ -127,27 +258,89 @@ export default function Navbar() {
           className="focus:outline-none hover:opacity-70 transition-opacity"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={28} strokeWidth={1.5} /> : <Menu size={28} strokeWidth={1.5} />}
+          {isOpen ? (
+            <X size={28} strokeWidth={1.5} />
+          ) : (
+            <Menu size={28} strokeWidth={1.5} />
+          )}
         </button>
       </div>
 
       <div
         ref={menuRef}
-        className="fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col justify-center items-center -translate-y-full will-change-transform"
+        className="fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden"
       >
-        <nav className="flex flex-col gap-4 text-center">
-          {navLinks.map((link, index) => (
-            <div key={index} className="nav-item overflow-hidden">
-              <Link
-                href={link.href}
-                onClick={toggleMenu}
-                className="font-heading text-5xl md:text-7xl hover:text-[#A7683A] transition-colors duration-300 block"
-              >
-                {link.title}
-              </Link>
+        <div className="w-full h-full max-w-[1600px] mx-auto flex flex-col lg:flex-row">
+
+          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center px-6 sm:px-8 md:px-16 pt-24 pb-10 lg:py-0">
+            <nav className="flex flex-col gap-4 sm:gap-5 lg:gap-4">
+              {navLinks.map((link, index) => (
+                <div
+                  key={index}
+                  className="nav-item pl-40"
+                  onMouseEnter={() => setActiveSubmenu(index)}
+                  onMouseLeave={() => setActiveSubmenu(null)}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={toggleMenu}
+                    className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-[#A7683A] transition-colors duration-300 block w-fit"
+                    onMouseEnter={() => setActiveImage(null)}
+                  >
+                    {link.title}
+                  </Link>
+
+                  {link.subLinks && (activeSubmenu === index || prevSubmenuRef.current === index) && (
+                    <div className={`submenu-${index} flex flex-col gap-2 ml-2 md:ml-4 pl-4 md:pl-6 border-l-2 border-white/20 overflow-hidden`}>
+                      {link.subLinks.map((sub, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={sub.href}
+                          onClick={toggleMenu}
+                          onMouseEnter={() => handleLinkHover(sub.image)}
+                          onMouseLeave={handleLinkLeave}
+                          className="sublink-item group flex items-center gap-2 md:gap-3 text-base sm:text-lg md:text-xl text-white/60 hover:text-[#F3E5CB] transition-colors duration-300 w-fit"
+                        >
+                          <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                            <ArrowRight size={14} className="sm:w-4 sm:h-4" />
+                          </span>
+                          {sub.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </div>
+
+          <div className="hidden lg:flex w-1/2 h-full items-center justify-center relative p-20">
+            <div
+              ref={imageRef}
+              className="relative w-full h-[600px] rounded-xl overflow-hidden"
+            >
+              {!activeImage && (
+                <div className="absolute inset-0 flex items-center justify-center text-white/5 font-heading text-9xl uppercase select-none">
+                  Menu
+                </div>
+              )}
+
+              {activeImage && (
+                <div className="absolute inset-0 w-full h-full">
+                  <Image
+                    src={activeImage}
+                    alt="Menu Preview"
+                    fill
+                    className="object-contain transition-all duration-500 ease-in-out rounded-3xl"
+
+
+                  />
+                </div>
+              )}
             </div>
-          ))}
-        </nav>
+          </div>
+
+        </div>
       </div>
     </header>
   );

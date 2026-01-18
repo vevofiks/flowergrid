@@ -100,16 +100,106 @@ export default function Footer() {
                         className="lg:col-span-3 flex flex-col justify-center items-center lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
                     >
                         <ul className="flex flex-col gap-4 md:gap-6 text-center lg:text-left">
-                            {["Home", "About Us", "Services", "Membership", "Program", "Blog", "Contact Us"].map((item) => (
-                                <li key={item}>
-                                    <Link
-                                        href={`/${item.toLowerCase().replace(" ", "-")}`}
-                                        className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
-                                    >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li>
+                                <Link
+                                    href="/"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Home
+                                </Link>
+                            </li>
+
+                            {/* About with sublinks */}
+                            <li className="flex flex-col gap-2">
+                                <Link
+                                    href="/about"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    About
+                                </Link>
+                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
+                                    <li>
+                                        <Link
+                                            href="/about/person1"
+                                            className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors"
+                                        >
+                                            Samina Khan
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/about/person2"
+                                            className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors"
+                                        >
+                                            Monira & Team
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/about/team"
+                                            className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors"
+                                        >
+                                            Team
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/services"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Services
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/membership"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Membership
+                                </Link>
+                            </li>
+
+                            {/* Programs with sublinks */}
+                            <li className="flex flex-col gap-2">
+                                <Link
+                                    href="/programs"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Programs
+                                </Link>
+                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
+                                    <li>
+                                        <Link
+                                            href="/programs/b2b"
+                                            className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors"
+                                        >
+                                            B2B
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/blogs"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Blogs
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/contact"
+                                    className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                >
+                                    Contact Us
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
