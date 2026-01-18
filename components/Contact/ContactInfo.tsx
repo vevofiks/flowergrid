@@ -120,7 +120,7 @@ export default function ContactInfoSection() {
 
                 <div ref={mapRef} className="flex-1 w-full relative rounded-2xl md:rounded-2xl overflow-hidden shadow-lg bg-gray-200 min-h-[300px]">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2158788279544!2d72.83102631490255!3d18.92199998718808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20of%20India!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.4474816737425!2d-0.12098422364579864!3d51.30289112562308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875fd3dd7637719%3A0xf4c019e289f1be75!2sFlowergriid%20%7C%20Holistic%20Wellness%20Centre%20Croydon!5e0!3m2!1sen!2sin!4v1768718902532!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
