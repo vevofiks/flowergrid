@@ -166,8 +166,8 @@ const MaskScroll = () => {
             <div ref={maskRef} className="absolute inset-0 flex items-center justify-center pointer-events-none origin-center w-screen h-screen"
                 style={{
                     willChange: "transform",
-                    maskImage: "url('/flower.svg')",
-                    WebkitMaskImage: "url('/flower.svg')",
+                    maskImage: "url('/Home/flower.svg')",
+                    WebkitMaskImage: "url('/Home/flower.svg')",
                     maskSize: "cover",
                     WebkitMaskSize: "cover",
                     maskRepeat: "no-repeat",

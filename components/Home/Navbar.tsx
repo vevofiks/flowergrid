@@ -225,7 +225,7 @@ export default function Navbar() {
       </Link>
 
       <div className="z-50 relative flex items-center gap-4 md:gap-6">
-        <button className="hidden sm:flex relative items-center gap-3 mr-2 pl-4 pr-12 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+        <Link href="https://flowergrid.vercel.app/" target="_blank" className="hidden sm:flex relative items-center gap-3 mr-2 pl-4 pr-12 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
           <span className="text-sm font-sans tracking-wide">Chat with Luna</span>
           <div
             className="absolute -right-3 top-1/2 -translate-y-1/2 w-14 h-13 rounded-full flex items-center justify-center cursor-pointer"
@@ -245,7 +245,7 @@ export default function Navbar() {
               priority
             />
           </div>
-        </button>
+        </Link >
         <button
           className="hover:opacity-70 transition-opacity"
           aria-label="Search"
@@ -272,18 +272,27 @@ export default function Navbar() {
       >
         <div className="w-full h-full max-w-[1600px] mx-auto flex flex-col lg:flex-row">
 
-          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center px-6 sm:px-8 md:px-16 pt-24 pb-10 lg:py-0">
+          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center lg:items-start px-6 sm:px-8 md:px-16 pt-24 pb-10 lg:py-0">
             <nav className="flex flex-col gap-4 sm:gap-5 lg:gap-4">
               {navLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="nav-item pl-40"
+                  className="nav-item lg:pl-40"
                   onMouseEnter={() => setActiveSubmenu(index)}
                   onMouseLeave={() => setActiveSubmenu(null)}
                 >
                   <Link
                     href={link.href}
-                    onClick={toggleMenu}
+                    onClick={(e) => {
+                      
+                      if (link.subLinks && link.subLinks.length > 0) {
+                        e.preventDefault();
+                        setActiveSubmenu(activeSubmenu === index ? null : index);
+                      } else {
+                        
+                        toggleMenu();
+                      }
+                    }}
                     className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-[#A7683A] transition-colors duration-300 block w-fit"
                     onMouseEnter={() => setActiveImage(null)}
                   >
