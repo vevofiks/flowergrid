@@ -36,7 +36,7 @@ export default function CorporateProgram() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative w-full h-screen bg-[#4E351A] flex items-center justify-center px-4 py-4 md:px-10 lg:px-20 overflow-hidden">
+    <section className="relative w-full h-[135vh] bg-[#4E351A] flex items-center justify-center px-4 py-4 md:px-10 lg:px-20 overflow-hidden">
       
       <div className="w-full max-w-7xl h-full max-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
         

@@ -74,7 +74,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="relative w-full flex-1 px-6 md:px-12 lg:px-14 pb-20 pt-4 md:pt-0">
+            <div className="relative w-full flex-1 px-6 md:px-12 lg:px-14 pb-20 pt-[-20px] md:pt-0">
                 <div ref={flowerRef} className="absolute top-[-20px] right-[20px] w-40 md:top-auto md:right-3 md:w-100 lg:w-150 pointer-events-none z-0">
                     <Image
                         src="/Home/hero-flower.png"
@@ -85,7 +85,7 @@ export default function Hero() {
                     />
                 </div>
 
-                <div ref={textRef} className="relative z-10 -mt-16.25 max-w-4xl">
+                <div ref={textRef} className="relative z-10 md:-mt-16.25 max-w-4xl">
                     <h1 className="hero-text-element medium leading-[1.1] text-4xl md:text-6xl lg:text-[59px]">
                         EMBRACE HEALTH INTEGRATION <br className="hidden md:block" />
                         OF MIND, BODY & SOUL <br className="hidden md:block" />
