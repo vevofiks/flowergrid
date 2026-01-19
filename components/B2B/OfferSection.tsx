@@ -47,6 +47,7 @@ const workshops = [
 export default function OfferSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  
   return (
     <section className="relative w-full h-[190vh] md:h-[130vh] bg-[#4E351A] px-4 py-8 md:px-10 lg:px-20 overflow-hidden">
       <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 mt-21">
