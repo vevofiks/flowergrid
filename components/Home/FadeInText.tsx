@@ -45,7 +45,7 @@ const FadeInText = () => {
 
     return (
         <div className='h-screen w-full relative bg-[#F3EAD8] overflow-hidden' ref={containerRef}>
-            <div className='text-section flex flex-col h-screen w-full justify-center text-start text-3xl sm:text-5xl md:text-6xl lg:text-[6rem] tracking-wider uppercase text-[#2D3F28]! pl-4 sm:pl-6 md:pl-10 font-heading! leading-[80px] md:leading-tight lg:leading-[140px]'>
+            <div className='text-section flex flex-col h-screen w-full justify-center text-start text-[28px] sm:text-5xl md:text-6xl lg:text-[6rem] tracking-wider uppercase text-[#2D3F28]! pl-4 sm:pl-6 md:pl-10 font-heading! leading-[80px] md:leading-tight lg:leading-[140px]'>
                 <h2 className='line-1'>Tailored workshops on </h2>
                 <h2 className='line-1'>leadership, </h2>
                 <h2 className='line-1'>communication, </h2>

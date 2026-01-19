@@ -41,7 +41,7 @@ const testimonialsData: Testimonial[] = [
 
 export default function HeroTestimonials() {
     return (
-        <section className="w-full h-screen py-10 bg-[#F3EAD8] overflow-hidden">
+        <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
             <div className="max-w-3xl mx-auto px-4 mb-30 md:mb-10 mt-5 text-center">
                 <h2 className="text-4xl md:text-6xl font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center">
                     WHAT OUR CLIENTS SAY ABOUT US
