@@ -23,7 +23,7 @@ export default function ScrollingTextReveal({ phrases }: ScrollingTextRevealProp
     if (!textElements || textElements.length === 0) return;
 
     // 4. The Animation Definition
-    gsap.fromTo(textElements, 
+    gsap.fromTo(textElements,
       {
         // Initial State (Before scrolling into view)
         y: 50,       // Pushed down by 50px
@@ -35,7 +35,7 @@ export default function ScrollingTextReveal({ phrases }: ScrollingTextRevealProp
         opacity: 1,  // Fully visible
         duration: 1, // Animation takes 1 second
         ease: "power3.out", // A smooth, natural-feeling easing
-        
+
         // 5. The Stagger Effect
         stagger: 0.4, // Wait 0.3s between each phrase starting its animation
         delay: 0.5,
@@ -53,19 +53,18 @@ export default function ScrollingTextReveal({ phrases }: ScrollingTextRevealProp
   }, { scope: containerRef }); // Scope ensures selectors only find elements inside this component
 
   return (
-    <section className="min-h-[50vh] flex p-20">
-        <h1
-          ref={containerRef}
-          className="text-5xl md:text-7xl lg:text-8xl w-full font-heading 
-          text-center max-w-4xl flex flex-wrap gap-x-[0.3em]
-          leading-28"
-        >
-            {phrases.map((phrase, index) => (
-            <span key={index} className="inline-block">
-                {phrase}
-            </span>
-            ))}
-        </h1>
-    </section>
+    <h1
+      ref={containerRef}
+      className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-full font-heading 
+      p-10 max-w-3xl flex flex-wrap gap-x-[0.3em]
+      leading-tight tracking-wide"  
+    >
+      {phrases.map((phrase, index) => (
+        <span key={index} className="inline-block">
+          {phrase}
+          {index !== phrases.length - 1 && <br />}
+        </span>
+      ))}
+    </h1>
   );
 }

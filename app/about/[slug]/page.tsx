@@ -1,16 +1,16 @@
 "use client"
 import React from 'react'
-import PersonHero from '@/components/about/person/PersonHero'
-import PersonBio from '@/components/about/person/Bio'
+import PersonHero from '@/components/About/person/PersonHero'
+import PersonBio from '@/components/About/person/Bio'
 import ScrollingTextReveal from '@/components/UI/ScrollingTextReveal'
-import WorkIncludes from '@/components/about/person/WorkIncludes'
+import WorkIncludes from '@/components/About/person/WorkIncludes'
 import { usePathname } from 'next/navigation'
 import { getPersonBySlug } from '../data'
-import FlowerGridSection from '@/components/about/person/FlowerGridSection'
-import JourneySection from '@/components/about/person/JourneySection'
-import Connect from '@/components/about/person/Connect'
-import WorkSpecifications from '@/components/about/person/WorkSpecifications'
-import Vision from '@/components/about/person/Vision'
+import FlowerGridSection from '@/components/About/person/FlowerGridSection'
+import JourneySection from '@/components/About/person/JourneySection'
+import Connect from '@/components/About/person/Connect'
+import WorkSpecifications from '@/components/About/person/WorkSpecifications'
+import Vision from '@/components/About/person/Vision'
 
 const PersonPage = () => {
   const pathname = usePathname();

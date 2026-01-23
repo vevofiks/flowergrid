@@ -8,7 +8,28 @@ import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger)
 
-const CoreValues = () => {
+interface ValueItem {
+    icon: string;
+    title: string;
+    desc: string;
+}
+
+interface CoreValuesProps {
+    values: ValueItem[];
+    backgroundColor?: string;
+    leftLeafImage?: string;
+    rightLeafImage?: string;
+    sectionTitle?: string;
+    iconBgColor?: string;
+}
+
+const CoreValues = ({
+    values,
+    backgroundColor = "transparent",
+    leftLeafImage = "/Home/left-leaf.png",
+    rightLeafImage = "/Home/right-leaf.png",
+    iconBgColor = "#ECDCC5"
+}: CoreValuesProps) => {
     const container = useRef(null)
 
     useGSAP(() => {
@@ -42,30 +63,12 @@ const CoreValues = () => {
 
     }, { scope: container })
 
-    const values = [
-        {
-            icon: "/Home/i1.png",
-            title: "HOLISTIC & EVIDENCE-BASED CARE",
-            desc: "At Flowergrid, we blend ethical, evidence-based holistic practices with modern medical insight to support genuine, lasting wellbeing."
-        },
-        {
-            icon: "/Home/i2.png",
-            title: "WELLNESS YOUR WAY",
-            desc: "Whether you're seeking in-person support or prefer online guidance, our global network ensures conscious living is accessible—anytime, anywhere."
-        },
-        {
-            icon: "/Home/i3.png",
-            title: "PERSONALISED TRANSFORMATION",
-            desc: "Our dedicated team of doctors, coaches, and therapists collaborate to build tailored journeys that respect your personal pace, needs, and goals."
-        }
-    ];
-
     return (
-        <section ref={container} className="relative w-full min-h-screen py-12 md:py-32 overflow-hidden mt-10 flex flex-col justify-center">
+        <section ref={container} className="relative w-full min-h-screen py-12 md:py-32 overflow-hidden mt-10 flex flex-col justify-center" style={{ backgroundColor }}>
 
             <div className="leaf-left absolute top-3 left-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src="/Home/left-leaf.png"
+                    src={leftLeafImage}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -75,7 +78,7 @@ const CoreValues = () => {
 
             <div className="leaf-right absolute bottom-3 right-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src="/Home/right-leaf.png"
+                    src={rightLeafImage}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -84,10 +87,13 @@ const CoreValues = () => {
             </div>
 
             <div className="relative z-10 max-w-7xl w-full items-center mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-center pb-10 md:pb-0">
+                <div className={`grid grid-cols-1 md:grid-cols-2 ${values.length > 3 ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-12 md:gap-8 text-center pb-10 md:pb-0`}>
                     {values.map((item, index) => (
                         <div key={index} className="flex flex-col items-center">
-                            <div className="value-icon-wrapper w-26 h-26 md:w-36 md:h-36 rounded-full flex items-center justify-center mt-10 md:mt-20 mb-6 md:mb-10 backdrop-blur-sm border border-white/20 bg-[#ECDCC5]">
+                            <div
+                                className="value-icon-wrapper w-26 h-26 md:w-36 md:h-36 rounded-full flex items-center justify-center mt-10 md:mt-20 mb-6 md:mb-10 backdrop-blur-sm border border-white/20"
+                                style={{ backgroundColor: iconBgColor }}
+                            >
                                 <div className="relative w-12 h-12 md:w-18 md:h-18">
                                     <Image
                                         src={item.icon}
