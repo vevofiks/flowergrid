@@ -5,14 +5,14 @@ export const personsData = {
 
         // PersonHero component data
         hero: {
-            imageSrc: "/about/person1/samina.png",
+            imageSrc: "/About/person1/samina.png",
             text: "Hi, I'm Samina Khan, wellbeing coach with expertise in integrated holistic practices for mind & body"
         },
 
         // PersonBio component data
         bio: {
             title: "A Little About Me",
-            imageSrc: "/about/person1/1.png",
+            imageSrc: "/About/person1/1.png",
             bioText: [
                 "Over the past 12 years, I've supported individuals through mental health and wellness initiatives, helping them navigate life's challenges. Alongside this, I have more than 20 years of experience in business and startups, bringing people and ideas together in meaningful ways.",
                 "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to help my clients do the same.",
@@ -38,18 +38,18 @@ export const personsData = {
             steps: [
                 {
                     title: "Discovery",
-                    image: "/about/person1/2c.png",
+                    image: "/About/person1/2c.png",
                     description: "Initial Consultation Goal Setting & Assessment Personalized Wellness Plan Resource Mapping"
                 },
                 {
                     title: "Transf",
-                    image: "/about/person1/2b.png",
+                    image: "/About/person1/2b.png",
                     description: "One-on-One Coaching Mindfulness Practices Holistic Techniques Progress Tracking"
 
                 },
                 {
                     title: "Integration",
-                    image: "/about/person1/2a.png",
+                    image: "/About/person1/2a.png",
                     description: "Sustainable Habits Ongoing Support Community Connection Long-term Wellness"
                 }
             ]
@@ -67,7 +67,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person1/3a.png",
+                    "image": "/About/person1/3a.png",
                     "alt": "Peony Sketch"
                 },
                 {
@@ -78,12 +78,12 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person1/3b.png",
+                    "image": "/About/person1/3b.png",
                     "alt": "Coneflower Sketch"
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person1/3c.png",
+                    "image": "/About/person1/3c.png",
                     "alt": "Dahlia Sketch"
                 },
                 {
@@ -94,7 +94,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person1/3d.png",
+                    "image": "/About/person1/3d.png",
                     "alt": "Magnolia Sketch"
                 },
                 {
@@ -106,7 +106,7 @@ export const personsData = {
             ]
         },
         connect:{
-            image:"/about/person1/5.png",
+            image:"/About/person1/5.png",
             title: "Take The First Step",
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
         }
@@ -118,14 +118,14 @@ export const personsData = {
 
         // PersonHero component data
         hero: {
-            imageSrc: "/about/person2/monira.png",
+            imageSrc: "/About/person2/monira.png",
             text: "Hi, I'm John Anderson, certified life coach specializing in career transitions and personal development"
         },
 
         // PersonBio component data
         bio: {
             title: "My Journey",
-            imageSrc: "/about/person2/1.png",
+            imageSrc: "/About/person2/1.png",
             bioText: [
                 "For over 15 years, I've helped professionals navigate career transitions and unlock their full potential. My journey began in corporate leadership, where I witnessed firsthand the challenges of balancing ambition with personal fulfillment.",
                 "After experiencing my own transformative career shift, I became passionate about helping others find clarity and purpose in their professional lives. I combine strategic thinking with emotional intelligence to guide my clients through meaningful change.",
@@ -142,18 +142,18 @@ export const personsData = {
             steps: [
                 {
                     title: "Assessment",
-                    image: "/about/person2/2c.png",
+                    image: "/About/person2/2c.png",
                     description: "Initial Consultation Goal Setting & Assessment Personalized Coaching Plan Resource Mapping"
                 },
                 {
                     title: "Strategy",
-                    image: "/about/person2/2b.png",
+                    image: "/About/person2/2b.png",
                     description: "Action Planning Goal Setting Obstacle Mapping Resource Identification"
 
                 },
                 {
                     title: "Execution",
-                    image: "/about/person2/2a.png",
+                    image: "/About/person2/2a.png",
                     description: "Implementation Support Accountability Check-ins Skill Development Success Celebration"
                 }
             ]
@@ -171,7 +171,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person2/3a.png",
+                    "image": "/About/person2/3a.png",
                     "alt": "Flower Sketch"
                 },
                 {
@@ -182,12 +182,12 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person2/3b.png",
+                    "image": "/About/person2/3b.png",
                     "alt": "Coneflower Sketch"
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person2/3c.png",
+                    "image": "/About/person2/3c.png",
                     "alt": "Dahlia Sketch"
                 },
                 {
@@ -198,7 +198,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": "/about/person2/3d.png",
+                    "image": "/About/person2/3d.png",
                     "alt": "Magnolia Sketch"
                 },
                 {
@@ -211,13 +211,105 @@ export const personsData = {
         },
 
         connect : {
-            image: "/about/person2/5.png",
+            image: "/About/person2/5.png",
             title: "Let's Begin Your Journey",
             description: "If you are ready to explore your potential, strengthen your mindset and live with greater purpose, I would love to connect.",
 
         }
     },
 };
+
+
+export const teamTree = [
+  {
+    "id": "row-1",
+    "type": "single",
+    "members": [
+      {
+        "name": "Dr. Hana Patel",
+        "role": "General Practitioner, Medical Expert",
+        "image": "/About/team/hana.png"
+      }
+    ]
+  },
+  {
+    "id": "row-2",
+    "type": "pair",
+    "members": [
+      {
+        "name": "Tamkin",
+        "role": "Trained Counselling, Services & Career",
+        "image": "/About/team/tamkin.png"
+      },
+      {
+        "name": "Yvonne Hewitt",
+        "role": "Hypnotherapist, RTT",
+        "image": "/About/team/yvonne.png"
+      }
+    ]
+  },
+  {
+    "id": "row-3",
+    "type": "single",
+    "members": [
+      {
+        "name": "Dr. Ravinder",
+        "role": "Auricular Acupuncturist, Reiki Grand Master",
+        "image": "/About/team/ravinder.png"
+      }
+    ]
+  },
+  {
+    "id": "row-4",
+    "type": "pair",
+    "members": [
+      {
+        "name": "Dr. Renuka Marley",
+        "role": "Healthcare Consultant",
+        "image": "/About/team/renuka.png"
+      },
+      {
+        "name": "Runa Boolaky",
+        "role": "NLP Practitioner, Lifecoach",
+        "image": "/About/team/runa.png"
+      }
+    ]
+  },
+  {
+    "id": "row-5",
+    "type": "single",
+    "members": [
+      {
+        "name": "Rico Wagner Caleep",
+        "role": "Leadership • Growth • Mental Performance",
+        "image": "/About/team/rico.png"
+      }
+    ]
+  },
+  {
+    "id": "row-6",
+    "type": "pair",
+    "members": [
+      {
+        "name": "Rebecca",
+        "role": "The Nutrition And Fitness Coach",
+        "image": "/About/team/rebecca.png"
+      },
+      {
+        "name": "Husna Hoque",
+        "role": "Personal Trainer & Wellness Coach",
+        "image": "/About/team/husna.png"
+      }
+    ]
+  }
+]
+
+export const lines = [
+    "“THE SOUL ALWAYS KNOWS",
+    "WHAT TO DO TO HEAL ITSELF.",
+    "THE CHALLENGE IS TO SILENCE",
+    "THE MIND”",
+]
 
 // Helper function to get person data by slug
 export const getPersonBySlug = (slug) => {
@@ -228,3 +320,4 @@ export const getPersonBySlug = (slug) => {
 export const getAllPersonSlugs = () => {
     return Object.keys(personsData);
 };
+

@@ -8,16 +8,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const lines = [
-    "YOU ARE NOT JUST A MIND TO BE UNDERSTOOD.",
-    "YOU ARE NOT JUST A SOUL TO BE HEALED.",
-    "YOU ARE AN EVOLVING STORY WRITTEN IN",
-    "SYMBOLS, STARS, AND PSYCHOLOGY.",
-    "ONLY WHEN YOU READ ALL OF YOU, DOES TRUE",
-    "TRANSFORMATION BEGIN."
-];
-
-export default function LeafScrollText() {
+export default function LeafScrollText({lines}: {lines: string[]}) {
     const containerRef = useRef<HTMLDivElement>(null);
     const leafRef = useRef<HTMLDivElement>(null);
     const textWrapperRef = useRef<HTMLDivElement>(null);
@@ -43,7 +34,7 @@ export default function LeafScrollText() {
         tl.to(leafRef.current, { opacity: 1, duration: 0.5, ease: "power1.out" }, 0);
 
         tl.to(leafRef.current, {
-            top: "110%", 
+            top: "110%",
             duration: totalDuration,
             ease: "none", 
         }, 0);
