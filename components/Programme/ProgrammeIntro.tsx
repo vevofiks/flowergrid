@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
-const Intro = () => {
+const ProgrammeIntro = () => {
     const introRef = useRef<HTMLDivElement>(null)
     const [isMobile, setIsMobile] = useState(false);
     
@@ -40,7 +40,7 @@ const Intro = () => {
     }, { scope: introRef })
     return (
         <div
-            style={{ background: "url('/services/intro.jpg') no-repeat center center/cover" }}
+            style={{ background: "url('/Programme/p1.jpg') no-repeat center center/cover" }}
             // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
             // 2. Added overflow-hidden to prevent scrollbars
             className='relative flex items-center min-h-[60vh] md:min-h-screen w-full overflow-hidden'
@@ -59,12 +59,15 @@ const Intro = () => {
             >
 
                 <h1 className='text-3xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 !text-white drop-shadow-lg'>
-                    Your Journey to Wholeness<br /> Begins Here
+                   Programmes designed to <br /> support your mind, body <br /> and sense of self
                 </h1>
 
                 <p className='text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>
-                    Our services combine medical science, holistic therapies and coaching expertise to help you create lasting transformation.
-                    Each programme is designed to support your physical health, emotional balance and personal growth.
+                    Our programmes are created by a multidisciplinary team who 
+                    combine medical understanding, therapeutic practice and
+                     holistic methods. Every journey is adapted around your needs 
+                     and your pace.
+
                 </p>
             </div>
 
@@ -72,4 +75,4 @@ const Intro = () => {
     )
 }
 
-export default Intro
+export default ProgrammeIntro

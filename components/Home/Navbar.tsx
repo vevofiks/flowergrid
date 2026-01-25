@@ -41,12 +41,16 @@ const navLinks = [
     href: "/programs",
     subLinks: [
       {
+        title: "Programs",
+        href: "/programs",
+      },
+      {
         title: "B2B",
         href: "/programs/b2b",
         image: "/B2B/1.jpg",
       },
     ],
-  },
+    },
   { title: "Blogs", href: "/blogs" },
   { title: "Contact Us", href: "/contact" },
 ];
