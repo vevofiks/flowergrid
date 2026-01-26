@@ -58,39 +58,39 @@ export default function Achievement() {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4 overflow-hidden"
+            className="relative w-full min-h-screen flex flex-col items-center justify-center py-12 px-4 md:py-16 md:px-8 lg:py-20 lg:px-12 overflow-hidden"
         >
-            <div className="intro-text text-center max-w-5xl mb-12 md:mb-16 relative z-10">
+            <div className="intro-text text-center max-w-5xl mb-8 md:mb-12 lg:mb-16 relative z-10 px-4">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
                     What You Will Achieve
-                </h2>
+                </h2>end
                 <p className="text-base md:text-lg lg:text-xl font-sans text-black/70! leading-relaxed">
-                    Experience transformation that touches every part of your being. 
+                    Experience transformation that touches every part of your being.
                     <br />
                     FlowerGrid programs are designed to create measurable, lasting impact
                     <br />
-                    across mind, body, and spirit.                
+                    across mind, body, and spirit.
                 </p>
                 <div className="mt-8">
 
-                <button
-                    className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+                    <button
+                        className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
 
-                >
-                    Explore How We Support You
+                    >
+                        Explore How We Support You
 
-                </button>
+                    </button>
 
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 relative z-10 w-full justify-center items-start max-w-7xl">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-6 lg:gap-12 xl:gap-16 px-4 md:px-6 lg:px-10 relative z-10 w-full justify-center items-start max-w-7xl">
                 {sections.map((section, index) => (
                     <div
                         key={section.id}
-                        className="thumb-item flex flex-col items-center gap-6 flex-1"
+                        className="thumb-item flex flex-col items-center gap-4 md:gap-5 lg:gap-6 flex-1 w-full md:w-auto"
                     >
-                        <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72">
+                        <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
                             <Image
                                 src={section.thumb}
                                 alt={section.title}
@@ -99,22 +99,19 @@ export default function Achievement() {
                             />
                         </div>
 
-                        <h3 className="text-black! text-lg md:text-xl lg:text-2xl font-normal tracking-wide text-center px-4">
+                        <h3 className="text-black! text-lg md:text-xl lg:text-2xl font-normal tracking-wide text-center px-2 md:px-4">
                             {section.title}
                         </h3>
 
-                        <div className="p-6 rounded-2xl max-w-[400px]">
-                            <p className="text-black/80 text-sm md:text-base leading-relaxed text-center">
+                        <div className="px-4 py-4 md:px-6 md:py-5 lg:px-6 lg:py-6 rounded-2xl max-w-full md:max-w-[350px] lg:max-w-[400px]">
+                            <p className="text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-center">
                                 {section.details}
                             </p>
                         </div>
 
-                        <ul className="
-                            list-disc text-black/80 
-                            text-sm md:text-base md:text-lg lg:text-lg md:ml-10 lg:p-10
-                            leading-relaxed text-center">
+                        <ul className="list-disc text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
                             {section.benefits.map((benefit, index) => (
-                                <li key={index}>{benefit}</li>
+                                <li key={index} className="pl-2">{benefit}</li>
                             ))}
                         </ul>
                     </div>

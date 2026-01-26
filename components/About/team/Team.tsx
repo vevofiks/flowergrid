@@ -72,7 +72,7 @@ const TeamTreeSection = () => {
                   <h3 className="text-base md:text-lg font-semibold text-[#2C1810] leading-snug mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-xs md:text-sm text-[#8B6F47] leading-relaxed font-normal px-2 max-w-[160px] md:max-w-[240px]">
+                  <p className="text-xs md:text-lg xl:text-xl  !text-[#714C24] leading-relaxed font-normal px-2 max-w-[160px] md:max-w-[240px]">
                     {member.role}
                   </p>
 
