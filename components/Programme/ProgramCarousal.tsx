@@ -34,7 +34,7 @@ interface ProgramCarouselProps {
 
 const getPositionClasses = (position: string): string => {
     const positions = {
-        'top-left': '-top-6 -left-6 sm:-top-8 sm:-left-8 md:-top-10 md:-left-10 lg:-top-12 lg:-left-24',
+        'top-left': '-top-6 -left-6 sm:-top-8 sm:-left-8 md:-top-10 md:-left-10 lg:-top-6 lg:-left-24',
         'top-right': '-top-6 -right-6 sm:-top-8 sm:-right-8 md:-top-16 md:-right-16 lg:-top-20 lg:-right-20',
         'bottom-left': '-bottom-6 -left-6 sm:-bottom-8 sm:-left-8 md:-bottom-16 md:-left-16 lg:-bottom-20 lg:-left-20',
         'bottom-right': '-bottom-6 -right-6 sm:-bottom-8 sm:-right-8 md:-bottom-0 md:-right-10 lg:-bottom-10 lg:-right-20'
@@ -227,7 +227,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                                                 alt={decorative.alt}
                                                 width={250}
                                                 height={250}
-                                                className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-56 xl:h-56 object-contain"
+                                                className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-56 lg:h-56 xl:w-60 xl:h-60 object-contain"
                                             />
                                         </div>
                                     ))}

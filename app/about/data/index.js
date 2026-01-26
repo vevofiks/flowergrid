@@ -227,7 +227,7 @@ export const teamTree = [
     "members": [
       {
         "name": "Dr. Hana Patel",
-        "role": "General Practitioner, Medical Expert",
+        "role": "General Practitioner, Medical Exert Witness & Family Doctor",
         "image": "/About/team/hana.png"
       }
     ]
@@ -238,7 +238,7 @@ export const teamTree = [
     "members": [
       {
         "name": "Tamkin",
-        "role": "Trained Counselling, Services & Career",
+        "role": "Trained Counselling Services & Career Education Direction",
         "image": "/About/team/tamkin.png"
       },
       {
@@ -254,7 +254,7 @@ export const teamTree = [
     "members": [
       {
         "name": "Dr. Ravinder",
-        "role": "Auricular Acupuncturist, Reiki Grand Master",
+        "role": "Auricular Acupuncturist, Colour Therapist, Angel Healer & Reiki Grand Master",
         "image": "/About/team/ravinder.png"
       }
     ]
@@ -265,12 +265,12 @@ export const teamTree = [
     "members": [
       {
         "name": "Dr. Renuka Marley",
-        "role": "Healthcare Consultant",
+        "role": "Healthcare Consultant and Lifecoach",
         "image": "/About/team/renuka.png"
       },
       {
         "name": "Runa Boolaky",
-        "role": "NLP Practitioner, Lifecoach",
+        "role": "NLP Practitioner, Lifecoach & Mental First Aider",
         "image": "/About/team/runa.png"
       }
     ]
@@ -281,7 +281,7 @@ export const teamTree = [
     "members": [
       {
         "name": "Rico Wagner Caleep",
-        "role": "Leadership • Growth • Mental Performance",
+        "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
         "image": "/About/team/rico.png"
       }
     ]

@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
+
 gsap.registerPlugin(ScrollTrigger);
 
 interface Step {
@@ -47,34 +49,43 @@ const steps: Step[] = [
 ];
 
 export default function CurvedPathAnimation() {
+  const [isMounted, setIsMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
   const dotsRef = useRef<(SVGCircleElement | null)[]>([]);
   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const mobileBeamRef = useRef<HTMLDivElement>(null);
+  const mobileDotsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const mobileStepsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-    
-      if (pathRef.current) {
-        const pathLength = pathRef.current.getTotalLength();
+    setIsMounted(true);
+  }, []);
 
-        gsap.set(pathRef.current, {
-          strokeDasharray: pathLength,
-          strokeDashoffset: pathLength
-        });
+  useGSAP(() => {
+    if (!isMounted) return;
 
-        gsap.to(pathRef.current, {
-          strokeDashoffset: 0,
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top center",
-            end: "bottom center",
-            scrub: 1,
-          }
-        });
-      }
+    const isMobile = window.innerWidth < 1024;
 
-      
+    // Desktop curved path animation
+    if (pathRef.current && !isMobile) {
+      const pathLength = pathRef.current.getTotalLength();
+
+      gsap.set(pathRef.current, {
+        strokeDasharray: pathLength,
+        strokeDashoffset: pathLength
+      });
+
+      gsap.to(pathRef.current, {
+        strokeDashoffset: 0,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+        }
+      });
+
       stepsRef.current.forEach((step, index) => {
         if (step) {
           const dot = dotsRef.current[index];
@@ -82,10 +93,7 @@ export default function CurvedPathAnimation() {
 
           if (dot) {
             gsap.fromTo(dot,
-              {
-                scale: 0,
-                opacity: 0
-              },
+              { scale: 0, opacity: 0 },
               {
                 scale: 1,
                 opacity: 1,
@@ -99,35 +107,105 @@ export default function CurvedPathAnimation() {
             );
           }
 
-          gsap.fromTo(content,
+          if (content) {
+            gsap.fromTo(content,
+              { opacity: 0, x: index % 2 === 0 ? -30 : 30 },
+              {
+                opacity: 1,
+                x: 0,
+                scrollTrigger: {
+                  trigger: step,
+                  start: "top 75%",
+                  end: "top 45%",
+                  scrub: 1,
+                }
+              }
+            );
+          }
+        }
+      });
+    }
+
+    // Mobile/Tablet animations
+    if (isMobile && containerRef.current) {
+      // Animate the vertical beam
+      if (mobileBeamRef.current) {
+        gsap.fromTo(
+          mobileBeamRef.current,
+          { scaleY: 0, transformOrigin: "top" },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: 1,
+            },
+          }
+        );
+      }
+
+      // Animate each step
+      mobileStepsRef.current.forEach((stepElement, index) => {
+        if (!stepElement) return;
+
+        const dot = mobileDotsRef.current[index];
+        const content = stepElement.querySelector('.mobile-content');
+
+        // Animate dot scale and color
+        if (dot) {
+          gsap.fromTo(
+            dot,
+            {
+              scale: 0.8,
+              backgroundColor: "#F3E5CB",
+              borderColor: "#9C7D4D",
+            },
+            {
+              scale: 1.3,
+              backgroundColor: "#9C7D4D",
+              borderColor: "#F3E5CB",
+              scrollTrigger: {
+                trigger: stepElement,
+                start: "top 70%",
+                end: "top 30%",
+                scrub: 1,
+              },
+            }
+          );
+        }
+
+        // Animate content fade and slide
+        if (content) {
+          gsap.fromTo(
+            content,
             {
               opacity: 0,
-              x: index % 2 === 0 ? -30 : 30
+              x: 30
             },
             {
               opacity: 1,
               x: 0,
               scrollTrigger: {
-                trigger: step,
+                trigger: stepElement,
                 start: "top 75%",
-                end: "top 45%",
+                end: "top 40%",
                 scrub: 1,
-              }
+              },
             }
           );
         }
       });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
+    }
+  }, { scope: containerRef, dependencies: [isMounted] });
 
   return (
     <div
       ref={containerRef}
       className="relative py-16 px-4 md:px-8 lg:px-16 bg-background overflow-hidden"
     >
-
+      {/* Decorative Leaves (Desktop) */}
       <div className="hidden lg:block">
         <Image
           src="/Programme/left-leaf.png"
@@ -159,41 +237,22 @@ export default function CurvedPathAnimation() {
         />
       </div>
 
-      <div className="hidden md:block">
-
+      {/* Desktop Curved Path View */}
+      <div className="hidden lg:block">
         <svg
           className="absolute left-0 top-0 w-full h-full pointer-events-none"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 1200 2000"
         >
-        
           <path
             ref={pathRef}
-            d="M 300 40
-               L 650 40
-               Q 800 40 800 140
-               Q 800 270 800 400
-               L 800 430
-               Q 800 550 650 550
-               L 300 550
-               Q 200 550 200 650
-               Q 200 750 300 750
-               L 650 750
-               Q 750 750 750 850
-               Q 750 950 750 1050
-               L 750 1100
-               Q 750 1200 650 1200
-               L 300 1200
-               Q 200 1200 200 1300
-               Q 200 1400 300 1400"
+            d="M 300 40 L 650 40 Q 800 40 800 140 Q 800 270 800 400 L 800 430 Q 800 550 650 550 L 300 550 Q 200 550 200 650 Q 200 750 300 750 L 650 750 Q 750 750 750 850 Q 750 950 750 1050 L 750 1100 Q 750 1200 650 1200 L 300 1200 Q 200 1200 200 1300 Q 200 1400 300 1400"
             stroke="#9C7D4D"
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
-
           />
-
           <circle ref={(el) => { dotsRef.current[0] = el; }} cx="300" cy="40" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
           <circle ref={(el) => { dotsRef.current[1] = el; }} cx="800" cy="430" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
           <circle ref={(el) => { dotsRef.current[2] = el; }} cx="200" cy="650" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
@@ -202,120 +261,91 @@ export default function CurvedPathAnimation() {
         </svg>
 
         <div className="relative mx-auto" style={{ maxWidth: '1400px', minHeight: '1800px' }}>
-          <div
-            ref={(el) => { stepsRef.current[0] = el; }}
-            className="absolute"
-            style={{
-              left: '5%',
-              top: '0px',
-              width: '320px'
-            }}
-          >
-            <div className="step-content md:mt-18">
-              <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
-                {steps[0].title}
-              </h3>
-              <p className="text-base lg:text-lg text-text-body leading-relaxed">
-                {steps[0].description}
-              </p>
-            </div>
-          </div>
-
-
-          <div
-            ref={(el) => { stepsRef.current[1] = el; }}
-            className="absolute"
-            style={{
-              right: '5%',
-              top: '360px',
-              width: '320px'
-            }}
-          >
-            <div className="step-content flex flex-col md:items-start lg:items-end md:text-right md:ml-12 lg:text-right">
-              <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
-                {steps[1].title}
-              </h3>
-              <p className="text-base lg:text-lg text-text-body leading-relaxed">
-                {steps[1].description}
-              </p>
-            </div>
-          </div>
-
-
-          <div
-            ref={(el) => { stepsRef.current[2] = el; }}
-            className="absolute"
-            style={{
-              left: '2%',
-              top: '700px',
-              width: '320px'
-            }}
-          >
-            <div className="step-content md:mt-12">
-              <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
-                {steps[2].title}
-              </h3>
-              <p className="text-base lg:text-lg text-text-body leading-relaxed">
-                {steps[2].description}
-              </p>
-            </div>
-          </div>
-
-          <div
-            ref={(el) => { stepsRef.current[3] = el; }}
-            className="absolute"
-            style={{
-              right: '5%',
-              top: '1030px',
-              width: '320px'
-            }}
-          >
-            <div className="step-content text-right">
-              <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
-                {steps[3].title}
-              </h3>
-              <p className="text-base lg:text-lg text-text-body leading-relaxed">
-                {steps[3].description}
-              </p>
-            </div>
-          </div>
-
-          <div
-            ref={(el) => { stepsRef.current[4] = el; }}
-            className="absolute"
-            style={{
-              left: '5%',
-              top: '1370px',
-              width: '320px'
-            }}
-          >
-            <div className="step-content md:mt-[-8rem] lg:mt-12">
-              <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
-                {steps[4].title}
-              </h3>
-              <p className="text-base lg:text-lg text-text-body leading-relaxed">
-                {steps[4].description}
-              </p>
-            </div>
-          </div>
+          {steps.map((step, index) => {
+            const positions = [
+              { left: '5%', top: '0px', mt: 'md:mt-20 sm:mt-12 lg:py-10' },
+              { right: '5%', top: '360px', align: 'items-end text-right', mt: 'md:mt-20 lg:ml-4' },
+              { left: '2%', top: '700px', mt: 'md:mt-12' },
+              { right: '5%', top: '1030px', align: 'text-right', mt: 'md:mt-6 lg:ml-6' },
+              { left: '5%', top: '1370px', mt: 'md:mt-[-8rem] lg:mt-4' }
+            ];
+            const pos = positions[index];
+            return (
+              <div
+                key={step.id}
+                ref={(el) => { stepsRef.current[index] = el; }}
+                className="absolute"
+                style={{
+                  left: pos.left,
+                  right: pos.right,
+                  top: pos.top,
+                  width: 'min(320px, 35vw)'
+                }}
+              >
+                <div className={`step-content ${pos.mt || ''} ${pos.align || ''}`}>
+                  <h3 className="text-2xl lg:text-3xl font-heading font-semibold text-text-heading mb-4 leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-base lg:text-lg text-text-body leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      <div className="md:hidden relative max-w-xl mx-auto">
-        <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary opacity-30" />
+      {/* Mobile/Tablet Vertical View */}
+      <div className="lg:hidden relative max-w-3xl mx-auto">
+        {/* Vertical line with beam - centered at 20px from left */}
+        <div
+          className="absolute top-0 bottom-0 w-0.5 bg-[#9C7D4D]/20"
+          style={{ left: '20px' }}
+        >
+          <div
+            ref={mobileBeamRef}
+            className="w-full h-full bg-[#9C7D4D] shadow-[0_0_15px_#9C7D4D] origin-top"
+          />
+        </div>
+
+        {/* Steps */}
         {steps.map((step, index) => (
-          <div key={step.id} className="relative pl-12 mb-16">
-            <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-primary -translate-x-[5px]" />
-            <h3 className="text-xl font-heading font-semibold text-text-heading mb-3 leading-tight">
-              {step.title}
-            </h3>
-            <p className="text-sm text-text-body leading-relaxed">
-              {step.description}
-            </p>
+          <div
+            key={step.id}
+            ref={(el) => { mobileStepsRef.current[index] = el; }}
+            className="relative flex items-start py-10 sm:py-12"
+          >
+            {/* Dot - positioned exactly on the line */}
+            <div
+              className="absolute flex-shrink-0"
+              style={{
+                left: '20px',
+                top: '50%',
+                transform: 'translate(-50%, -50%)'
+              }}
+            >
+              <div
+                ref={(el) => { mobileDotsRef.current[index] = el; }}
+                className="w-4 h-4 sm:w-5 sm:h-5 bg-[#F3E5CB] rounded-full border-2 sm:border-[3px] border-[#9C7D4D]"
+              />
+            </div>
+
+            {/* Content - starts after the dot with proper spacing */}
+            <div
+              className="mobile-content w-full"
+              style={{ paddingLeft: '48px' }}
+            >
+              <h3 className="text-xl sm:text-2xl font-heading font-semibold text-text-heading mb-3 leading-tight">
+                {step.title}
+              </h3>
+              <p className="text-sm sm:text-base text-text-body leading-relaxed max-w-lg">
+                {step.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 }
