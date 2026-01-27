@@ -105,8 +105,8 @@ export const personsData = {
                 }
             ]
         },
-        connect:{
-            image:"/About/person1/5.png",
+        connect: {
+            image: "/About/person1/5.png",
             title: "Take The First Step",
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
         }
@@ -137,7 +137,7 @@ export const personsData = {
         workIncludes: {
             title: "My Approach to Leadership and Wellbeing",
             description: "I believe true leadership begins with self-awareness. Before you can guide others, you need to understand your own values, emotions and patterns.",
-            title2:"My coaching style brings together:",
+            title2: "My coaching style brings together:",
             description2: "This combination allows me to help clients achieve both personal and professional transformation. It is astructured yet compassionate approach that blends intellect with intuition.",
             steps: [
                 {
@@ -210,7 +210,7 @@ export const personsData = {
             ]
         },
 
-        connect : {
+        connect: {
             image: "/About/person2/5.png",
             title: "Let's Begin Your Journey",
             description: "If you are ready to explore your potential, strengthen your mindset and live with greater purpose, I would love to connect.",
@@ -221,87 +221,115 @@ export const personsData = {
 
 
 export const teamTree = [
-  {
-    "id": "row-1",
-    "type": "single",
-    "members": [
-      {
-        "name": "Dr. Hana Patel",
-        "role": "General Practitioner, Medical Exert Witness & Family Doctor",
-        "image": "/About/team/hana.png"
-      }
-    ]
-  },
-  {
-    "id": "row-2",
-    "type": "pair",
-    "members": [
-      {
-        "name": "Tamkin",
-        "role": "Trained Counselling Services & Career Education Direction",
-        "image": "/About/team/tamkin.png"
-      },
-      {
-        "name": "Yvonne Hewitt",
-        "role": "Hypnotherapist, RTT",
-        "image": "/About/team/yvonne.png"
-      }
-    ]
-  },
-  {
-    "id": "row-3",
-    "type": "single",
-    "members": [
-      {
-        "name": "Dr. Ravinder",
-        "role": "Auricular Acupuncturist, Colour Therapist, Angel Healer & Reiki Grand Master",
-        "image": "/About/team/ravinder.png"
-      }
-    ]
-  },
-  {
-    "id": "row-4",
-    "type": "pair",
-    "members": [
-      {
-        "name": "Dr. Renuka Marley",
-        "role": "Healthcare Consultant and Lifecoach",
-        "image": "/About/team/renuka.png"
-      },
-      {
-        "name": "Runa Boolaky",
-        "role": "NLP Practitioner, Lifecoach & Mental First Aider",
-        "image": "/About/team/runa.png"
-      }
-    ]
-  },
-  {
-    "id": "row-5",
-    "type": "single",
-    "members": [
-      {
-        "name": "Rico Wagner Caleep",
-        "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
-        "image": "/About/team/rico.png"
-      }
-    ]
-  },
-  {
-    "id": "row-6",
-    "type": "pair",
-    "members": [
-      {
-        "name": "Rebecca",
-        "role": "The Nutrition And Fitness Coach",
-        "image": "/About/team/rebecca.png"
-      },
-      {
-        "name": "Husna Hoque",
-        "role": "Personal Trainer & Wellness Coach",
-        "image": "/About/team/husna.png"
-      }
-    ]
-  }
+    {
+        "id": "row-1",
+        "type": "single",
+        "members": [
+            {
+                "name": "Dr. Hana Patel",
+                "role": "General Practitioner, Medical Exert Witness & Family Doctor",
+                "image": "/About/team/hana.png",
+                "description": "Dr. Hana, our skilled and acclaimed doctor in wellness, specializes in assessing and reviewing chronic conditions. Whether you are managing a chronic illness or seeking active improvement, Dr. Hana provides expert guidance. With a focus on holistic wellness, she helps individuals refine their health goals and achieve optimal well-being. Trust Dr. Hana to support you in your journey towards better health and vitality"
+            }
+        ]
+    },
+    {
+        "id": "row-2",
+        "type": "pair",
+        "members": [
+            {
+                "name": "Tamkin",
+                "role": "Trained Counselling Services & Career Education Direction",
+                "image": "/About/team/tamkin.png",
+                "description": "Wanting a listening ear on relationships, guidance, career, Education, Social improvement. Serving the community, individuals in a journey to link needs and solutions"
+            },
+            {
+                "name": "Yvonne Hewitt",
+                "role": "Hypnotherapist, RTT",
+                "image": "/About/team/yvonne.png",
+                "description": "Yvonne, our skilled specialist, excels in hypnotherapy and harnessing the power of the mind. With expertise in Rapid Transformational Therapy (RTT) and energy work, she guides you towards profound personal breakthroughs. Yvonne's holistic approach helps you unlock your inner potential, overcome limiting beliefs, and achieve lasting change. Trust her to empower you on your journey to mental clarity and emotional well-being."
+            }
+        ]
+    },
+    {
+        "id": "row-3",
+        "type": "single",
+        "members": [
+            {
+                "name": "Dr. Ravinder",
+                "role": "Auricular Acupuncturist, Colour Therapist, Angel Healer & Reiki Grand Master",
+                "image": "/About/team/ravinder.png",
+                "description": "Dr. Ravinder is a licensed Auricular Acupuncturist & accredited Reiki Grand Master offering holistic healing. He utilizes reiki, energy, color therapy, & angelic healing to enhance overall well-being. With professional memberships in Microsystems Acupuncture Society, CNHC, & The Acupuncture Society, his comprehensive care blends ancient healing traditions with modern modalities to relieve physical pain, heal emotionally, & improve vitality."
+            }
+        ]
+    },
+    {
+        "id": "row-4",
+        "type": "pair",
+        "members": [
+            {
+                "name": "Dr. Renuka Marley",
+                "role": "Healthcare Consultant and Lifecoach",
+                "image": "/About/team/renuka.png",
+                "description": "Dr. Renu offers comprehensive body scans to analyze mineral & vitamin levels, utilizing functional nutrition to address deficiencies. With expertise in personalized supplementation and dietary recommendations, she helps clients optimize their nutritional intake. Dr. Renu goes beyond the basics, incorporating additional elements to support overall health & wellness. Trust Dr. Renu for a tailored approach to enhancing your well-being through nutrient balancing with Dr. Renu."
+            },
+            {
+                "name": "Runa Boolaky",
+                "role": "NLP Practitioner, Lifecoach & Mental First Aider",
+                "image": "/About/team/runa.png",
+                "description": "Runa is your guide to leadership development, goal achievement, and the cultivation of healthy habits. She offers support with a range of products designed to enhance your financial health and investment strategies. Runa's holistic approach empowers you to evolve personally and professionally, helping you build a balanced and prosperous life. Trust her expertise to unlock your potential and achieve lasting success.  "
+            }
+        ]
+    },
+    {
+        "id": "row-5",
+        "type": "single",
+        "members": [
+            {
+                "name": "Rico Wagner Caleep",
+                "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
+                "image": "/About/team/rico.png",
+                "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
+            }
+        ]
+    },
+    {
+        "id": "row-6",
+        "type": "pair",
+        "members": [
+            {
+                "name": "Rebecca",
+                "role": "The Nutrition And Fitness Coach",
+                "image": "/About/team/rebecca.png",
+                "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programs, and specializing in fitness and body strength still being individual."
+            },
+            {
+                "name": "Husna Hoque",
+                "role": "Personal Trainer & Wellness Coach",
+                "image": "/About/team/husna.png",
+                "description": "Trainer Husna specializes in creating customized workout routines and managing your macros to help you adopt healthier habits. With a focus on personalized fitness plans, she guides clients towards achieving their goals effectively. Trust in Trainer Husna to design workouts tailored to your needs and support you in making positive lifestyle changes. Elevate your fitness journey with Husna's expertise and commitment to your well-being."
+            }
+        ]
+
+    },
+    {
+        "id": "row-7",
+        "type": "pair",
+        "members": [
+            {
+                "name": "Samin Khan",
+                "role": "Lifecoach & Reiki Healer",
+                "image": "/About/team/samina.png",
+                "description": "Simmi, your dedicated life coach councilor, healer & holistic therapist specializing in integrating personalized plans into your daily routine. With a focus on holistic modalities, she selects practices to support your overall health and mental well-being. Simmi brings a unique approach to inner healing, consciousness, and mindfulness, guiding you towards a more balanced and mindful lifestyle. Trust in Simmi to help you cultivate inner peace, develop greater self-awareness, and foster positive habits for sustainable well-being."
+            },
+            {
+                "name": "Munira",
+                "role": "NLP Practitioner, Hypnotherapist, RTT",
+                "image": "/About/team/munira.png",
+                "description": "Munira, our alchemist, specializes in transforming mindsets into positive habits through the potent tools of NLP, hypnotherapy, and RTT. With a focus on elevating consciousness and refining your internal being, she guides you on a journey of self-discovery and empowerment. Trust her expertise to unlock your fullest potential and cultivate lasting change from within."
+            }
+        ]
+    }
 ]
 
 export const lines = [
