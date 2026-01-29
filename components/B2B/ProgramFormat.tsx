@@ -12,19 +12,19 @@ const sections = [
     {
         id: "intensive",
         title: "5-Day Intensive Programme",
-        thumb: "/B2B/7.png",
+        thumb: `/b2b/7.png`,
         details: "A guided wellbeing and leadership experience for teams seeking sustainable transformation. Includes personalised assessments, group coaching, and integrated mind-body workshops."
     },
     {
         id: "power",
         title: "Power Hour Sessions",
-        thumb: "/B2B/8.png",
+        thumb: `/b2b/8.png`,
         details: "Short, focused sessions offering immediate clarity and practical strategies for managers or teams facing specific challenges."
     },
     {
         id: "workshops",
         title: "Workshops and Events",
-        thumb: "/B2B/9.png",
+        thumb: `/b2b/9.png`,
         details: "Half-day or full-day group sessions designed to enhance emotional wellbeing, address anxiety and build a culture of open communication."
     },
 ];

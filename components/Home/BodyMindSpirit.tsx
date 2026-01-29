@@ -13,8 +13,8 @@ const sections = [
     {
         id: "body",
         title: "BODY",
-        thumb: "/Home/H4 d.png",
-        full: "/Home/H4 a.png",
+        thumb: `/home/H4 d.png`,
+        full: `/home/H4 a.png`,
         details: [
             { title: "Medical & Aesthetic Health Care", desc: "Enhancing physical vitality through scientifically guided body sculpting & health checks." },
             { title: "Nutritional Consulting", desc: "Personalized diet plans to optimize gut health, energy, and immunity." },
@@ -24,8 +24,8 @@ const sections = [
     {
         id: "mind",
         title: "MIND",
-        thumb: "/Home/H4 e.png",
-        full: "/Home/H4 b.png",
+        thumb: `/home/H4 e.png`,
+        full: `/home/H4 b.png`,
         details: [
             { title: "Anxiety & Stress Management", desc: "Tools and techniques to declutter the mind and manage stress effectively." },
             { title: "Neuro-Linguistic Programming (NLP)", desc: "Rewiring thought patterns to break negative cycles and boost confidence." },
@@ -36,8 +36,8 @@ const sections = [
     {
         id: "spirit",
         title: "SPIRIT",
-        thumb: "/Home/H4 f.png",
-        full: "/Home/H4 c.png",
+        thumb: `/home/H4 f.png`,
+        full: `/home/H4 c.png`,
         details: [
             { title: "Meditation & Mindfulness", desc: "Guided practices to cultivate presence and inner peace." },
             { title: "Reiki Healing", desc: "Gentle energy work to unblock chakras and restore balance." },
@@ -263,7 +263,7 @@ export default function BodyMindSpirit() {
 
                     <div className="detail-btn flex items-center justify-center shrink-0 mb-4 md:mb-0">
                         <button onClick={handleClose} className="flex items-center justify-center gap-2 rounded-full text-center bg-white/20 backdrop-blur-md border border-white/30 text-white p-3 md:p-4 px-8 md:px-10 text-sm md:text-base hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-                            Click Here <MoveRight size={20} />
+                            Back <MoveRight size={20} />
                         </button>
                     </div>
                 </div>

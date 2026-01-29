@@ -22,7 +22,7 @@ const MembershipPage = () => {
       <HeroTestimonials />
       <Founders />
       <FaqSection />
-      <Connect image="/membership/connection.jpg" title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
+      <Connect image={`/membership/connection.jpg`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </div>
   )
 }

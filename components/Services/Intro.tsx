@@ -7,14 +7,14 @@ import { gsap } from 'gsap'
 const Intro = () => {
     const introRef = useRef<HTMLDivElement>(null)
     const [isMobile, setIsMobile] = useState(false);
-    
+
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 640);
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
- 
+
 
     useGSAP(() => {
         // Staggered child animation for text elements
@@ -40,7 +40,7 @@ const Intro = () => {
     }, { scope: introRef })
     return (
         <div
-            style={{ background: "url('/services/intro.jpg') no-repeat center center/cover" }}
+            style={{ background: `url('/services/intro.jpg') no-repeat center center/cover` }}
             // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
             // 2. Added overflow-hidden to prevent scrollbars
             className='relative flex items-center min-h-[60vh] md:min-h-screen w-full overflow-hidden'
@@ -50,11 +50,11 @@ const Intro = () => {
 
             {/* Content Wrapper */}
             {/* 3. Replaced fixed ml-12 with responsive padding (px-6 md:px-12) */}
-            <div 
+            <div
                 ref={introRef} className='relative z-10 w-full px-6 md:px-12 lg:pl-20 max-w-5xl'
                 style={{
-                        marginTop: isMobile ? "98px" : "30px",
-                        padding: isMobile ? "30px" : "70px",
+                    marginTop: isMobile ? "98px" : "30px",
+                    padding: isMobile ? "30px" : "70px",
                 }}
             >
 

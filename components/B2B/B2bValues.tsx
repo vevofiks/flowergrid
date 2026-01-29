@@ -44,22 +44,22 @@ const B2bValues = () => {
 
     const values = [
         {
-            icon: "/Home/i3.png",
+            icon: `/home/i3.png`,
             title: "HOLISTIC & EVIDENCE-BASED CARE",
             desc: "Our approach bridges psychology, mindfulness and real workplace challenges."
         },
         {
-            icon: "/Home/i2.png",
+            icon: `/home/i2.png`,
             title: "SUSTAINABLE RESULT",
             desc: "We focus on measurable impact, not quick fixes. Our programmes help create lasting behavioural and cultural change."
         },
         {
-            icon: "/Home/i1.png",
+            icon: `/home/i1.png`,
             title: "Led by Experienced Practitioners",
             desc: "Our multi-disciplinary team of 15+ certified coaches, therapists and wellbeing experts bring both professional insight and human understanding."
         },
         {
-            icon: "/Home/i4.png",
+            icon: `/home/i4.png`,
             title: "Tailored for Every Culture",
             desc: "We design each programme to fit your organisation’s structure, pace and objectives."
         }
@@ -70,7 +70,7 @@ const B2bValues = () => {
 
             <div className="leaf-left absolute top-3 left-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src="/Home/left-leaf.png"
+                    src={`/home/left-leaf.png`}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -80,7 +80,7 @@ const B2bValues = () => {
 
             <div className="leaf-right absolute bottom-3 right-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src="/Home/right-leaf.png"
+                    src={`/home/right-leaf.png`}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}

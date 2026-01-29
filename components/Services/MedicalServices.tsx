@@ -14,8 +14,8 @@ const sections = [
         id: "body",
         title: "Medical & Aesthetic Wellness",
         desc: "Experience a unique fusion of medical expertise and holistic health care for vitality, longevity, and confidence.",
-        thumb: "/Home/H4 d.png",
-        full: "/Home/H4 a.png",
+        thumb: `/home/H4 d.png`,
+        full: `/home/H4 a.png`,
         details: [
             { title: "Medical Checks, Treatments & Aesthetics", desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals." },
             { title: "Nutritional Consulting", desc: "Tailored plans to optimize nutrition, metabolism, and energy." },
@@ -27,8 +27,8 @@ const sections = [
         id: "mind",
         title: "Therapeutic & Mental Wellness",
         desc: "Restore peace and resilience with therapies that support mental clarity, emotional healing, and stress management.",
-        thumb: "/Home/H4 e.png",
-        full: "/Home/H4 b.png",
+        thumb: `/home/H4 e.png`,
+        full: `/home/H4 b.png`,
         details: [
             { title: "Anxiety & Stress Management Techniques", desc: "Learn evidence-based tools to calm the mind and regulate emotions." },
             { title: "Neuro-Linguistic Programming (NLP)", desc: "Rewire patterns of thought and behaviour to achieve positive change." },
@@ -40,8 +40,8 @@ const sections = [
         id: "spirit",
         title: "Holistic & Energy Healing",
         desc: "Reconnect with your inner essence through practices that harmonize energy, calm the spirit, and awaken self-awareness.",
-        thumb: "/Home/H4 f.png",
-        full: "/Home/H4 c.png",
+        thumb: `/home/H4 f.png`,
+        full: `/home/H4 c.png`,
 
         details: [
             { title: "Meditation & Mindfulness & Breathing", desc: "Restore presence and balance through guided stillness" },
@@ -54,8 +54,8 @@ const sections = [
         id: "transformation",
         title: "Life Coaching & Transformation",
         desc: "Discover powerful coaching programs that help you redefine your path, strengthen relationships, and unlock your fullest potential.",
-        thumb: "/services/s1.png",
-        full: "/services/s3.jpg",
+        thumb: `/services/s1.png`,
+        full: `/services/s3.jpg`,
         details: [
             { title: "Personal & Professional Growth Coaching", desc: "Build confidence, clarity, and purpose in every aspect of life." },
             { title: "Relationship Coaching", desc: "Strengthen communication, compassion, and connection in your relationships." },

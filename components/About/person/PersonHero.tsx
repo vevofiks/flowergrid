@@ -98,7 +98,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
           md:mb-12 lg:mb-20 "
-          style={{ marginBottom: '75px' }}
+            style={{ marginBottom: '75px' }}
           >
             {text}
           </h1>
@@ -112,7 +112,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
             w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
           "
         >
-          <Image src="/about/lamp.png" alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
+          <Image src={`/about/lamp.png`} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
         </div>
 
         <div
@@ -146,7 +146,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
             w-[160px] sm:w-[220px] md:w-[260px] lg:w-[340px] xl:w-[400px]
           "
         >
-          <Image src="/about/tree.png" alt="Plant" width={400} height={400} className="w-full h-auto" />
+          <Image src={`/about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
         </div>
 
         <div
@@ -158,7 +158,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
           "
         >
           <Image
-            src="/about/tablewithplant.png"
+            src={`/about/tablewithplant.png`}
             alt="Table"
             width={420}
             height={200}

@@ -48,7 +48,7 @@ const AboutB2b = () => {
                         About Our B2B Coaching
                     </h2>
                     <Image
-                        src="/Home/connection-logo.png"
+                        src={`/home/connection-logo.png`}
                         alt="Flowergrid Logo"
                         width={100}
                         height={100}

@@ -26,8 +26,8 @@ interface CoreValuesProps {
 const CoreValues = ({
     values,
     backgroundColor = "transparent",
-    leftLeafImage = "/Home/left-leaf.png",
-    rightLeafImage = "/Home/right-leaf.png",
+    leftLeafImage = `/home/left-leaf.png`,
+    rightLeafImage = `/home/right-leaf.png`,
     iconBgColor = "#ECDCC5"
 }: CoreValuesProps) => {
     const container = useRef(null)

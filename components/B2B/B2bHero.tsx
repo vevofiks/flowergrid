@@ -49,20 +49,20 @@ export default function B2bHero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-screen overflow-hidden">
-      
+
       <div className="absolute inset-0">
         <Image
-          src="/B2B/hero.jpg"
+          src={`/b2b/hero.jpg`}
           alt="Wellness session"
           fill
           className="object-cover"
           priority
         />
-        
+
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      
+
       <div className="relative z-10 h-full max-w-[90vw] mx-auto flex flex-col justify-center">
         <div className="max-w-220">
           <h1
@@ -80,7 +80,7 @@ export default function B2bHero() {
             and evidence-based wellbeing programmes.
           </p>
 
-          
+
           <div ref={buttonGroupRef} className="flex flex-col gap-4">
             <button className="bg-[#C19A6B] hover:bg-[#A8865A] text-white font-medium text-lg py-4 px-8  max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
               Book a Discovery Session

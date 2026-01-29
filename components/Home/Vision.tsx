@@ -20,12 +20,12 @@ const Vision = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 70%", 
+                start: "top 70%",
                 toggleActions: "play none none reverse",
             }
         });
 
-        
+
         tl.from(imageWrapperRef.current, {
             x: 100,
             opacity: 0,
@@ -33,14 +33,14 @@ const Vision = () => {
             ease: "power3.out"
         });
 
-        
+
         tl.from([titleRef.current, textRef.current, btnRef.current], {
             y: 50,
             opacity: 0,
             duration: 1,
-            stagger: 0.2, 
+            stagger: 0.2,
             ease: "power3.out"
-        }, "-=1.2"); 
+        }, "-=1.2");
 
     }, { scope: containerRef });
 
@@ -69,7 +69,7 @@ const Vision = () => {
                 <div ref={imageWrapperRef} className="relative w-full h-[35vh] md:h-[60vh] lg:h-[90vh] flex items-center justify-center md:justify-end order-1 md:order-2">
                     <div className="relative w-full h-full">
                         <Image
-                            src="/Home/H vision flower.png"
+                            src={`/home/H vision flower.png`}
                             alt="Vision Flower"
                             fill
                             className='object-contain object-center md:object-right'

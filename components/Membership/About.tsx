@@ -48,7 +48,7 @@ const MembershipAbout = () => {
                         Empowering You to Take Control of Your Wellbeing
                     </h2>
                     <Image
-                        src="/Home/connection-logo.png"
+                        src={`/home/connection-logo.png`}
                         alt="Flowergrid Logo"
                         width={100}
                         height={100}

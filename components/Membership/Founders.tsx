@@ -83,7 +83,7 @@ export default function Founders() {
                     <div className="image-block flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-[500px] aspect-4/5">
                             <Image
-                                src="/About/person1/samina.png"
+                                src={`/about/person1/samina.png`}
                                 alt="Samina Khan"
                                 fill
                                 className="object-cover"
@@ -98,7 +98,7 @@ export default function Founders() {
                     <div className="image-block flex-1 order-1 flex justify-center lg:justify-start">
                         <div className="relative w-full max-w-[500px] aspect-4/5">
                             <Image
-                                src="/About/person2/monira.png"
+                                src={`/about/person2/monira.png`}
                                 alt="Monira Ahmed"
                                 fill
                                 className="object-cover"

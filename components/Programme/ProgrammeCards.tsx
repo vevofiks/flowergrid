@@ -72,12 +72,12 @@ const ProgrammeCards: React.FC<ProgrammeCardsProps> = ({ cards = defaultCards })
                 {/* Decorative curved lines - Behind the cards */}
 
                 <svg className="absolute inset-0 w-screen -left-82 top-100 md:-top-[65rem] pointer-events-none opacity-40 -z-10" width="170%" height="200%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path 
+                    <path
                         d="M-50 400 
                         C 150 150, 450 150, 720 400  
-                        S 1250 650, 1490 400" 
+                        S 1250 650, 1490 400"
                         stroke="#8C8C73"
-                        strokeWidth="1.5" 
+                        strokeWidth="1.5"
                         strokeLinecap="round"
                     />
                 </svg>
@@ -128,7 +128,7 @@ const ProgrammeCards: React.FC<ProgrammeCardsProps> = ({ cards = defaultCards })
                                     {/* Leaf decoration - Inside the card at top */}
                                     <div className="flex justify-center mb-4">
                                         <Image
-                                            src="/Home/leaf.png"
+                                            src={`/home/leaf.png`}
                                             alt="Leaf decoration"
                                             width={50}
                                             height={50}

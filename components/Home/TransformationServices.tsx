@@ -13,7 +13,7 @@ const services = [
     id: 1,
     title: "Life & Transformation Coaching",
     desc: "Unlock your potential through tailored one-to-one coaching. Our approach blends practical mindset tools with self-reflection and accountability to help you navigate change, build confidence, and create meaningful direction in your life.",
-    img: "/Home/H3b.png",
+    img: `/home/H3b.png`,
     btnText: "Explore Coaching",
     btnLink: "/coaching"
   },
@@ -21,7 +21,7 @@ const services = [
     id: 2,
     title: "Mental Health & Emotional Wellbeing",
     desc: "Find calm and clarity with professional support for stress, anxiety, and emotional balance. We use evidence-based techniques such as NLP, hypnotherapy, and mindfulness to help you develop resilience and a stronger connection to your inner self.",
-    img: "/Home/H3c.png",
+    img: `/home/H3c.png`,
     btnText: "Learn About Mental Wellbeing",
     btnLink: "/mental-wellbeing"
   },
@@ -29,7 +29,7 @@ const services = [
     id: 3,
     title: "Physical Health & Aesthetic Wellness",
     desc: "Achieve vitality inside and out through programmes that unite medical expertise with holistic care. From nutritional guidance and body treatments to lifestyle coaching, we help you look and feel your best while supporting long-term health.",
-    img: "/Home/H3d.png",
+    img: `/home/H3d.png`,
     btnText: "Discover Health Programmes",
     btnLink: "/health-programmes"
   },
@@ -37,7 +37,7 @@ const services = [
     id: 4,
     title: "Workshops & Corporate Programmes",
     desc: "Bring conscious living and wellbeing into your workplace or community. Our interactive workshops cover leadership, communication, stress management, and resilience training to promote healthier teams and more connected environments.",
-    img: "/Home/H3e.png",
+    img: `/home/H3e.png`,
     btnText: "Learn About Workshops",
     btnLink: "/workshops"
   }
@@ -137,26 +137,25 @@ export default function TransformationService() {
       }, 3.2);
 
       tl.to(".pill-preview-image", { opacity: 0, duration: 0.5 }, 4.5);
-      tl.to(".service-image-0", { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" }, 4.8);
-
-      tl.to(".service-content-0", { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, 5);
+      tl.to(".service-image-0", { autoAlpha: 1, scale: 1, duration: 1.5, ease: "power2.out" }, 4.8);
+      tl.to(".service-content-0", { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" }, 5);
 
 
       services.slice(1).forEach((_, index) => {
         const i = index + 1;
         const baseTime = 7 + (i - 1) * 3;
 
-        tl.to(`.service-image-${i - 1}`, { opacity: 0, scale: 0.95, duration: 1 }, baseTime);
-        tl.to(`.service-content-${i - 1}`, { opacity: 0, y: -20, duration: 0.8 }, baseTime);
+        tl.to(`.service-image-${i - 1}`, { autoAlpha: 0, scale: 0.95, duration: 1 }, baseTime);
+        tl.to(`.service-content-${i - 1}`, { autoAlpha: 0, y: -20, duration: 0.8 }, baseTime);
 
         tl.fromTo(`.service-image-${i}`,
-          { opacity: 0, scale: 1.05 },
-          { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out" },
+          { autoAlpha: 0, scale: 1.05 },
+          { autoAlpha: 1, scale: 1, duration: 1.5, ease: "power2.out" },
           baseTime + 0.5
         );
         tl.fromTo(`.service-content-${i}`,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+          { autoAlpha: 0, y: 30 },
+          { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" },
           baseTime + 0.8
         );
       });
@@ -174,14 +173,14 @@ export default function TransformationService() {
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden bg-[#F3EAD8]"
       style={{
-        backgroundImage: "url('/Home/service-bg.png')",
+        backgroundImage: `url('/home/service-bg.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       <div ref={leafRef} className="absolute top-10 -left-1 md:top-8 md:-left-2 z-10">
         <Image
-          src="/Home/service-leaf.png"
+          src={`/home/service-leaf.png`}
           alt="Leaf"
           width={80}
           height={80}
@@ -208,10 +207,10 @@ export default function TransformationService() {
 
         <div
           ref={womanRef}
-          className="absolute -bottom-10 right-3 md:right-16 lg:right-29 md:-bottom-40 -translate-y-1/2 z-10"
+          className="absolute bottom-10 -right-4 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
         >
           <Image
-            src="/Home/women-line-art.png"
+            src={`/home/women-line-art.png`}
             alt="Woman"
             width={400}
             height={400}
@@ -226,7 +225,7 @@ export default function TransformationService() {
         >
           <div className="pill-preview-image absolute inset-0 opacity-0 scale-90">
             <Image
-              src="/Home/H3a.png"
+              src={`/home/H3a.png`}
               alt="Preview"
               fill
               className="object-cover"
@@ -252,7 +251,7 @@ export default function TransformationService() {
           {services.map((service, idx) => (
             <div
               key={`content-${service.id}`}
-              className={`service-content-${idx} absolute top-0 left-0 w-full flex flex-col items-center opacity-0 translate-y-10`}
+              className={`service-content-${idx} absolute top-0 left-0 w-full flex flex-col items-center opacity-0 invisible translate-y-10`}
             >
               <h3 className="text-2xl md:text-5xl text-[#3A4033] mb-3 md:mb-6 font-playfair! font-bold">
                 {service.title}
@@ -262,7 +261,7 @@ export default function TransformationService() {
                 {service.desc}
               </p>
 
-              <Link href={service.btnLink} className="px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase hover:bg-primary hover:text-[#F3EAD8] transition-colors duration-300 font-semibold">
+              <Link href={service.btnLink} className="w-full md:w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold">
                 {service.btnText}
               </Link>
             </div>

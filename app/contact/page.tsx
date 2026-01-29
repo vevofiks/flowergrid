@@ -7,8 +7,8 @@ import React from 'react'
 const ContactPage = () => {
     return (
         <div>
-            <div className="h-screen flex items-center justify-center" style={{ backgroundImage: 'url(/Contact/hero.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <h1 className='text-6xl lg:text-8xl font-medium text-white! text-center'>Contact Us</h1>
+            <div className="h-screen flex items-center justify-center" style={{ backgroundImage: `url(/contact/hero.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <h1 className='text-6xl lg:text-8xl font-medium text-white! text-center'>Contact Us</h1>
             </div>
 
             <ContactForm />
