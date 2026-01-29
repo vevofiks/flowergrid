@@ -21,13 +21,13 @@ const FadeInText = () => {
                 start: "top top",
                 end: "+=350%",
                 scrub: 1,
-                pin: true,
+                pin: true
             }
         });
 
         tl.fromTo(lines1,
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out" }
+            { autoAlpha: 0, y: 50 },
+            { autoAlpha: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out", force3D: true }
         );
 
         tl.to(sections, {
@@ -37,30 +37,29 @@ const FadeInText = () => {
         });
 
         tl.fromTo(lines2,
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out" }
+            { autoAlpha: 0, y: 50 },
+            { autoAlpha: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out", force3D: true }
         );
 
     }, { scope: containerRef });
 
     return (
-        <div className='h-screen w-full relative bg-[#F3EAD8] overflow-hidden' ref={containerRef}>
-            <div className='text-section flex flex-col h-screen w-full justify-center text-start text-[28px] sm:text-5xl md:text-6xl lg:text-[6rem] tracking-wider uppercase text-[#2D3F28]! pl-4 sm:pl-6 md:pl-10 font-heading! leading-[80px] md:leading-tight lg:leading-[140px]'>
-                <h2 className='line-1'>Tailored workshops on </h2>
-                <h2 className='line-1'>leadership, </h2>
-                <h2 className='line-1'>communication, </h2>
-                <h2 className='line-1'>wellbeing, and mental</h2>
-                <h2 className='line-1'>health,</h2>
+        <div className='h-screen w-full relative bg-[#F3EAD8] overflow-hidden z-10' ref={containerRef}>
+            <div className='text-section flex flex-col h-screen w-full justify-center text-start text-[28px] sm:text-4xl md:text-5xl lg:text-7xl tracking-wider uppercase text-[#2D3F28]! pl-4 sm:pl-6 md:pl-10 font-heading! sm:leading-[1.2] md:leading-tight lg:leading-[1.1]'>
+                <h2 className='line-1 will-change-transform will-change-opacity'>Tailored workshops on </h2>
+                <h2 className='line-1 will-change-transform will-change-opacity'>leadership, </h2>
+                <h2 className='line-1 will-change-transform will-change-opacity'>communication, </h2>
+                <h2 className='line-1 will-change-transform will-change-opacity'>wellbeing, and mental</h2>
+                <h2 className='line-1 will-change-transform will-change-opacity'>health,</h2>
             </div>
-            <div className='text-section flex flex-col h-screen w-full justify-center text-end text-3xl sm:text-5xl md:text-6xl lg:text-[6rem] tracking-wider uppercase text-[#2D3F28]! pr-4 sm:pr-6 md:pr-10 font-heading! leading-[80px] md:leading-tight lg:leading-[120px]'>
-                <h2 className='line-2'>designed to enhance</h2>
-                <h2 className='line-2'>productivity, resilience,</h2>
-                <h2 className='line-2'>and engagement</h2>
-                <h2 className='line-2'>across your</h2>
-                <h2 className='line-2'>organization or</h2>
-                <h2 className='line-2'>institution.</h2>
+            <div className='text-section flex flex-col h-screen w-full justify-center text-end text-[28px] sm:text-4xl md:text-5xl lg:text-7xl tracking-wider uppercase text-[#2D3F28]! pr-4 sm:pr-6 md:pr-10 font-heading! sm:leading-[1.2] md:leading-tight lg:leading-[1.1]'>
+                <h2 className='line-2 will-change-transform will-change-opacity'>designed to enhance</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity'>productivity, resilience,</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity'>and engagement</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity'>across your</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity'>organization or</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity'>institution.</h2>
             </div>
-
         </div>
     )
 }

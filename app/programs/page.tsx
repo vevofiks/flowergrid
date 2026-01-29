@@ -14,12 +14,12 @@ const page = () => {
     <>
       <ProgrammeIntro />
       <ProgrammeCards />
-      <HeroTestimonials/>
+      <HeroTestimonials />
       <ProgramCarousel programs={myPrograms} />
       <HeaderSecrtion />
       <CurvedPathAnimation />
       <Achievement />
-      <Connect image="/About/person2/5.png" title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
+      <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
       <FaqSection />
     </>
   )

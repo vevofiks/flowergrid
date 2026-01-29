@@ -153,7 +153,7 @@ const MaskScroll = () => {
             <div className="absolute inset-0 w-full h-full">
                 <div ref={bgImageRef} className="w-full h-full will-change-transform">
                     <Image
-                        src="/Home/H2.png"
+                        src={`/home/H2.png`}
                         alt="BG"
                         fill
                         className='object-cover'
@@ -166,8 +166,8 @@ const MaskScroll = () => {
             <div ref={maskRef} className="absolute inset-0 flex items-center justify-center pointer-events-none origin-center w-screen h-screen"
                 style={{
                     willChange: "transform",
-                    maskImage: "url('/Home/flower.svg')",
-                    WebkitMaskImage: "url('/Home/flower.svg')",
+                    maskImage: `url('/home/flower.svg')`,
+                    WebkitMaskImage: `url('/home/flower.svg')`,
                     maskSize: "cover",
                     WebkitMaskSize: "cover",
                     maskRepeat: "no-repeat",

@@ -8,22 +8,22 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function LeafScrollText({lines}: {lines: string[]}) {
+export default function LeafScrollText({ lines }: { lines: string[] }) {
     const containerRef = useRef<HTMLDivElement>(null);
     const leafRef = useRef<HTMLDivElement>(null);
     const textWrapperRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
         const textLines = gsap.utils.toArray<HTMLElement>('.reveal-line');
-        const totalDuration = 10; 
-        const swayDuration = totalDuration / lines.length; 
+        const totalDuration = 10;
+        const swayDuration = totalDuration / lines.length;
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=600%", 
-                scrub: 1.5,    
+                end: "+=600%",
+                scrub: 1.5,
                 pin: true,
             }
         });
@@ -36,33 +36,33 @@ export default function LeafScrollText({lines}: {lines: string[]}) {
         tl.to(leafRef.current, {
             top: "110%",
             duration: totalDuration,
-            ease: "none", 
+            ease: "none",
         }, 0);
 
 
         lines.forEach((_, index) => {
             const startTime = index * swayDuration;
-            
+
             const isEven = index % 2 === 0;
-            const xPos = isEven ? 60 : -60; 
-            const rotation = isEven ? 15 : -45; 
+            const xPos = isEven ? 60 : -60;
+            const rotation = isEven ? 15 : -45;
 
             tl.to(leafRef.current, {
                 x: xPos,
                 rotation: rotation,
-                duration: swayDuration, 
-                ease: "sine.inOut" 
+                duration: swayDuration,
+                ease: "sine.inOut"
             }, startTime);
         });
 
 
-       
+
         textLines.forEach((line, index) => {
-            const triggerTime = (index * swayDuration) + (swayDuration * 0.4); 
+            const triggerTime = (index * swayDuration) + (swayDuration * 0.4);
 
             tl.to(line, {
                 opacity: 1,
-                duration: 1, 
+                duration: 1,
                 ease: "power2.out"
             }, triggerTime);
         });
@@ -100,7 +100,7 @@ export default function LeafScrollText({lines}: {lines: string[]}) {
                 style={{ willChange: 'top, transform' }}
             >
                 <Image
-                    src="/Home/leaf.png"
+                    src={`/home/leaf.png`}
                     alt="Leaf"
                     width={100}
                     height={100}

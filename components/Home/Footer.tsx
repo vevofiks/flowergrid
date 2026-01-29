@@ -33,33 +33,30 @@ export default function Footer() {
     const pathname = usePathname();
 
     useGSAP(() => {
-        // 3. CRITICAL FIX: Reset styles immediately. 
-        // This ensures content is visible even if the animation fails or ScrollTrigger miscalculates.
+
         gsap.set([leftColRef.current, linksColRef.current, rightColRef.current, copyrightRef.current], {
             clearProps: "all",
-            opacity: 1, // Force visibility as a fallback
+            opacity: 1,
             y: 0
         });
 
-        // 4. Force ScrollTrigger to recalculate positions after route change
         ScrollTrigger.refresh();
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: footerRef.current,
-                start: "top 95%", // Trigger slightly earlier
-                toggleActions: "play none none none", // Play once and stay there. Do NOT reverse.
+                start: "top 95%",
+                toggleActions: "play none none none",
             },
         });
 
-        // 5. Re-apply the animation
         tl.from([leftColRef.current, linksColRef.current, rightColRef.current], {
-            y: 30, 
+            y: 30,
             opacity: 0,
             duration: 0.8,
             stagger: 0.1,
             ease: "power2.out",
-            clearProps: "opacity,transform" // Clear props after animation so it doesn't get stuck later
+            clearProps: "opacity,transform"
         });
 
         tl.from(copyrightRef.current, {
@@ -70,9 +67,9 @@ export default function Footer() {
             clearProps: "opacity"
         }, "<");
 
-    }, { 
-        scope: footerRef, 
-        dependencies: [pathname] // 6. Re-run this entire logic when the URL changes
+    }, {
+        scope: footerRef,
+        dependencies: [pathname]
     });
 
     return (
@@ -88,7 +85,7 @@ export default function Footer() {
                     <div ref={leftColRef} className="lg:col-span-5 flex flex-col justify-between relative h-[400px] lg:h-auto order-3 lg:order-1 mt-10 lg:mt-0">
                         <div className="absolute bottom-[-40px] z-20 left-[17px] md:left-11 w-[280px] md:w-[350px] lg:w-[450px] pointer-events-none opacity-90">
                             <Image
-                                src="/Logo/footer flower.png"
+                                src={`/logo/footer flower.png`}
                                 alt="Magnolia"
                                 width={500}
                                 height={800}
@@ -98,7 +95,7 @@ export default function Footer() {
                         <div className="absolute -bottom-13 z-10 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
                             <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0">
                                 <img
-                                    src="/Logo/footer-logo_cropped.png"
+                                    src={`/logo/footer-logo_cropped.png`}
                                     alt="Logo"
                                     className="object-contain w-full h-full"
                                 />
@@ -147,11 +144,11 @@ export default function Footer() {
                             <Link href="#" className="mt-6 hover:text-white transition-colors block font-medium text-[#F3EAD8]">Book a Discovery Call</Link>
                         </div>
                         <div className="flex items-center gap-6 text-[#D6CFC2]">
-                            <Link href="#" className="hover:text-[#A58E62] transition-colors"><Instagram className="w-6 h-6" strokeWidth={1.5} /></Link>
-                            <Link href="#" className="hover:text-[#A58E62] transition-colors"><Facebook className="w-6 h-6" strokeWidth={1.5} /></Link>
-                            <Link href="#" className="hover:text-[#A58E62] transition-colors"><Linkedin className="w-6 h-6" strokeWidth={1.5} /></Link>
-                            <Link href="#" className="hover:text-[#A58E62] transition-colors"><TikTokIcon className="w-5 h-5" /></Link>
-                            <Link href="#" className="hover:text-[#A58E62] transition-colors"><Youtube className="w-6 h-6" strokeWidth={1.5} /></Link>
+                            <Link href="https://www.instagram.com/flowergridwellness/" target="_blank" className="hover:text-[#A58E62] transition-colors"><Instagram className="w-6 h-6" strokeWidth={1.5} /></Link>
+                            <Link href="https://www.facebook.com/flowergriidwellness/" target="_blank" className="hover:text-[#A58E62] transition-colors"><Facebook className="w-6 h-6" strokeWidth={1.5} /></Link>
+                            <Link href="https://uk.linkedin.com/company/flowergridwellness" target="_blank" className="hover:text-[#A58E62] transition-colors"><Linkedin className="w-6 h-6" strokeWidth={1.5} /></Link>
+                            <Link href="https://www.tiktok.com/@flowergrid" target="_blank" className="hover:text-[#A58E62] transition-colors"><TikTokIcon className="w-5 h-5" /></Link>
+                            <Link href="https://www.youtube.com/channel/UCyP_NG0t1WA_OAJZGR-qU_w" target="_blank" className="hover:text-[#A58E62] transition-colors"><Youtube className="w-6 h-6" strokeWidth={1.5} /></Link>
                         </div>
                     </div>
 

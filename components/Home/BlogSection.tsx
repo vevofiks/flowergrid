@@ -16,7 +16,7 @@ const blogs = [
         readTime: "2 min read",
         title: "The Art of Slow Living: Why Your Mind Needs It",
         desc: "In a world that moves at lightning speed, learning to slow down isn’t just an act of rebellion—it’s a form of self-care. This blog explores practical ways to embrace slow living and how it can restore your inner peace.",
-        image: "/Home/H8 a.png",
+        image: `/home/H8 a.png`,
         link: "/blog/slow-living"
     },
     {
@@ -25,7 +25,7 @@ const blogs = [
         readTime: "3 min read",
         title: "How Plant Power is Redefining Healing",
         desc: "Discover how the ancient wisdom of plant medicine is making its way back into modern wellness practices. From herbal teas to aromatherapy, here's why nature’s remedies still matter today.",
-        image: "/Home/H8 b.png",
+        image: `/home/H8 b.png`,
         link: "/blog/plant-power"
     },
     {
@@ -34,7 +34,7 @@ const blogs = [
         readTime: "2 min read",
         title: "The Art of Slow Living: Why Your Mind Needs It",
         desc: "In a world that moves at lightning speed, learning to slow down isn’t just an act of rebellion—it’s a form of self-care. This blog explores practical ways to embrace slow living and how it can restore your inner peace.",
-        image: "/Home/H8 c.png",
+        image: `/home/H8 c.png`,
         link: "/blog/slow-living-2"
     },
 ];
@@ -85,7 +85,7 @@ export default function BlogSection() {
             <div ref={headerRef} className="flex-none flex items-center justify-center gap-3 md:gap-4 mb-7">
                 <div className="relative w-6 h-6 md:w-20 md:h-20">
                     <Image
-                        src="/Home/leaf.png"
+                        src={`/home/leaf.png`}
                         alt="Leaf"
                         fill
                         className="object-contain opacity-80"

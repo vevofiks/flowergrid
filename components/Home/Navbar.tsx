@@ -20,17 +20,17 @@ const navLinks = [
       {
         title: "Samina Khan",
         href: "/about/person1",
-        image: "/about/person1/1.png",
+        image: `/about/person1/1.png`,
       },
       {
-        title: "Monira & Team",
+        title: "Monira",
         href: "/about/person2",
-        image: "/about/person2/1.png",
+        image: `/about/person2/1.png`,
       },
       {
         title: "Team",
         href: "/about/team",
-        image: "/B2B/4.jpg",
+        image: `/b2b/4.jpg`,
       },
     ],
   },
@@ -47,10 +47,10 @@ const navLinks = [
       {
         title: "B2B",
         href: "/programs/b2b",
-        image: "/B2B/1.jpg",
+        image: `/b2b/1.jpg`,
       },
     ],
-    },
+  },
   { title: "Blogs", href: "/blogs" },
   { title: "Contact Us", href: "/contact" },
 ];
@@ -219,7 +219,7 @@ export default function Navbar() {
     >
       <Link href="/" className="z-50 relative w-16 h-16 md:w-20 md:h-20">
         <Image
-          src="/Logo/Flowergrid-logo.png"
+          src={`/logo/Flowergrid-logo.png`}
           alt="Luna Logo"
           width={58}
           height={58}
@@ -239,8 +239,8 @@ export default function Navbar() {
             <Image
               src={
                 isLunaHovered
-                  ? "/Logo/Luna eyes open.png"
-                  : "/Logo/Header Luna.png"
+                  ? `/logo/Luna eyes open.png`
+                  : `/logo/Header Luna.png`
               }
               alt="Luna Logo"
               width={60}
@@ -288,12 +288,12 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={(e) => {
-                      
+
                       if (link.subLinks && link.subLinks.length > 0) {
                         e.preventDefault();
                         setActiveSubmenu(activeSubmenu === index ? null : index);
                       } else {
-                        
+
                         toggleMenu();
                       }
                     }}

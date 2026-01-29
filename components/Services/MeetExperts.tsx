@@ -103,7 +103,7 @@ export default function MeetExperts() {
                             className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#D4C4A8] shadow-lg"
                         >
                             <Image
-                                src="/services/s2.png"
+                                src={`/services/s2.png`}
                                 alt="Meet our experts"
                                 fill
                                 className="object-cover"
@@ -144,7 +144,7 @@ export default function MeetExperts() {
                     change. Every journey is personalised and supported by a multidisciplinary team of
                     coaches, therapists and medical professionals.
                 </p>
-                
+
             </div>
         </section>
     );

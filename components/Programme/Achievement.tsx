@@ -12,21 +12,21 @@ const sections = [
     {
         id: 1,
         title: "Vitality and Strength",
-        thumb: "/Home/H4 d.png",
+        thumb: `/home/H4 d.png`,
         details: "Improve your health, energy, and lifestyle habits through personalised guidance. Integrating medical insight with holistic practices ensures long-term vitality and wellbeing.",
         benefits: ["Increased energy and stamina", "Sustainable nutrition and movement habits", "Enhanced physical health"]
     },
     {
         id: 2,
         title: "Calm, Focused, Resilient",
-        thumb: "/Home/H4 e.png",
+        thumb: `/home/H4 e.png`,
         details: "Reduce anxiety, gain clarity, and cultivate emotional balance. Practical tools and expert guidance support daily resilience, helping you make decisions with confidence and calm.",
         benefits: ["Reduced stress and overwhelm", "Clear thinking and focus", "Emotional balance in daily life"]
     },
     {
         id: 3,
         title: "Aligned and Purposeful",
-        thumb: "/Home/H4 f.png",
+        thumb: `/home/H4 f.png`,
         details: "Deepen self-awareness, align with your purpose, and nurture inner calm. Mindfulness, reflection, and integrative practices foster a sense of harmony and direction.",
         benefits: ["Heightened self-awareness", "Stronger connection to purpose", "Lasting inner calm and balance"]
     },

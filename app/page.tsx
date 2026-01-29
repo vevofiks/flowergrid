@@ -23,17 +23,17 @@ const lines = [
 
 const coreValues = [
   {
-    icon: "/Home/i1.png",
+    icon: `/home/i1.png`,
     title: "HOLISTIC & EVIDENCE-BASED CARE",
     desc: "At Flowergrid, we blend ethical, evidence-based holistic practices with modern medical insight to support genuine, lasting wellbeing."
   },
   {
-    icon: "/Home/i2.png",
+    icon: `/home/i2.png`,
     title: "WELLNESS YOUR WAY",
     desc: "Whether you're seeking in-person support or prefer online guidance, our global network ensures conscious living is accessible—anytime, anywhere."
   },
   {
-    icon: "/Home/i3.png",
+    icon: `/home/i3.png`,
     title: "PERSONALISED TRANSFORMATION",
     desc: "Our dedicated team of doctors, coaches, and therapists collaborate to build tailored journeys that respect your personal pace, needs, and goals."
   }

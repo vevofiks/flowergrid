@@ -24,22 +24,22 @@ const phrases = [
 const coreValues = [
 
   {
-    icon: "/services/i1.png",
+    icon: `/services/i1.png`,
     title: "Book A Discovery Call",
     desc: "share your goals and challenges."
   },
   {
-    icon: "/services/i2.png",
+    icon: `/services/i2.png`,
     title: "Receive a Personalized Wellness Path",
     desc: " built around your unique needs."
   },
   {
-    icon: "/services/i3.png",
+    icon: `/services/i3.png`,
     title: "Begin Your Journey",
     desc: "start 1:1 or group sessions online or in person."
   },
   {
-    icon: "/services/i4.png",
+    icon: `/services/i4.png`,
     title: "Transform & Reflect",
     desc: "supported by our expert team and digital tools."
   }
@@ -64,9 +64,9 @@ const page = () => {
       <MedicalServices />
       <MeetExperts />
       <CoreValues values={coreValues} />
-      <ServiceConsultation/>
-      <HeroTestimonials  />
-      <FaqSection/>
+      <ServiceConsultation />
+      <HeroTestimonials />
+      <FaqSection />
     </>
   )
 }

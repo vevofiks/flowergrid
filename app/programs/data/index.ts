@@ -8,17 +8,17 @@ export const myPrograms: ProgramData[] = [
         benefits: ["Personalised transformation plan", "Expert guidance across mind, body, and spirit", "Biomarker tracking and progress check-ins", "Flexible online or onsite participation"],
         buttonText: "Enquire About the 5-Day Program",
         buttonLink: "/your-link", // optional
-        imageUrl: "/Programme/p2.jpg",
+        imageUrl: `/programme/p2.jpg`,
         imageAlt: "Description for accessibility",
         decorativeImages: [
             {
-                src: "/Programme/decorations/flower1.png",
+                src: `/programme/decorations/flower1.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: "/Programme/decorations/flower2.png",
+                src: `/programme/decorations/flower2.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -33,17 +33,17 @@ export const myPrograms: ProgramData[] = [
         benefits: ["Personalised advice tailored to your goals", "One-on-one time with an experienced expert", "Flexible scheduling to fit your lifestyle", "Immediate actionable insights for tangible results"],
         buttonText: "Book Your Power Hour",
         buttonLink: "/your-link", // optional
-        imageUrl: "/Programme/p3.jpg",
+        imageUrl: `/programme/p3.jpg`,
         imageAlt: "power hour session",
         decorativeImages: [
             {
-                src: "/Programme/decorations/flower3.png",
+                src: `/programme/decorations/flower3.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: "/Programme/decorations/pot.png",
+                src: `/programme/decorations/pot.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -58,17 +58,17 @@ export const myPrograms: ProgramData[] = [
         benefits: ["Holistic approach to trauma, anxiety, and emotional healing", "Practical skills in communication, self-image, and relationships","Breathwork and meditation techniques for lasting calm","Boost self-awareness, self-worth, and personal growth"],
         buttonText: "View Workshop Schedule",
         buttonLink: "/your-link",
-        imageUrl: "/Programme/p4.jpg",
+        imageUrl: `/programme/p4.jpg`,
         imageAlt: "1-day workshop",
         decorativeImages: [
             {
-                src: "/Programme/decorations/flower4.png",
+                src: `/programme/decorations/flower4.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: "/Programme/decorations/flower5.png",
+                src: `/programme/decorations/flower5.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -84,17 +84,17 @@ export const myPrograms: ProgramData[] = [
         benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment","Sustainable habit formation and long-term transformation"],
         buttonText: "Start Your Transformation Journey",
         buttonLink: "/your-link",
-        imageUrl: "/Programme/p5.jpg",
+        imageUrl: `/programme/p5.jpg`,
         imageAlt: "Tailored coaching program",
         decorativeImages: [
             {
-                src: "/Programme/decorations/flower7.png",
+                src: `/programme/decorations/flower7.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: "/Programme/decorations/flower6.png",
+                src: `/programme/decorations/flower6.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -110,17 +110,17 @@ export const myPrograms: ProgramData[] = [
         benefits:["Tailored workshops for organisations, schools, NHS, and community groups","Practical strategies to enhance leadership and teamwork","Tools for stress management, resilience, and wellbeing","Cultivates conscious, supportive, and high-performing workplace culture"],
         buttonText:"Learn More about Corporate Programs",
         buttonLink:"/programs/corporate",
-        imageUrl:"/Programme/p6.jpg",
+        imageUrl:`/programme/p6.jpg`,
         imageAlt:"Corporate & Community Programs",
         decorativeImages:[
             {
-                src:"/Programme/decorations/flower8.png",
+                src:`/programme/decorations/flower8.png`,
                 alt:"Decorative element",
                 position:"top-left", 
                 className:"rotate-45"
             },
             {
-                src:"/Programme/decorations/flower9.png",
+                src:`/programme/decorations/flower9.png`,
                 alt:"Decorative element",
                 position:"bottom-right", 
                 className:"rotate-45"

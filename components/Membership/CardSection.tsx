@@ -116,7 +116,7 @@ const CardSection = () => {
                             >
 
                                 <div className="card-icon mb-2">
-                                    <Image src="/Home/leaf.png" alt="Sprig" className="w-12 h-12" width={40} height={40} />
+                                    <Image src={`/home/leaf.png`} alt="Sprig" className="w-12 h-12" width={40} height={40} />
                                 </div>
 
 
