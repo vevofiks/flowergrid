@@ -49,7 +49,7 @@ export default function OfferSection() {
 
 
   return (
-    <section className="relative w-full h-[190vh] md:h-[130vh] bg-[#4E351A] px-4 py-8 md:px-10 lg:px-20 overflow-hidden">
+    <section className="relative w-full h-[146vh] md:h-[130vh] bg-[#4E351A] px-4 py-8 md:px-10 lg:px-20 overflow-hidden">
       <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 mt-21">
         <h1 className="text-white! text-5xl font-heading font-normal tracking-wide">What We Offer</h1>
         <p className="text-white! text-lg font-sans font-light! tracking-wide mt-2">Our corporate and educational programmes address both individual growth and team dynamics.</p>

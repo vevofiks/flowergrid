@@ -85,9 +85,9 @@ export default function TransformationService() {
           left: oLeft + oRect.width / 2,
           top: oTop + oRect.height / 2,
           xPercent: -50,
-          yPercent: -33,
+          yPercent: -40,
           width: oRect.width * 0.9,
-          height: oRect.height * 0.45,
+          height: oRect.height * 0.38,
           borderRadius: '50%',
           opacity: 0,
         });
@@ -192,7 +192,7 @@ export default function TransformationService() {
 
         <div
           ref={textRef}
-          className="absolute left-4 md:left-8 lg:left-25 top-1/2 md:top-[450px] -translate-y-1/2 z-10"
+          className="absolute left-12 md:left-8 lg:left-25 top-1/2 md:top-[450px] -translate-y-1/2 z-10"
         >
           <h2 className="text-4xl md:text-5xl lg:text-[8rem] font-extrabold tracking-wide leading-tight text-[#535D4E]! font-heading whitespace-nowrap">
             <span className="block mb-2">Where</span>
@@ -207,7 +207,7 @@ export default function TransformationService() {
 
         <div
           ref={womanRef}
-          className="absolute bottom-10 -right-4 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
+          className="absolute bottom-34 -right-4 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
         >
           <Image
             src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
@@ -247,7 +247,7 @@ export default function TransformationService() {
           ))}
         </div>
 
-        <div className="absolute w-full max-w-6xl text-center z-30 px-4 md:px-6 top-[53%] md:top-[55%]">
+        <div className="absolute w-full max-w-6xl text-center z-30 px-4 md:px-6 top-[53%] md:top-[47%]">
           {services.map((service, idx) => (
             <div
               key={`content-${service.id}`}
@@ -257,11 +257,11 @@ export default function TransformationService() {
                 {service.title}
               </h3>
 
-              <p className="text-sm md:text-xl leading-relaxed text-[#5C6154] mb-6 md:mb-10 max-w-md md:max-w-3xl mx-auto font-sans font-medium">
+              <p className="text-sm md:text-xl leading-relaxed text-[#5C6154] mb-6 md:mb-10 max-w-md md:max-w-3xl mx-auto font-sans font-medium px-3 md:px-0">
                 {service.desc}
               </p>
 
-              <Link href={service.btnLink} className="w-full md:w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold">
+              <Link href={service.btnLink} className="w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold">
                 {service.btnText}
               </Link>
             </div>
