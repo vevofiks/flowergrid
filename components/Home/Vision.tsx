@@ -69,7 +69,7 @@ const Vision = () => {
                 <div ref={imageWrapperRef} className="relative w-full h-[35vh] md:h-[60vh] lg:h-[90vh] flex items-center justify-center md:justify-end order-1 md:order-2">
                     <div className="relative w-full h-full">
                         <Image
-                            src={`/home/H vision flower.png`}
+                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/H vision flower.png`}
                             alt="Vision Flower"
                             fill
                             className='object-contain object-center md:object-right'

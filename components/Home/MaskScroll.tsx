@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -18,7 +19,7 @@ const MaskScroll = () => {
             scrollTrigger: {
                 trigger: container.current,
                 start: "top top",
-                end: "+=600%",
+                end: "+=500%",
                 scrub: 1,
                 pin: true,
                 anticipatePin: 1
@@ -115,9 +116,9 @@ const MaskScroll = () => {
         tl.to(texts[3], { y: -50, opacity: 0, duration: 0.5 }, "scene5");
 
         tl.to(bgImageRef.current, {
-            xPercent: -35,
-            yPercent: -35,
-            scale: 2,
+            xPercent: 0,
+            yPercent: 0,
+            scale: 1.09,
             duration: 1.5,
             ease: "power1.inOut"
         }, "scene5");
@@ -128,23 +129,6 @@ const MaskScroll = () => {
             "scene5+=0.2"
         );
 
-        tl.addLabel("scene6");
-        tl.to(texts[4], { y: -50, opacity: 0, duration: 0.5 }, "scene6");
-
-        tl.to(bgImageRef.current, {
-            xPercent: 0,
-            yPercent: 0,
-            scale: 1.09,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene6");
-
-        tl.fromTo(texts[5],
-            { y: 100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene6+=0.2"
-        );
-
     }, { scope: container });
 
     return (
@@ -153,7 +137,7 @@ const MaskScroll = () => {
             <div className="absolute inset-0 w-full h-full">
                 <div ref={bgImageRef} className="w-full h-full will-change-transform">
                     <Image
-                        src={`/home/H2.png`}
+                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/penn.svg`}
                         alt="BG"
                         fill
                         className='object-cover'
@@ -181,12 +165,8 @@ const MaskScroll = () => {
             <div ref={textRef} className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none px-4">
 
 
-                <h2 className="reveal-text absolute flex-nowrap text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
-                    Transformation begins by aligning your mind, body and spirit.
-                </h2>
-
                 <h2 className="reveal-text absolute text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
-                    The Flowergrid philosophy is rooted in balance.
+                    The Flowergrid philosophy is rooted in balance and integrative wellness.
                 </h2>
 
                 <h2 className="reveal-text absolute text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
@@ -203,9 +183,9 @@ const MaskScroll = () => {
                     <h2 className="text-5xl md:text-8xl lg:text-9xl font-bold text-white! leading-[0.9] text-center max-w-7xl font-gilroy-black">
                         See How We Help You Transform
                     </h2>
-                    <button className="explore-button pointer-events-auto px-8 py-4 bg-primary border text-white rounded-full font-medium cursor-pointer hover:bg-primary/90 transition-colors">
+                    <Link href="/services" className="explore-button pointer-events-auto px-8 py-4 bg-primary border text-white rounded-full font-medium cursor-pointer hover:bg-primary/90 transition-colors">
                         Explore Our Services
-                    </button>
+                    </Link>
                 </div>
 
             </div>

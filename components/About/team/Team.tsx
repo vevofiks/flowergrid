@@ -22,28 +22,28 @@ const TeamTreeSection = () => {
 
       {/* -- Decorative Leaves (Adjusted positions slightly for safety) -- */}
       <Image
-        src={`/home/left-leaf.png`}
+        src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
         width={120}
         height={120}
         alt=""
         className='absolute top-24 left-[-20px] md:top-8 md:left-1 opacity-70 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`/home/right-leaf.png`}
+        src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
         width={120}
         height={120}
         alt=""
         className='absolute top-36 right-[-20px] md:top-8 md:right-1 opacity-70 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`/home/right-leaf.png`}
+        src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
         width={120}
         height={120}
         alt=""
         className='absolute bottom-4 left-[-20px] md:bottom-8 md:left-0 opacity-70 rotate-180 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`/home/left-leaf.png`}
+        src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
         width={120}
         height={120}
         alt=""

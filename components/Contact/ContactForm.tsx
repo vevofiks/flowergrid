@@ -53,7 +53,7 @@ export default function ContactForm() {
         className="relative w-full md:w-1/2 h-[25vh] md:h-full shrink-0"
       >
         <Image
-          src={`/contact/form-img.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}contact/form-img.png`}
           alt="Hands holding a crystal"
           fill
           className="object-cover object-center"
