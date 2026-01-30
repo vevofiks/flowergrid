@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -26,9 +27,9 @@ const Connections = () => {
             { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
         );
 
-        tl.fromTo(".connection-column",
+        tl.fromTo(".connection-text",
             { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out" },
+            { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
             "-=0.4"
         );
 
@@ -39,16 +40,17 @@ const Connections = () => {
         );
 
     }, { scope: container });
+
     return (
         <section ref={container} className="w-full bg-background py-20 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
 
                 <div className="connection-header flex items-center gap-4 mb-12">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading">
-                        The Connection
+                        Holistic Wellness: Understanding the Flowergrid Connection
                     </h2>
                     <Image
-                        src={`/home/connection-logo.png`}
+                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
                         alt="Flowergrid Logo"
                         width={100}
                         height={100}
@@ -56,36 +58,19 @@ const Connections = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
-                    <div className="connection-column space-y-6">
-                        <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            At Flowergrid, we believe in unlocking life's mysteries and harnessing
-                            the power of the Flower of Life's sacred geometry.
-                        </p>
-                        <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            The Flower Grid is the integration of medicine science and supporting
-                            holistic modalities to create the ultimate wellness, that assist physical
-                            conditions,
-                        </p>
-                    </div>
-
-                    <div className="connection-column space-y-6">
-                        <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            mental health, terminally ill, improvement in ones aesthetic, anxiety
-                            and those seeking to live a conscious life.
-                        </p>
-                        <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            Discover how this ancient symbol can guide you towards understanding the
-                            Universe's creation, shaping your journey towards personal growth and
-                            transformation.
-                        </p>
-                    </div>
+                <div className="connection-text mb-12">
+                    <p className="text-text-body text-base md:text-lg leading-relaxed mb-6">
+                        At Flowergrid, we believe in Flower of Life healing for personal growth and spiritual balance, harnessing the power of this sacred geometry to guide conscious living. As a modern holistic wellness centre, the Flowergrid approach blends medical science with sacred geometry-based holistic wellness practices to create complete mind body spirit wellness.
+                    </p>
+                    <p className="text-text-body text-base md:text-lg leading-relaxed">
+                        Our programs help individuals manage physical conditions, support mental health, improve aesthetics, reduce anxiety, and cultivate mind body spirit wellness through integrative holistic methods. Discover how this ancient symbol can illuminate your journey, shaping your path toward personal growth, self-awareness, and lasting transformation.
+                    </p>
                 </div>
 
                 <div className="flex justify-center">
-                    <button className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
+                    <Link href="/about/teams" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors inline-block">
                         Discover The Flowergrid Philosophy
-                    </button>
+                    </Link>
                 </div>
 
             </div>

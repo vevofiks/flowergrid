@@ -12,34 +12,34 @@ const services = [
   {
     id: 1,
     title: "Life & Transformation Coaching",
-    desc: "Unlock your potential through tailored one-to-one coaching. Our approach blends practical mindset tools with self-reflection and accountability to help you navigate change, build confidence, and create meaningful direction in your life.",
-    img: `/home/H3b.png`,
+    desc: "Unlock your potential with personalized life and transformation coaching for emotional wellbeing. Our approach blends practical mindset tools with self-reflection and accountability to help you navigate change, build confidence, and create meaningful direction in your life.",
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`,
     btnText: "Explore Coaching",
-    btnLink: "/coaching"
+    btnLink: "/services"
   },
   {
     id: 2,
     title: "Mental Health & Emotional Wellbeing",
-    desc: "Find calm and clarity with professional support for stress, anxiety, and emotional balance. We use evidence-based techniques such as NLP, hypnotherapy, and mindfulness to help you develop resilience and a stronger connection to your inner self.",
-    img: `/home/H3c.png`,
+    desc: "Find calm and clarity with our evidence-based anxiety and stress management programs. We use techniques such as NLP, hypnotherapy, and mindfulness to help you develop resilience and a stronger connection to your inner self.",
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/H3c.png`,
     btnText: "Learn About Mental Wellbeing",
-    btnLink: "/mental-wellbeing"
+    btnLink: "/services"
   },
   {
     id: 3,
     title: "Physical Health & Aesthetic Wellness",
-    desc: "Achieve vitality inside and out through programmes that unite medical expertise with holistic care. From nutritional guidance and body treatments to lifestyle coaching, we help you look and feel your best while supporting long-term health.",
-    img: `/home/H3d.png`,
+    desc: "Achieve vitality inside and out through integrated medical and aesthetic health programs. From nutritional guidance and body treatments to lifestyle coaching, we help you look and feel your best while supporting long-term health.",
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/H3d.png`,
     btnText: "Discover Health Programmes",
-    btnLink: "/health-programmes"
+    btnLink: "/services"
   },
   {
     id: 4,
     title: "Workshops & Corporate Programmes",
-    desc: "Bring conscious living and wellbeing into your workplace or community. Our interactive workshops cover leadership, communication, stress management, and resilience training to promote healthier teams and more connected environments.",
-    img: `/home/H3e.png`,
-    btnText: "Learn About Workshops",
-    btnLink: "/workshops"
+    desc: "Bring conscious living into your workplace or community with corporate wellbeing workshops for resilience and leadership. Our interactive workshops cover leadership, communication, stress management, and resilience training to promote healthier teams and more connected environments.",
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t2.png`,
+    btnText: "View Workshops",
+    btnLink: "/programs/b2b"
   }
 ];
 
@@ -123,9 +123,9 @@ export default function TransformationService() {
         top: isMobile ? '35%' : '30%',
         xPercent: -50,
         yPercent: -50,
-        width: isMobile ? "90vw" : "550px",
-        height: isMobile ? "250px" : "320px",
-        borderRadius: "160px",
+        width: isMobile ? "90vw" : "500px",
+        height: isMobile ? "180px" : "200px",
+        borderRadius: "120px",
         duration: 2,
         ease: "power2.inOut",
       }, 3);
@@ -180,7 +180,7 @@ export default function TransformationService() {
     >
       <div ref={leafRef} className="absolute top-10 -left-1 md:top-8 md:-left-2 z-10">
         <Image
-          src={`/home/service-leaf.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}home/service-leaf.png`}
           alt="Leaf"
           width={80}
           height={80}
@@ -210,7 +210,7 @@ export default function TransformationService() {
           className="absolute bottom-10 -right-4 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
         >
           <Image
-            src={`/home/women-line-art.png`}
+            src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
             alt="Woman"
             width={400}
             height={400}
@@ -225,10 +225,10 @@ export default function TransformationService() {
         >
           <div className="pill-preview-image absolute inset-0 opacity-0 scale-90">
             <Image
-              src={`/home/H3a.png`}
+              src={`${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`}
               alt="Preview"
               fill
-              className="object-cover"
+              className="object-cover rounded-full"
             />
           </div>
 
@@ -241,7 +241,7 @@ export default function TransformationService() {
                 src={service.img}
                 alt={service.title}
                 fill
-                className="object-contain"
+                className="object-cover rounded-full"
               />
             </div>
           ))}

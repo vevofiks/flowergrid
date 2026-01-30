@@ -123,7 +123,7 @@ const WorkSpecifications = () => {
                             <div className='w-full h-full !bg-[#E5CCA1] rounded-xl flex flex-col gap-3 p-6 sm:p-8'>
                                 <div className='flex justify-center mb-2'>
                                     <Image
-                                        src={`/home/leaf.png`}
+                                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
                                         alt={card.title}
                                         width={40}
                                         height={40}

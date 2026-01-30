@@ -67,7 +67,7 @@ export default function VisionSection() {
 
           <div className="vision-image relative h-[400px] md:h-[500px] lg:h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-lg">
             <Image
-              src={`/about/person2/vision.jpg`}
+              src={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/vision.jpg`}
               alt="A Vision for Conscious Leadership"
               fill
               className="object-cover"

@@ -11,30 +11,51 @@ export interface Testimonial {
 const testimonialsData: Testimonial[] = [
     {
         id: 1,
-        quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-        author: "Aisha M.",
-        image: `/home/H5 a.png`,
+        quote: "Before coming to Flowergrid, I struggled with daily stress and imbalance. Their holistic wellness programmes helped me restore harmony in my life and feel truly supported.",
+        author: "Sarah Thompson, Surrey",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`,
         rating: 5,
     },
     {
         id: 2,
-        quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-        author: "Jonathan L.",
-        image: `/home/H5 b.png`,
+        quote: "The life and transformation coaching at Flowergrid was tailored to my needs. Each session helped me build clarity, confidence, and sustainable change in both my personal and professional life.",
+        author: "James Morgan, London",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 b.png`,
         rating: 5,
     },
     {
         id: 3,
-        quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-        author: "Winona",
-        image: `/home/H5 c.png`,
+        quote: "My holistic wellbeing has improved significantly since joining Flowergrid. I feel calmer, more focused, and better equipped to manage my mind, body, and spirit.",
+        author: "Emily Carter, Manchester",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 c.png`,
         rating: 5,
     },
     {
         id: 4,
-        quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-        author: "Sarah K.",
-        image: `/home/H5 d.png`,
+        quote: "I felt genuinely understood from day one. The guidance I received helped me reconnect with myself and achieve a deeper level of mind body spirit wellness.",
+        author: "David Wilson, UK",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 d.png`,
+        rating: 5,
+    },
+    {
+        id: 5,
+        quote: "I had tried several holistic wellness programmes before, but Flowergrid was different. The personalised approach helped me make real, lasting changes in my life.",
+        author: "Olivia Bennett, Kent",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`,
+        rating: 5,
+    },
+    {
+        id: 6,
+        quote: "Flowergrid's integrative wellness approach reminded me that healing is a personal journey. Their support allowed me to progress at my own pace and feel fully restored.",
+        author: "Michael Foster, Brighton",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 b.png`,
+        rating: 5,
+    },
+    {
+        id: 7,
+        quote: "The combination of life and transformation coaching with holistic practices at Flowergrid helped me shift my mindset, improve emotional wellbeing, and achieve meaningful personal growth.",
+        author: "Charlotte Hughes, London",
+        image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 c.png`,
         rating: 5,
     },
 ];
@@ -44,7 +65,7 @@ export default function HeroTestimonials() {
         <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
             <div className="max-w-3xl mx-auto px-4 mb-30 md:mb-10 mt-5 text-center">
                 <h2 className="text-4xl md:text-6xl font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center">
-                    WHAT OUR CLIENTS SAY ABOUT US
+                    Client Experiences with Flowergrid
                 </h2>
                 <p className="text-black! text-lg md:text-xl font-sans uppercase tracking-widest text-center">
                     Flowergrid's Testimonials

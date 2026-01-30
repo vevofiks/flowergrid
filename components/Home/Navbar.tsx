@@ -219,7 +219,7 @@ export default function Navbar() {
     >
       <Link href="/" className="z-50 relative w-16 h-16 md:w-20 md:h-20">
         <Image
-          src={`/logo/Flowergrid-logo.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
           alt="Luna Logo"
           width={58}
           height={58}
@@ -229,7 +229,7 @@ export default function Navbar() {
       </Link>
 
       <div className="z-50 relative flex items-center gap-4 md:gap-6">
-        <Link href="https://flowergrid.vercel.app/" target="_blank" className="hidden sm:flex relative items-center gap-3 mr-2 pl-4 pr-12 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 pl-4 pr-12 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
           <span className="text-sm font-sans tracking-wide">Chat with Luna</span>
           <div
             className="absolute -right-3 top-1/2 -translate-y-1/2 w-14 h-13 rounded-full flex items-center justify-center cursor-pointer"

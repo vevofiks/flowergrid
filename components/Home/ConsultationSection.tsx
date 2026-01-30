@@ -43,7 +43,7 @@ const ContactSection = () => {
     return (
         <section
             ref={containerRef}
-            className="bg-[#F3EAD8] h-screen w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8"
+            className="bg-[#F3EAD8] h-[40vh] md:h-screen w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8"
         >
             <div className="w-full max-w-[90vw] xl:max-w-7xl flex flex-col mb-10 md:mb-16">
 
@@ -66,7 +66,7 @@ const ContactSection = () => {
 
             <button
                 ref={buttonRef}
-                className="bg-[#A58E62] text-white font-medium rounded-full tracking-wider hover:bg-[#8F7A52] transition-colors duration-300 opacity-0 shadow-lg cursor-pointer
+                className="bg-primary text-white font-medium rounded-full tracking-wider transition-colors duration-300 opacity-0 shadow-lg cursor-pointer
                    text-xs px-8 py-3 
                    md:text-base md:px-12 md:py-4"
             >

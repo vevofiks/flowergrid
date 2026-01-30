@@ -128,7 +128,7 @@ const ProgrammeCards: React.FC<ProgrammeCardsProps> = ({ cards = defaultCards })
                                     {/* Leaf decoration - Inside the card at top */}
                                     <div className="flex justify-center mb-4">
                                         <Image
-                                            src={`/home/leaf.png`}
+                                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
                                             alt="Leaf decoration"
                                             width={50}
                                             height={50}

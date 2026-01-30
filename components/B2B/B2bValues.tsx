@@ -45,13 +45,13 @@ const B2bValues = () => {
     const values = [
         {
             icon: `/home/i3.png`,
-            title: "HOLISTIC & EVIDENCE-BASED CARE",
+            title: "Holistic and Practical",
             desc: "Our approach bridges psychology, mindfulness and real workplace challenges."
         },
         {
-            icon: `/home/i2.png`,
-            title: "SUSTAINABLE RESULT",
-            desc: "We focus on measurable impact, not quick fixes. Our programmes help create lasting behavioural and cultural change."
+            icon: `/home/i4.png`,
+            title: "Tailored for Every Culture",
+            desc: "We design each corporate wellbeing programme to fit your specific structure, pace, and strategic objectives."
         },
         {
             icon: `/home/i1.png`,
@@ -59,9 +59,9 @@ const B2bValues = () => {
             desc: "Our multi-disciplinary team of 15+ certified coaches, therapists and wellbeing experts bring both professional insight and human understanding."
         },
         {
-            icon: `/home/i4.png`,
-            title: "Tailored for Every Culture",
-            desc: "We design each programme to fit your organisation’s structure, pace and objectives."
+            icon: `/home/i2.png`,
+            title: "Sustainable Results",
+            desc: "We focus on measurable impact, not quick fixes. Our programmes help create lasting behavioural and cultural change."
         }
     ];
 
@@ -70,7 +70,7 @@ const B2bValues = () => {
 
             <div className="leaf-left absolute top-3 left-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src={`/home/left-leaf.png`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -80,7 +80,7 @@ const B2bValues = () => {
 
             <div className="leaf-right absolute bottom-3 right-0 w-24 md:w-50 pointer-events-none z-0">
                 <Image
-                    src={`/home/right-leaf.png`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -89,7 +89,7 @@ const B2bValues = () => {
             </div>
 
             <div className="relative z-10 max-w-7xl w-full items-center mx-auto px-6">
-                <h2 className="text-black! text-2xl md:text-3xl lg:text-4xl text-center mx-auto font-heading font-normal tracking-wide mt-[38px]">Why Organisations Choose Flower Grid</h2>
+                <h2 className="text-black! text-2xl md:text-3xl lg:text-4xl text-center mx-auto font-heading font-medium tracking-wide mt-[38px]">Why Organisations Choose Flower Grid</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-center pb-10 md:pb-0">
                     {values.map((item, index) => (
                         <div key={index} className="flex flex-col items-center">
