@@ -32,7 +32,7 @@ export default function Hero() {
 
             <div className="absolute inset-0">
                 <Image
-                    src={`/membership/hero.jpg`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}membership/hero.jpg`}
                     alt="Membership Hero"
                     fill
                     className="object-cover"

@@ -11,48 +11,38 @@ gsap.registerPlugin(ScrollTrigger);
 const faqData = [
     {
         id: 1,
-        question: "I am new to holistic wellness. Where is the best place to start?",
-        answer: "The best starting point is our complimentary discovery call. This is a relaxed, confidential conversation where we can understand your personal goals and challenges. We can then recommend the most suitable path for you, whether that is one-to-one coaching, a specific wellness programme, or joining a workshop.",
+        question: "What does Holistic Wellness mean at Flowergrid?",
+        answer: "Holistic Wellness at Flowergrid focuses on your mind, body and spirit as one connected system. We combine therapeutic support, physical health guidance and reflective practices to help you build lasting balance and genuine holistic wellbeing.",
     },
     {
         id: 2,
-        question: "How do I book a holistic wellness consultation at Flowergrid?",
-        answer: "Booking is simple. You can schedule online, ring us on +44 7432 211096, or drop us an email at sk@flowergrid.co.uk. We offer a free 30-minute discovery session where we'll chat about what you're looking for and suggest the right holistic wellbeing programme to help you get there.",
+        question: "How does Flowergrid support mind body spirit wellness?",
+        answer: "Our approach brings together medical insight, emotional support and gentle energy practices to encourage mind body spirit wellness. Each programme is designed to help you feel grounded, centred and more aware of your personal needs.",
     },
     {
         id: 3,
-        question: "What qualifications do your holistic wellness practitioners have?",
-        answer: "Our team includes qualified doctors, certified life coaches, licensed therapists and accredited holistic practitioners. Each professional holds proper certifications in their speciality, whether that's NLP, hypnotherapy, Reiki or clinical qualifications. We take professional standards seriously to ensure you receive safe, effective integrative wellness support.",
+        question: "What is included in your life and transformation coaching?",
+        answer: "Our life and transformation coaching offers structured guidance that supports clarity, confidence and personal direction. Sessions may include mindset work, emotional wellbeing support and practical tools that help you move forward with purpose.",
     },
     {
         id: 4,
-        question: "Can I combine different holistic wellbeing services in my programme?",
-        answer: "Absolutely. Our holistic wellness approach works best when combining complementary services. Many clients benefit from pairing life and transformation coaching with stress management, or medical consultations with energy healing for complete mind body spirit wellness.",
+        question: "Do you offer services that support mental and emotional wellbeing?",
+        answer: "Yes. Flowergrid provides programmes that address anxiety, stress, confidence and emotional balance. Techniques such as NLP, hypnotherapy and mindfulness help you understand your patterns and develop healthier ways of responding to daily challenges.",
     },
     {
         id: 5,
-        question: "Do you offer holistic wellness services in Croydon and South London?",
-        answer: "Yes, our holistic wellness centre in Coulsdon, CR5 2JA, serves Croydon, Surrey and South London. We also provide online integrative wellness consultations across the UK and internationally, making mind body spirit wellness accessible wherever you are.",
+        question: "What integrative wellness treatments do you offer for physical health?",
+        answer: "Our integrative wellness services include nutritional consulting, medical and aesthetic treatments and personalised health plans. Each option is designed to improve physical vitality while supporting your wider holistic wellbeing.",
     },
     {
         id: 6,
-        question: "What are your fees for a discovery call or initial session?",
-        answer: "Our initial discovery call is offered free of charge, with no obligation. This ensures you can explore how Flowergrid can help you before making a commitment. Fees for subsequent coaching or therapy sessions vary depending on the practitioner and programme length. Please contact us for our current rate card.",
+        question: "Can I access Flowergrid's holistic wellness services online?",
+        answer: "Yes. Many of our holistic wellness and emotional wellbeing services are available both online and in person. This makes it easy to continue your progress even if you are travelling or living outside the local area.",
     },
     {
         id: 7,
-        question: "What happens during a corporate wellness workshop?",
-        answer: "Our corporate workshops are interactive and practical. We focus on key areas such as resilience, leadership, communication, and stress management. The aim is to provide your team with tangible tools and strategies they can apply immediately to improve their performance, wellbeing, and workplace environment.",
-    },
-    {
-        id: 8,
-        question: "Can I combine different holistic wellbeing services in my programme?",
-        answer: "Absolutely. Our holistic wellness approach works best when combining complementary services. Many clients benefit from pairing life and transformation coaching with stress management, or medical consultations with energy healing for complete mind body spirit wellness.",
-    },
-    {
-        id: 9,
-        question: "What is your policy for cancelling or rescheduling an appointment?",
-        answer: "We operate a 48-hour cancellation policy. If you need to reschedule or cancel an appointment, please let us know at least 48 hours in advance to avoid a cancellation fee. This policy helps us manage our practitioners' schedules and offer appointments to clients on our waiting list.",
+        question: "Who can benefit from holistic wellbeing programmes at Flowergrid?",
+        answer: "Our programmes are suitable for anyone seeking clarity, improved emotional balance, better physical health or deeper personal growth. Whether you are starting a new chapter or rebuilding your energy, holistic wellbeing can support steady and meaningful progress.",
     },
 ];
 

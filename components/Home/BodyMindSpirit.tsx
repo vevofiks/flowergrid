@@ -13,8 +13,8 @@ const sections = [
     {
         id: "body",
         title: "BODY",
-        thumb: `/home/H4 d.png`,
-        full: `/home/H4 a.png`,
+        thumb: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 d.png`,
+        full: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 a.png`,
         details: [
             { title: "Medical & Aesthetic Health Care", desc: "Enhancing physical vitality through scientifically guided body sculpting & health checks." },
             { title: "Nutritional Consulting", desc: "Personalized diet plans to optimize gut health, energy, and immunity." },
@@ -24,8 +24,8 @@ const sections = [
     {
         id: "mind",
         title: "MIND",
-        thumb: `/home/H4 e.png`,
-        full: `/home/H4 b.png`,
+        thumb: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 e.png`,
+        full: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 b.png`,
         details: [
             { title: "Anxiety & Stress Management", desc: "Tools and techniques to declutter the mind and manage stress effectively." },
             { title: "Neuro-Linguistic Programming (NLP)", desc: "Rewiring thought patterns to break negative cycles and boost confidence." },
@@ -36,8 +36,8 @@ const sections = [
     {
         id: "spirit",
         title: "SPIRIT",
-        thumb: `/home/H4 f.png`,
-        full: `/home/H4 c.png`,
+        thumb: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 f.png`,
+        full: `${process.env.NEXT_PUBLIC_IMGURL}home/H4 c.png`,
         details: [
             { title: "Meditation & Mindfulness", desc: "Guided practices to cultivate presence and inner peace." },
             { title: "Reiki Healing", desc: "Gentle energy work to unblock chakras and restore balance." },

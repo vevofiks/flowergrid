@@ -22,7 +22,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=600%",
+                end: "+=1000%",
                 scrub: 1.5,
                 pin: true,
             }
@@ -58,11 +58,14 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
 
 
         textLines.forEach((line, index) => {
-            const triggerTime = (index * swayDuration) + (swayDuration * 0.4);
+            const linePosition = ((index + 1) / (lines.length + 1)) * 110;
+            const leafReachTime = (linePosition / 110) * totalDuration;
+            const revealDelay = 0.1;
+            const triggerTime = leafReachTime + revealDelay;
 
             tl.to(line, {
                 opacity: 1,
-                duration: 1,
+                duration: 0.6,
                 ease: "power2.out"
             }, triggerTime);
         });
@@ -77,7 +80,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#F3EAD8]"
+            className="relative w-full h-screen py-16 md:py-0 overflow-hidden flex flex-col items-center justify-center bg-[#F3EAD8]"
         >
             <div
                 ref={textWrapperRef}
@@ -100,7 +103,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                 style={{ willChange: 'top, transform' }}
             >
                 <Image
-                    src={`/home/leaf.png`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
                     alt="Leaf"
                     width={100}
                     height={100}

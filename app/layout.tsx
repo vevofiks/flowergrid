@@ -7,8 +7,8 @@ import { LoadingProvider } from "@/contexts/LoadingContext";
 import Footer from "@/components/Home/Footer";
 
 export const metadata: Metadata = {
-  title: "Flower Grid",
-  description: "Flower Grid",
+  title: "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
+  description: "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity.",
 };
 
 export default function RootLayout({

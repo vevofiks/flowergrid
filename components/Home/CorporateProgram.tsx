@@ -8,27 +8,27 @@ import { MoveRight } from "lucide-react";
 const workshops = [
   {
     id: 1,
-    title: "Be a Leader of Your Own Life",
-    desc: "Empower your leaders to inspire and guide teams with confidence, empathy, and clarity. Our workshops develop decision-making, resilience, and emotional intelligence.",
-    image: `/home/H5 a.png`
+    title: "Be a leader of you own life",
+    desc: "Empower your leaders to inspire and guide teams with confidence, empathy, and clarity. Our workshops develop decision-making, resilience, and emotional intelligence to foster high-performing, motivated, and collaborative leaders.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`
   },
   {
     id: 2,
     title: "Communication Skills Training",
-    desc: "Enhance team collaboration and workplace clarity through practical strategies. Participants learn to listen actively, articulate ideas, and resolve conflicts.",
-    image: `/home/H5 b.png`
+    desc: "Enhance team collaboration and workplace clarity through practical communication strategies. Participants learn to listen actively, articulate ideas effectively, and resolve conflicts, improving productivity, engagement, and overall team cohesion.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 b.png`
   },
   {
     id: 3,
     title: "Wellbeing Programs",
-    desc: "Support staff and students to achieve mental, emotional, and physical balance. Our holistic approach integrates relaxation and stress management.",
-    image: `/home/H5 c.png`
+    desc: "Support staff and students to achieve mental, emotional, and physical balance. Our holistic approach integrates relaxation, stress management, and wellness practices to boost energy, focus, and sustained performance.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 c.png`
   },
   {
     id: 4,
     title: "Mental Health Awareness",
-    desc: "Provide teams with tools to manage stress and anxiety. These sessions promote resilience, emotional stability, and a psychologically safe environment.",
-    image: `/home/H5 d.png`
+    desc: "Provide teams and students with practical tools to recognise, manage, and reduce stress and anxiety. These sessions promote resilience, emotional stability, and a supportive, psychologically safe environment.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 d.png`
   }
 ];
 
@@ -80,8 +80,8 @@ export default function CorporateProgram() {
 
                 <div
                   className={`grid transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeIndex === index
-                      ? "grid-rows-[1fr] opacity-100 pb-4"
-                      : "grid-rows-[0fr] opacity-0 pb-0"
+                    ? "grid-rows-[1fr] opacity-100 pb-4"
+                    : "grid-rows-[0fr] opacity-0 pb-0"
                     }`}
                 >
                   <div className="overflow-hidden">

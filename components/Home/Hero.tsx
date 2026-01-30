@@ -66,7 +66,7 @@ export default function Hero() {
         <section ref={container} className="relative w-full min-h-screen flex flex-col bg-background overflow-x-hidden">
             <div ref={heroImageRef} className="relative w-full h-[50vh] md:h-[65vh] lg:h-[78vh]">
                 <Image
-                    src={`/home/H1.png`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/H1.png`}
                     alt="Hero Image"
                     fill
                     className="object-cover object-top"
@@ -75,26 +75,23 @@ export default function Hero() {
             </div>
 
             <div className="relative w-full flex-1 px-6 md:px-12 lg:px-14 pb-20 pt-0">
-                <div ref={flowerRef} className="absolute top-[-20px] right-[20px] w-40 md:top-auto md:right-3 md:w-100 lg:w-150 pointer-events-none z-0">
+                <div ref={flowerRef} className="absolute top-[-20px] right-[20px] w-40 md:top-10 md:right-3 md:w-100 lg:w-150 pointer-events-none z-0">
                     <Image
-                        src={`/home/hero-flower.png`}
+                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/hero-flower.png`}
                         width={600}
                         height={600}
                         alt="Decorative Flower"
-                        className="w-full h-auto"
+                        className="w-full h-auto object-contain"
                     />
                 </div>
 
                 <div ref={textRef} className="relative z-10 md:mt-0 max-w-4xl">
                     <h1 className="hero-text-element medium leading-[1.1] text-4xl md:text-6xl lg:text-[59px]">
-                        EMBRACE HEALTH INTEGRATION <br className="hidden md:block" />
-                        OF MIND, BODY & SOUL <br className="hidden md:block" />
-                        WITH
+                        Holistic Wellness: Integrating Mind, Body & Soul for Complete Wellbeing
                     </h1>
 
                     <p className="hero-text-element mt-6 md:mt-8 text-lg md:text-xl max-w-2xl">
-                        <span className="font-bold text-gray-600">Samina Khan</span>, wellbeing coach with expertise in
-                        integrated holistic practices for mind and body
+                        Flowergrid is a holistic wellness centre in the UK, guiding you toward balance, clarity and conscious living through integrative mind-body-spirit practices.
                     </p>
 
                     <div className="hero-text-element mt-10 flex flex-wrap md:flex-col gap-4">

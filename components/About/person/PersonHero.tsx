@@ -112,7 +112,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
             w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
           "
         >
-          <Image src={`/about/lamp.png`} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
+          <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/lamp.png`} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
         </div>
 
         <div
@@ -146,7 +146,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
             w-[160px] sm:w-[220px] md:w-[260px] lg:w-[340px] xl:w-[400px]
           "
         >
-          <Image src={`/about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
+          <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
         </div>
 
         <div
@@ -158,7 +158,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
           "
         >
           <Image
-            src={`/about/tablewithplant.png`}
+            src={`${process.env.NEXT_PUBLIC_IMGURL}about/tablewithplant.png`}
             alt="Table"
             width={420}
             height={200}

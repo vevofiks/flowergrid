@@ -50,6 +50,13 @@ export default function ProgramFormat() {
             stagger: 0.2,
             ease: "back.out(1.7)"
         }, "-=0.4");
+
+        tl.from(".proposal-btn", {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out"
+        }, "-=0.6");
     }, { scope: containerRef });
 
     return (
@@ -92,6 +99,12 @@ export default function ProgramFormat() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="proposal-btn mt-12 md:mt-16 flex justify-center relative z-10">
+                <button className="bg-primary text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-sm md:text-base font-semibold tracking-wide uppercase hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Request a Tailored Proposal
+                </button>
             </div>
 
         </section>
