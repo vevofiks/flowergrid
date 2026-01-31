@@ -112,7 +112,17 @@ const FaqItem = ({
     );
 };
 
-export default function FaqSection() {
+interface Faq {
+    id: number;
+    question: string;
+    answer: string;
+}
+
+interface FaqSectionProps {
+    faqs?: Faq[];
+}
+
+export default function FaqSection({ faqs = faqData }: FaqSectionProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const headerRef = useRef<HTMLHeadingElement>(null);
     const listRef = useRef<HTMLDivElement>(null);
@@ -163,7 +173,7 @@ export default function FaqSection() {
                 </h2>
 
                 <div ref={listRef} className="flex flex-col">
-                    {faqData.map((faq) => (
+                    {faqs.map((faq) => (
                         <FaqItem
                             key={faq.id}
                             question={faq.question}
