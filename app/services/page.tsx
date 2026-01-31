@@ -1,24 +1,17 @@
 import Intro from '@/components/Services/Intro'
 import ScrollingTextReveal from '@/components/UI/ScrollingTextReveal'
 import MedicalServices from '@/components/Services/MedicalServices'
-import FlowerRiseAnimation from '@/components/Services/FlowerRiseAnimation'
 import MeetExperts from '@/components/Services/MeetExperts'
 import CoreValues from '@/components/Home/CoreValues'
 import ServiceConsultation from '@/components/Services/ServiceConsultation'
 import FaqSection from '@/components/Contact/FAQSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
+import Image from 'next/image'
 
+const img = `/about/person2/4.png`
 
 const phrases = [
-  "The Flower of Life",
-  "reminds us that ",
-  "everything in the",
-  "universe is ",
-  "connected",
-  "including our own",
-  "journey of",
-  "transformation"
-
+  "The Flower of Life reminds us that everything in the universe is connected, including our own journey of transformation"
 ]
 
 const coreValues = [
@@ -56,11 +49,21 @@ const page = () => {
             <ScrollingTextReveal phrases={phrases} />
           </div>
 
-          <div className="flex items-end justify-center h-full min-h-[600px]">
-            <FlowerRiseAnimation />
+          <div className="flex items-end justify-center h-full ">
+            <div className="relative">
+                <Image
+                  src={img}
+                  alt="Flower Grid"
+                  width={500}
+                  height={600}
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+            </div>
           </div>
         </div>
-      </section>
+      </section>  
       <MedicalServices />
       <MeetExperts />
       <CoreValues values={coreValues} />

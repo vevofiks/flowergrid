@@ -35,7 +35,6 @@ const WorkSpecifications = () => {
     ];
 
     useGSAP(() => {
-        // Text animation - top to bottom
         const textElements = textRef.current?.children;
         if (textElements) {
             gsap.fromTo(
@@ -59,7 +58,6 @@ const WorkSpecifications = () => {
             );
         }
 
-        // Cards animation - right to left
         const cardElements = cardsRef.current?.children;
         if (cardElements) {
             gsap.fromTo(
@@ -89,7 +87,6 @@ const WorkSpecifications = () => {
             className='w-full py-12 sm:py-16 md:py-20 flex justify-center overflow-hidden'
         >
             <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-24 items-start">
-                {/* Left side - Text content */}
                 <div ref={textRef}
                     className='flex flex-col gap-6 sm:gap-8 text-[#4A4A4A]'
                 >
@@ -103,7 +100,7 @@ const WorkSpecifications = () => {
                         Our platform, known as The Intelligent Soul's Wellness Platform, helps people explore personal growth through both structured learning and intuitive guidance.
                     </p>
 
-                    <p className='sm:text-lg !text-black lg:text-2xl font-semibold'>
+                    <p className='sm:text-lg !text-black lg:text-2xl font-normal'>
                         We bring together:
                     </p>
 
@@ -112,14 +109,12 @@ const WorkSpecifications = () => {
                     </p>
                 </div>
 
-                {/* Right side - Cards */}
                 <div ref={cardsRef} className='flex flex-col gap-6 lg:gap-5'>
                     {cards.map((card, index) => (
                         <div
                             key={index}
                             className='border-2 border-[#8B7355] rounded-2xl p-3'
                         >
-                            {/* Inner content container */}
                             <div className='w-full h-full !bg-[#E5CCA1] rounded-xl flex flex-col gap-3 p-6 sm:p-8'>
                                 <div className='flex justify-center mb-2'>
                                     <Image

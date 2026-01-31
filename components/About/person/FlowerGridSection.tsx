@@ -1,24 +1,35 @@
 'use client';
 
 import Image from 'next/image';
-import FlowerAnimation from './FlowerAnimation';
 import BlurTextReveal from '../../UI/BlurTextReveal';
 
-export default function FlowerGridSection() {
+interface FlowerGridSectionProps {
+    text: string;
+    img: string;
+}
+
+export default function FlowerGridSection({ text, img}: FlowerGridSectionProps) {
     const content = "I'm proud to be part of Flower Grid, where a team of 15 skilled practitioners provides integrated support for mind, body, and spirit. Together, we offer coaching, counselling, nutrition guidance, exercise plans, Reiki, spiritual direction, and medical support.";
 
     return (
         <section className="min-h-screen flex items-center justify-center py-10 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                {/* LEFT: Text Content */}
                 <div className="order-2 lg:order-1">
-                    <BlurTextReveal text={content} />
+                    <BlurTextReveal text={text} />
                 </div>
 
-                {/* RIGHT: Flower Animation */}
-                <div className="order-1 px-20 lg:order-2 h-[500px] lg:h-[600px] flex items-center justify-center">
-                    <FlowerAnimation/>
+                <div className="order-1 lg:order-2 h-[300px] sm:h-[450px] md:h-[500px] lg:h-[600px] flex items-center justify-center p-4 md:p-10 lg:px-20">
+                    <div className="relative w-full h-full">
+                        <Image
+                            src={img}
+                            alt="Flower Grid"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            priority
+                        />
+                    </div>
                 </div>
 
             </div>

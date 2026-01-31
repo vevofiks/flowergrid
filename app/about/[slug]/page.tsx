@@ -11,6 +11,8 @@ import JourneySection from '@/components/About/person/JourneySection'
 import Connect from '@/components/About/person/Connect'
 import WorkSpecifications from '@/components/About/person/WorkSpecifications'
 import Vision from '@/components/About/person/Vision'
+import Qualifications from '@/components/About/person/Qualifications'
+import Support from '@/components/About/person/Support'
 
 const PersonPage = () => {
   const pathname = usePathname();
@@ -31,7 +33,7 @@ const PersonPage = () => {
     );
   }
 
-  console.log(personData.hero.imageSrc)
+  console.log(personData.flowerWithText);
 
   return (
     <div>
@@ -49,6 +51,7 @@ const PersonPage = () => {
           phrases={personData.scrollingText.phrases}
         />
       )}
+      
       <WorkIncludes
         description={personData.workIncludes.description}
         steps={personData.workIncludes.steps}
@@ -57,11 +60,17 @@ const PersonPage = () => {
         title2={personData.workIncludes.title2}
       />
 
-      <FlowerGridSection />
+      {personData?.flowerWithText && (
+        <FlowerGridSection
+          text={personData.flowerWithText.description}
+          img={personData.flowerWithText.image}
+        />
+      )}
 
       {isPerson2 && (
-        <WorkSpecifications/>
+        <WorkSpecifications />
       )}
+      
       {personData?.journeySection && (
         <JourneySection
           title={personData.journeySection.title}
@@ -70,9 +79,12 @@ const PersonPage = () => {
         />
       )}
 
+      <Qualifications qualifications={personData.qualifications} educations={personData.educations} vision={personData.vision} />
+
       {isPerson2 && (
-        <Vision/>
+        <Vision />
       )}
+      <Support data={personData.support} />
 
       <Connect
         image={personData.connect.image}

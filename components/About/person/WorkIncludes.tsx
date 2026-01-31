@@ -38,7 +38,6 @@ const WorkIncludes = ({
     const cardsRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
-        // 1. Text Animation (Top to Down)
         const textElements = textRef.current?.children;
         if (textElements) {
             gsap.fromTo(textElements,
@@ -47,20 +46,18 @@ const WorkIncludes = ({
                     y: 0,
                     opacity: 1,
                     duration: 1,
-                    stagger: 0.3, // Increased stagger for better visibility
+                    stagger: 0.3,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: textRef.current,
-                        start: "top 80%", // Trigger earlier
+                        start: "top 80%",
                         end: "bottom 20%",
-                        toggleActions: "play none none none", // Play once on enter
-                        // markers: true, // Uncomment for debugging
+                        toggleActions: "play none none none", 
                     }
                 }
             );
         }
 
-        // 2. Cards Animation (Fade in from right with stagger)
         const cards = cardsRef.current?.children;
         if (cards) {
             gsap.fromTo(cards,
@@ -69,14 +66,13 @@ const WorkIncludes = ({
                     x: 0,
                     opacity: 1,
                     duration: 0.8,
-                    stagger: 0.3, // Increased stagger for better visibility
+                    stagger: 0.3,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: cardsRef.current,
-                        start: "top 80%", // Trigger earlier
+                        start: "top 80%",
                         end: "bottom 20%",
-                        toggleActions: "play none none none", // Play once on enter
-                        // markers: true, // Uncomment for debugging
+                        toggleActions: "play none none none",
                     }
                 }
             );
@@ -90,12 +86,10 @@ const WorkIncludes = ({
         >
             <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-24 items-center">
 
-                {/* --- LEFT SIDE: TEXT --- */}
                 <div ref={textRef} className="flex flex-col gap-6 sm:gap-8 text-body">
                     <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-normal text-heading leading-tight'>
                         {title}
                     </h1>
-                    {/* Use prop description or fallback */}
                     <p className='text-lg sm:text-xl md:text-2xl leading-relaxed text-[#5B5B5B] font-light'>
                         {description || "I take a holistic approach that combines mind, body, and spirit, because I believe true transformation starts from within and grows through guided reflection and actionable steps."}
                     </p>
@@ -110,7 +104,6 @@ const WorkIncludes = ({
                     </div>
                 </div>
 
-                {/* --- RIGHT SIDE: CARDS --- */}
                 <div ref={cardsRef} className="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
                     {steps.map((step, index) => (
                         <div key={index} className="w-full">

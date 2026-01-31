@@ -21,7 +21,7 @@ const services = [
     id: 2,
     title: "Mental Health & Emotional Wellbeing",
     desc: "Find calm and clarity with our evidence-based anxiety and stress management programs. We use techniques such as NLP, hypnotherapy, and mindfulness to help you develop resilience and a stronger connection to your inner self.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/H3c.png`,
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t2.png`,
     btnText: "Learn About Mental Wellbeing",
     btnLink: "/services"
   },
@@ -29,7 +29,7 @@ const services = [
     id: 3,
     title: "Physical Health & Aesthetic Wellness",
     desc: "Achieve vitality inside and out through integrated medical and aesthetic health programs. From nutritional guidance and body treatments to lifestyle coaching, we help you look and feel your best while supporting long-term health.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/H3d.png`,
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t3.png`,
     btnText: "Discover Health Programmes",
     btnLink: "/services"
   },
@@ -37,12 +37,11 @@ const services = [
     id: 4,
     title: "Workshops & Corporate Programmes",
     desc: "Bring conscious living into your workplace or community with corporate wellbeing workshops for resilience and leadership. Our interactive workshops cover leadership, communication, stress management, and resilience training to promote healthier teams and more connected environments.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t2.png`,
+    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t4.png`,
     btnText: "View Workshops",
     btnLink: "/programs/b2b"
   }
 ];
-
 
 export default function TransformationService() {
   const containerRef = useRef<HTMLDivElement>(null);

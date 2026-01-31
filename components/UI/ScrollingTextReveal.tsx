@@ -55,9 +55,10 @@ export default function ScrollingTextReveal({ phrases }: ScrollingTextRevealProp
   return (
     <h1
       ref={containerRef}
-      className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-full font-heading 
-      p-10 max-w-3xl flex flex-wrap gap-x-[0.3em]
-      leading-tight tracking-wide"  
+      className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl w-full font-heading 
+      p-10 max-w-screen-2xl mx-auto flex flex-wrap justify-center gap-x-[0.3em] text-center
+      leading-tight tracking-wide
+      md:p-10"
     >
       {phrases.map((phrase, index) => (
         <span key={index} className="inline-block">

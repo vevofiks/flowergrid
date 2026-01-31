@@ -16,11 +16,9 @@ const Connect = ({ image, title, description, btnText = "Schedule Appointment" }
                     src={image}
                     alt={title}
                     fill
-                    className="object-cover rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
+                    className="object-cover rounded-t-2xl hover:scale-105 transition-all duration-300 md:rounded-t-none md:rounded-l-2xl"
                 />
             </div>
-
-            {/* Right side - Content */}
             <div className="bg-[#E5CCA1] flex flex-col justify-center items-start p-8 md:p-12 lg:p-16 rounded-b-2xl md:rounded md:rounded-r-2xl">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-[#2d3e2d] mb-4">
                     {title}
@@ -31,6 +29,7 @@ const Connect = ({ image, title, description, btnText = "Schedule Appointment" }
                     </p>
                 )}
                 <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 rounded-full text-sm md:text-base shadow-md">
+
                     {btnText}
                 </button>
             </div>

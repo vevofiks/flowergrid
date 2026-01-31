@@ -11,7 +11,6 @@ if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-// -- Types --
 type JourneyItem =
     | { type: 'card'; number: string; title: string; description: string }
     | { type: 'flower'; image: string; alt: string };
@@ -28,7 +27,6 @@ export default function JourneySection({ title, description, items }: JourneySec
 
 
     useGSAP(() => {
-        // Simple fade-up for the grid items
         gsap.fromTo('.journey-item',
             { y: 50, opacity: 0 },
             {
@@ -46,10 +44,9 @@ export default function JourneySection({ title, description, items }: JourneySec
     }, { scope: containerRef });
 
     return (
-        <section className="py-24"> {/* Global Beige Background */}
+        <section className="py-24"> 
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-heading text-[#171717] mb-4">
                         {title}
@@ -67,11 +64,8 @@ export default function JourneySection({ title, description, items }: JourneySec
                     {items.map((item, index) => (
                         <div key={index} className="journey-item flex justify-center items-center w-full h-full">
 
-                            {/* --- RENDER CARD --- */}
                             {item.type === 'card' ? (
-                                // "Double Border" Card Style
                                 <div className="w-full max-w-[280px] aspect-[3/4] border-2 border-[#C4A484] rounded-2xl p-3 flex flex-col">
-                                    {/* Inner Filled Container */}
                                     <div className="w-full h-full !bg-[#E5CCA1] rounded-xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
 
                                         <span className="text-4xl font-heading text-[#171717] mb-4">
@@ -89,11 +83,8 @@ export default function JourneySection({ title, description, items }: JourneySec
                                 </div>
                             ) : (
 
-                                // --- RENDER FLOWER ---
                                 <div className="w-full max-w-[250px] aspect-[3/4] flex items-center justify-center relative">
-                                    {/* Replace with your actual flower assets */}
                                     <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-500">
-                                        {/* Using a placeholder SVG logic if image fails, but you should use real images */}
                                         <Image
                                             src={item.image || "/assets/flower-placeholder.svg"}
                                             alt={item.alt}

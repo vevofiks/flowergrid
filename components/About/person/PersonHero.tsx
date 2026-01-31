@@ -74,31 +74,30 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen w-full overflow-hidden
+      className="relative min-h-[850px] w-full overflow-hidden
                   bg-gradient-to-r from-[#ECDDC6] to-[#a27f45]"
     >
 
       <div className="mx-auto flex flex-col min-h-screen max-w-7xl items-center justify-center md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
-          md:flex-col md:h-[800px] sm:max-h-[650px] lg:max-h-[800px]
+          md:flex-col md:h-[850px] lg:max-h-[850px]
       ">
 
         <div
           ref={textRef}
           className="
           relative z-20 mx-auto
-          max-w-4xl
+          max-w-6xl
           md:pt-12 lg:pt-16
-          px-4 sm:px-8 md:px-24 lg:px-24 lg:pr-24
+          px-4 sm:px-6 md:px-12 lg:px-24 lg:pr-24
           text-center
           flex flex-col justify-center
         "
         >
           <h1 className="
-          text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl
+          text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
-          md:mb-12 lg:mb-20 "
-            style={{ marginBottom: '75px' }}
+          md:px-28 lg:mt-20 mb-24 sm:mb-32 "
           >
             {text}
           </h1>
@@ -107,7 +106,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
         <div
           ref={lampRef}
           className="
-            absolute top-0 left-0 sm:left-2 md:left-6 lg:left-10 xl:left-12
+            absolute top-0 left-0 sm:left-2 md:left-0 lg:left-10 xl:left-12
             z-10
             w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
           "
@@ -117,27 +116,18 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
 
         <div
           ref={imageRef}
-          className="
-              absolute bottom-0 left-1/2 z-10
-              h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh]
-              w-full max-w-[260px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[560px]
-              -translate-x-1/2
-            "
-        >
+          className="absolute bottom-[-2.5rem] left-1/2 z-10 h-full w-full -translate-x-1/2">
           <Image
             src={imageSrc}
             alt="trainer img"
-            fill
-            className="object-contain object-bottom"
+            width={450}
+            height={450}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[250px] object-contain object-bottom sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px]"
             priority
           />
         </div>
 
-        <div
-          className="absolute bottom-0 left-0 w-full h-24
-            sm:h-28 md:h-32 lg:h-36
-            bg-gradient-to-r from-[#ECDDC6] to-[#af8849]"
-        />
+        <div className="absolute bottom-0 left-0 w-full h-24 sm:h-8 md:h-32 lg:h-36 bg-gradient-to-r from-[#ECDDC6] to-[#af8849]" />
 
         <div
           className="
@@ -147,13 +137,14 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
           "
         >
           <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
+
         </div>
 
         <div
           className="
             absolute bottom-0 left-0
             z-10
-            w-[180px] sm:w-[240px] md:w-[300px] lg:w-[360px] xl:w-[420px]
+            w-[180px] sm:w-[320px] md:w-[360px] lg:w-[400px] xl:w-[420px]
             -mb-6 sm:-mb-8 md:-mb-10 lg:-mb-12
           "
         >
