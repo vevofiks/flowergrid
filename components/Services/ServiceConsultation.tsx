@@ -43,14 +43,14 @@ const ServiceConsultation = () => {
     return (
         <section
             ref={containerRef}
-            className="bg-[#F3EAD8] h-screen w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8"
+            className="bg-[#F3EAD8] h-[50vh] -mb-20 md:mb-0 w-full flex flex-col justify-center items-center overflow-hidden px-4 md:px-8"
         >
             <div className="w-full max-w-[90vw] xl:max-w-7xl flex flex-col mb-10 md:mb-16">
 
                 <h1
                     ref={leftTextRef}
                     className="text-start text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0
-                     text-4xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
+                     text-2xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
                 >
                     EVERY TRANSFORMATION
                 </h1>
@@ -58,7 +58,7 @@ const ServiceConsultation = () => {
                 <h1
                     ref={rightTextRef}
                     className="text-start text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0 mt-2 md:mt-4
-                     text-4xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
+                     text-xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
                 >
                     STARTS WITH A CONVERSATION
                 </h1>

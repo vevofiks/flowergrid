@@ -47,11 +47,11 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
             >
-                <div className="max-w-4xl">
+                <div className="max-w-6xl">
 
                     <motion.h1
                         variants={itemVariants}
-                        className="text-white! text-4xl md:text-6xl lg:text-[4.5rem] font-heading font-light leading-[1.1] mb-6 tracking-wide"
+                        className="text-white! text-3xl md:text-7xl lg:text-[5.5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
                     >
                         Become the Healthiest, Most Aligned Version of You
                     </motion.h1>

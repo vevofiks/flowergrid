@@ -62,9 +62,9 @@ export default function ProgramFormat() {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4 overflow-hidden"
+            className="relative w-full h-auto lg:h-screen flex flex-col items-center justify-between lg:justify-center py-12 lg:py-16 px-4 overflow-hidden md:mt-20"
         >
-            <div className="intro-text text-center max-w-5xl mb-12 md:mb-16 relative z-10">
+            <div className="intro-text text-center max-w-5xl mb-8 lg:mb-10 relative z-10">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
                     Programme Formats
                 </h2>
@@ -73,13 +73,13 @@ export default function ProgramFormat() {
                 </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 relative z-10 w-full justify-center items-start max-w-7xl">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 relative z-10 w-full justify-center items-start max-w-7xl">
                 {sections.map((section, index) => (
                     <div
                         key={section.id}
                         className="thumb-item flex flex-col items-center gap-6 flex-1"
                     >
-                        <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72">
+                        <div className="relative w-40 h-40 md:w-56 md:h-56 lg:w-48 lg:h-48 xl:w-64 xl:h-64">
                             <Image
                                 src={section.thumb}
                                 alt={section.title}
@@ -92,7 +92,7 @@ export default function ProgramFormat() {
                             {section.title}
                         </h3>
 
-                        <div className="p-6 rounded-2xl max-w-[400px]">
+                        <div className="px-4 py-2 rounded-2xl max-w-[350px]">
                             <p className="text-black/80 text-sm md:text-base leading-relaxed text-center">
                                 {section.details}
                             </p>
@@ -101,7 +101,7 @@ export default function ProgramFormat() {
                 ))}
             </div>
 
-            <div className="proposal-btn mt-12 md:mt-16 flex justify-center relative z-10">
+            <div className="proposal-btn mt-8 lg:mt-10 flex justify-center relative z-10">
                 <button className="bg-primary text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-sm md:text-base font-semibold tracking-wide uppercase hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     Request a Tailored Proposal
                 </button>

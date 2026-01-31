@@ -84,7 +84,7 @@ export default function B2bHero() {
             <button className="bg-[#C19A6B] hover:bg-[#A8865A] text-white font-medium text-lg py-4 px-8  max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
               Book a Discovery Session
             </button>
-            <button className="border text-white hover:bg-[#C19A6B]/10 font-medium text-lg py-4 px-8 max-w-full md:max-w-120 rounded-full transition-colors duration-300">
+            <button className="border text-white hover:bg-[#C19A6B]/10 font-medium text-md md:text-lg py-4 px-8 max-w-full md:max-w-120 rounded-full transition-colors duration-300">
               Download Programme Brochure
             </button>
           </div>

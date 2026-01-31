@@ -49,13 +49,13 @@ export default function OfferSection() {
 
 
   return (
-    <section className="relative w-full h-[146vh] md:h-[130vh] bg-[#4E351A] px-4 py-8 md:px-10 lg:px-20 overflow-hidden">
+    <section className="relative w-full h-auto min-h-screen lg:h-[130vh] bg-[#4E351A] px-4 py-20 md:px-10 lg:px-20 overflow-hidden">
       <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 mt-21">
         <h1 className="text-white! text-5xl font-heading font-normal tracking-wide">What We Offer</h1>
         <p className="text-white! text-lg font-sans font-light! tracking-wide mt-2">Our corporate and educational programmes address both individual growth and team dynamics.</p>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto h-[calc(100%-120px)] max-h-[80vh] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+      <div className="w-full max-w-7xl mx-auto h-auto lg:h-[calc(100%-120px)] lg:max-h-[80vh] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
 
 
         <div className="relative w-full h-[40vh] lg:h-full lg:max-h-[98vh] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-0">
@@ -97,8 +97,8 @@ export default function OfferSection() {
 
                 <div
                   className={`grid transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeIndex === index
-                      ? "grid-rows-[1fr] opacity-100 pb-4"
-                      : "grid-rows-[0fr] opacity-0 pb-0"
+                    ? "grid-rows-[1fr] opacity-100 pb-4"
+                    : "grid-rows-[0fr] opacity-0 pb-0"
                     }`}
                 >
                   <div className="overflow-hidden">

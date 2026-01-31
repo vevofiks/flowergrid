@@ -129,7 +129,7 @@ export default function Footer() {
                                     <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">B2B</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Blogs</Link></li>
+                            {/* <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Blogs</Link></li> */}
                             <li><Link href="/contact" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>

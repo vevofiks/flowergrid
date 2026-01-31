@@ -98,7 +98,7 @@ export default function Hero() {
                         <button className="w-full md:w-100 px-8 py-4 bg-primary text-white rounded-full font-medium hover:opacity-90 transition-opacity">
                             Book a Discovery Session
                         </button>
-                        <button className="w-full md:w-120 px-8 py-4 border border-[#171717] text-[#17171] rounded-full font-medium hover:bg-primary hover:border-primary hover:text-white transition-colors">
+                        <button className="w-full md:w-120 px-8 py-4 border border-[#171717] text-[#17171] text-sm md:text-base rounded-full font-medium hover:bg-primary hover:border-primary hover:text-white transition-colors">
                             Discover the Flower of Life Approach
                         </button>
                     </div>

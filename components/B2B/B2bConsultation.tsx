@@ -50,7 +50,7 @@ const ContactSection = () => {
                 <h1
                     ref={leftTextRef}
                     className="text-left text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0
-                      text-2xl md:text-8xl lg:text-[5rem] "
+                      text-xl md:text-8xl lg:text-[5rem] "
                 >
                     BRING HOLISTIC WELLNESS
                 </h1>
@@ -58,7 +58,7 @@ const ContactSection = () => {
                 <h1
                     ref={rightTextRef}
                     className="text-right text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0 mt-2 md:mt-4
-                     text-2xl md:text-8xl lg:text-[5rem] "
+                     text-xl md:text-8xl lg:text-[5rem] "
                 >
                     TO YOUR ORGANISATION
                 </h1>
