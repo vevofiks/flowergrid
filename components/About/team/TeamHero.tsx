@@ -1,9 +1,10 @@
 import React from 'react'
 
 const TeamHero = () => {
+    const imageUrl = process.env.NEXT_PUBLIC_IMGURL
     return (
         <div
-            style={{ background: "url('/About/team/teamhero.jpg') no-repeat center center/cover" }}
+            style={{ background: `url('${imageUrl}about/team/teamhero.jpg') no-repeat center center/cover` }}
             // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
             // 2. Added overflow-hidden to prevent scrollbars
             className='relative flex items-center min-h-[60vh] md:min-h-screen w-full overflow-hidden'
