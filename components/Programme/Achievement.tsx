@@ -63,7 +63,7 @@ export default function Achievement() {
             <div className="intro-text text-center max-w-5xl mb-8 md:mb-12 lg:mb-16 relative z-10 px-4">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
                     What You Will Achieve
-                </h2>end
+                </h2>
                 <p className="text-base md:text-lg lg:text-xl font-sans text-black/70! leading-relaxed">
                     Experience transformation that touches every part of your being.
                     <br />

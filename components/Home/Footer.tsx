@@ -95,7 +95,7 @@ export default function Footer() {
                         <div className="absolute -bottom-13 z-10 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
                             <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0">
                                 <img
-                                    src={`${process.env.NEXT_PUBLIC_IMGURL}logo/footer-logo_cropped.png`}
+                                    src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
                                     alt="Logo"
                                     className="object-contain w-full h-full"
                                 />

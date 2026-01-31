@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function BlurTextReveal({ text }: { text: string }) {
     const containerRef = useRef<HTMLDivElement>(null);
+    console.log("BlurTextReveal text:", text);
 
     useGSAP(() => {
         const elements = containerRef.current?.querySelectorAll('.word');

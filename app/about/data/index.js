@@ -1,3 +1,5 @@
+import { m } from "framer-motion";
+
 export const personsData = {
     "person1": {
         slug: "person1",
@@ -5,7 +7,7 @@ export const personsData = {
 
         // PersonHero component data
         hero: {
-            imageSrc: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/samina.png`,
+            imageSrc: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`,
             text: "Hi, I'm Samina Khan, wellbeing coach with expertise in integrated holistic practices for mind & body"
         },
 
@@ -54,6 +56,11 @@ export const personsData = {
                 }
             ]
         },
+
+        flowerWithText : {
+            image: `/about/person1/4.png`,
+            description: "I'm proud to be part of Flower Grid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together we offer coaching, counselling, nutrition guidance, exercise plans, Reiki spiritual direction, and medical Support."
+        },
         // JourneySection component data
         journeySection: {
             title: "Your Journey with Me",
@@ -74,9 +81,9 @@ export const personsData = {
                     "type": "card",
                     "number": "02",
                     "title": "Reflection",
-                    "description": "We examine fears, limiting beliefs, and opportunities for growth"
+                    "description": "We examine fears and limiting beliefs using holistic life coaching techniques"
                 },
-                {
+                {   
                     "type": "flower",
                     "image": `${process.env.NEXT_PUBLIC_IMGURL}about/person1/3b.png`,
                     "alt": "Coneflower Sketch"
@@ -109,9 +116,59 @@ export const personsData = {
             image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/5.png`,
             title: "Take The First Step",
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
-        }
-    },
+        },
 
+        // Vision component data
+        vision: {
+            title: "A Vision for Conscious Leadership",
+            image: "/Home/connection-logo.png",
+            text: [
+                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
+                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
+            ]
+        },
+
+        // Qualifications component data
+        qualifications: [
+            {
+                period: "2023 – Present",
+                title: "Strategic Leadership & Community Impact",
+                description: "Founder · Trustee · Strategic Partnerships",
+            },
+            {
+                period: "2020 – 2023",
+                title: "Wellness & Social Consultancy",
+                description: "Management Consultant · Senior Consultant · Head of Business Development",
+            },
+            {
+                period: "2000 – 2018",
+                title: "Corporate Strategy & Change Management",
+                description: "Promotions Manager · Change Management Manager · Senior Service Delivery Manager",
+            },
+        ],
+        educations: [
+            "MA Business Management – Kingston University",
+            "Postgraduate Diploma in International Marketing – CIM (Chartered Institute of Marketing)",
+            "ITIL Service Delivery – IT Service Management Certification",
+            "NLP Practitioner – Neuro-Linguistic Programming",
+            "Mental Health First Aider – LSBU University"
+        ],
+        support : [
+            {
+                image: "/About/person1/s1.jfif",
+                title: "Personal & Professional Growth Coaching",
+            },
+            {
+                image: "/About/person1/s2.jfif",
+                title: "Leadership & Soft Skills Coaching",
+            },
+            {
+                image: "/About/person1/s3.jfif",
+                title: "Neuro-Linguistic Programming",
+            }
+        ]
+    },
+    
     "person2": {
         slug: "person2",
         name: "Monira Ahmed",
@@ -127,9 +184,9 @@ export const personsData = {
             title: "My Journey",
             imageSrc: `${process.env.NEXT_PUBLIC_IMGURL}about/person2/1.png`,
             bioText: [
-                "For over 15 years, I've helped professionals navigate career transitions and unlock their full potential. My journey began in corporate leadership, where I witnessed firsthand the challenges of balancing ambition with personal fulfillment.",
-                "After experiencing my own transformative career shift, I became passionate about helping others find clarity and purpose in their professional lives. I combine strategic thinking with emotional intelligence to guide my clients through meaningful change.",
-                "Whether you're contemplating a career change, seeking advancement, or looking to align your work with your values, I'm here to help you create a roadmap to success that honors who you truly are."
+                "My journey has taken me through the worlds of business, education, and community development. I began my career with a degree in International Business and Economics, which opened my eyes to how people learn, lead, and adapt in different cultures.",
+                "Today, I work as a hypnotherapist in Croydon and global strategist. Along the way, I trained as a Master NLP Coach and became a certified trainer in nutrition and soft skills. These disciplines gave me the tools to understand human behaviour and guide others through meaningful transformation.",
+                "My career has been shaped by one idea: progress happens when people grow together. Whether I am mentoring young adults, supporting women settling into new environments, or leading wellbeing programmes, I aim to help people feel confident, capable, and connected."
             ]
         },
 
@@ -157,6 +214,10 @@ export const personsData = {
                     description: "Implementation Support Accountability Check-ins Skill Development Success Celebration"
                 }
             ]
+        },
+        flowerWithText : {
+            image: `/about/person2/4.png`,
+            description: "Flower Grid was created from a shared vision with Samina Khan to unite science and spirituality in one space. Our platform, known as “The Intelligent Soul's Wellness Platform”, helps people explore personal growth through both structured learning and intuitive guidance."
         },
         // JourneySection component data
         journeySection: {
@@ -213,9 +274,60 @@ export const personsData = {
         connect: {
             image: `${process.env.NEXT_PUBLIC_IMGURL}about/person2/5.png`,
             title: "Let's Begin Your Journey",
+
             description: "If you are ready to explore your potential, strengthen your mindset and live with greater purpose, I would love to connect.",
 
-        }
+        },
+
+        // Vision component data
+        vision: {
+            title: "Leadership with Purpose",
+            image: "/Home/connection-logo.png", // Assuming a similar asset exists or using a placeholder
+            text: [
+                "I envision a world where leadership is defined not by authority, but by authenticity and service. My mission is to empower individuals to lead lives of impact and integrity.",
+                "By integrating professional ambition with personal wellbeing, I help my clients build sustainable success that nurtures both themselves and the communities they serve."
+            ]
+        },
+
+        // Qualifications component data
+        qualifications: [
+           {
+            period: "2023 - Present",
+            title: "Strategic Leadership & Community Impact",
+            description: "Founder · Trustee · Strategic Partnerships"
+           },
+            {
+            period: "2020 - 2023",
+            title: "Wellness & Social Consultancy",
+            description: "Management Consultant · Senior Consultant · Head of Business Development"
+           },
+           {
+            period: "2000 – 2018",
+            title: "Corporate Strategy & Change Management",
+            description: "Promotions Manager · Change Management Manager · Senior Service Delivery Manager"
+           }
+        ],
+        educations: [
+            "MA Business Management – Kingston University",
+            "Postgraduate Diploma in International Marketing – CIM (Chartered Institute of Marketing)",
+            "ITIL Service Delivery – IT Service Management Certification",
+            "NLP Practitioner – Neuro-Linguistic Programming",
+            "Mental Health First Aider – LSBU University"
+        ],
+        support : [
+            {
+                image: "/About/person2/s1.jfif",
+                title: "Hypnotherapy",
+            },
+            {
+                image: "/About/person2/s2.jfif",
+                title: "Rapid Transformational Therapy (RTT)",
+            },
+            {
+                image: "/About/person1/s3.jfif",
+                title: "Neuro-Linguistic Programming (NLP)",
+            }
+        ]
     },
 };
 
