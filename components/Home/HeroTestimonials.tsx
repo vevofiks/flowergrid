@@ -4,11 +4,11 @@ export interface Testimonial {
     id: number;
     quote: string;
     author: string;
-    image: string;
+    image?: string;
     rating: number;
 }
 
-const testimonialsData: Testimonial[] = [
+const defaultTestimonials: Testimonial[] = [
     {
         id: 1,
         quote: "Before coming to Flowergrid, I struggled with daily stress and imbalance. Their holistic wellness programmes helped me restore harmony in my life and feel truly supported.",
@@ -60,19 +60,29 @@ const testimonialsData: Testimonial[] = [
     },
 ];
 
-export default function HeroTestimonials() {
+interface HeroTestimonialsProps {
+    testimonials?: Testimonial[];
+    title?: string;
+    subtitle?: string;
+}
+
+export default function HeroTestimonials({
+    testimonials = defaultTestimonials,
+    title = "Client Experiences with Flowergrid",
+    subtitle = "Flowergrid's Testimonials"
+}: HeroTestimonialsProps) {
     return (
         <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
             <div className="max-w-3xl mx-auto px-4 mb-30 md:mb-10 mt-5 text-center">
                 <h2 className="text-4xl md:text-6xl font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center">
-                    Client Experiences with Flowergrid
+                    {title}
                 </h2>
                 <p className="text-black! text-lg md:text-xl font-sans uppercase tracking-widest text-center">
-                    Flowergrid's Testimonials
+                    {subtitle}
                 </p>
             </div>
 
-            <MovingTestimonials testimonials={testimonialsData} />
+            <MovingTestimonials testimonials={testimonials} />
         </section>
     );
 }
