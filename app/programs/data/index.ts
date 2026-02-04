@@ -106,8 +106,8 @@ export const myPrograms: ProgramData[] = [
     {
         id:6,
         title:"Corporate & Community Programs",
-        description:"Empower your teams and communities with workshops designed to enhance leadership, communication, resilience, and overall wellbeing. Our expert-led sessions foster a conscious, collaborative culture, boost productivity, and develop emotional intelligence for lasting impact in any organisation or group.",
-        benefits:["Tailored workshops for organisations, schools, NHS, and community groups","Practical strategies to enhance leadership and teamwork","Tools for stress management, resilience, and wellbeing","Cultivates conscious, supportive, and high-performing workplace culture"],
+        description:"Empower your teams and communities with workshops designed to enhance leadership, communication, resilience, and overall wellbeing. Our expert-led sessions foster a conscious, collaborative culture, boost productivity, and develop emotional intelligence for lasting impact in any organization or group.",
+        benefits:["Tailored workshops for organizations, schools, NHS, and community groups","Practical strategies to enhance leadership and teamwork","Tools for stress management, resilience, and wellbeing","Cultivates conscious, supportive, and high-performing workplace culture"],
         buttonText:"Learn More about Corporate Programs",
         buttonLink:"/programs/corporate",
         imageUrl:`/programme/p6.jpg`,

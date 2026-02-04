@@ -4,8 +4,50 @@ import B2bHero from '@/components/B2B/B2bHero'
 import B2bValues from '@/components/B2B/B2bValues'
 import OfferSection from '@/components/B2B/OfferSection'
 import ProgramFormat from '@/components/B2B/ProgramFormat'
+import FaqSection from '@/components/Contact/FAQSection'
+import ConsultationSection from '@/components/Home/ConsultationSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import React from 'react'
+
+
+const B2BFaqs = [
+    {
+        id: 1,
+        question: "How are your corporate wellbeing programmes different from standard employee assistance plans (EAPs)?",
+        answer: "EAPs are often reactive, offering support only when an employee is already in crisis. Our corporate wellbeing programmes are proactive. We focus on building emotional intelligence, resilience and leadership skills before burnout happens. We work with your culture and team dynamics to create an environment where wellbeing is integrated into daily work, not just an add-on service."
+    },
+    {
+        id: 2,
+        question: "Can you tailor the programme to our specific industry or team size?",
+        answer: "Yes. We understand that a university faculty faces different pressures than a tech start-up or financial firm. Every engagement begins with a consultation to understand your specific challenges. We then design a corporate wellbeing programme that fits your sector, team size and current objectives, whether you need a half-day workshop for ten people or a long-term strategy for a whole department."
+    },
+    {
+        id: 3,
+        question: "Do you deliver training online, in person or both?",
+        answer: "We offer flexible delivery to suit modern working patterns. Our leadership and emotional intelligence coaching and team workshops can be delivered onsite at your offices, fully online via secure video platforms, or through a hybrid model. For deeper work, we also facilitate off-site corporate wellness retreats to help teams disconnect and reset."
+    },
+    {
+        id: 4,
+        question: "How do we measure the impact of a corporate wellbeing programme?",
+        answer: "We focus on tangible outcomes, not just attendance numbers. Depending on your goals, we can track metrics such as improved employee engagement scores, reduced sickness absence, or qualitative feedback on team communication and stress levels. We build regular review points into our corporate wellbeing programmes to ensure we are delivering real value and sustainable change."
+    },
+    {
+        id: 5,
+        question: " Is your approach suitable for senior leadership teams?",
+        answer: "Absolutely. In fact, sustainable culture change often starts at the top. Our executive coaching and leadership and emotional intelligence coaching are designed specifically for senior decision-makers. We help leaders manage their own nervous systems and stress responses so they can lead with greater clarity, empathy and stability during high-pressure periods."
+    },
+    {
+        id: 6,
+        question: "What if our team is cynical about “wellness” initiatives?",
+        answer: "We encounter this often, and we welcome it. Our approach is grounded in psychology, neuroscience and practical application. We avoid generic advice and focus on evidence-based tools that help people do their jobs better and feel less exhausted. Feedback consistently shows that even skeptical participants value the practical nature of our mindfulness and stress resilience training."
+    },
+    {
+        id: 7,
+        question: "How quickly can we get started?",
+        answer: "We can usually begin the discovery process within a few days of your enquiry. Once we have agreed on the scope and focus of your corporate wellbeing programme, we can typically schedule workshops or coaching sessions to start within a few weeks, depending on the scale of the rollout and your internal timelines."
+    },
+];
+
 
 const b2bTestimonials = [
     {
@@ -54,6 +96,8 @@ const B2BPage = () => {
                 subtitle="What our B2B partners say"
             />
             <B2bConsultation />
+            <FaqSection faqs={B2BFaqs} />
+
         </div>
     )
 }
