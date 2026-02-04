@@ -43,8 +43,8 @@ const AboutB2b = () => {
         <section ref={container} className="w-full bg-background py-20 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
 
-                <div className="connection-header flex items-center gap-4 mb-12">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading">
+                <div className="connection-header flex items-start gap-4 mb-12">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl lg:max-w-4xl font-heading text-text-heading">
                         About Our Corporate Wellbeing Programmes
                     </h2>
                     <Image
@@ -59,7 +59,7 @@ const AboutB2b = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
                     <div className="connection-column space-y-2">
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            At Flowergrid, we believe people are at the heart of every organisation’s success. Our corporate wellbeing programmes are designed to create workplaces that are emotionally aware, purpose-driven, and resilient.
+                            At Flowergrid, we believe people are at the heart of every organization’s success. Our corporate wellbeing programmes are designed to create workplaces that are emotionally aware, purpose-driven, and resilient.
                         </p>
                     </div>
 

@@ -69,7 +69,7 @@ export default function ProgramFormat() {
                     Programme Formats
                 </h2>
                 <p className="text-base md:text-xl lg:text-2xl font-sans text-black/70! leading-relaxed">
-                    Choose a format that suits your organisation's needs and time frame.
+                    Choose a format that suits your organization's needs and time frame.
                 </p>
             </div>
 
