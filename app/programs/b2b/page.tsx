@@ -48,7 +48,6 @@ const B2BFaqs = [
     },
 ];
 
-
 const b2bTestimonials = [
     {
         id: 1,
