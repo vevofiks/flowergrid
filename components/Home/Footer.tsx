@@ -101,7 +101,7 @@ export default function Footer() {
                                 />
                             </div>
                             <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
-                                Flower Grid
+                                Flower Grid 
                             </span>
                         </div>
                     </div>

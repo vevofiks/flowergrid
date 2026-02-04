@@ -89,7 +89,7 @@ const contactTestimonials = [
 const ContactPage = () => {
     return (
         <div>
-            <div className="h-screen flex items-center justify-center" style={{ backgroundImage: `url(/contact/hero.png)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="h-screen flex items-center justify-center" style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_IMGURL}contact/contactHero.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <h1 className='text-6xl lg:text-8xl font-medium text-white! text-center'>Contact Us</h1>
             </div>
 

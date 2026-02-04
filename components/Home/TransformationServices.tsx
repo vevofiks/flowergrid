@@ -119,7 +119,7 @@ export default function TransformationService() {
         ease: "power2.inOut"
       }, 1);
       tl.to(rightTextRef.current, {
-        x: isMobile ? 50 : pushDist,
+        x: isMobile ? 100 : pushDist,
         opacity: isMobile ? 0 : 1,
         duration: 1.5,
         ease: "power2.inOut"
@@ -210,7 +210,7 @@ export default function TransformationService() {
 
         <div
           ref={womanRef}
-          className="absolute bottom-20 -right-9 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
+          className="absolute bottom-50 -right-9 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
         >
           <Image
             src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
