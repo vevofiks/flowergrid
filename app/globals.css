@@ -93,3 +93,33 @@ p {
 button {
   cursor: pointer;
 }
+
+.flower-mask {
+  /* Mask setup */
+  -webkit-mask-image: linear-gradient(to bottom,
+      black 0%,
+      black 30%,
+      transparent 60%);
+  mask-image: linear-gradient(to bottom,
+      black 0%,
+      black 30%,
+      transparent 60%);
+
+  -webkit-mask-size: 100% 200%;
+  mask-size: 100% 200%;
+
+  -webkit-mask-position: 0% 0%;
+  mask-position: 0% 0%;
+
+  transition: -webkit-mask-position 1s ease-in-out;
+  transition: mask-position 1s ease-in-out;
+}
+
+/* SVG Drawing Animation Styles */
+svg {
+  overflow: visible;
+}
+
+.draw-path {
+  vector-effect: non-scaling-stroke;
+}

@@ -103,7 +103,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ qualifications = [], ed
                                                 {item.description}
                                             </p>
                                         )}
-                           
+
                                     </div>
                                 </div>
                             </div>
