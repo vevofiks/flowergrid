@@ -45,7 +45,8 @@ export default function MovingTestimonials({ testimonials }: MovingTestimonialsP
 
                             <div className="flex items-center">
                                 {item.image && (
-                                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                                    console.log(item.author.length),
+                                    <div className={`relative ${item.author.length > 25 ? "w-22 h-14" : "w-12 h-12"} rounded-full overflow-hidden mr-4`}>
                                         <Image
                                             src={item.image}
                                             alt={item.author}
