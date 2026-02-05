@@ -1,3 +1,5 @@
+import { i, image } from "framer-motion/client";
+import { title } from "process";
 
 const imageUrl = process.env.NEXT_PUBLIC_IMGURL;
 export const personsData = {
@@ -118,15 +120,6 @@ export const personsData = {
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
         },
 
-        // Vision component data
-        vision: {
-            title: "A Vision for Conscious Leadership",
-            image: `${imageUrl}Home/connection-logo.png`,
-            text: [
-                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
-                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
-            ]
-        },
 
         // Qualifications component data
         qualifications: [
@@ -155,16 +148,24 @@ export const personsData = {
         ],
         support : [
             {
-                image: `${imageUrl}about/person1/s1.jfif`,
+                image: `${imageUrl}about/person1/s1.jpg`,
                 title: "Personal & Professional Growth Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s2.jfif`,
+                image: `${imageUrl}about/person1/s2.jpg`,
                 title: "Leadership & Soft Skills Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s3.jfif`,
-                title: "Neuro-Linguistic Programming",
+                image: `${imageUrl}about/person1/s3.jpg`,
+                title: "Neuro-Linguistic Programming",  
+            },
+            {
+                image: `${imageUrl}about/person1/s4.jpg`,
+                title: "Soul Reflection & Transformation Work"
+            },
+            {
+                image: `${imageUrl}about/person1/s5.jpg`,
+                title: "Rekhi Healing"
             }
         ]
     },
@@ -199,18 +200,18 @@ export const personsData = {
             description2: "This combination allows me to help clients achieve both personal and professional transformation. It is astructured yet compassionate approach that blends intellect with intuition.",
             steps: [
                 {
-                    title: "Strategic insight",
+                    title: "Strategic Insight",
                     image: `${imageUrl}about/person2/2a.png`,
                     description: "developed through years in business and education"
                 },
                 {
-                    title: "Psychological techniques insight",
+                    title: "Psychological Techniques Insight",
                     image: `${imageUrl}about/person2/2b.png`,
                     description: " Using my expertise as an NLP coach in Croydon and RTT practitioner to shift mindsets."
 
                 },
                 {
-                    title: "Wellbeing practices",
+                    title: "Wellbeing Practices",
                     image: `${imageUrl}about/person2/2c.png`,
                     description: "such as nutrition, mindfulness and energy balance"
                 }
@@ -282,10 +283,10 @@ export const personsData = {
         // Vision component data
         vision: {
             title: "Leadership with Purpose",
-            image: `${imageUrl}Home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
+            image: `${imageUrl}home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
             text: [
-                "I envision a world where leadership is defined not by authority, but by authenticity and service. My mission is to empower individuals to lead lives of impact and integrity.",
-                "By integrating professional ambition with personal wellbeing, I help my clients build sustainable success that nurtures both themselves and the communities they serve."
+                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
+                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
             ]
         },
 
@@ -296,7 +297,7 @@ export const personsData = {
             title: "Strategic Leadership & Community Impact",
             description: "Founder · Trustee · Strategic Partnerships"
            },
-            {
+            {   
             period: "2020 - 2023",
             title: "Wellness & Social Consultancy",
             description: "Management Consultant · Senior Consultant · Head of Business Development"
@@ -315,17 +316,26 @@ export const personsData = {
             "Mental Health First Aider – LSBU University"
         ],
         support : [
+
             {
-                image: `${imageUrl}about/person2/ps1.jfif`,
+                image: `${imageUrl}about/person2/ps3.jpg`,
                 title: "Hypnotherapy",
             },
             {
-                image: `${imageUrl}about/person2/ps2.jfif`,
+                image: `${imageUrl}about/person2/ps2.png`,
                 title: "Rapid Transformational Therapy (RTT)",
             },
             {
-                image: `${imageUrl}about/person1/s3.jfif`,
+                image: `${imageUrl}about/person1/s3.jpg`,
                 title: "Neuro-Linguistic Programming (NLP)",
+            },
+            {
+                image: `${imageUrl}about/person2/ps1.jpg`,
+                title: "Anxiety & Stress Management Techniques",
+            },
+            {
+                image: `${imageUrl}about/person1/s4.jpg`,
+                title: "Soul Reflection & Transformation Work"
             }
         ]
     },
