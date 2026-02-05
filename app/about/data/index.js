@@ -224,7 +224,7 @@ export const personsData = {
         // JourneySection component data
         journeySection: {
             title: "Community and Impact",
-            description: "Community work is central to what I do. I have collaborated with schools, charities and local organisations to design programmes that make a lasting difference. These include:",
+            description: "Community work is central to what I do. I have collaborated with schools, charities and local organizations to design programmes that make a lasting difference. These include:",
             flowerWithCard: [
                 {
                     "type": "card",
@@ -409,7 +409,7 @@ export const teamTree = [
         "members": [
             {
                 "name": "Rico Wagner Caleep",
-                "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
+                "role": "Leadership • Growth • Mental Performance Coaching executives & organizations",
                 "image": `${imageUrl}about/team/rico.png`,
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }

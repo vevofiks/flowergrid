@@ -52,11 +52,11 @@ const Vision = () => {
                 <div className="flex flex-col items-center md:items-start z-10 order-2 md:order-1 justify-start md:justify-center h-full max-h-[90vh] mx-10 md:mx-0">
                     <h1 ref={titleRef} className='text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.1] mb-6 text-center md:text-left'>
                         The Vision Behind <br className="hidden md:block" />
-                        FlowerGrid
+                        Flowergrid
                     </h1>
 
                     <p ref={textRef} className='text-[#4A4A4A] text-sm md:text-base lg:text-xl font-sans! leading-relaxed max-w-lg mb-8 text-center md:text-left'>
-                        FlowerGrid exists to guide individuals and organisations towards holistic wellbeing through mind, body, and spirit integration. We provide evidence-based, personalised programs that foster personal growth, resilience, and conscious living, supporting meaningful change while helping clients achieve balance, clarity, and long-term transformation.
+                        FlowerGrid exists to guide individuals and organizations towards holistic wellbeing through mind, body, and spirit integration. We provide evidence-based, personalised programs that foster personal growth, resilience, and conscious living, supporting meaningful change while helping clients achieve balance, clarity, and long-term transformation.
                     </p>
 
                     <Link href="/vision" className='' >

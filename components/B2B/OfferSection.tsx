@@ -9,38 +9,38 @@ const workshops = [
   {
     id: 1,
     title: "Leadership and Emotional Intelligence Coaching",
-    desc: "Empower leaders to connect with authenticity and purpose. Through guided reflection and emotional awareness training, participants learn to inspire, motivate, and build meaningful connections within their teams.",
-    image: `/b2b/1.jpg`
+    desc: "Empower leaders to manage with empathy and self-awareness. We help managers understand their own drivers to build psychological safety and trust within their teams.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/1.jpg`
   },
   {
     id: 2,
     title: "Mindfulness and Stress Resilience Training",
-    desc: "Cultivate calm and clarity amidst workplace pressures. This program helps individuals manage stress through mindfulness tools, grounding techniques, and emotional balance practices for lasting inner stability.",
-    image: `/b2b/2.jpg`
+    desc: "Practical tools to help employees manage high-pressure environments. We teach nervous system regulation and focus techniques to reduce burnout.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/2.jpg`
   },
   {
     id: 3,
     title: "Trauma-Informed Workplace Wellbeing Workshops",
-    desc: "Designed with empathy and care, these sessions help teams understand trauma awareness, emotional safety, and boundaries—creating workplaces where everyone feels respected, supported, and seen.",
-    image: `/b2b/3.jpg`
+    desc: "Create a supportive environment. We guide organizations on how to support staff through personal crises and societal stress without overstepping professional boundaries.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/3.jpg`
   },
   {
     id: 4,
     title: "Communication and Relationship Coaching",
-    desc: "Designed with empathy and care, these sessions help teams understand trauma awareness, emotional safety, and boundaries—creating workplaces where everyone feels respected, supported, and seen.",
-    image: `/b2b/4.jpg`
+    desc: "Resolve conflict and silence silos. Using NLP and transactional analysis, we improve how teams listen, speak, and collaborate for smoother workflows.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/4.jpg`
   },
   {
     id: 5,
     title: "Team Cohesion and Cultural Alignment",
-    desc: "Transform groups into purpose-driven communities. This offering focuses on aligning shared values, enhancing empathy, and nurturing a culture of belonging and respect within the organization.",
-    image: `/b2b/5.jpg`
+    desc: "Move beyond basic team building. We facilitate deep work to align your team’s personal values with the organization’s mission, fostering genuine loyalty.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/5.jpg`
   },
   {
     id: 6,
     title: "Corporate Wellness Retreats and Immersive Sessions",
-    desc: "Step away from routine to reset and recharge. Our curated retreats blend holistic wellness, mindfulness, and experiential learning designed to restore energy, creativity, and team unity.",
-    image: `/b2b/6.jpg`
+    desc: "Immersive off-site or on-site sessions designed to reset collective energy, combining strategic planning with holistic restoration.",
+    image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/6.jpg`
   }
 ];
 

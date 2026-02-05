@@ -44,14 +44,16 @@ export default function MovingTestimonials({ testimonials }: MovingTestimonialsP
                             <div className="h-px w-full bg-[#BFA894] mb-6"></div>
 
                             <div className="flex items-center">
-                                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.author}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
+                                {item.image && (
+                                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.author}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                )}
                                 <div>
                                     <h4 className="text-[#4E351A] font-heading font-medium text-lg">
                                         — {item.author}

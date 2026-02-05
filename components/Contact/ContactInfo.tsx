@@ -62,6 +62,14 @@ export default function ContactInfoSection() {
 
     }, { scope: sectionRef });
 
+    const socialLinks = [
+        { Icon: Instagram, href: "https://www.instagram.com/flowergridwellness/" },
+        { Icon: Facebook, href: "https://www.facebook.com/flowergriidwellness/" },
+        { Icon: Linkedin, href: "https://uk.linkedin.com/company/flowergridwellness" },
+        { Icon: TikTokIcon, href: "https://www.tiktok.com/@flowergrid" },
+        { Icon: Youtube, href: "https://www.youtube.com/channel/UCyP_NG0t1WA_OAJZGR-qU_w" },
+    ];
+
     return (
         <section
             ref={sectionRef}
@@ -85,9 +93,14 @@ export default function ContactInfoSection() {
 
                     <div className="bg-[#E6D7C3] rounded-2xl p-4 md:p-8 flex items-center justify-center md:justify-start min-h-[80px] md:min-h-[140px]">
                         <div className="flex gap-4 md:gap-6 text-[#1C1C1C]">
-                            {[Instagram, Facebook, Linkedin, TikTokIcon, Youtube].map((Icon, i) => (
-                                <Link key={i} href="#" className="hover:opacity-60 transition-opacity p-1.5 md:p-2 border border-[#1C1C1C] rounded-full">
-
+                            {socialLinks.map(({ Icon, href }, i) => (
+                                <Link
+                                    key={i}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:opacity-60 transition-opacity p-1.5 md:p-2 border border-[#1C1C1C] rounded-full"
+                                >
                                     <Icon size={16} className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
                                 </Link>
                             ))}
