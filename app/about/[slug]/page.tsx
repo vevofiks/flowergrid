@@ -63,7 +63,7 @@ const PersonPage = () => {
       {personData?.flowerWithText && (
         <FlowerGridSection
           text={personData.flowerWithText.description}
-          img={personData.flowerWithText.image}
+          // img={personData.flowerWithText.image}
         />
       )}
 
@@ -79,7 +79,7 @@ const PersonPage = () => {
         />
       )}
 
-      <Qualifications qualifications={personData.qualifications} educations={personData.educations} vision={personData.vision} />
+      <Qualifications qualifications={personData.qualifications} educations={personData.educations} vision={personData?.vision} />
 
       {isPerson2 && (
         <Vision />

@@ -137,11 +137,11 @@ export default function MeetExperts() {
 
                 <p
                     ref={descriptionRef}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed max-w-5xl"
+                    className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-800 leading-relaxed max-w-5xl"
                 >
                     Our method integrates the best of modern medicine with proven holistic techniques.
-                    By addressing the mind, body and spirit together, we help clients create lasting
-                    change. Every journey is personalised and supported by a multidisciplinary team of
+                    By addressing the mind, body and spirit together through our holistic wellness services, we help clients create lasting change.
+                    Every journey is personalised and supported by a multidisciplinary team of
                     coaches, therapists and medical professionals.
                 </p>
 

@@ -109,7 +109,7 @@ export default function Achievement() {
                             </p>
                         </div>
 
-                        <ul className="list-disc text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
+                        <ul className="text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
                             {section.benefits.map((benefit, index) => (
                                 <li key={index} className="pl-2">{benefit}</li>
                             ))}

@@ -58,7 +58,7 @@ const ServiceConsultation = () => {
                 <h1
                     ref={rightTextRef}
                     className="text-start text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0 mt-2 md:mt-4
-                     text-xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
+                     text-2xl sm:text-4xl md:text-4xl lg:text-[4rem] xl:text-[5rem]"
                 >
                     STARTS WITH A CONVERSATION
                 </h1>

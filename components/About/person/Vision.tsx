@@ -57,11 +57,10 @@ export default function VisionSection() {
 
             <div className="flex flex-col gap-6 text-lg lg:text-2xl leading-relaxed text-[#5B5B5B] font-light">
               <p className="vision-text">
-                My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it.
+                My vision is to inspire leadership that values empathy, awareness, and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it.
               </p>
               <p className="vision-text">
-                Through Flower Grid and my coaching work, I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength.
-              </p>
+                Through FlowerGrid and my work as a hypnotherapist in Croydon, I help people lead with confidence, clarity, and compassion. True leadership begins from within, and my goal is to help more people discover that strength.              </p>
             </div>
           </div>
 
