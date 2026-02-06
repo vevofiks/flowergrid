@@ -77,7 +77,7 @@ export default function Footer() {
             ref={footerRef}
             className="relative bg-[#271B0D] text-[#D6CFC2] overflow-hidden pt-16 pb-8 min-h-screen flex flex-col justify-center"
         >
-            <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-20">
+            <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-20">
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 relative">
 
@@ -97,13 +97,12 @@ export default function Footer() {
                                 <Image
                                     src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
                                     alt="Logo"
-                                    width={96}
-                                    height={96}
                                     className="object-contain w-full h-full"
+                                    fill
                                 />
                             </div>
                             <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
-                                Flowergrid
+                                Flowergrid 
                             </span>
                         </div>
                     </div>

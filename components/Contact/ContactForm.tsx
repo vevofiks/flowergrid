@@ -44,33 +44,26 @@ export default function ContactForm() {
   return (
     <section
       ref={containerRef}
-      className="w-full h-screen flex flex-col md:flex-row bg-[#F3EAD8] overflow-hidden"
+      className="w-full min-h-screen flex flex-col md:flex-row bg-[#F3EAD8]"
     >
-
 
       <div
         ref={imageRef}
-        className="relative w-full md:w-1/2 h-[25vh] md:h-full shrink-0"
+        className="relative w-full md:w-1/2 h-[25vh] md:h-auto md:min-h-screen shrink-0"
       >
         <Image
           src={`${process.env.NEXT_PUBLIC_IMGURL}contact/form-img.png`}
           alt="Hands holding a crystal"
           fill
-          className="object-cover object-center"
+          className="object-cover md:object-contain rounded-4xl drop-shadow m-4"
           priority
         />
       </div>
-
-
-
       <div className="w-full md:w-1/2 h-full bg-[#F3EAD8] flex flex-col justify-center">
-
-
         <div
           ref={contentRef}
-          className="w-full h-full flex flex-col justify-center px-6 py-4 md:px-12 lg:px-20 overflow-y-auto no-scrollbar"
+          className="w-full flex flex-col justify-center px-6 py-12 md:px-12 lg:px-20"
         >
-
           <h1 className="text-[#2D3F28] text-2xl md:text-4xl lg:text-5xl font-heading font-normal mb-2 md:mb-4">
             Connect with Flowergrid
           </h1>
