@@ -1,13 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import BlurTextReveal from '../../UI/BlurTextReveal';
 import FlowerSVG from './FlowerSVG';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { usePathname } from 'next/navigation';
 import FlowerSvg2 from './FlowerSvg2';
+import BlurTextReveal from '../../ui/BlurTextReveal';
 
 interface FlowerGridSectionProps {
     text: string;
@@ -55,7 +55,7 @@ export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
         });
         masterTl.to(detailPaths, {
             strokeDashoffset: 0,
-            duration: 2.5, // Very fast duration
+            duration: 2.5, 
             ease: "expo.out",
             stagger: {
                 amount: 0.2,

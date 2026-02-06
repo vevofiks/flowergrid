@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Menu, X, Search, ArrowRight } from "lucide-react";
+import { Menu, X, Search, ArrowRight, Calendar } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@ const navLinks = [
       {
         title: "Samina Khan",
         href: "/about/person1",
-        image: `/about/person1/1.png`,
+        image:`${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
       },
       {
         title: "Monira",
@@ -51,7 +51,7 @@ const navLinks = [
       },
     ],
   },
-  // { title: "Blogs", href: "/blogs" },
+  { title: "Blogs", href: "/blogs" },
   { title: "Contact Us", href: "/contact" },
 ];
 
@@ -228,11 +228,13 @@ export default function Navbar() {
         />
       </Link>
 
-      <div className="z-50 relative flex items-center gap-4 md:gap-6">
-        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 pl-4 pr-12 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
-          <span className="text-xs md:text-sm font-sans tracking-wide">Chat with Luna</span>
+      <div className="z-50 relative flex items-center gap-3 md:gap-6">
+
+        {/* Luna Chat Button */}
+        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 px-2 md:pl-4 md:pr-12 py-1 h-10 md:h-auto rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+          <span className="hidden md:inline text-xs md:text-sm font-sans tracking-wide">Chat with Luna</span>
           <div
-            className="absolute -right-3 top-1/2 -translate-y-1/2 w-14 h-13 rounded-full flex items-center justify-center cursor-pointer"
+            className="relative md:absolute md:-right-3 md:top-1/2 md:-translate-y-1/2 w-8 h-8 md:w-14 md:h-13 rounded-full flex items-center justify-center cursor-pointer"
             onMouseEnter={() => setIsLunaHovered(true)}
             onMouseLeave={() => setIsLunaHovered(false)}
           >
@@ -250,12 +252,16 @@ export default function Navbar() {
             />
           </div>
         </Link >
-        <button
-          className="hover:opacity-70 transition-opacity"
-          aria-label="Search"
+            {/* Book Consultation Button */}
+        <Link
+          href="https://calendly.com/flowergridmarketing/30min?month=2026-02"
+          target="_blank"
+          className="flex items-center gap-2 px-3 py-2 md:px-6 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white"
         >
-          <Search size={24} strokeWidth={1.5} />
-        </button>
+          <Calendar className="w-5 h-5 md:hidden" />
+          <span className="hidden md:inline text-sm font-sans tracking-wide">Book Consultation</span>
+        </Link>
+
 
         <button
           onClick={toggleMenu}
@@ -303,7 +309,7 @@ export default function Navbar() {
                     {link.title}
                   </Link>
 
-                  {link.subLinks && (activeSubmenu === index || prevSubmenuRef.current === index) && (
+                  {link.subLinks && activeSubmenu === index && (
                     <div className={`submenu-${index} flex flex-col gap-2 ml-2 md:ml-4 pl-4 md:pl-6 border-l-2 border-white/20 overflow-hidden`}>
                       {link.subLinks.map((sub, subIndex) => (
                         <Link
@@ -345,8 +351,6 @@ export default function Navbar() {
                     alt="Menu Preview"
                     fill
                     className="object-contain transition-all duration-500 ease-in-out rounded-3xl"
-
-
                   />
                 </div>
               )}
