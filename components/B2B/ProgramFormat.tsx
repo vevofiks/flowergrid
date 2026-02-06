@@ -69,12 +69,12 @@ export default function ProgramFormat() {
                     Programme Formats
                 </h2>
                 <p className="text-base md:text-xl lg:text-2xl font-sans text-black/70! leading-relaxed">
-                    Choose a format that suits your organization's needs and time frame.
+                    Choose a format that suits your organisation&apos;s needs and time frame.
                 </p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 relative z-10 w-full justify-center items-start max-w-7xl">
-                {sections.map((section, index) => (
+                {sections.map((section) => (
                     <div
                         key={section.id}
                         className="thumb-item flex flex-col items-center gap-6 flex-1"

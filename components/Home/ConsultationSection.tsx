@@ -84,7 +84,7 @@ const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                     className="text-right text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0 mt-2 md:mt-4
                      text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] xl:text-[8.5rem]"
                 >
-                    {lineTwo}
+                    FLOWERGRID
                 </h1>
             </div>
 

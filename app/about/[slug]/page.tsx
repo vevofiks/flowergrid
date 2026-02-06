@@ -2,7 +2,7 @@
 import React from 'react'
 import PersonHero from '@/components/About/person/PersonHero'
 import PersonBio from '@/components/About/person/Bio'
-import ScrollingTextReveal from '@/components/UI/ScrollingTextReveal'
+import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
 import WorkIncludes from '@/components/About/person/WorkIncludes'
 import { usePathname } from 'next/navigation'
 import { getPersonBySlug } from '../data'
@@ -19,7 +19,7 @@ const PersonPage = () => {
   const slug = pathname.split('/').pop();
   const isPerson2 = slug === 'person2';
 
-  // Get person data based on slug
+
   const personData = getPersonBySlug(slug || '');
 
   if (!personData) {
@@ -27,7 +27,7 @@ const PersonPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Person Not Found</h1>
-          <p className="text-xl text-gray-600">The person you're looking for doesn't exist.</p>
+          <p className="text-xl text-gray-600">The person you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </div>
     );
@@ -83,6 +83,7 @@ const PersonPage = () => {
       {isPerson2 && (
         <Vision />
       )}
+      
       <Support data={personData.support} />
 
       <Connect
