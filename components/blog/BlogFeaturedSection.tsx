@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { extractTldrText } from '@/lib/utils'; // Make sure this utils file exists or define inline if not
+import { extractTldrText } from '@/lib/utils';
 
-// Helper to extract first image from Editor.js content (duplicated from page for now, or move to utils)
 function extractCoverImage(content: any): string | null {
     if (!content || !content.blocks) return null;
     const imageBlock = content.blocks.find((block: any) => block.type === 'image');

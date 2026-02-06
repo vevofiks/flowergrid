@@ -19,8 +19,8 @@ const navLinks = [
     subLinks: [
       {
         title: "Samina Khan",
-        href: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`,
-        image: `/about/person1/1.png`,
+        href: "/about/person1",
+        image:`${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
       },
       {
         title: "Monira",

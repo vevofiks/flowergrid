@@ -21,16 +21,11 @@ interface BlogLayoutProps {
 }
 
 export default function BlogLayout({ blogs }: BlogLayoutProps) {
-    // 1. Latest Post = First post
     const latestPost = blogs.length > 0 ? blogs[0] : null;
 
-    // 2. Featured Posts = Next 3 posts (or fewer if not enough)
     const featuredPosts = blogs.length > 1 ? blogs.slice(1, 4) : [];
-
-    // 3. Grid Posts = All remaining posts (from index 4 onwards)
     const gridPosts = blogs.length > 4 ? blogs.slice(4) : [];
 
-    // 4. Sidebar Top Posts = Use first 5 posts as "Top Posts" for now
     const topPosts = blogs.slice(0, 5);
 
     return (

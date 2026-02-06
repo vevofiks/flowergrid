@@ -11,12 +11,11 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ data }) => {
     }
 
     return (
-        <div className="prose prose-lg prose-p:font-serif prose-headings:font-serif prose-headings:font-bold max-w-[700px] mx-auto text-gray-800">
+        <div className="prose prose-lg prose-p:font-serif prose-headings:font-serif prose-headings:font-bold max-w-175 mx-auto text-gray-800">
             {data.blocks.map((block) => {
                 switch (block.type) {
                     case 'header':
                         const Tag = `h${block.data.level}` as keyof React.JSX.IntrinsicElements;
-                        // Generate ID for ToC linking
                         const id = block.data.text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                         return (
                             <Tag key={block.id} id={id} className="font-bold my-4 scroll-mt-32">
@@ -36,7 +35,6 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ data }) => {
                         return (
                             <ListTag key={block.id} className="list-disc pl-5 mb-4 font-sans text-[#4A4A4A] leading-relaxed">
                                 {block.data.items.map((item: string | any, index: number) => {
-                                    // Handle cases where item is an object (e.g. nested lists or specific editor tools)
                                     const content = typeof item === 'string' ? item : item.content || item.text || '';
                                     return (
                                         <li key={index} dangerouslySetInnerHTML={{ __html: content }}></li>

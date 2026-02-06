@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import BlogRenderer from '@/components/BlogRenderer';
 import { TableOfContents, AskAI } from '@/components/blog/BlogSidebar';
@@ -42,7 +42,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
             )}
 
             {/* Main Content Container */}
-            <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-12">
+            <div className="max-w-350 mx-auto px-6 md:px-12 mt-12">
 
                 {/* Back Button & Focus Toggle */}
                 <div className="flex justify-between items-center mb-8">

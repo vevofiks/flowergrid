@@ -14,13 +14,13 @@ interface BlogListingSidebarProps {
 }
 
 const CATEGORIES = [
-    { name: 'Holistic Wellness', image: 'https://images.unsplash.com/photo-1544367563-ed285e990027?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Mindfulness & Meditation', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Healing Therapies', image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Emotional Wellbeing', image: 'https://images.unsplash.com/photo-1499209971180-415802d28f09?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Nutrition & Lifestyle', image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Eco-conscious Living', image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1000&auto=format&fit=crop' },
-    { name: 'Workplace Wellness', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop' },
+    { name: 'Holistic Wellness', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c1.png` },
+    { name: 'Mindfulness & Meditation', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c2.png`},
+    { name: 'Healing Therapies', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c3.png` },
+    { name: 'Emotional Wellbeing', image: `${process.env.NEXT_PUBLIC_IMGURL}blog/c4.png` },
+    { name: 'Nutrition & Lifestyle', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c5.png`},
+    { name: 'Eco-conscious Living', image: `${process.env.NEXT_PUBLIC_IMGURL}blog/c6.png` },
+    { name: 'Workplace Wellness', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c7.png`},
 ];
 
 export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps) {
