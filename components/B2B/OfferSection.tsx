@@ -21,7 +21,7 @@ const workshops = [
   {
     id: 3,
     title: "Trauma-Informed Workplace Wellbeing Workshops",
-    desc: "Create a supportive environment. We guide organisations on how to support staff through personal crises and societal stress without overstepping professional boundaries.",
+    desc: "Create a supportive environment. We guide organizations on how to support staff through personal crises and societal stress without overstepping professional boundaries.",
     image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/3.jpg`
   },
   {
@@ -33,7 +33,7 @@ const workshops = [
   {
     id: 5,
     title: "Team Cohesion and Cultural Alignment",
-    desc: "Move beyond basic team building. We facilitate deep work to align your team’s personal values with the organisation’s mission, fostering genuine loyalty.",
+    desc: "Move beyond basic team building. We facilitate deep work to align your team’s personal values with the organization’s mission, fostering genuine loyalty.",
     image: `${process.env.NEXT_PUBLIC_IMGURL}b2b/5.jpg`
   },
   {

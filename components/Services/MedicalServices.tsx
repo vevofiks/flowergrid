@@ -19,34 +19,34 @@ const sections = [
         details: [
             { title: "Medical Checks, Treatments & Aesthetics", desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals." },
             { title: "Nutritional Consulting", desc: "Tailored plans to optimize nutrition, metabolism, and energy." },
-            { title: "Doctor Consultations", desc: "Access our network of integrative practitioners for personalized health insights." },
+            { title: "Doctor Consultations", desc: "Access our network of integrative practitioners for personalised health insights." },
             { title: "Integrative Health & Fitness Plans", desc: "Custom wellness programs combining fitness, nutrition, and mindfulness." },
         ],
     },
     {
         id: "mind",
         title: "Therapeutic & Mental Wellness",
-        desc: "Restore peace and resilience with therapies that support mental clarity, emotional healing, and stress management.",
+        desc: "Restore peace and resilience with holistic wellness services and therapies that support mental clarity, emotional healing, and stress management.Restore peace and resilience with holistic wellness services and therapies that support mental clarity, emotional healing, and stress management.",
         thumb: `/home/H4 e.png`,
         full: `/home/H4 b.png`,
         details: [
             { title: "Anxiety & Stress Management Techniques", desc: "Learn evidence-based tools to calm the mind and regulate emotions." },
             { title: "Neuro-Linguistic Programming (NLP)", desc: "Rewire patterns of thought and behaviour to achieve positive change." },
             { title: "Psychological Therapy", desc: "Receive compassionate support to process emotions and heal from within." },
-            { title: "Hypnotherapy", desc: "Access your subconscious to overcome blocks and instil confidence." },
+            { title: "Hypnotherapy", desc: "Access your subconscious to overcome blocks and instill confidence." },
         ],
     },
     {
         id: "spirit",
         title: "Holistic & Energy Healing",
-        desc: "Reconnect with your inner essence through practices that harmonize energy, calm the spirit, and awaken self-awareness.",
+        desc: "Reconnect with your inner essence through holistic wellness services that harmonise energy, calm the spirit, and awaken self-awareness.",
         thumb: `/home/H4 f.png`,
         full: `/home/H4 c.png`,
 
         details: [
             { title: "Meditation & Mindfulness & Breathing", desc: "Restore presence and balance through guided stillness" },
             { title: "Reiki Healing", desc: "Channel universal energy to clear blockages and renew your emotional state." },
-            { title: "Colour Therapy / Auricular Acupuncture", desc: "Experience subtle energy realignment for mind–body rejuvenation." },
+            { title: "Colour Therapy / Auricular Acupuncture", desc: "Experience subtle energy realignment for mind–body rejuvenation."},
             { title: "Soul Reflection & Transformation Work", desc: "Dive deep into self-awareness, ego work, and soul growth" }
         ],
     },
@@ -214,6 +214,9 @@ export default function MedicalServices() {
             ref={containerRef}
             className="relative w-full min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-hidden"
         >
+            <h2 className="intro-text text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-heading uppercase text-center mb-12 sm:mb-16 md:mb-20 drop-shadow-lg">
+                The Flower of Life reminds us that everything in the universe is connected
+            </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-4">
                 {sections.map((section, index) => (
@@ -223,7 +226,6 @@ export default function MedicalServices() {
                         onClick={() => handleExpand(index)}
                         ref={(el) => { if (el) thumbRefs.current[index] = el; }}
                     >
-                        {/* Background Shape */}
                         <div
                             className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-44 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 rounded-full -z-10 transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
                             style={{ backgroundColor: '#F3E5CB' }}

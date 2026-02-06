@@ -53,7 +53,7 @@ export default function Hero() {
                         variants={itemVariants}
                         className="text-white! text-3xl md:text-7xl lg:text-[5.5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
                     >
-                        Become the Healthiest, Most Aligned Version of You
+                        Flowergrid Holistic Wellness Membership
                     </motion.h1>
 
                     <motion.p

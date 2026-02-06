@@ -2,7 +2,7 @@
 import React from 'react'
 import PersonHero from '@/components/About/person/PersonHero'
 import PersonBio from '@/components/About/person/Bio'
-import ScrollingTextReveal from '@/components/UI/ScrollingTextReveal'
+import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
 import WorkIncludes from '@/components/About/person/WorkIncludes'
 import { usePathname } from 'next/navigation'
 import { getPersonBySlug } from '../data'
@@ -63,7 +63,7 @@ const PersonPage = () => {
       {personData?.flowerWithText && (
         <FlowerGridSection
           text={personData.flowerWithText.description}
-          img={personData.flowerWithText.image}
+          // img={personData.flowerWithText.image}
         />
       )}
 
@@ -79,7 +79,7 @@ const PersonPage = () => {
         />
       )}
 
-      <Qualifications qualifications={personData.qualifications} educations={personData.educations} vision={personData.vision} />
+      <Qualifications qualifications={personData.qualifications} educations={personData.educations} vision={personData?.vision} />
 
       {isPerson2 && (
         <Vision />

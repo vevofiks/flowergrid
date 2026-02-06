@@ -55,17 +55,13 @@ const MembershipHelp = () => {
                             The Flowergrid Membership brings together mind, body, and spirit in a single, integrated approach. Guided by the Flower of Life philosophy, it helps you create balance, clarity, and alignment in your life.
                         </p>
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            Through integrative coaching and evidence-based mental health techniques, you gain practical tools to manage stress, build
+                            Through integrative coaching and evidence-based mental health techniques, you gain practical tools to manage stress, build confidence, and transform habits. Holistic wellbeing practices and medical insights work together to support your overall health.
                         </p>
                     </div>
 
                     <div className="connection-column space-y-6">
                         <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            confidence, and transform habits.
-                            Holistic wellbeing practices and medical insights work together to support your overall health.
-                        </p>
-                        <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            With guidance on lifestyle alignment and conscious living, the membership empowers you to live intentionally, develop lasting change, and nurture your mind, body, and spirit.
+                            With guidance on lifestyle alignment and conscious living, this holistic transformation programme empowers you to live intentionally and nurture your mind, body, and spirit.
                         </p>
                     </div>
                 </div>

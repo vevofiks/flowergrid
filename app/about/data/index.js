@@ -1,3 +1,5 @@
+import { i, image } from "framer-motion/client";
+import { title } from "process";
 
 const imageUrl = process.env.NEXT_PUBLIC_IMGURL;
 export const personsData = {
@@ -155,16 +157,24 @@ export const personsData = {
         ],
         support : [
             {
-                image: `${imageUrl}about/person1/s1.jfif`,
+                image: `${imageUrl}about/person1/s1.jpg`,
                 title: "Personal & Professional Growth Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s2.jfif`,
+                image: `${imageUrl}about/person1/s2.jpg`,
                 title: "Leadership & Soft Skills Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s3.jfif`,
-                title: "Neuro-Linguistic Programming",
+                image: `${imageUrl}about/person1/s3.jpg`,
+                title: "Neuro-Linguistic Programming",  
+            },
+            {
+                image: `${imageUrl}about/person1/s4.jpg`,
+                title: "Soul Reflection & Transformation Work"
+            },
+            {
+                image: `${imageUrl}about/person1/s5.jpg`,
+                title: "Rekhi Healing"
             }
         ]
     },
@@ -199,18 +209,18 @@ export const personsData = {
             description2: "This combination allows me to help clients achieve both personal and professional transformation. It is astructured yet compassionate approach that blends intellect with intuition.",
             steps: [
                 {
-                    title: "Strategic insight",
+                    title: "Strategic Insight",
                     image: `${imageUrl}about/person2/2a.png`,
                     description: "developed through years in business and education"
                 },
                 {
-                    title: "Psychological techniques insight",
+                    title: "Psychological Techniques Insight",
                     image: `${imageUrl}about/person2/2b.png`,
                     description: " Using my expertise as an NLP coach in Croydon and RTT practitioner to shift mindsets."
 
                 },
                 {
-                    title: "Wellbeing practices",
+                    title: "Wellbeing Practices",
                     image: `${imageUrl}about/person2/2c.png`,
                     description: "such as nutrition, mindfulness and energy balance"
                 }
@@ -223,7 +233,7 @@ export const personsData = {
         // JourneySection component data
         journeySection: {
             title: "Community and Impact",
-            description: "Community work is central to what I do. I have collaborated with schools, charities and local organisations to design programmes that make a lasting difference. These include:",
+            description: "Community work is central to what I do. I have collaborated with schools, charities and local organizations to design programmes that make a lasting difference. These include:",
             flowerWithCard: [
                 {
                     "type": "card",
@@ -282,10 +292,10 @@ export const personsData = {
         // Vision component data
         vision: {
             title: "Leadership with Purpose",
-            image: `${imageUrl}Home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
+            image: `${imageUrl}home/connection-logo.png`,
             text: [
-                "I envision a world where leadership is defined not by authority, but by authenticity and service. My mission is to empower individuals to lead lives of impact and integrity.",
-                "By integrating professional ambition with personal wellbeing, I help my clients build sustainable success that nurtures both themselves and the communities they serve."
+                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
+                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
             ]
         },
 
@@ -296,7 +306,7 @@ export const personsData = {
             title: "Strategic Leadership & Community Impact",
             description: "Founder · Trustee · Strategic Partnerships"
            },
-            {
+            {   
             period: "2020 - 2023",
             title: "Wellness & Social Consultancy",
             description: "Management Consultant · Senior Consultant · Head of Business Development"
@@ -315,17 +325,26 @@ export const personsData = {
             "Mental Health First Aider – LSBU University"
         ],
         support : [
+
             {
-                image: `${imageUrl}about/person2/ps1.jfif`,
+                image: `${imageUrl}about/person2/ps3.jpg`,
                 title: "Hypnotherapy",
             },
             {
-                image: `${imageUrl}about/person2/ps2.jfif`,
+                image: `${imageUrl}about/person2/ps2.png`,
                 title: "Rapid Transformational Therapy (RTT)",
             },
             {
-                image: `${imageUrl}about/person1/s3.jfif`,
+                image: `${imageUrl}about/person1/s3.jpg`,
                 title: "Neuro-Linguistic Programming (NLP)",
+            },
+            {
+                image: `${imageUrl}about/person2/ps1.jpg`,
+                title: "Anxiety & Stress Management Techniques",
+            },
+            {
+                image: `${imageUrl}about/person1/s4.jpg`,
+                title: "Soul Reflection & Transformation Work"
             }
         ]
     },
@@ -399,7 +418,7 @@ export const teamTree = [
         "members": [
             {
                 "name": "Rico Wagner Caleep",
-                "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
+                "role": "Leadership • Growth • Mental Performance Coaching executives & organizations",
                 "image": `${imageUrl}about/team/rico.png`,
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }

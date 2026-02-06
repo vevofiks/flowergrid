@@ -63,8 +63,10 @@ const Intro = () => {
                 </h1>
 
                 <p className='text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>
-                    Our services combine medical science, holistic therapies and coaching expertise to help you create lasting transformation.
-                    Each programme is designed to support your physical health, emotional balance and personal growth.
+                    Our holistic wellness services combine medical science, holistic therapies and coaching 
+                    expertise to help you create lasting transformation. Each programme is designed to support 
+                    your physical health, emotional balance and personal growth.
+
                 </p>
             </div>
 

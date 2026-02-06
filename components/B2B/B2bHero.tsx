@@ -69,7 +69,7 @@ export default function B2bHero() {
             ref={headingRef}
             className="text-white! text-4xl md:text-6xl lg:text-[50px] font-heading font-normal leading-tight mb-6"
           >
-            Transform Your Organisation with Corporate Wellbeing Programmes & Leadership Coaching.
+            Transform Your Organization with Corporate Wellbeing Programmes & Leadership Coaching.
           </h1>
           <p
             ref={textRef}

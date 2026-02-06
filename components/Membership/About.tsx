@@ -43,7 +43,7 @@ const MembershipAbout = () => {
         <section ref={container} className="w-full bg-background py-20 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
 
-                <div className="connection-header flex items-center gap-4 mb-12">
+                <div className="connection-header flex items-start gap-4 mb-12">
                     <h2 className="text-4xl md:text-5xl lg:text-5xl max-w-3xl font-heading text-text-heading">
                         Empowering You to Take Control of Your Wellbeing
                     </h2>
