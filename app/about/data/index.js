@@ -16,7 +16,7 @@ export const personsData = {
         // PersonBio component data
         bio: {
             title: "A Little About Me",
-            imageSrc: `${imageUrl}about/person1/1.png`,
+            imageSrc: `${imageUrl}about/person1/saminahalf.png`,
             bioText: [
                 "Over the past 12 years, I've supported individuals through mental health and wellness initiatives, helping them navigate life's challenges. Alongside this, I have more than 20 years of experience in business and startups, bringing people and ideas together in meaningful ways.",
                 "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to help my clients do the same.",
@@ -120,15 +120,6 @@ export const personsData = {
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
         },
 
-        // Vision component data
-        vision: {
-            title: "A Vision for Conscious Leadership",
-            image: `${imageUrl}Home/connection-logo.png`,
-            text: [
-                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flowergrid and my coaching work",
-                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
-            ]
-        },
 
         // Qualifications component data
         qualifications: [
@@ -211,7 +202,7 @@ export const personsData = {
                 {
                     title: "Strategic Insight",
                     image: `${imageUrl}about/person2/2a.png`,
-                    description: "developed through years in business and education"
+                    description: "Developed through years in business and education"
                 },
                 {
                     title: "Psychological Techniques Insight",
@@ -222,13 +213,13 @@ export const personsData = {
                 {
                     title: "Wellbeing Practices",
                     image: `${imageUrl}about/person2/2c.png`,
-                    description: "such as nutrition, mindfulness and energy balance"
+                    description: "Such as nutrition, mindfulness and energy balance"
                 }
             ]
         },
         flowerWithText : {
             image: `${imageUrl}about/person2/4.png`,
-            description: "Flowergrid was created from a shared vision with Samina Khan to unite science and spirituality in one space. Our platform, known as “The Intelligent Soul's Wellness Platform”, helps people explore personal growth through both structured learning and intuitive guidance."
+            description: "I believe leadership should feel fair as well as successful. My work bridges minds, markets and generations, rooting growth in empathy and real wellbeing. Through Flowergrid, I help people lead with clarity and courage, uplifting themselves and their communities."
         },
         // JourneySection component data
         journeySection: {
@@ -292,9 +283,9 @@ export const personsData = {
         // Vision component data
         vision: {
             title: "Leadership with Purpose",
-            image: `${imageUrl}home/connection-logo.png`,
+            image: `${imageUrl}home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
             text: [
-                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
+                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flowergrid and my coaching work",
                 "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
             ]
         },
@@ -479,4 +470,3 @@ export const getPersonBySlug = (slug) => {
 export const getAllPersonSlugs = () => {
     return Object.keys(personsData);
 };
-

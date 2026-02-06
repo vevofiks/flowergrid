@@ -96,8 +96,8 @@ const WorkSpecifications = () => {
                     </h1>
 
                     <p className='sm:text-lg lg:text-2xl leading-relaxed'>
-                        Flower Grid was created from a shared vision with Samina Khan to unite science and spirituality in one space.
-                        Our platform, known as The Intelligent Soul's Wellness Platform, helps people explore personal growth through both structured learning and intuitive guidance.
+                        Flowergrid was created from a shared vision with Samina Khan to unite science and spirituality in one space.
+                        Our platform, known as The Intelligent Soul&apos;s Wellness Platform, helps people explore personal growth through both structured learning and intuitive guidance.
                     </p>
 
                     <p className='sm:text-lg !text-black lg:text-2xl font-normal'>
