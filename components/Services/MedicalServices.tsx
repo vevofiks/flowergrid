@@ -222,7 +222,7 @@ export default function MedicalServices() {
                 {sections.map((section, index) => (
                     <div
                         key={section.id}
-                        className="thumb-item group cursor-pointer flex flex-col items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 relative touch-manipulation"
+                        className="thumb-item group flex flex-col items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 relative touch-manipulation"
                         onClick={() => handleExpand(index)}
                         ref={(el) => { if (el) thumbRefs.current[index] = el; }}
                     >
@@ -246,7 +246,7 @@ export default function MedicalServices() {
                     </div>
                 ))}
             </div>
-
+    {/* 
             <div
                 ref={overlayRef}
                 className="fixed z-60 overflow-hidden invisible"
@@ -259,9 +259,9 @@ export default function MedicalServices() {
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 z-10 bg-black/20 cursor-pointer" onClick={handleClose} />
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
                 ref={detailContentRef}
                 className="fixed inset-0 z-70 flex flex-col items-center justify-center invisible opacity-0 pointer-events-none"
             >
@@ -270,7 +270,14 @@ export default function MedicalServices() {
                     <h2 className="detail-title text-white! text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading uppercase text-center mt-2 sm:mt-4 md:mt-6 lg:mt-10 mb-4 sm:mb-6 md:mb-8 drop-shadow-lg shrink-0 px-2">
                         {currentData.title}
                     </h2>
-
+     {/* <button
+                onClick={handleClose}
+                className="detail-btn fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black active:scale-90 transition-all duration-300 cursor-pointer touch-manipulation z-80"
+                aria-label="Close"
+                style={{ opacity: activeSection !== null ? 1 : 0, pointerEvents: activeSection !== null ? 'auto' : 'none' }}
+            >
+                <MoveRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+            </button>
                     <div className={`grid gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-6 sm:mb-8 md:mb-10 w-full ${getGridClass(currentData.details.length)}`}>
                         {currentData.details.map((detail, idx) => (
                             <div
@@ -289,17 +296,17 @@ export default function MedicalServices() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Close Button - Outside detail content for better accessibility */}
-            <button
+            {/* <button
                 onClick={handleClose}
                 className="detail-btn fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black active:scale-90 transition-all duration-300 cursor-pointer touch-manipulation z-80"
                 aria-label="Close"
                 style={{ opacity: activeSection !== null ? 1 : 0, pointerEvents: activeSection !== null ? 'auto' : 'none' }}
             >
                 <MoveRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-            </button>
+            </button> */}
 
         </section>
     );

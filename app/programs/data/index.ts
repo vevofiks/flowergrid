@@ -1,5 +1,6 @@
 import { ProgramData } from "@/components/Programme/ProgramCarousal";
 
+const imgurl = process.env.NEXT_PUBLIC_IMGURL;
 export const myPrograms: ProgramData[] = [
     {
         id: 1,
@@ -12,13 +13,13 @@ export const myPrograms: ProgramData[] = [
         imageAlt: "Description for accessibility",
         decorativeImages: [
             {
-                src: `/programme/decorations/flower1.png`,
+                src: `${imgurl}programme/decorations/flower1.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: `/programme/decorations/flower2.png`,
+                src: `${imgurl}programme/decorations/flower2.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -37,13 +38,13 @@ export const myPrograms: ProgramData[] = [
         imageAlt: "power hour session",
         decorativeImages: [
             {
-                src: `/programme/decorations/flower3.png`,
+                src: `${imgurl}programme/decorations/flower3.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: `/programme/decorations/pot.png`,
+                src: `${imgurl}programme/decorations/pot.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -62,13 +63,13 @@ export const myPrograms: ProgramData[] = [
         imageAlt: "1-day workshop",
         decorativeImages: [
             {
-                src: `/programme/decorations/flower4.png`,
+                src: `${imgurl}programme/decorations/flower4.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: `/programme/decorations/flower5.png`,
+                src: `${imgurl}programme/decorations/flower5.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -88,13 +89,13 @@ export const myPrograms: ProgramData[] = [
         imageAlt: "Tailored coaching program",
         decorativeImages: [
             {
-                src: `/programme/decorations/flower7.png`,
+                src: `${imgurl}programme/decorations/flower7.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
             },
             {
-                src: `/programme/decorations/flower6.png`,
+                src: `${imgurl}programme/decorations/flower6.png`,
                 alt: "Decorative element",
                 position: "bottom-right", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes
@@ -114,13 +115,13 @@ export const myPrograms: ProgramData[] = [
         imageAlt:"Corporate & Community Programs",
         decorativeImages:[
             {
-                src:`/programme/decorations/flower8.png`,
+                src:`${imgurl}programme/decorations/flower8.png`,
                 alt:"Decorative element",
                 position:"top-left", 
                 className:"rotate-45"
             },
             {
-                src:`/programme/decorations/flower9.png`,
+                src:`${imgurl}programme/decorations/flower9.png`,
                 alt:"Decorative element",
                 position:"bottom-right", 
                 className:"rotate-45"

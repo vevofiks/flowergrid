@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-
+import Link from 'next/link';
 interface ConnectProps {
     image: string;
     title: string;
@@ -28,9 +28,12 @@ const Connect = ({ image, title, description, btnText = "Schedule Appointment" }
                         {description}
                     </p>
                 )}
-                <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 mt-8 rounded-full text-sm md:text-base shadow-md">
-                    {btnText}
-                </button>
+                <Link href='/contact' >
+                    <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 mt-8 rounded-full text-sm md:text-base shadow-md">
+                        {btnText}
+                    </button>
+
+                </Link>
             </div>
         </div>
     )

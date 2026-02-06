@@ -34,7 +34,7 @@ interface ProgramCarouselProps {
 
 const getPositionClasses = (position: string): string => {
     const positions = {
-        'top-left': '-top-6 -left-6 sm:-top-8 sm:-left-8 md:-top-10 md:-left-10 lg:-top-6 lg:-left-24',
+        'top-left': '-top-6 -left-6 sm:-top-8 sm:-left-8 md:-top-4 md:-left-4 lg:-top-6 lg:-left-24',
         'top-right': '-top-6 -right-6 sm:-top-8 sm:-right-8 md:-top-16 md:-right-16 lg:-top-20 lg:-right-20',
         'bottom-left': '-bottom-6 -left-6 sm:-bottom-8 sm:-left-8 md:-bottom-16 md:-left-16 lg:-bottom-20 lg:-left-20',
         'bottom-right': '-bottom-6 -right-6 sm:-bottom-8 sm:-right-8 md:-bottom-0 md:-right-10 lg:-bottom-10 lg:-right-20'
