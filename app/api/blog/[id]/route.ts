@@ -44,44 +44,29 @@ export async function PUT(
         const body = await req.json();
         console.log('Update blog data:', body);
 
-        // existing blog
         const existingBlog = await Blog.findById(id);
         if (!existingBlog) {
             return NextResponse.json({ success: false, error: 'Blog not found' }, { status: 404 });
         }
 
-        // Image Cleanup Logic
-        const importFs = await import('fs');
-        const fs = importFs.default;
-        const path = await import('path');
         const { extractImageUrls } = await import('@/lib/utils');
+        const { del } = await import('@vercel/blob');
 
-        // Get old images
         const oldContentImages = extractImageUrls(existingBlog.content);
-        // TLDR might be string or object
         const oldTldrImages = typeof existingBlog.tldr === 'object' ? extractImageUrls(existingBlog.tldr) : [];
         const allOldImages = [...oldContentImages, ...oldTldrImages];
 
-        // Get new images
         const newContentImages = extractImageUrls(body.content);
         const newTldrImages = typeof body.tldr === 'object' ? extractImageUrls(body.tldr) : [];
         const allNewImages = new Set([...newContentImages, ...newTldrImages]);
 
-        // Find removed images
         const removedImages = allOldImages.filter(imgUrl => !allNewImages.has(imgUrl));
 
-        // Delete removed images from filesystem
         for (const imgUrl of removedImages) {
             try {
-                // imgUrl is like "/blog/123.jpg" -> convert to system path
-                // "public/blog/123.jpg"
-                if (imgUrl.startsWith('/')) {
-                    const relativePath = imgUrl.substring(1); // remove leading slash
-                    const absolutePath = path.join(process.cwd(), 'public', relativePath);
-                    if (fs.existsSync(absolutePath)) {
-                        await fs.promises.unlink(absolutePath);
-                        console.log('Deleted unused image:', absolutePath);
-                    }
+                if (imgUrl.includes('vercel-storage.com')) {
+                    await del(imgUrl);
+                    console.log('Deleted unused blob image:', imgUrl);
                 }
             } catch (err) {
                 console.error('Failed to delete image:', imgUrl, err);
