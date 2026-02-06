@@ -132,7 +132,7 @@ export default function FlowergridJourney() {
 
             <div className="pt-20 pb-10 text-center top-0 z-10 backdrop-blur-sm">
                 <h2 className="text-3xl md:text-5xl font-heading text-[#3a3a3a] mb-4">
-                    The Flower Grid Journey
+                    The Flowergrid Journey
                 </h2>
                 <p className="text-[#5a5a5a] text-sm md:text-base max-w-2xl mx-auto px-6">
                     Our membership is a guided, structured journey, supporting you step-by-step

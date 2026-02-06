@@ -53,7 +53,7 @@ const page = () => {
             <div className="relative">
                 <Image
                   src={img}
-                  alt="Flower Grid"
+                  alt="Flowergrid"
                   width={500}
                   height={600}
                   className="object-contain"

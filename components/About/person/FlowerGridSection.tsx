@@ -9,7 +9,7 @@ interface FlowerGridSectionProps {
 }
 
 export default function FlowerGridSection({ text, img}: FlowerGridSectionProps) {
-    const content = "I'm proud to be part of Flower Grid, where a team of 15 skilled practitioners provides integrated support for mind, body, and spirit. Together, we offer coaching, counselling, nutrition guidance, exercise plans, Reiki, spiritual direction, and medical support.";
+    const content = "I'm proud to be part of Flowergrid, where a team of 15 skilled practitioners provides integrated support for mind, body, and spirit. Together, we offer coaching, counselling, nutrition guidance, exercise plans, Reiki, spiritual direction, and medical support.";
 
     return (
         <section className="min-h-screen flex items-center justify-center py-10 overflow-hidden">
@@ -23,7 +23,7 @@ export default function FlowerGridSection({ text, img}: FlowerGridSectionProps) 
                     <div className="relative w-full h-full">
                         <Image
                             src={img}
-                            alt="Flower Grid"
+                            alt="Flowergrid"
                             fill
                             className="object-contain"
                             sizes="(max-width: 1024px) 100vw, 50vw"

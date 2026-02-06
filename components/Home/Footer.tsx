@@ -77,7 +77,7 @@ export default function Footer() {
             ref={footerRef}
             className="relative bg-[#271B0D] text-[#D6CFC2] overflow-hidden pt-16 pb-8 min-h-screen flex flex-col justify-center"
         >
-            <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl w-full mx-auto px-6 md:px-12 lg:px-20">
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 relative">
 
@@ -94,14 +94,16 @@ export default function Footer() {
                         </div>
                         <div className="absolute -bottom-13 z-10 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
                             <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0">
-                                <img
+                                <Image
                                     src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
                                     alt="Logo"
+                                    width={96}
+                                    height={96}
                                     className="object-contain w-full h-full"
                                 />
                             </div>
                             <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
-                                Flower Grid
+                                Flowergrid
                             </span>
                         </div>
                     </div>
@@ -117,7 +119,7 @@ export default function Footer() {
                                 <Link href="/about" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">About</Link>
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/about/person1" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
-                                    <li><Link href="/about/person2" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira & Team</Link></li>
+                                    <li><Link href="/about/person2" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
                                     <li><Link href="/about/team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
                                 </ul>
                             </li>
