@@ -22,7 +22,7 @@ export default async function RootLayout({
   const isAdminRoute = pathname.startsWith("/admin") || pathname.startsWith("/blogs/editor");
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased overflow-x-hidden">
         <LoadingProvider>
           {!isAdminRoute && <Preloader />}

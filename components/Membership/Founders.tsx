@@ -81,9 +81,9 @@ export default function Founders() {
                     </div>
 
                     <div className="image-block flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[500px] aspect-4/5">
+                        <div className="relative w-full max-w-[500px] aspect-3/5 mb-10">
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/samina.png`}
+                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
                                 alt="Samina Khan"
                                 fill
                                 className="object-cover"
