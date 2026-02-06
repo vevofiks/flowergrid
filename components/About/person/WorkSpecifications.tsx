@@ -92,7 +92,7 @@ const WorkSpecifications = () => {
                 >
                     <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-normal text-[#2C2C2C] leading-tight'>
                         Co-Founding<br />
-                        Flower Grid
+                        Flowergrid
                     </h1>
 
                     <p className='sm:text-lg lg:text-2xl leading-relaxed'>

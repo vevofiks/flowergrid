@@ -61,7 +61,7 @@ export const personsData = {
 
         flowerWithText : {
             image: `${imageUrl}about/person1/4.png`,
-            description: "I'm proud to be part of Flower Grid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together we offer coaching, counselling, nutrition guidance, exercise plans, Reiki spiritual direction, and medical Support."
+            description: "I'm proud to be part of Flowergrid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together we offer coaching, counselling, nutrition guidance, exercise plans, Reiki spiritual direction, and medical Support."
         },
         // JourneySection component data
         journeySection: {
@@ -120,6 +120,15 @@ export const personsData = {
             description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
         },
 
+        // Vision component data
+        vision: {
+            title: "A Vision for Conscious Leadership",
+            image: `${imageUrl}Home/connection-logo.png`,
+            text: [
+                "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flowergrid and my coaching work",
+                "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
+            ]
+        },
 
         // Qualifications component data
         qualifications: [
@@ -219,7 +228,7 @@ export const personsData = {
         },
         flowerWithText : {
             image: `${imageUrl}about/person2/4.png`,
-            description: "Flower Grid was created from a shared vision with Samina Khan to unite science and spirituality in one space. Our platform, known as “The Intelligent Soul's Wellness Platform”, helps people explore personal growth through both structured learning and intuitive guidance."
+            description: "Flowergrid was created from a shared vision with Samina Khan to unite science and spirituality in one space. Our platform, known as “The Intelligent Soul's Wellness Platform”, helps people explore personal growth through both structured learning and intuitive guidance."
         },
         // JourneySection component data
         journeySection: {
@@ -283,7 +292,7 @@ export const personsData = {
         // Vision component data
         vision: {
             title: "Leadership with Purpose",
-            image: `${imageUrl}home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
+            image: `${imageUrl}home/connection-logo.png`,
             text: [
                 "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flower Grid and my coaching work",
                 "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."

@@ -86,7 +86,7 @@ export default function Preloader() {
             <div className="preloader-content absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
                 <div className="overflow-hidden">
                     <h1 className="preloader-text text-5xl md:text-7xl font-heading text-white! tracking-widest uppercase">
-                        FlowerGrid
+                        Flowergrid
                     </h1>
                 </div>
 

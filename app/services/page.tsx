@@ -87,7 +87,32 @@ const page = () => {
   return (
     <>
       <Intro />
+<<<<<<< HEAD
+
+      <section className="min-h-screen w-full flex items-center justify-center px-8 py-20">
+        <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex items-center justify-center">
+            <ScrollingTextReveal phrases={phrases} />
+          </div>
+
+          <div className="flex items-end justify-center h-full ">
+            <div className="relative">
+                <Image
+                  src={img}
+                  alt="Flowergrid"
+                  width={500}
+                  height={600}
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+            </div>
+          </div>
+        </div>
+      </section>  
+=======
       <ServiceCards />
+>>>>>>> dev
       <MedicalServices />
       <MeetExperts />
       <CoreValues values={coreValues} />

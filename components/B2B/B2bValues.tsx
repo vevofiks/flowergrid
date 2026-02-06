@@ -89,7 +89,7 @@ const B2bValues = () => {
             </div>
 
             <div className="relative z-10 max-w-7xl w-full items-center mx-auto px-6">
-                <h2 className="text-black! text-2xl md:text-3xl lg:text-4xl text-center mx-auto font-heading font-medium tracking-wide mt-[38px]">Why Organizations Choose Flowergrid</h2>
+                <h2 className="text-black! text-2xl md:text-3xl lg:text-4xl text-center mx-auto font-heading font-medium tracking-wide mt-[38px]">Why Organisations Choose Flowergrid</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 text-center pb-10 md:pb-0">
                     {values.map((item, index) => (
                         <div key={index} className="flex flex-col items-center">
