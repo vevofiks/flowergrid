@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import BlurTextReveal from '../../UI/BlurTextReveal';
+import BlurTextReveal from '../../ui/BlurTextReveal';
 
 interface FlowerGridSectionProps {
     text: string;

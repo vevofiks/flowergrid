@@ -1,4 +1,4 @@
-import MovingTestimonials from "../UI/MovingTestimonials";
+import MovingTestimonials from "../ui/MovingTestimonials";
 
 export interface Testimonial {
     id: number;

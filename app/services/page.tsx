@@ -1,5 +1,5 @@
 import Intro from '@/components/Services/Intro'
-import ScrollingTextReveal from '@/components/UI/ScrollingTextReveal'
+import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
 import MedicalServices from '@/components/Services/MedicalServices'
 import MeetExperts from '@/components/Services/MeetExperts'
 import CoreValues from '@/components/Home/CoreValues'
