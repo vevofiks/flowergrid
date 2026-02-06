@@ -51,7 +51,7 @@ export default function VisionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           <div className="flex flex-col gap-8">
-            <h2 className="vision-text text-4xl md:text-5xl lg:text-6xl font-heading font-normal text-[#171717] leading-tight">
+            <h2 className="vision-text text-4xl md:text-6xl lg:text-7xl font-heading font-normal text-[#171717] md:mx-auto leading-tight tracking-wider">
               A Vision for Conscious Leadership
             </h2>
 

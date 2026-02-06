@@ -16,7 +16,7 @@ export const personsData = {
         // PersonBio component data
         bio: {
             title: "A Little About Me",
-            imageSrc: `${imageUrl}about/person1/1.png`,
+            imageSrc: `${imageUrl}about/person1/saminahalf.png`,
             bioText: [
                 "Over the past 12 years, I've supported individuals through mental health and wellness initiatives, helping them navigate life's challenges. Alongside this, I have more than 20 years of experience in business and startups, bringing people and ideas together in meaningful ways.",
                 "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to help my clients do the same.",
@@ -202,7 +202,7 @@ export const personsData = {
                 {
                     title: "Strategic Insight",
                     image: `${imageUrl}about/person2/2a.png`,
-                    description: "developed through years in business and education"
+                    description: "Developed through years in business and education"
                 },
                 {
                     title: "Psychological Techniques Insight",
@@ -213,7 +213,7 @@ export const personsData = {
                 {
                     title: "Wellbeing Practices",
                     image: `${imageUrl}about/person2/2c.png`,
-                    description: "such as nutrition, mindfulness and energy balance"
+                    description: "Such as nutrition, mindfulness and energy balance"
                 }
             ]
         },

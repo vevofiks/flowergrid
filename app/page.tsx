@@ -2,16 +2,17 @@ import Hero from "@/components/Home/Hero";
 import MaskScroll from "@/components/Home/MaskScroll";
 import Connections from "@/components/Home/Connections";
 import CoreValues from "@/components/Home/CoreValues";
+
 import TransformationServices from "@/components/Home/TransformationServices";
 import LeafScrollText from "@/components/Home/LeafScrollText";
 import BodyMindSpirit from "@/components/Home/BodyMindSpirit";
+import LadyScroll from "@/components/LadyScroll";
 import FadeInText from "@/components/Home/FadeInText";
 import CorporateProgram from "@/components/Home/CorporateProgram";
 import HeroTestimonials from "@/components/Home/HeroTestimonials";
 import Vision from "@/components/Home/Vision";
 import BlogSection from "@/components/Home/BlogSection";
-import ConsultationSection from "@/components/Home/ConsultationSection";
-import FaqSection from "@/components/Contact/FAQSection";
+import Connect from "@/components/About/person/Connect";
 
 const lines = [
   "YOU ARE NOT JUST A MIND TO BE UNDERSTOOD.",
@@ -24,42 +25,45 @@ const lines = [
 
 
 
+
+
+
 const HomeFaqs = [
-    {
-        id: 1,
-        question: "What does Holistic Wellness mean at Flowergrid?",
-        answer: "Holistic Wellness at Flowergrid focuses on your mind, body and spirit as one connected system. We combine therapeutic support, physical health guidance and reflective practices to help you build lasting balance and genuine holistic wellbeing."
-    },
-    {
-        id: 2,
-        question: "How does Flowergrid support mind body spirit wellness?",
-        answer: "Our approach brings together medical insight, emotional support and gentle energy practices to encourage mind body spirit wellness. Each programme is designed to help you feel grounded, centred and more aware of your personal needs."
-    },
-    {
-        id: 3,
-        question: "What is included in your life and transformation coaching?",
-        answer: "Our life and transformation coaching offers structured guidance that supports clarity, confidence and personal direction. Sessions may include mindset work, emotional wellbeing support and practical tools that help you move forward with purpose."
-    },
-    {
-        id: 4,
-        question: "Do you offer services that support mental and emotional wellbeing?",
-        answer: "Yes. Flowergrid provides programmes that address anxiety, stress, confidence and emotional balance. Techniques such as NLP, hypnotherapy and mindfulness help you understand your patterns and develop healthier ways of responding to daily challenges."
-    },
-    {
-        id: 5,
-        question: "What integrative wellness treatments do you offer for physical health?",
-        answer: "Our integrative wellness services include nutritional consulting, medical and aesthetic treatments and personalised health plans. Each option is designed to improve physical vitality while supporting your wider holistic wellbeing."
-    },
-    {
-        id: 6,
-        question: "Can I access Flowergrid’s holistic wellness services online?",
-        answer: "Yes. Many of our holistic wellness and emotional wellbeing services are available both online and in person. This makes it easy to continue your progress even if you are travelling or living outside the local area."
-    },
-    {
-        id: 7,
-        question: "Who can benefit from holistic wellbeing programmes at Flowergrid?",
-        answer: "Our programmes are suitable for anyone seeking clarity, improved emotional balance, better physical health or deeper personal growth. Whether you are starting a new chapter or rebuilding your energy, holistic wellbeing can support steady and meaningful progress."
-    },
+  {
+    id: 1,
+    question: "What does Holistic Wellness mean at Flowergrid?",
+    answer: "Holistic Wellness at Flowergrid focuses on your mind, body and spirit as one connected system. We combine therapeutic support, physical health guidance and reflective practices to help you build lasting balance and genuine holistic wellbeing."
+  },
+  {
+    id: 2,
+    question: "How does Flowergrid support mind body spirit wellness?",
+    answer: "Our approach brings together medical insight, emotional support and gentle energy practices to encourage mind body spirit wellness. Each programme is designed to help you feel grounded, centred and more aware of your personal needs."
+  },
+  {
+    id: 3,
+    question: "What is included in your life and transformation coaching?",
+    answer: "Our life and transformation coaching offers structured guidance that supports clarity, confidence and personal direction. Sessions may include mindset work, emotional wellbeing support and practical tools that help you move forward with purpose."
+  },
+  {
+    id: 4,
+    question: "Do you offer services that support mental and emotional wellbeing?",
+    answer: "Yes. Flowergrid provides programmes that address anxiety, stress, confidence and emotional balance. Techniques such as NLP, hypnotherapy and mindfulness help you understand your patterns and develop healthier ways of responding to daily challenges."
+  },
+  {
+    id: 5,
+    question: "What integrative wellness treatments do you offer for physical health?",
+    answer: "Our integrative wellness services include nutritional consulting, medical and aesthetic treatments and personalised health plans. Each option is designed to improve physical vitality while supporting your wider holistic wellbeing."
+  },
+  {
+    id: 6,
+    question: "Can I access Flowergrid’s holistic wellness services online?",
+    answer: "Yes. Many of our holistic wellness and emotional wellbeing services are available both online and in person. This makes it easy to continue your progress even if you are travelling or living outside the local area."
+  },
+  {
+    id: 7,
+    question: "Who can benefit from holistic wellbeing programmes at Flowergrid?",
+    answer: "Our programmes are suitable for anyone seeking clarity, improved emotional balance, better physical health or deeper personal growth. Whether you are starting a new chapter or rebuilding your energy, holistic wellbeing can support steady and meaningful progress."
+  },
 ];
 
 const coreValues = [
@@ -80,29 +84,30 @@ const coreValues = [
   }
 ];
 
+
 export default function Home() {
   return (
     <>
       <Hero />
-      <MaskScroll />
+      {/* <MaskScroll /> */}
+      <LadyScroll />
       <Connections />
       <CoreValues values={coreValues} />
       <TransformationServices />
       <LeafScrollText lines={lines} />
-      <BodyMindSpirit />
+
       <FadeInText />
       <CorporateProgram />
       <HeroTestimonials />
       <Vision />
       <BlogSection />
-      <ConsultationSection
-        lineOne="Your Journey"
-        lineTwo="Begins"
-        subtext="Connect with our team to design a personalized wellness pathway that fits your unique needs."
-        buttonText="Request a Consultation"
-        buttonLink="/contact"
+      <Connect
+        image={`${process.env.NEXT_PUBLIC_IMGURL}membership/connection.jpg`}
+        title="Your Journey Begins"
+        description="Connect with our team to design a personalized wellness pathway that fits your unique needs."
+        btnText="Request a Consultation"
       />
-      <FaqSection faqs={HomeFaqs} />
     </>
   );
 }
+

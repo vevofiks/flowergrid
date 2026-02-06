@@ -60,10 +60,9 @@ const PersonPage = () => {
         title2={personData.workIncludes.title2}
       />
 
-      {personData?.flowerWithText && (
+      {personData?.flowerWithText && !isPerson2 && (
         <FlowerGridSection
           text={personData.flowerWithText.description}
-          // img={personData.flowerWithText.image}
         />
       )}
 

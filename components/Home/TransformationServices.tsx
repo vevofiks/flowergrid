@@ -5,8 +5,27 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
+import PracticesSection from './PracticesSection';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const practices = [
+  {
+    "id": "mind",
+    "title": "Mind",
+    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/mind.jpg`
+  },
+  {
+    "id": "body",
+    "title": "Body",
+    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/body.jpg`
+  },
+  {
+    "id": "spirit",
+    "title": "Spirit",
+    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/spirit.jpg`
+  }
+];
 
 const services = [
   {
@@ -17,30 +36,6 @@ const services = [
     btnText: "Explore Coaching",
     btnLink: "/services"
   },
-  {
-    id: 2,
-    title: "Mental Health & Emotional Wellbeing",
-    desc: "Find calm and clarity with our evidence-based anxiety and stress management programs. We use techniques such as NLP, hypnotherapy, and mindfulness to help you develop resilience and a stronger connection to your inner self.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t2.png`,
-    btnText: "Learn About Mental Wellbeing",
-    btnLink: "/services"
-  },
-  {
-    id: 3,
-    title: "Physical Health & Aesthetic Wellness",
-    desc: "Achieve vitality inside and out through integrated medical and aesthetic health programs. From nutritional guidance and body treatments to lifestyle coaching, we help you look and feel your best while supporting long-term health.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t3.png`,
-    btnText: "Discover Health Programmes",
-    btnLink: "/services"
-  },
-  {
-    id: 4,
-    title: "Workshops & Corporate Programmes",
-    desc: "Bring conscious living into your workplace or community with corporate wellbeing workshops for resilience and leadership. Our interactive workshops cover leadership, communication, stress management, and resilience training to promote healthier teams and more connected environments.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t4.png`,
-    btnText: "View Workshops",
-    btnLink: "/programs/b2b"
-  }
 ];
 
 export default function TransformationService() {
@@ -67,7 +62,7 @@ export default function TransformationService() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=700%",
+          end: "+=1000%",
           scrub: 1,
           pin: true,
         },
@@ -163,6 +158,18 @@ export default function TransformationService() {
         tl.to(`.service-content-${i}`, { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" }, baseTime + 0.8);
       });
 
+      // Animate PracticesSection after the last service
+      const lastServiceTime = services.length > 1 ? 7 + (services.length - 2) * 3 + 2 : 7;
+      tl.to(`.service-image-${services.length - 1}`, { autoAlpha: 0, scale: 0.95, duration: 1 }, lastServiceTime);
+      tl.to(`.service-content-${services.length - 1}`, { autoAlpha: 0, y: -20, duration: 0.8 }, lastServiceTime);
+      tl.to(".practices-section-content", {
+        autoAlpha: 1,
+        y: 0,
+        scale: isMobile ? 0.35 : 0.6,
+        duration: 1.5,
+        ease: "power2.out"
+      }, lastServiceTime + 1);
+
       return () => {
         window.removeEventListener("resize", positionPill);
       };
@@ -172,106 +179,112 @@ export default function TransformationService() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-[#F3EAD8]"
-      style={{
-        backgroundImage: `url('/home/service-bg.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div ref={leafRef} className="absolute top-10 -left-1 md:top-8 md:-left-2 z-10">
-        <Image
-          src={`/home/service-leaf.png`}
-          alt="Leaf"
-          width={80}
-          height={80}
-          className="w-20 h-20 md:w-40 md:h-35 opacity-60"
-        />
-      </div>
-
-      <div className="relative w-full h-full flex items-center justify-center">
-
-        <div
-          ref={textRef}
-          className="absolute left-4 md:left-8 lg:left-25 top-1/2 md:top-[450px] -translate-y-1/2 z-30 md:z-10"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-[8rem] font-extrabold tracking-wide leading-tight text-[#535D4E]! font-heading whitespace-nowrap">
-            <span className="block mb-2">Where</span>
-            <span className="mb-2 flex items-center">
-              <span ref={leftTextRef} className="inline-block relative">Transf</span>
-              <span ref={oLetterRef} className="inline-block opacity-100">o</span>
-              <span ref={rightTextRef} className="inline-block relative">rmation</span>
-            </span>
-            <span className="block">Begins</span>
-          </h2>
-        </div>
-
-        <div
-          ref={womanRef}
-          className="absolute bottom-50 -right-9 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
-        >
+    <>
+      <div
+        ref={containerRef}
+        className="relative w-full h-screen overflow-hidden bg-[#F3EAD8] "
+        style={{
+          backgroundImage: `url('/home/service-bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div ref={leafRef} className="absolute top-10 -left-1 md:top-8 md:-left-2 z-10">
           <Image
-            src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
-            alt="Woman"
-            width={400}
-            height={400}
-            className="w-[300px] h-[300px] md:w-64 md:h-80 lg:w-[450px] lg:h-[450px] object-contain opacity-80"
+            src={`/home/service-leaf.png`}
+            alt="Leaf"
+            width={80}
+            height={80}
+            className="w-20 h-20 md:w-40 md:h-35 opacity-60"
           />
         </div>
 
-        <div
-          ref={pillRef}
-          className="absolute overflow-hidden bg-transparent border-5 md:border-19 border-[#535D4E] z-20 flex items-center justify-center"
-          style={{ opacity: 0 }}
-        >
-          <div className="pill-preview-image absolute inset-0 opacity-0 scale-90">
+        <div className="relative w-full h-full flex items-center justify-center py-20">
+
+          <div
+            ref={textRef}
+            className="absolute left-4 md:left-8 lg:left-25 top-1/2 md:top-[450px] -translate-y-1/2 z-30 md:z-10"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-[8rem] font-extrabold tracking-wide leading-tight text-[#535D4E]! font-heading whitespace-nowrap">
+              <span className="block mb-2">Where</span>
+              <span className="mb-2 flex items-center">
+                <span ref={leftTextRef} className="inline-block relative">Transf</span>
+                <span ref={oLetterRef} className="inline-block opacity-100">o</span>
+                <span ref={rightTextRef} className="inline-block relative">rmation</span>
+              </span>
+              <span className="block">Begins</span>
+            </h2>
+          </div>
+
+          <div
+            ref={womanRef}
+            className="absolute bottom-50 -right-9 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
+          >
             <Image
-              src={`${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`}
-              alt="Preview"
-              fill
-              className="object-cover rounded-full"
+              src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
+              alt="Woman"
+              width={400}
+              height={400}
+              className="w-[300px] h-[300px] md:w-64 md:h-80 lg:w-[450px] lg:h-[450px] object-contain opacity-80"
             />
           </div>
 
-          {services.map((service, idx) => (
-            <div
-              key={`img-${service.id}`}
-              className={`service-image-${idx} absolute inset-0 opacity-0 scale-100`}
-            >
+          <div
+            ref={pillRef}
+            className="absolute overflow-hidden bg-transparent border-5 md:border-19 border-[#535D4E] z-20 flex items-center justify-center"
+            style={{ opacity: 0 }}
+          >
+            <div className="pill-preview-image absolute inset-0 opacity-0 scale-90">
               <Image
-                src={service.img}
-                alt={service.title}
+                src={`${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`}
+                alt="Preview"
                 fill
                 className="object-cover rounded-full"
               />
             </div>
-          ))}
-        </div>
 
-        <div className="absolute w-full max-w-6xl text-center z-30 px-4 md:px-6 top-[51%] md:top-[48%]">
-          {services.map((service, idx) => (
-            <div
-              key={`content-${service.id}`}
-              className={`service-content-${idx} absolute top-0 left-0 w-full flex flex-col items-center opacity-0 invisible translate-y-10`}
-            >
-              <h3 className="text-2xl md:text-5xl text-[#3A4033] mb-3 md:mb-4 font-playfair! font-bold">
-                {service.title}
-              </h3>
+            {services.map((service, idx) => (
+              <div
+                key={`img-${service.id}`}
+                className={`service-image-${idx} absolute inset-0 opacity-0 scale-100`}
+              >
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
+            ))}
+          </div>
 
-              <p className="text-sm md:text-xl px-5 md:px-0 leading-relaxed text-[#5C6154] mb-6 md:mb-8 max-w-md md:max-w-3xl mx-auto font-sans font-medium">
-                {service.desc}
-              </p>
+          <div className="absolute w-full max-w-6xl text-center z-30 px-4 md:px-6 top-[51%] md:top-[48%]">
+            {services.map((service, idx) => (
+              <div
+                key={`content-${service.id}`}
+                className={`service-content-${idx} absolute top-0 left-0 w-full flex flex-col items-center opacity-0 invisible translate-y-10`}
+              >
+                <h3 className="text-2xl md:text-5xl text-[#3A4033] mb-3 md:mb-4 font-playfair! font-bold">
+                  {service.title}
+                </h3>
 
-              <Link href={service.btnLink} className="w-auto md:w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold">
-                {service.btnText}
-              </Link>
+                <p className="text-sm md:text-xl px-5 md:px-0 leading-relaxed text-[#5C6154] mb-6 md:mb-8 max-w-md md:max-w-3xl mx-auto font-sans font-medium">
+                  {service.desc}
+                </p>
+
+                <Link href={service.btnLink} className="w-auto md:w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold mb-8">
+                  {service.btnText}
+                </Link>
+              </div>
+            ))}
+
+            <div className="practices-section-content absolute top-[-18rem] md:top-[-20rem] left-0 right-0 w-full opacity-0 invisible translate-y-10 scale-95 origin-top">
+              <PracticesSection practices={practices} />
             </div>
-          ))}
-        </div>
+          </div>
 
+        </div>
       </div>
-    </div>
+    </>
   );
 }

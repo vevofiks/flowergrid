@@ -16,9 +16,9 @@ interface FlowerGridSectionProps {
 export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
     const svgRef = useRef<HTMLDivElement>(null);
 
-      const pathname = usePathname();
-      const slug = pathname.split('/').pop();
-      const isPerson2 = slug === 'person2';
+    //   const pathname = usePathname();
+    //   const slug = pathname.split('/').pop();
+    //   const isPerson2 = slug === 'person2';
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -55,7 +55,7 @@ export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
         });
         masterTl.to(detailPaths, {
             strokeDashoffset: 0,
-            duration: 2.5, // Very fast duration
+            duration: 3.5,
             ease: "expo.out",
             stagger: {
                 amount: 0.2,
@@ -78,7 +78,7 @@ export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
 
                 <div className="order-1 lg:order-2 h-[300px] sm:h-[450px] md:h-[500px] lg:h-[600px] flex items-center justify-center p-4 md:p-10 lg:px-20">
                     <div ref={svgRef} className="relative w-full h-full">
-                        {isPerson2 ? <FlowerSvg2 /> : <FlowerSVG />}
+                     <FlowerSVG />
                     </div>
                 </div>
             </div>
