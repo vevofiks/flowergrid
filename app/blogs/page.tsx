@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import connectDB from '@/lib/db';
+import '@/models/Author';
 import Blog from '@/models/Blog';
 
 async function getBlogs() {

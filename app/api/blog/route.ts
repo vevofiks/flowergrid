@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
+import mongoose from "mongoose";
+
 import connectDB from '@/lib/db';
 import Blog from '@/models/Blog';
 import '@/models/Author';
-import mongoose from "mongoose";
 
 
 export async function POST(req: Request) {
