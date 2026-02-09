@@ -19,8 +19,8 @@ const page = () => {
       <HeaderSecrtion />
       <CurvedPathAnimation />
       <Achievement />
-      <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
       <FaqSection />
+      <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </>
   )
 }

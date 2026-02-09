@@ -32,13 +32,12 @@ export default function Hero() {
 
             <div className="absolute inset-0">
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}membership/hero.jpg`}
+                    src={`${process.env.NEXT_PUBLIC_IMGURL}membership/membershiphero.jpeg`}
                     alt="Membership Hero"
                     fill
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/30" />
             </div>
 
             <motion.div

@@ -15,7 +15,6 @@ export async function GET(
         const resolvedParams = await params;
         const { id } = resolvedParams;
         const blog = await Blog.findById(id).populate('author');
-
         if (!blog) {
             return NextResponse.json(
                 { success: false, error: 'Blog not found' },

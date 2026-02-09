@@ -100,7 +100,7 @@ export default function ContactForm() {
       setErrors({ name: "", email: "", phone: "", country: "", description: "" });
 
       toast.update(toastId, {
-        render: "Discovery Session Booked Successfully!",
+        render: "Session Booked Successfully!",
         type: "success",
         isLoading: false,
         autoClose: 5000

@@ -14,21 +14,21 @@ const sections = [
         title: "Vitality and Strength",
         thumb: `/home/H4 d.png`,
         details: "Improve your health, energy, and lifestyle habits through personalised guidance. Integrating medical insight with holistic practices ensures long-term vitality and wellbeing.",
-        benefits: ["Increased energy and stamina", "Sustainable nutrition and movement habits", "Enhanced physical health"]
+        // benefits: ["Increased energy and stamina", "Sustainable nutrition and movement habits", "Enhanced physical health"]
     },
     {
         id: 2,
         title: "Calm, Focused, Resilient",
         thumb: `/home/H4 e.png`,
         details: "Reduce anxiety, gain clarity, and cultivate emotional balance. Practical tools and expert guidance support daily resilience, helping you make decisions with confidence and calm.",
-        benefits: ["Reduced stress and overwhelm", "Clear thinking and focus", "Emotional balance in daily life"]
+        // benefits: ["Reduced stress and overwhelm", "Clear thinking and focus", "Emotional balance in daily life"]
     },
     {
         id: 3,
         title: "Aligned and Purposeful",
         thumb: `/home/H4 f.png`,
         details: "Deepen self-awareness, align with your purpose, and nurture inner calm. Mindfulness, reflection, and integrative practices foster a sense of harmony and direction.",
-        benefits: ["Heightened self-awareness", "Stronger connection to purpose", "Lasting inner calm and balance"]
+        // benefits: ["Heightened self-awareness", "Stronger connection to purpose", "Lasting inner calm and balance"]
     },
 ];
 
@@ -58,7 +58,7 @@ export default function Achievement() {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-screen flex flex-col items-center justify-center py-12 px-4 md:py-16 md:px-8 lg:py-20 lg:px-12 overflow-hidden"
+            className="relative w-full min-h-screen flex flex-col items-center justify-center py-4 px-4 md:py-16 md:px-8 lg:py-4 lg:px-12 overflow-hidden"
         >
             <div className="intro-text text-center max-w-5xl mb-8 md:mb-12 lg:mb-16 relative z-10 px-4">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
@@ -67,7 +67,7 @@ export default function Achievement() {
                 <p className="text-base md:text-lg lg:text-xl font-sans text-black/70! leading-relaxed">
                     Experience transformation that touches every part of your being.
                     <br />
-                    FlowerGrid programs are designed to create measurable, lasting impact
+                    Flowergrid programs are designed to create measurable, lasting impact
                     <br />
                     across mind, body, and spirit.
                 </p>
@@ -75,7 +75,6 @@ export default function Achievement() {
 
                     <button
                         className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
-
                     >
                         Explore How We Support You
 
@@ -109,11 +108,11 @@ export default function Achievement() {
                             </p>
                         </div>
 
-                        <ul className="text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
+                        {/* <ul className="text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
                             {section.benefits.map((benefit, index) => (
                                 <li key={index} className="pl-2">{benefit}</li>
                             ))}
-                        </ul>
+                        </ul> */}
                     </div>
                 ))}
             </div>

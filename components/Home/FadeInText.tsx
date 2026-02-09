@@ -22,7 +22,7 @@ const FadeInText = () => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "+=100%",
+                end: "+=300%",
                 scrub: 1,
                 pin: true
             }
@@ -30,19 +30,19 @@ const FadeInText = () => {
 
         tl.fromTo(lines1,
             { autoAlpha: 0, y: 50 },
-            { autoAlpha: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out", force3D: true }
+            { autoAlpha: 1, y: 0, duration: 6, stagger: 0.4, ease: "power3.out", force3D: true }
         );
 
         tl.to([section1Ref.current, section2Ref.current], {
             y: "-=100%",
-            duration: 2,
+            duration: 4,
             ease: "power2.inOut",
             force3D: true
         });
 
         tl.fromTo(lines2,
             { autoAlpha: 0, y: 50 },
-            { autoAlpha: 1, y: 0, duration: 2, stagger: 0.2, ease: "power3.out", force3D: true }
+            { autoAlpha: 1, y: 0, duration: 6, stagger: 0.4, ease: "power3.out", force3D: true }
         );
 
     }, { scope: containerRef });
@@ -68,7 +68,7 @@ const FadeInText = () => {
                 <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>productivity, resilience,</h2>
                 <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>and engagement</h2>
                 <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>across your</h2>
-                <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>organization or</h2>
+                <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>organisation or</h2>
                 <h2 className='line-2 will-change-transform will-change-opacity mt-5 md:mt-2'>institution.</h2>
             </div>
         </div>

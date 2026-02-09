@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // 1. Import usePathname
+import { usePathname } from "next/navigation";
+import { useLoading } from "@/contexts/LoadingContext";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -31,8 +32,26 @@ export default function Footer() {
 
     // 2. Get current path to force re-render/re-animation on navigation
     const pathname = usePathname();
+    const { isPreloaderComplete } = useLoading();
+
+    // Refresh ScrollTrigger when page height changes (e.g., images loading)
+    useEffect(() => {
+        if (!isPreloaderComplete) return;
+
+        const resizeObserver = new ResizeObserver(() => {
+            ScrollTrigger.refresh();
+        });
+
+        resizeObserver.observe(document.body);
+
+        // Initial refresh
+        ScrollTrigger.refresh();
+
+        return () => resizeObserver.disconnect();
+    }, [isPreloaderComplete]);
 
     useGSAP(() => {
+        if (!isPreloaderComplete) return;
 
         gsap.set([leftColRef.current, linksColRef.current, rightColRef.current, copyrightRef.current], {
             clearProps: "all",
@@ -45,7 +64,7 @@ export default function Footer() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: footerRef.current,
-                start: "top 95%",
+                start: "top bottom",
                 toggleActions: "play none none none",
             },
         });
@@ -69,7 +88,7 @@ export default function Footer() {
 
     }, {
         scope: footerRef,
-        dependencies: [pathname]
+        dependencies: [pathname, isPreloaderComplete]
     });
 
     return (
@@ -101,9 +120,16 @@ export default function Footer() {
                                     fill
                                 />
                             </div>
-                            <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
-                                Flowergrid 
-                            </span>
+
+                            <div>
+                                <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
+                                    Flowergrid
+                                </span>
+                                <span className="block text-sm md:text-base tracking-wide text-[#D6CFC2]/80 mt-1">
+                                    Your Sanctuary of Synthesis
+                                </span>
+                            </div>
+
                         </div>
                     </div>
 

@@ -42,10 +42,10 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
             )}
 
             {/* Main Content Container */}
-            <div className="max-w-350 mx-auto px-6 md:px-12 mt-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12">
 
                 {/* Back Button & Focus Toggle */}
-                <div className="flex justify-between items-center mb-8">
+                <div className="flex justify-between items-center mb-8 pt-24 md:pt-28">
                     <Link
                         href="/blogs"
                         className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
@@ -108,7 +108,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                 </div>
 
                 {/* Mobile Author & AI Section (Visible only on small screens) */}
-                <div className="mt-16 lg:hidden space-y-12">
+                <div className="mt-20 lg:hidden flex flex-col gap-12">
                     <AuthorSidebar author={blog.author} />
                     <AskAI url={blogUrl} />
                 </div>
