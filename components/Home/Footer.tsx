@@ -23,6 +23,50 @@ const TikTokIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
+const navLinks = [
+    { title: "Home", href: "/" },
+    {
+        title: "About",
+        href: "/about",
+        subLinks: [
+            {
+                title: "Samina Khan",
+                href: "/about/person1",
+                image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
+            },
+            {
+                title: "Monira",
+                href: "/about/person2",
+                image: `/about/person2/1.png`,
+            },
+            {
+                title: "Team",
+                href: "/about/team",
+                image: `/b2b/4.jpg`,
+            },
+        ],
+    },
+    { title: "Services", href: "/services" },
+    { title: "Membership", href: "/membership" },
+    {
+        title: "Workshops",
+        href: "/programs",
+        subLinks: [
+            {
+                title: "Programs",
+                href: "/programs",
+            },
+            {
+                title: "Corporate Programs",
+                href: "/programs/b2b",
+                image: `/b2b/1.jpg`,
+            },
+        ],
+    },
+    { title: "Journals", href: "/blogs" },
+    { title: "Contact Us", href: "/contact" },
+];
+
 export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
     const leftColRef = useRef<HTMLDivElement>(null);
@@ -111,17 +155,17 @@ export default function Footer() {
                                 className="object-contain w-full h-120"
                             />
                         </div>
-                        <div className="absolute -bottom-13 z-10 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
+                        <div className="absolute -bottom-13 z-20 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
                             <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0">
                                 <Image
                                     src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
-                                    alt="Logo"
+                                    alt="Luna Logo"
                                     className="object-contain w-full h-full"
                                     fill
                                 />
                             </div>
 
-                            <div>
+                            <div >
                                 <span className="text-3xl md:text-5xl font-heading font-light tracking-wide text-[#F3EAD8] leading-none">
                                     Flowergrid
                                 </span>
@@ -139,25 +183,30 @@ export default function Footer() {
                         className="lg:col-span-3 flex flex-col justify-center items-center lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
                     >
                         <ul className="flex flex-col gap-4 md:gap-6 text-center lg:text-left">
-                            <li><Link href="/" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Home</Link></li>
-                            <li className="flex flex-col gap-2">
-                                <Link href="/about" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">About</Link>
-                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
-                                    <li><Link href="/about/person1" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
-                                    <li><Link href="/about/person2" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
-                                    <li><Link href="/about/team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link href="/services" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Services</Link></li>
-                            <li><Link href="/membership" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Membership</Link></li>
-                            <li className="flex flex-col gap-2">
-                                <Link href="/programs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Programs</Link>
-                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
-                                    <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">B2B</Link></li>
-                                </ul>
-                            </li>
-                            {/* <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Blogs</Link></li> */}
-                            <li><Link href="/contact" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
+                            {navLinks.map((link, index) => (
+                                <li key={index} className="flex flex-col gap-2">
+                                    <Link
+                                        href={link.href}
+                                        className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors"
+                                    >
+                                        {link.title}
+                                    </Link>
+                                    {link.subLinks && link.subLinks.length > 0 && (
+                                        <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
+                                            {link.subLinks.map((sub, subIndex) => (
+                                                <li key={subIndex}>
+                                                    <Link
+                                                        href={sub.href}
+                                                        className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors"
+                                                    >
+                                                        {sub.title}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 

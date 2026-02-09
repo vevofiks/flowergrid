@@ -205,7 +205,7 @@ export default function TransformationService() {
 
           <div
             ref={womanRef}
-            className="absolute bottom-50 -right-9 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
+            className="absolute bottom-35 -right-3 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
           >
             <Image
               src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
