@@ -130,7 +130,10 @@ export default function Navbar() {
     if (isOpen) {
       tl.current.reverse();
 
-      setTimeout(() => setActiveImage(null), 600);
+      setTimeout(() => {
+        setActiveImage(null);
+        setActiveSubmenu(null);
+      }, 600);
     } else {
       tl.current.play();
     }
@@ -278,9 +281,11 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className="fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden"
+        className={`fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
       >
-        <div className="w-full h-full max-w-[1600px] mx-auto flex flex-col lg:flex-row">
+        <div className="w-full h-full max-w-400 mx-auto flex flex-col lg:flex-row">
 
           <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center lg:items-start px-6 sm:px-8 md:px-16 pt-24 pb-10 lg:py-0">
             <nav className="flex flex-col gap-4 sm:gap-5 lg:gap-4">
@@ -299,11 +304,11 @@ export default function Navbar() {
                         e.preventDefault();
                         setActiveSubmenu(activeSubmenu === index ? null : index);
                       } else {
-
+                        setActiveSubmenu(null);
                         toggleMenu();
                       }
                     }}
-                    className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl hover:text-[#A7683A] transition-colors duration-300 block w-fit"
+                    className="font-heading text-3xl sm:text-4xl md:text-5xl hover:text-[#A7683A] transition-colors duration-300 block w-fit"
                     onMouseEnter={() => setActiveImage(null)}
                   >
                     {link.title}
@@ -315,7 +320,10 @@ export default function Navbar() {
                         <Link
                           key={subIndex}
                           href={sub.href}
-                          onClick={toggleMenu}
+                          onClick={() => {
+                            setActiveSubmenu(null);
+                            toggleMenu();
+                          }}
                           onMouseEnter={() => handleLinkHover(sub.image)}
                           onMouseLeave={handleLinkLeave}
                           className="sublink-item group flex items-center gap-2 md:gap-3 text-base sm:text-lg md:text-xl text-white/60 hover:text-[#F3E5CB] transition-colors duration-300 w-fit"
@@ -336,7 +344,7 @@ export default function Navbar() {
           <div className="hidden lg:flex w-1/2 h-full items-center justify-center relative p-20">
             <div
               ref={imageRef}
-              className="relative w-full h-[600px] rounded-xl overflow-hidden"
+              className="relative w-full h-150 rounded-xl overflow-hidden"
             >
               {!activeImage && (
                 <div className="absolute inset-0 flex items-center justify-center text-white/5 font-heading text-9xl uppercase select-none">
