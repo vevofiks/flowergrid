@@ -4,7 +4,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,21 +12,18 @@ interface BlogType {
   _id: string;
   title: string;
   slug: string;
-  tldr: any; // Editor.js JSON
-  content: any; // Editor.js JSON
+  tldr: any;
+  content: any;
   createdAt: string;
   image?: string;
 }
 
-// Helper function to extract text from Editor.js JSON blocks
 const extractTextFromEditorJS = (editorData: any, wordLimit: number = 30): string => {
   if (!editorData) return "";
 
   try {
-    // Handle if it's already a string
     if (typeof editorData === 'string') return editorData;
 
-    // Handle Editor.js format
     if (editorData.blocks && Array.isArray(editorData.blocks)) {
       const textBlocks = editorData.blocks
         .filter((block: any) => block.type === 'paragraph' || block.type === 'header')
@@ -46,7 +42,6 @@ const extractTextFromEditorJS = (editorData: any, wordLimit: number = 30): strin
   }
 };
 
-// Helper function to extract cover image from Editor.js content
 const extractCoverImage = (editorData: any): string | null => {
   if (!editorData) return null;
 
@@ -72,11 +67,10 @@ export default function BlogSection() {
   const [blogs, setBlogs] = useState<BlogType[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Fetch blogs from API
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch("/api/blog");
+        const res = await fetch("/api/blog?limit=3");
         const data = await res.json();
 
         if (data.success) {
@@ -92,33 +86,7 @@ export default function BlogSection() {
     fetchBlogs();
   }, []);
 
-  // ✅ Animation
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-      },
-    });
 
-    tl.from(headerRef.current, {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-
-    if (cardsRef.current) {
-      tl.from(cardsRef.current.children, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      }, "-=0.4");
-    }
-  }, { scope: containerRef, dependencies: [blogs] });
 
   return (
     <section

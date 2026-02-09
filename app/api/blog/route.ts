@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import mongoose from "mongoose";
-
 import connectDB from '@/lib/db';
 import Blog from '@/models/Blog';
 import '@/models/Author';
@@ -33,16 +32,33 @@ export async function POST(req: Request) {
 }
 
 
-export async function GET() {
-    try {
-        await connectDB();
-        const blogs = await Blog.find({}).populate('author').sort({ createdAt: -1 });
-        return NextResponse.json({ success: true, data: blogs });
-    } catch (error) {
-        console.error('Fetch blogs error:', error);
-        return NextResponse.json(
-            { success: false, error: 'Failed to fetch blogs' },
-            { status: 500 }
-        );
+export async function GET(req: Request) {
+  try {
+    await connectDB();
+
+    const { searchParams } = new URL(req.url);
+    const limit = searchParams.get("limit");
+
+    let query = Blog.find({})
+      .populate('author')
+      .sort({ createdAt: -1 });
+
+    if (limit) {
+      query = query.limit(Number(limit));
     }
+
+    const blogs = await query;
+
+    return NextResponse.json({ success: true, data: blogs });
+
+  } catch (error) {
+    console.error('Fetch blogs error:', error);
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch blogs' },
+      { status: 500 }
+    );
+  }
 }
+
+
+
