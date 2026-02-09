@@ -50,9 +50,7 @@ export async function PUT(
         }
 
         // Image Cleanup Logic
-        const importFs = await import('fs');
-        const fs = importFs.default;
-        const path = await import('path');
+        const { del } = await import('@vercel/blob');
         const { extractImageUrls } = await import('@/lib/utils');
 
         // Get old images
@@ -69,21 +67,16 @@ export async function PUT(
         // Find removed images
         const removedImages = allOldImages.filter(imgUrl => !allNewImages.has(imgUrl));
 
-        // Delete removed images from filesystem
+        // Delete removed images from Vercel Blob
         for (const imgUrl of removedImages) {
             try {
-                // imgUrl is like "/blog/123.jpg" -> convert to system path
-                // "public/blog/123.jpg"
-                if (imgUrl.startsWith('/')) {
-                    const relativePath = imgUrl.substring(1); // remove leading slash
-                    const absolutePath = path.join(process.cwd(), 'public', relativePath);
-                    if (fs.existsSync(absolutePath)) {
-                        await fs.promises.unlink(absolutePath);
-                        console.log('Deleted unused image:', absolutePath);
-                    }
+                // imgUrl is a full blob URL like "https://xxx.public.blob.vercel-storage.com/blog/123.jpg"
+                if (imgUrl.includes('blob.vercel-storage.com')) {
+                    await del(imgUrl);
+                    console.log('Deleted unused blob image:', imgUrl);
                 }
             } catch (err) {
-                console.error('Failed to delete image:', imgUrl, err);
+                console.error('Failed to delete blob image:', imgUrl, err);
             }
         }
 
