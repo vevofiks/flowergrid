@@ -22,7 +22,7 @@ interface PracticesSectionProps {
 
 const Card = ({ practice }: { practice: Practice }) => (
     <Link href={'/services'}>
-        <div className="relative overflow-hidden rounded-[20px] md:rounded-[24px] lg:rounded-[28px] aspect-[3/4] cursor-pointer">
+        <div className="relative overflow-hidden rounded-[20px] md:rounded-[24px] lg:rounded-[28px] aspect-4/3 md:aspect-5/4 cursor-pointer">
             <Image
                 src={practice.image}
                 alt={practice.title}
@@ -94,49 +94,53 @@ export default function PracticesSection({
     return (
         <section
             ref={sectionRef}
-            className="w-full h-full flex items-center justify-center overflow-hidden"
+            className="w-full h-auto flex items-center justify-center overflow-visible"
         >
-            <div className="w-full h-full flex items-center justify-center px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-6 sm:py-8 md:py-10 lg:py-12">
-                <div className="w-full max-w-[1000px]">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 lg:gap-5 xl:gap-8">
+            <div className="w-full h-auto flex items-center justify-center px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+                <div className="w-full max-w-[1100px] overflow-visible">
+                    <div className="practices-animation-container flex md:block">
 
-                        {/* Column 1: Text + Mind Card */}
-                        {mindPractice && (
-                            <div className="col-1-item group transition-transform duration-500 ease-out hover:-translate-y-3">
-                                <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                                    <Card practice={mindPractice} />
-                                </div>
-                            </div>
-                        )}
+                        {/* Wrapper for horizontal scroll on mobile */}
+                        <div className="flex md:grid md:grid-cols-3 gap-8 md:gap-5 xl:gap-8 w-full practices-scroller">
 
-                        {/* Column 2: Text + Body */}
-                        {bodyPractice && (
-                            <div className="col-2-item group transition-transform duration-500 ease-out hover:-translate-y-3">
-                                <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                                    <div>
-                                        <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
-                                            Each practice plays a part in restoring balance to the mind, body, and spirit
-                                        </p>
+                            {/* Column 1: Mind Card */}
+                            {mindPractice && (
+                                <div className="col-1-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                    <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+                                        <Card practice={mindPractice} />
                                     </div>
-                                    <Card practice={bodyPractice} />
                                 </div>
-                            </div>
-                        )}
+                            )}
 
-                        {/* Column 3: Text + Spirit */}
-                        {spiritPractice && (
-                            <div className="col-3-item group transition-transform duration-500 ease-out hover:-translate-y-3 sm:col-span-2 lg:col-span-1">
-                                <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                                    <div className="hidden lg:block h-12 xl:h-16"></div>
-                                    <div>
-                                        <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
-                                            bringing clarity, health, and calm through evidence-based and holistic care
-                                        </p>
+                            {/* Column 2: Text + Body */}
+                            {bodyPractice && (
+                                <div className="col-2-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                    <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+                                        <div className="hidden md:block">
+                                            <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
+                                                Each practice plays a part in restoring balance to the mind, body, and spirit
+                                            </p>
+                                        </div>
+                                        <Card practice={bodyPractice} />
                                     </div>
-                                    <Card practice={spiritPractice} />
                                 </div>
-                            </div>
-                        )}
+                            )}
+
+                            {/* Column 3: Text + Spirit */}
+                            {spiritPractice && (
+                                <div className="col-3-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                    <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+                                        <div className="hidden lg:block h-12 xl:h-16"></div>
+                                        <div className="hidden md:block">
+                                            <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
+                                                bringing clarity, health, and calm through evidence-based and holistic care
+                                            </p>
+                                        </div>
+                                        <Card practice={spiritPractice} />
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
                     </div>
                 </div>
