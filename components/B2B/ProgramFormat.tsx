@@ -62,7 +62,7 @@ export default function ProgramFormat() {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-auto lg:h-screen flex flex-col items-center justify-between lg:justify-center py-12 lg:py-16 px-4 overflow-hidden md:mt-20"
+            className="relative w-full h-auto flex flex-col items-center justify-between lg:justify-center py-12 lg:py-16 px-4 md:mt-20"
         >
             <div className="intro-text text-center max-w-5xl mb-8 lg:mb-10 relative z-10">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
