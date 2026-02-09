@@ -43,28 +43,22 @@ export async function PUT(
         const body = await req.json();
         console.log('Update blog data:', body);
 
-        // existing blog
         const existingBlog = await Blog.findById(id);
         if (!existingBlog) {
             return NextResponse.json({ success: false, error: 'Blog not found' }, { status: 404 });
         }
 
-        // Image Cleanup Logic
-        const { del } = await import('@vercel/blob');
         const { extractImageUrls } = await import('@/lib/utils');
+        const { del } = await import('@vercel/blob');
 
-        // Get old images
         const oldContentImages = extractImageUrls(existingBlog.content);
-        // TLDR might be string or object
         const oldTldrImages = typeof existingBlog.tldr === 'object' ? extractImageUrls(existingBlog.tldr) : [];
         const allOldImages = [...oldContentImages, ...oldTldrImages];
 
-        // Get new images
         const newContentImages = extractImageUrls(body.content);
         const newTldrImages = typeof body.tldr === 'object' ? extractImageUrls(body.tldr) : [];
         const allNewImages = new Set([...newContentImages, ...newTldrImages]);
 
-        // Find removed images
         const removedImages = allOldImages.filter(imgUrl => !allNewImages.has(imgUrl));
 
         // Delete removed images from Vercel Blob
