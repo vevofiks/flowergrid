@@ -48,8 +48,8 @@ export async function PUT(
             return NextResponse.json({ success: false, error: 'Blog not found' }, { status: 404 });
         }
 
-        const { del } = await import('@vercel/blob');
         const { extractImageUrls } = await import('@/lib/utils');
+        const { del } = await import('@vercel/blob');
 
         const oldContentImages = extractImageUrls(existingBlog.content);
         const oldTldrImages = typeof existingBlog.tldr === 'object' ? extractImageUrls(existingBlog.tldr) : [];
