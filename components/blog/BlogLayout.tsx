@@ -33,7 +33,7 @@ export default function BlogLayout({ blogs }: BlogLayoutProps) {
             {/* Hero Section - Full Width */}
             <BlogHero />
 
-            <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mt-16 md:mt-20">
+            <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mt-12 md:mt-8">
                 <BlogFeaturedSection latestPost={latestPost} featuredPosts={featuredPosts} />
 
                 <div className="flex flex-col lg:flex-row gap-16 mt-16">

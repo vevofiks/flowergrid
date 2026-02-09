@@ -26,7 +26,7 @@ export default function BlogPostHero({
     return (
         <div className="w-full mb-16">
             {/* Hero Banner */}
-            <div className="relative w-full h-[60vh] min-h-100 md:h-[70vh] overflow-hidden mb-12 group">
+        <div className="relative h-screen w-full overflow-hidden">
                 {/* Background Image */}
                 {coverImage ? (
                     <Image
@@ -44,7 +44,7 @@ export default function BlogPostHero({
 
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-20">
+                <div className="absolute inset-0 flex flex-col justify-end pb-50 md:pb-40">
                     <div className="max-w-350 mx-auto px-6 md:px-12 w-full !text-white">
                         <div className="max-w-4xl">
                             {/* Meta Tags */}

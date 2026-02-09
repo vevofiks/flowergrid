@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { extractTldrText } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,7 +127,7 @@ export default function BlogSection() {
 
           {!loading && blogs.map((blog) => {
             const coverImage = extractCoverImage(blog.content) || `${process.env.NEXT_PUBLIC_IMGURL}home/H8 a.png`;
-            const tldrText = extractTextFromEditorJS(blog.tldr, 30);
+            const tldrText = extractTldrText(blog.tldr);
 
             return (
               <Link
