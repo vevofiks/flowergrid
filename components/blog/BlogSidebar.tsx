@@ -10,7 +10,6 @@ export function AskAI({ url }: { url: string }) {
         setMounted(true);
     }, []);
 
-    // Only encode URL on client side to avoid hydration mismatch
     const encodedUrl = mounted ? encodeURIComponent(url) : '';
 
     const links = [
