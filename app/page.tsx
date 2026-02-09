@@ -90,7 +90,6 @@ export default function Home() {
     <>
       <Hero />
       <MaskScroll />
-      <LadyScroll />
       <Connections />
       <CoreValues values={coreValues} />
       <TransformationServices />

@@ -45,7 +45,7 @@ export default function BlogPostHero({
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-20">
-                    <div className="max-w-350 mx-auto px-6 md:px-12 w-full text-white">
+                    <div className="max-w-350 mx-auto px-6 md:px-12 w-full !text-white">
                         <div className="max-w-4xl">
                             {/* Meta Tags */}
                             <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-medium tracking-[0.15em] mb-6 uppercase opacity-90">
@@ -64,7 +64,7 @@ export default function BlogPostHero({
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-serif leading-[1.1] mb-8 drop-shadow-lg">
+                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-serif leading-[1.1] mb-8 drop-shadow-lg !text-white">
                                 {title}
                             </h1>
                         </div>
