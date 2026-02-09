@@ -4,7 +4,7 @@ export default function AuthorSidebar({ author }: { author: any }) {
     if (!author) return null;
 
     return (
-        <div className="bg-[#ECDDC4]/30 rounded-2xl p-8 border border-[#8C7A65]/10 text-center sticky top-24">
+        <div className="bg-[#ECDDC4]/30 rounded-2xl p-8 border border-[#8C7A65]/10 text-center lg:sticky lg:top-32">
             <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[#fff] shadow-sm">
                 {author.avatar ? (
                     <Image

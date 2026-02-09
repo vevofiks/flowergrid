@@ -59,7 +59,7 @@ const MembershipAbout = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
                     <div className="connection-column space-y-6">
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            The FlowerGrid Membership offers structured guidance and expert support to help you cultivate clarity, resilience, and balance in your life. Through evidence-based techniques and holistic practices, you develop practical skills to manage stress, strengthen emotional wellbeing, and build sustainable habits. The membership provides a supportive community where you can share experiences and gain encouragement, ensuring you never feel alone on your journey.
+                            The Flowergrid Membership offers structured guidance and expert support to help you cultivate clarity, resilience, and balance in your life. Through evidence-based techniques and holistic practices, you develop practical skills to manage stress, strengthen emotional wellbeing, and build sustainable habits. The membership provides a supportive community where you can share experiences and gain encouragement, ensuring you never feel alone on your journey.
                         </p>
                     </div>
 

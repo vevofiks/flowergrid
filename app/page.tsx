@@ -75,7 +75,7 @@ const coreValues = [
   {
     icon: `${process.env.NEXT_PUBLIC_IMGURL}home/i2.png`,
     title: "WELLNESS YOUR WAY",
-    desc: "Whether you're seeking in-person support or prefer online guidance, our global network ensures conscious living is accessible—anytime, anywhere."
+    desc: "Whether you're seeking in-person support or prefer online guidance, our global network ensures conscious living is accessible - anytime, anywhere."
   },
   {
     icon: `${process.env.NEXT_PUBLIC_IMGURL}home/i3.png`,
@@ -89,13 +89,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <MaskScroll /> */}
+      <MaskScroll />
       <LadyScroll />
       <Connections />
       <CoreValues values={coreValues} />
       <TransformationServices />
       <LeafScrollText lines={lines} />
-
       <FadeInText />
       <CorporateProgram />
       <HeroTestimonials />
@@ -104,7 +103,7 @@ export default function Home() {
       <Connect
         image={`${process.env.NEXT_PUBLIC_IMGURL}membership/connection.jpg`}
         title="Your Journey Begins"
-        description="Connect with our team to design a personalized wellness pathway that fits your unique needs."
+        description="Connect with our team to design a personalised wellness pathway that fits your unique needs."
         btnText="Request a Consultation"
       />
     </>

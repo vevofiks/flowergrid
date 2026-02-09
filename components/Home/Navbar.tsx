@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Menu, X, Search, ArrowRight, Calendar } from "lucide-react";
+import { Menu, X, ArrowRight, Calendar } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@ const navLinks = [
       {
         title: "Samina Khan",
         href: "/about/person1",
-        image:`${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
+        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
       },
       {
         title: "Monira",
@@ -37,7 +37,7 @@ const navLinks = [
   { title: "Services", href: "/services" },
   { title: "Membership", href: "/membership" },
   {
-    title: "Programs",
+    title: "Workshops",
     href: "/programs",
     subLinks: [
       {
@@ -45,13 +45,13 @@ const navLinks = [
         href: "/programs",
       },
       {
-        title: "B2B",
+        title: "Corporate Programs",
         href: "/programs/b2b",
         image: `/b2b/1.jpg`,
       },
     ],
   },
-  { title: "Blogs", href: "/blogs" },
+  { title: "Holistic Journals", href: "/blogs" },
   { title: "Contact Us", href: "/contact" },
 ];
 
@@ -252,7 +252,7 @@ export default function Navbar() {
             />
           </div>
         </Link >
-            {/* Book Consultation Button */}
+        {/* Book Consultation Button */}
         <Link
           href="https://calendly.com/flowergridmarketing/30min?month=2026-02"
           target="_blank"

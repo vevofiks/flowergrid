@@ -1,3 +1,4 @@
+import Connect from '@/components/About/person/Connect'
 import AboutB2b from '@/components/B2B/AboutB2b'
 import B2bConsultation from '@/components/B2B/B2bConsultation'
 import B2bHero from '@/components/B2B/B2bHero'
@@ -94,8 +95,10 @@ const B2BPage = () => {
                 title="Impactful Experiences"
                 subtitle="What our B2B partners say"
             />
-            <B2bConsultation />
+            {/* <B2bConsultation /> */}
             <FaqSection faqs={B2BFaqs} />
+            <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
+
 
         </div>
     )
