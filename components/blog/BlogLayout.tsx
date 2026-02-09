@@ -34,11 +34,9 @@ export default function BlogLayout({ blogs }: BlogLayoutProps) {
             <BlogHero />
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mt-16 md:mt-20">
-                {/* Featured Section */}
                 <BlogFeaturedSection latestPost={latestPost} featuredPosts={featuredPosts} />
 
                 <div className="flex flex-col lg:flex-row gap-16 mt-16">
-                    {/* Left Sidebar - Fixed Width on Desktop */}
                     <aside className="w-full lg:w-[320px] flex-shrink-0">
                         <div className="sticky top-24">
                             <BlogListingSidebar topPosts={topPosts} />
