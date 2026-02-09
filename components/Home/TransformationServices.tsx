@@ -52,7 +52,7 @@ export default function TransformationService() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=1000%",
+          end: isMobile ? "+=1500%" : "+=1000%",
           scrub: 1,
           pin: true,
         },
@@ -70,9 +70,9 @@ export default function TransformationService() {
           left: oLeft + oRect.width / 2,
           top: oTop + oRect.height / 2,
           xPercent: -50,
-          yPercent: -33,
-          width: oRect.width * 0.9,
-          height: oRect.height * 0.45,
+          yPercent: -30,
+          width: oRect.width * 1,
+          height: oRect.height * 0.6,
           borderRadius: '50%',
           opacity: 0,
         });
@@ -148,6 +148,15 @@ export default function TransformationService() {
         ease: "power2.inOut"
       }, 4.5);
 
+      // Carousel animation for mobile
+      if (isMobile) {
+        tl.to(".practices-scroller", {
+          x: "-200%", // Shift all 3 cards (assuming width 100% or similar)
+          ease: "none",
+          duration: 3,
+        }, 5.5);
+      }
+
       return () => {
         window.removeEventListener("resize", positionPill);
       };
@@ -181,9 +190,9 @@ export default function TransformationService() {
 
           <div
             ref={textRef}
-            className="absolute left-4 md:left-8 lg:left-25 top-1/2 md:top-[450px] -translate-y-1/2 z-30 md:z-10"
+            className="absolute left-4 md:left-8 lg:left-25 top-1/2 -translate-y-1/2 z-30 md:z-10"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-[8rem] font-extrabold tracking-wide leading-tight text-[#535D4E]! font-heading whitespace-nowrap">
+            <h2 className="text-4xl md:text-6xl lg:text-[7.5rem] font-extrabold tracking-tight leading-[0.9] text-[#535D4E]! font-heading whitespace-nowrap">
               <span className="block mb-2">Where</span>
               <span className="mb-2 flex items-center">
                 <span ref={leftTextRef} className="inline-block relative">Transf</span>
@@ -214,8 +223,10 @@ export default function TransformationService() {
           >
           </div>
 
-          <div className="practices-wrapper absolute inset-0 z-30 flex items-center justify-center opacity-0 pointer-events-none mx-auto my-auto">
-            <PracticesSection practices={practices} />
+          <div className="practices-wrapper absolute inset-0 z-30 opacity-0 pointer-events-none flex items-center overflow-hidden">
+            <div className="w-full flex items-center justify-center md:py-20 h-full">
+              <PracticesSection practices={practices} />
+            </div>
           </div>
         </div>
       </div>
