@@ -24,7 +24,7 @@ const coreValues = [
   },
   {
     icon: `${process.env.NEXT_PUBLIC_IMGURL}services/i2.png`,
-    title: "Receive a Personalized Wellness Path",
+    title: "Receive a Personalised Wellness Path",
     desc: " built around your unique needs."
   },
   {
@@ -88,13 +88,13 @@ const page = () => {
     <>
       <Intro />
       <ServiceCards />
-      <MedicalServices />
+      {/* <MedicalServices /> */}
       <MeetExperts />
       <CoreValues values={coreValues} />
-      <Connect image={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/5.png`} title='Ready to explore our holistic wellness services?' description='Book a conversation today to find the path that supports your transformation best.' btnText='Book a Consultation' />
-      <ServiceConsultation />
+      {/* <ServiceConsultation /> */}
       <HeroTestimonials title='Testimonials' testimonials={ServiceTestimonials} />
       <FaqSection />
+      <Connect image={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/5.png`} title='Ready to explore our holistic wellness services?' description='Book a conversation today to find the path that supports your transformation best.' btnText='Book a Consultation' />
     </>
   )
 }

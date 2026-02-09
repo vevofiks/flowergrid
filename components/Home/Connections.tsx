@@ -46,9 +46,12 @@ const Connections = () => {
             <div className="max-w-7xl mx-auto">
 
                 <div className="connection-header flex items-center gap-4 mb-12">
+                    <div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading">
-                        Holistic Wellness: Understanding the Flowergrid Connection
+                        Understanding the Flowergrid Connection
                     </h2>
+                    </div>
+                    <div>
                     <Image
                         src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
                         alt="Flowergrid Logo"
@@ -56,6 +59,7 @@ const Connections = () => {
                         height={100}
                         className="object-contain"
                     />
+                    </div>
                 </div>
 
                 <div className="connection-text mb-12">

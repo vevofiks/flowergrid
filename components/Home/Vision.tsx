@@ -45,41 +45,62 @@ const Vision = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className='relative w-full h-screen bg-[#F3EAD8] flex items-center justify-center overflow-hidden'>
+      <section
+  ref={containerRef}
+  className="relative w-full bg-[#F3EAD8] py-16 md:py-24 lg:py-32 overflow-hidden"
+>
+  <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-            <div className="max-w-7xl w-full h-full max-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center justify-items-center">
+    {/* TEXT COLUMN */}
+    <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
 
-                <div className="flex flex-col items-center md:items-start z-10 order-2 md:order-1 justify-start md:justify-center h-full max-h-[90vh] mx-10 md:mx-0">
-                    <h1 ref={titleRef} className='text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.1] mb-6 text-center md:text-left'>
-                        The Vision Behind <br className="hidden md:block" />
-                        Flowergrid
-                    </h1>
+      <h1
+        ref={titleRef}
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 max-w-xl"
+      >
+        The Vision Behind <br className="hidden md:block" />
+        Flowergrid
+      </h1>
 
-                    <p ref={textRef} className='text-[#4A4A4A] text-sm md:text-base lg:text-xl font-sans! leading-relaxed max-w-lg mb-8 text-center md:text-left'>
-                        FlowerGrid exists to guide individuals and organizations towards holistic wellbeing through mind, body, and spirit integration. We provide evidence-based, personalised programs that foster personal growth, resilience, and conscious living, supporting meaningful change while helping clients achieve balance, clarity, and long-term transformation.
-                    </p>
+      <p
+        ref={textRef}
+        className="text-[#4A4A4A] text-sm sm:text-base md:text-lg leading-relaxed max-w-md md:max-w-lg mb-8"
+      >
+        Flowergrid exists to guide individuals and organisations towards holistic wellbeing through mind, body, and spirit integration. We provide personalised programs that foster growth, resilience, and conscious living.
+      </p>
 
-                    <Link href="/vision" className='' >
-                        <button ref={btnRef} className='bg-primary text-white font-sans text-xs md:text-sm uppercase tracking-wider font-medium rounded-full px-8 py-3 md:px-25 md:py-4 hover:bg-[#8F7A52] transition-colors duration-300 shadow-md'>
-                            Discover Our Vision
-                        </button>
-                    </Link>
-                </div>
+      <Link href="/vision">
+        <button
+          ref={btnRef}
+          className="bg-primary text-white text-xs md:text-sm uppercase tracking-wider font-medium rounded-full px-8 py-3 md:px-10 md:py-4 hover:bg-[#8F7A52] transition-colors duration-300 shadow-md"
+        >
+          Discover Our Vision
+        </button>
+      </Link>
 
-                <div ref={imageWrapperRef} className="relative w-full h-[35vh] md:h-[60vh] lg:h-[90vh] flex items-center justify-center md:justify-end order-1 md:order-2">
-                    <div className="relative w-full h-full">
-                        <Image
-                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/H vision flower.png`}
-                            alt="Vision Flower"
-                            fill
-                            className='object-contain object-center md:object-right'
-                            priority
-                        />
-                    </div>
-                </div>
+    </div>
 
-            </div>
-        </section>
+    {/* IMAGE COLUMN */}
+    <div
+      ref={imageWrapperRef}
+      className="relative w-full flex justify-center md:justify-end order-1 md:order-2"
+    >
+      <div className="relative w-[80%] sm:w-[70%] md:w-[90%] lg:w-full max-w-lg aspect-square md:aspect-[4/5]">
+
+        <Image
+          src={`${process.env.NEXT_PUBLIC_IMGURL}home/H vision flower.png`}
+          alt="Vision Flower"
+          fill
+          className="object-contain md:object-right"
+          priority
+        />
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
     )
 }
 

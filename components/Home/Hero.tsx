@@ -87,7 +87,7 @@ export default function Hero() {
 
                 <div ref={textRef} className="relative z-10 md:mt-0 max-w-4xl">
                     <h1 className="hero-text-element medium leading-[1.1] text-4xl md:text-6xl lg:text-[59px]">
-                        Holistic Wellness: Integrating Mind, Body & Soul for Complete Wellbeing
+                      Integrating Mind, Body & Soul for Complete Wellbeing
                     </h1>
 
                     <p className="hero-text-element mt-6 md:mt-8 text-lg md:text-xl max-w-2xl">

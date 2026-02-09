@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function HeaderSecrtion() {
@@ -14,10 +15,12 @@ function HeaderSecrtion() {
             <p className="text-xl md:text-2xl font-heading font-semibold text-text-heading">
                 Step-by-Step Experience:
             </p>
-
+            <Link
+            href={'https://calendly.com/flowergridmarketing/30min?month=2026-02'}>
             <button className="bg-[#9C7D4D] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#8A6D42] transition-colors duration-300 shadow-lg">
                 Book Your Discovery Session
             </button>
+            </Link>
         </div>
     </div>
   )

@@ -4,7 +4,14 @@ import React, { useEffect, useState } from 'react';
 
 // AskAI Component
 export function AskAI({ url }: { url: string }) {
-    const encodedUrl = encodeURIComponent(url);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Only encode URL on client side to avoid hydration mismatch
+    const encodedUrl = mounted ? encodeURIComponent(url) : '';
 
     const links = [
         { name: 'ChatGPT', icon: '🧠', href: `https://chat.openai.com?q=Summarize+this+article:+${encodedUrl}` },

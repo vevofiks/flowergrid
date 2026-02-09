@@ -4,7 +4,6 @@ import React, { useRef, useLayoutEffect } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Link from 'next/link';
 import PracticesSection from './PracticesSection';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,16 +26,7 @@ const practices = [
   }
 ];
 
-const services = [
-  {
-    id: 1,
-    title: "Life & Transformation Coaching",
-    desc: "Unlock your potential with personalized life and transformation coaching for emotional wellbeing. Our approach blends practical mindset tools with self-reflection and accountability to help you navigate change, build confidence, and create meaningful direction in your life.",
-    img: `${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`,
-    btnText: "Explore Coaching",
-    btnLink: "/services"
-  },
-];
+
 
 export default function TransformationService() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -91,9 +81,7 @@ export default function TransformationService() {
       positionPill();
       window.addEventListener("resize", positionPill);
 
-
       tl.set([textRef.current, womanRef.current, leafRef.current], { opacity: 1 });
-
 
       tl.to(oLetterRef.current, { opacity: 0, duration: 0.1 }, 0.5);
       tl.to(pillRef.current, { opacity: 1, duration: 0.1 }, 0.5);
@@ -120,18 +108,18 @@ export default function TransformationService() {
         ease: "power2.inOut"
       }, 1);
       tl.to(womanRef.current, { x: womanPush, opacity: 0.5, duration: 1.5, ease: "power2.inOut" }, 1);
-      tl.to(".pill-preview-image", { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }, 1.5);
 
-
+      // Expand pill to full width/height
       tl.to(pillRef.current, {
         left: '50%',
-        top: isMobile ? '35%' : '30%',
+        top: '50%',
         x: 0,
         xPercent: -50,
         yPercent: -50,
-        width: isMobile ? "90vw" : "550px",
-        height: isMobile ? "160px" : "200px",
-        borderRadius: "200px",
+        width: "100vw",
+        height: "100vh",
+        borderRadius: "0px",
+        borderWidth: '0px',
         duration: 2,
         ease: "power2.inOut",
       }, 3);
@@ -142,33 +130,23 @@ export default function TransformationService() {
         pointerEvents: "none"
       }, 3.2);
 
-      tl.to(".pill-preview-image", { autoAlpha: 0, duration: 0.5 }, 4.5);
-      tl.to(".service-image-0", { autoAlpha: 1, scale: 1, duration: 1.5, ease: "power2.out" }, 4.8);
-      tl.to(".service-content-0", { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" }, 5);
+      tl.to(womanRef.current, {
+        opacity: 0,
+        duration: 0.5,
+      }, 3.5);
 
-      services.slice(1).forEach((_, index) => {
-        const i = index + 1;
-        const baseTime = 7 + (i - 1) * 3;
+      tl.to(leafRef.current, {
+        opacity: 0,
+        duration: 0.5,
+      }, 3.5);
 
-        tl.to(`.service-image-${i - 1}`, { autoAlpha: 0, scale: 0.95, duration: 1 }, baseTime);
-        tl.to(`.service-content-${i - 1}`, { autoAlpha: 0, y: -20, duration: 0.8 }, baseTime);
-
-        // Using .to instead of .fromTo for better scroll-back behavior
-        tl.to(`.service-image-${i}`, { autoAlpha: 1, scale: 1, duration: 1.5, ease: "power2.out" }, baseTime + 0.5);
-        tl.to(`.service-content-${i}`, { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" }, baseTime + 0.8);
-      });
-
-      // Animate PracticesSection after the last service
-      const lastServiceTime = services.length > 1 ? 7 + (services.length - 2) * 3 + 2 : 7;
-      tl.to(`.service-image-${services.length - 1}`, { autoAlpha: 0, scale: 0.95, duration: 1 }, lastServiceTime);
-      tl.to(`.service-content-${services.length - 1}`, { autoAlpha: 0, y: -20, duration: 0.8 }, lastServiceTime);
-      tl.to(".practices-section-content", {
-        autoAlpha: 1,
-        y: 0,
-        scale: isMobile ? 0.35 : 0.6,
-        duration: 1.5,
-        ease: "power2.out"
-      }, lastServiceTime + 1);
+      // Show practices section
+      tl.to(".practices-wrapper", {
+        opacity: 1,
+        pointerEvents: "auto",
+        duration: 1,
+        ease: "power2.inOut"
+      }, 4.5);
 
       return () => {
         window.removeEventListener("resize", positionPill);
@@ -182,7 +160,7 @@ export default function TransformationService() {
     <>
       <div
         ref={containerRef}
-        className="relative w-full h-screen overflow-hidden bg-[#F3EAD8] "
+        className="relative w-full h-screen overflow-hidden bg-[#F3EAD8]"
         style={{
           backgroundImage: `url('/home/service-bg.png')`,
           backgroundSize: "cover",
@@ -231,58 +209,14 @@ export default function TransformationService() {
 
           <div
             ref={pillRef}
-            className="absolute overflow-hidden bg-transparent border-5 md:border-19 border-[#535D4E] z-20 flex items-center justify-center"
+            className="absolute overflow-hidden bg-[#F3EAD8] border-5 md:border-19 border-[#535D4E] z-20 flex items-center justify-center"
             style={{ opacity: 0 }}
           >
-            <div className="pill-preview-image absolute inset-0 opacity-0 scale-90">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_IMGURL}home/t1.png`}
-                alt="Preview"
-                fill
-                className="object-cover rounded-full"
-              />
-            </div>
-
-            {services.map((service, idx) => (
-              <div
-                key={`img-${service.id}`}
-                className={`service-image-${idx} absolute inset-0 opacity-0 scale-100`}
-              >
-                <Image
-                  src={service.img}
-                  alt={service.title}
-                  fill
-                  className="object-cover rounded-full"
-                />
-              </div>
-            ))}
           </div>
 
-          <div className="absolute w-full max-w-6xl text-center z-30 px-4 md:px-6 top-[51%] md:top-[48%]">
-            {services.map((service, idx) => (
-              <div
-                key={`content-${service.id}`}
-                className={`service-content-${idx} absolute top-0 left-0 w-full flex flex-col items-center opacity-0 invisible translate-y-10`}
-              >
-                <h3 className="text-2xl md:text-5xl text-[#3A4033] mb-3 md:mb-4 font-playfair! font-bold">
-                  {service.title}
-                </h3>
-
-                <p className="text-sm md:text-xl px-5 md:px-0 leading-relaxed text-[#5C6154] mb-6 md:mb-8 max-w-md md:max-w-3xl mx-auto font-sans font-medium">
-                  {service.desc}
-                </p>
-
-                <Link href={service.btnLink} className="w-auto md:w-auto px-8 py-3 md:px-10 md:py-4 border border-[#8C9283] rounded-full text-xs md:text-base tracking-widest uppercase bg-transparent hover:bg-primary! hover:border-primary! hover:text-[#F3EAD8]! transition-colors duration-300 font-semibold mb-8">
-                  {service.btnText}
-                </Link>
-              </div>
-            ))}
-
-            <div className="practices-section-content absolute top-[-18rem] md:top-[-20rem] left-0 right-0 w-full opacity-0 invisible translate-y-10 scale-95 origin-top">
-              <PracticesSection practices={practices} />
-            </div>
+          <div className="practices-wrapper absolute inset-0 z-30 flex items-center justify-center opacity-0 pointer-events-none mx-auto my-auto">
+            <PracticesSection practices={practices} />
           </div>
-
         </div>
       </div>
     </>

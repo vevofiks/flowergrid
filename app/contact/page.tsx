@@ -96,11 +96,11 @@ const ContactPage = () => {
             <ContactForm />
             <ContactInfo />
             <FAQSection faqs={contactFaqs} />
-            <HeroTestimonials
+            {/* <HeroTestimonials
                 testimonials={contactTestimonials}
                 title="Client Experiences and Insights"
                 subtitle="Voices of Tranquility"
-            />
+            /> */}
         </div>
     )
 }
