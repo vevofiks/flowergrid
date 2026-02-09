@@ -16,7 +16,11 @@ export function extractTldrText(tldr: any): string {
                 return block.data.items.join(' ');
             }
             return '';
-        }).join(' ').replace(/<[^>]*>?/gm, ''); // Strip HTML tags just in case
+        }).join(' ')
+        .replace(/<[^>]*>?/gm, '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\u00A0/g, ' ')
+        .trim();
     }
 
     return '';

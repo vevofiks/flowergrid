@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-// AskAI Component
 export function AskAI({ url }: { url: string }) {
     const [mounted, setMounted] = useState(false);
 

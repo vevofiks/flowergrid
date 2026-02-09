@@ -32,7 +32,6 @@ export default function BlogFeaturedSection({ latestPost, featuredPosts }: BlogF
     return (
         <section className="bg-transparent mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                {/* Left Column: Latest Post (Large Card) */}
                 {latestPost && (
                     <div>
                         <h2 className="text-xl font-serif text-[#1C1C1C] mb-6">Latest Post</h2>
