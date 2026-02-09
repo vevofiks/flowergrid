@@ -148,7 +148,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
             </div>
 
             {/* Navigation Arrows */}
-            <div className={`fixed right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 md:gap-4 transition-all duration-500 ${isNavVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10 pointer-events-none'
+            <div className={`fixed right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3 md:gap-4 transition-all duration-500 ${isNavVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10 pointer-events-none'
                 }`}>
                 <button
                     onClick={() => scrollToSection(currentSection - 1)}

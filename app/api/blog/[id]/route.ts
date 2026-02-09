@@ -61,10 +61,8 @@ export async function PUT(
 
         const removedImages = allOldImages.filter(imgUrl => !allNewImages.has(imgUrl));
 
-        // Delete removed images from Vercel Blob
         for (const imgUrl of removedImages) {
             try {
-                // imgUrl is a full blob URL like "https://xxx.public.blob.vercel-storage.com/blog/123.jpg"
                 if (imgUrl.includes('blob.vercel-storage.com')) {
                     await del(imgUrl);
                     console.log('Deleted unused blob image:', imgUrl);

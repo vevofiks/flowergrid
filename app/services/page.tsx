@@ -1,19 +1,14 @@
 import Intro from '@/components/Services/Intro'
-import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
-import MedicalServices from '@/components/Services/MedicalServices'
 import MeetExperts from '@/components/Services/MeetExperts'
 import CoreValues from '@/components/Home/CoreValues'
-import ServiceConsultation from '@/components/Services/ServiceConsultation'
 import FaqSection from '@/components/Contact/FAQSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import ServiceCards from '@/components/Services/ServiceCards'
 import Connect from '@/components/About/person/Connect'
-import { Quote } from 'lucide-react'
-const img = `/about/person2/4.png`
 
-const phrases = [
-  "The Flower of Life reminds us that everything in the universe is connected, including our own journey of transformation"
-]
+// const phrases = [
+//   "The Flower of Life reminds us that everything in the universe is connected, including our own journey of transformation"
+// ]
 
 const coreValues = [
 
@@ -88,10 +83,8 @@ const page = () => {
     <>
       <Intro />
       <ServiceCards />
-      {/* <MedicalServices /> */}
       <MeetExperts />
       <CoreValues values={coreValues} />
-      {/* <ServiceConsultation /> */}
       <HeroTestimonials title='Testimonials' testimonials={ServiceTestimonials} />
       <FaqSection />
       <Connect image={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/5.png`} title='Ready to explore our holistic wellness services?' description='Book a conversation today to find the path that supports your transformation best.' btnText='Book a Consultation' />

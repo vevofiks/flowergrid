@@ -51,7 +51,7 @@ const navLinks = [
       },
     ],
   },
-  { title: "Holistic Journals", href: "/blogs" },
+  { title: "Journals", href: "/blogs" },
   { title: "Contact Us", href: "/contact" },
 ];
 
