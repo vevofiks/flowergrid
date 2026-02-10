@@ -46,21 +46,25 @@ export default function ProgramIntro() {
             >
                 <div className="max-w-6xl">
 
-                    <motion.h1
-                        variants={itemVariants}
-                        className="!text-white text-3xl md:text-6xl lg:text-[5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
-                    >
-                        Flowergrid Holistic Wellness Programmes Support for Mind, Body & Self
-                    </motion.h1>
-                    <motion.p
-                        variants={itemVariants}
-                        className="!text-white/90 text-lg md:text-2xl font-sans font-light tracking-wide max-w-3xl"
-                    >
-                        Our holistic wellness programmes are created by a multidisciplinary team who combine medical understanding, therapeutic practice and holistic methods. Every journey is adapted around your needs and your pace.
-                    </motion.p>
+          <motion.h1
+            variants={itemVariants}
+            className="!text-white text-3xl md:text-6xl lg:text-[5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
+          >
+            Flowergrid Holistic Wellness Programmes Support for Mind, Body & Self
+        </motion.h1>
 
-                </div>
-            </motion.div>
-        </section>
-    );
+          <motion.p
+            variants={itemVariants}
+            className="!text-white/90 text-lg md:text-2xl font-sans font-light tracking-wide max-w-3xl"
+          >
+            Our holistic wellness programmes are created by a multidisciplinary team who combine
+            medical understanding, therapeutic practice and holistic methods.
+            Every journey is adapted around your needs and your pace.
+          </motion.p>
+
+
+        </div>
+      </motion.div>
+    </section>
+  );
 }

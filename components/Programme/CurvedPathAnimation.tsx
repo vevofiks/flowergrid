@@ -82,7 +82,7 @@ export default function CurvedPathAnimation() {
           trigger: containerRef.current,
           start: "top center",
           end: "bottom center",
-          scrub: 1,
+          scrub: 0.5,
         }
       });
 
@@ -101,7 +101,7 @@ export default function CurvedPathAnimation() {
                   trigger: step,
                   start: "top 80%",
                   end: "top 50%",
-                  scrub: 1,
+                  scrub: 0.5,
                 }
               }
             );
@@ -117,7 +117,7 @@ export default function CurvedPathAnimation() {
                   trigger: step,
                   start: "top 75%",
                   end: "top 45%",
-                  scrub: 1,
+                  scrub: 0.5,
                 }
               }
             );
@@ -140,7 +140,7 @@ export default function CurvedPathAnimation() {
               trigger: containerRef.current,
               start: "top center",
               end: "bottom center",
-              scrub: 1,
+              scrub: 0.5,
             },
           }
         );
@@ -170,7 +170,7 @@ export default function CurvedPathAnimation() {
                 trigger: stepElement,
                 start: "top 70%",
                 end: "top 30%",
-                scrub: 1,
+                scrub: 0.5,
               },
             }
           );
@@ -191,7 +191,7 @@ export default function CurvedPathAnimation() {
                 trigger: stepElement,
                 start: "top 75%",
                 end: "top 40%",
-                scrub: 1,
+                scrub: 0.5,
               },
             }
           );
@@ -208,28 +208,28 @@ export default function CurvedPathAnimation() {
       {/* Decorative Leaves (Desktop) */}
       <div className="hidden lg:block">
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}program/left-leaf.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/left-leaf.png`}
           alt="leaf"
           className="absolute top-[23%] left-0 w-44"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}program/right-leaf2.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/right-leaf2.png`}
           alt="leaf"
           className="absolute bottom-[10%] right-0 opacity-80 w-44"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}program/right-leaf.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/right-leaf.png`}
           alt="leaf"
           className="absolute top-[45%] right-0 w-38 rotate-45"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}program/left-leaf2.png`}
+          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/left-leaf2.png`}
           alt="leaf"
           className="absolute top-[60%] left-1 w-38 opacity-60 "
           width={100}
@@ -252,6 +252,7 @@ export default function CurvedPathAnimation() {
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
+            style={{ willChange: "stroke-dashoffset" }}
           />
           <circle ref={(el) => { dotsRef.current[0] = el; }} cx="300" cy="40" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
           <circle ref={(el) => { dotsRef.current[1] = el; }} cx="800" cy="430" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
@@ -279,7 +280,8 @@ export default function CurvedPathAnimation() {
                   left: pos.left,
                   right: pos.right,
                   top: pos.top,
-                  width: 'min(320px, 35vw)'
+                  width: 'min(320px, 35vw)',
+                  willChange: "opacity, transform"
                 }}
               >
                 <div className={`step-content ${pos.mt || ''} ${pos.align || ''}`}>

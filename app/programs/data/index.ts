@@ -85,7 +85,7 @@ export const myPrograms: ProgramData[] = [
         benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment","Sustainable habit formation and long-term transformation"],
         buttonText: "Start Your Transformation Journey",
         buttonLink: "/your-link",
-        imageUrl: `/programme/p5.jpg`,
+        imageUrl: `${imgurl}programme/p5.jpg`,
         imageAlt: "Tailored coaching program",
         decorativeImages: [
             {

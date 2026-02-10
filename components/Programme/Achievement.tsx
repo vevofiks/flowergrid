@@ -65,11 +65,10 @@ export default function Achievement() {
                     What You Will Achieve
                 </h2>
                 <p className="text-base md:text-lg lg:text-xl font-sans text-black/70! leading-relaxed">
+                
                     Experience transformation that touches every part of your being.
                     <br />
-                    Flowergrid programs are designed to create measurable, lasting impact
-                    <br />
-                    across mind, body, and spirit.
+                    Holistic wellness programmes at Flowergrid are designed to create measurable impact.
                 </p>
                 <div className="mt-8">
 
@@ -108,11 +107,6 @@ export default function Achievement() {
                             </p>
                         </div>
 
-                        {/* <ul className="text-black/80 text-sm md:text-base lg:text-base leading-relaxed text-left pl-6 md:pl-8 lg:pl-10 space-y-2 md:space-y-2.5 lg:space-y-3 w-full max-w-full md:max-w-[320px] lg:max-w-[360px]">
-                            {section.benefits.map((benefit, index) => (
-                                <li key={index} className="pl-2">{benefit}</li>
-                            ))}
-                        </ul> */}
                     </div>
                 ))}
             </div>
