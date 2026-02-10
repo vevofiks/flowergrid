@@ -60,7 +60,7 @@ const MembershipHelp = () => {
 
                     <div className="connection-column space-y-6">
                         <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            With guidance on lifestyle alignment and conscious living, this holistic transformation programme empowers you to live intentionally and nurture your mind, body, and spirit.
+                            With guidance on lifestyle alignment and conscious living, this holistic transformation program empowers you to live intentionally and nurture your mind, body, and spirit.
                         </p>
                     </div>
                 </div>

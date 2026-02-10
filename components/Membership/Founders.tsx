@@ -63,6 +63,17 @@ export default function Founders() {
 
                 <div ref={saminaRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
+                    <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <div className="relative w-full max-w-[450px] aspect-3/4 mb-4 lg:mb-0">
+                            <Image
+                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
+                                alt="Samina Khan"
+                                fill
+                                className="object-cover rounded-2xl"
+                            />
+                        </div>
+                    </div>
+
                     <div className="content-block flex-1 order-2 lg:order-1 text-center lg:text-left">
                         <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
                             Meet <span className="font-medium">Samina Khan</span>
@@ -71,7 +82,7 @@ export default function Founders() {
                             Co-Founder & Wellness Strategist
                         </h3>
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
+                            Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programs, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
                         </p>
                         <Link href="/about/samina-khan">
                             <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
@@ -79,34 +90,23 @@ export default function Founders() {
                             </button>
                         </Link>
                     </div>
-
-                    <div className="image-block flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[500px] aspect-3/5 mb-10">
-                            <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
-                                alt="Samina Khan"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
                 </div>
 
 
                 <div ref={moniraRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
-                    <div className="image-block flex-1 order-1 flex justify-center lg:justify-start">
-                        <div className="relative w-full max-w-[500px] aspect-4/5">
+                    <div className="image-block w-full lg:flex-1 order-1 flex justify-center lg:justify-start">
+                        <div className="relative w-full max-w-[450px] aspect-3/4 mb-4 lg:mb-0">
                             <Image
                                 src={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/monira.png`}
                                 alt="Monira Ahmed"
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-2xl"
                             />
                         </div>
                     </div>
 
-                    <div className="content-block flex-1 order-2 text-center lg:text-right">
+                    <div className="content-block flex-1 order-2 text-center lg:text-left lg:text-right">
                         <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
                             Meet <span className="font-medium">Monira Ahmed</span>
                         </h2>
@@ -114,7 +114,7 @@ export default function Founders() {
                             Co-Founder & Leadership Life Coach
                         </h3>
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
+                            Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programs, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
                         </p>
                         <Link href="/about/monira-ahmed">
                             <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
