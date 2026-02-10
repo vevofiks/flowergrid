@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +22,7 @@ interface PracticesSectionProps {
 
 const Card = ({ practice }: { practice: Practice }) => (
     <Link href={'/services'}>
-        <div className="relative overflow-hidden rounded-[20px] md:rounded-[24px] lg:rounded-[28px] aspect-4/3 md:aspect-5/4 cursor-pointer">
+        <div className="relative overflow-hidden rounded-[24px] md:rounded-[32px] aspect-4/5 md:aspect-3/3 cursor-pointer shadow-lg shadow-black/5">
             <Image
                 src={practice.image}
                 alt={practice.title}
@@ -51,6 +51,41 @@ export default function PracticesSection({
     practices,
 }: PracticesSectionProps) {
     const sectionRef = useRef<HTMLElement>(null);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    const checkScroll = () => {
+        if (scrollContainerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+            setCanScrollLeft(scrollLeft > 10);
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+        }
+    };
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', checkScroll);
+            checkScroll();
+            window.addEventListener('resize', checkScroll);
+        }
+        return () => {
+            if (container) container.removeEventListener('scroll', checkScroll);
+            window.removeEventListener('resize', checkScroll);
+        };
+    }, []);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const scrollAmount = container.clientWidth * 0.8;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     // Safety check for practices
     if (!practices || practices.length === 0) {
@@ -94,29 +129,31 @@ export default function PracticesSection({
     return (
         <section
             ref={sectionRef}
-            className="w-full h-auto flex items-center justify-center overflow-visible"
+            className="w-full h-auto py-10 md:py-20 flex flex-col items-center justify-center overflow-hidden"
         >
-            <div className="w-full h-auto flex items-center justify-center px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-                <div className="w-full max-w-[1100px] overflow-visible">
-                    <div className="practices-animation-container flex md:block">
+            <div className="w-full  flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+                <div className="w-full max-w-[1200px] flex flex-col gap-8 md:gap-12 relative">
 
-                        {/* Wrapper for horizontal scroll on mobile */}
-                        <div className="flex md:grid md:grid-cols-3 gap-8 md:gap-5 xl:gap-8 w-full practices-scroller">
+                    <div
+                        ref={scrollContainerRef}
+                        className="w-full h-[450px] md:h-auto overflow-x-auto scrollbar-hide snap-x snap-mandatory overflow-y-hidden"
+                    >
+                        <div className="flex items-start gap-6 md:gap-12 py-6 min-w-full md:mb-[60px]">
 
-                            {/* Column 1: Mind Card */}
+                            {/* Mind Card */}
                             {mindPractice && (
-                                <div className="col-1-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                <div className="col-1-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[75vw] sm:w-[50vw] md:w-[31%] lg:w-[calc(33.333%-2rem)] snap-center md:snap-start md:mt-0">
                                     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
                                         <Card practice={mindPractice} />
                                     </div>
                                 </div>
                             )}
 
-                            {/* Column 2: Text + Body */}
+                            {/* Body Card */}
                             {bodyPractice && (
-                                <div className="col-2-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                <div className="col-2-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[75vw] sm:w-[50vw] md:w-[31%] lg:w-[calc(33.333%-2rem)] snap-center md:snap-start md:mt-15">
                                     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                                        <div className="hidden md:block">
+                                        <div className="hidden md:block min-h-16">
                                             <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
                                                 Each practice plays a part in restoring balance to the mind, body, and spirit
                                             </p>
@@ -126,12 +163,11 @@ export default function PracticesSection({
                                 </div>
                             )}
 
-                            {/* Column 3: Text + Spirit */}
+                            {/* Spirit Card */}
                             {spiritPractice && (
-                                <div className="col-3-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[85vw] md:w-full">
+                                <div className="col-3-item group transition-transform duration-500 ease-out hover:-translate-y-3 shrink-0 w-[75vw] sm:w-[50vw] md:w-[31%] lg:w-[calc(33.333%-2rem)] snap-center md:snap-start md:mt-30">
                                     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
-                                        <div className="hidden lg:block h-12 xl:h-16"></div>
-                                        <div className="hidden md:block">
+                                        <div className="hidden md:block min-h-16">
                                             <p className="text-[#5A5A5A] text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] font-sans leading-tight lg:leading-snug">
                                                 bringing clarity, health, and calm through evidence-based and holistic care
                                             </p>
@@ -141,8 +177,24 @@ export default function PracticesSection({
                                 </div>
                             )}
                         </div>
-
                     </div>
+
+                    {/* Navigation Buttons - Hidden on Desktop */}
+                    <div className="flex md:hidden justify-center gap-10 items-center w-full mt-4 md:mt-8 px-2">
+                        <button
+                            onClick={() => scroll('left')}
+                            className={`w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#535D4E]/20 flex items-center justify-center transition-all duration-300 ${canScrollLeft ? 'opacity-100 bg-white hover:bg-[#535D4E] hover:text-white cursor-pointer shadow-md' : 'opacity-30 cursor-not-allowed'}`}
+                        >
+                            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                        </button>
+                        <button
+                            onClick={() => scroll('right')}
+                            className={`w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#535D4E]/20 flex items-center justify-center transition-all duration-300 ${canScrollRight ? 'opacity-100 bg-white hover:bg-[#535D4E] hover:text-white cursor-pointer shadow-md' : 'opacity-30 cursor-not-allowed'}`}
+                        >
+                            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </section>

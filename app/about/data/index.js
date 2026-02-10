@@ -188,7 +188,7 @@ export const personsData = {
             bioText: [
                 "My journey has taken me through the worlds of business, education, and community development. I began my career with a degree in International Business and Economics, which opened my eyes to how people learn, lead, and adapt in different cultures.",
                 "Today, I work as a hypnotherapist in Croydon and global strategist. Along the way, I trained as a Master NLP Coach and became a certified trainer in nutrition and soft skills. These disciplines gave me the tools to understand human behaviour and guide others through meaningful transformation.",
-                "My career has been shaped by one idea: progress happens when people grow together. Whether I am mentoring young adults, supporting women settling into new environments, or leading wellbeing programmes, I aim to help people feel confident, capable, and connected."
+                "My career has been shaped by one idea: progress happens when people grow together. Whether I am mentoring young adults, supporting women settling into new environments, or leading wellbeing programs, I aim to help people feel confident, capable, and connected."
             ]
         },
 
@@ -224,7 +224,7 @@ export const personsData = {
         // JourneySection component data
         journeySection: {
             title: "Community and Impact",
-            description: "Community work is central to what I do. I have collaborated with schools, charities and local organizations to design programmes that make a lasting difference. These include:",
+            description: "Community work is central to what I do. I have collaborated with schools, charities and local organisations to design programs that make a lasting difference. These include:",
             flowerWithCard: [
                 {
                     "type": "card",
@@ -241,7 +241,7 @@ export const personsData = {
                     "type": "card",
                     "number": "02",
                     "title": "Leadership Programs",
-                    "description": "Leadership and wellbeing programmes for older adults"
+                    "description": "Leadership and wellbeing programs for older adults"
                 },
                 {
                     "type": "flower",
@@ -409,7 +409,7 @@ export const teamTree = [
         "members": [
             {
                 "name": "Rico Wagner Caleep",
-                "role": "Leadership • Growth • Mental Performance Coaching executives & organizations",
+                "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
                 "image": `${imageUrl}about/team/rico.png`,
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }

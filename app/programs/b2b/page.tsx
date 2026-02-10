@@ -14,13 +14,13 @@ import React from 'react'
 const B2BFaqs = [
     {
         id: 1,
-        question: "How are your corporate wellbeing programmes different from standard employee assistance plans (EAPs)?",
-        answer: "EAPs are often reactive, offering support only when an employee is already in crisis. Our corporate wellbeing programmes are proactive. We focus on building emotional intelligence, resilience and leadership skills before burnout happens. We work with your culture and team dynamics to create an environment where wellbeing is integrated into daily work, not just an add-on service."
+        question: "How are your corporate wellbeing programs different from standard employee assistance plans (EAPs)?",
+        answer: "EAPs are often reactive, offering support only when an employee is already in crisis. Our corporate wellbeing programs are proactive. We focus on building emotional intelligence, resilience and leadership skills before burnout happens. We work with your culture and team dynamics to create an environment where wellbeing is integrated into daily work, not just an add-on service."
     },
     {
         id: 2,
-        question: "Can you tailor the programme to our specific industry or team size?",
-        answer: "Yes. We understand that a university faculty faces different pressures than a tech start-up or financial firm. Every engagement begins with a consultation to understand your specific challenges. We then design a corporate wellbeing programme that fits your sector, team size and current objectives, whether you need a half-day workshop for ten people or a long-term strategy for a whole department."
+        question: "Can you tailor the program to our specific industry or team size?",
+        answer: "Yes. We understand that a university faculty faces different pressures than a tech start-up or financial firm. Every engagement begins with a consultation to understand your specific challenges. We then design a corporate wellbeing program that fits your sector, team size and current objectives, whether you need a half-day workshop for ten people or a long-term strategy for a whole department."
     },
     {
         id: 3,
@@ -29,8 +29,8 @@ const B2BFaqs = [
     },
     {
         id: 4,
-        question: "How do we measure the impact of a corporate wellbeing programme?",
-        answer: "We focus on tangible outcomes, not just attendance numbers. Depending on your goals, we can track metrics such as improved employee engagement scores, reduced sickness absence, or qualitative feedback on team communication and stress levels. We build regular review points into our corporate wellbeing programmes to ensure we are delivering real value and sustainable change."
+        question: "How do we measure the impact of a corporate wellbeing program?",
+        answer: "We focus on tangible outcomes, not just attendance numbers. Depending on your goals, we can track metrics such as improved employee engagement scores, reduced sickness absence, or qualitative feedback on team communication and stress levels. We build regular review points into our corporate wellbeing programs to ensure we are delivering real value and sustainable change."
     },
     {
         id: 5,
@@ -45,14 +45,14 @@ const B2BFaqs = [
     {
         id: 7,
         question: "How quickly can we get started?",
-        answer: "We can usually begin the discovery process within a few days of your enquiry. Once we have agreed on the scope and focus of your corporate wellbeing programme, we can typically schedule workshops or coaching sessions to start within a few weeks, depending on the scale of the rollout and your internal timelines."
+        answer: "We can usually begin the discovery process within a few days of your enquiry. Once we have agreed on the scope and focus of your corporate wellbeing program, we can typically schedule workshops or coaching sessions to start within a few weeks, depending on the scale of the rollout and your internal timelines."
     },
 ];
 
 const b2bTestimonials = [
     {
         id: 1,
-        quote: "We have engaged with several providers in the past, but Flowergrid’s corporate wellbeing programmes offered the strategic depth we were missing. Their focus on leadership and emotional intelligence coaching has transformed how our managers handle pressure. We aren't just seeing happier staff; we are seeing leaders who can spot burnout before it happens and support their teams effectively.",
+        quote: "We have engaged with several providers in the past, but Flowergrid’s corporate wellbeing programs offered the strategic depth we were missing. Their focus on leadership and emotional intelligence coaching has transformed how our managers handle pressure. We aren't just seeing happier staff; we are seeing leaders who can spot burnout before it happens and support their teams effectively.",
         author: "Sarah Thomson., Head of People & Culture, Financial Services",
         rating: 5,
     },
@@ -76,7 +76,7 @@ const b2bTestimonials = [
     },
     {
         id: 5,
-        quote: "“Our teams were under pressure and struggling to communicate well. The corporate wellbeing programme delivered by Flowergrid helped us rebuild trust and cohesion in a very grounded way. Colleagues now have a shared language around stress, boundaries, and wellbeing, and we are already noticing better collaboration and fewer conflicts.”",
+        quote: "“Our teams were under pressure and struggling to communicate well. The corporate wellbeing program delivered by Flowergrid helped us rebuild trust and cohesion in a very grounded way. Colleagues now have a shared language around stress, boundaries, and wellbeing, and we are already noticing better collaboration and fewer conflicts.”",
         author: "Elena Rico, Operations Manager, Techminds",
         rating: 5,
     }

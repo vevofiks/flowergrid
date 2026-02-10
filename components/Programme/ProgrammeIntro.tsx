@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
-const ProgrammeIntro = () => {
+const programIntro = () => {
     const introRef = useRef<HTMLDivElement>(null)
     const [isMobile, setIsMobile] = useState(false);
 
@@ -40,7 +40,7 @@ const ProgrammeIntro = () => {
     }, { scope: introRef })
     return (
         <div
-            style={{ background: `url('/programme/p1.jpg') no-repeat center center/cover` }}
+            style={{ background: `url('/program/p1.jpg') no-repeat center center/cover` }}
             // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
             // 2. Added overflow-hidden to prevent scrollbars
             className='relative flex items-center h-screen md:min-h-screen w-full overflow-hidden'
@@ -59,11 +59,11 @@ const ProgrammeIntro = () => {
             >
 
                 <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 !text-white drop-shadow-lg'>
-                    Programmes designed to <br /> support your mind, body <br /> and sense of self
+                    programs designed to <br /> support your mind, body <br /> and sense of self
                 </h1>
 
                 <p className='text-md md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>
-                    Our programmes are created by a multidisciplinary team who
+                    Our programs are created by a multidisciplinary team who
                     combine medical understanding, therapeutic practice and
                     holistic methods. Every journey is adapted around your needs
                     and your pace.
@@ -75,4 +75,4 @@ const ProgrammeIntro = () => {
     )
 }
 
-export default ProgrammeIntro
+export default programIntro
