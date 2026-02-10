@@ -40,10 +40,15 @@ const Intro = () => {
     }, { scope: introRef })
     return (
         <div
-            style={{ background: `url('/services/intro.jpg') no-repeat center center/cover` }}
-            // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
-            // 2. Added overflow-hidden to prevent scrollbars
-            className='relative flex items-center min-h-screen w-full overflow-hidden'
+            className="
+            relative w-full overflow-hidden flex items-center
+            min-h-[60vh] md:min-h-screen
+            bg-no-repeat bg-cover
+            bg-top md:bg-center
+            "
+            style={{
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMGURL}services/intro.jpg')`,
+            }}
         >
             {/* Overlay: Changed to standard 'bg-gradient-to-r' and increased darkness on the left for readability */}
             <div className='absolute inset-0 bg-linear-to-r from-black/60 to-transparent'></div>
@@ -59,7 +64,7 @@ const Intro = () => {
             >
 
                 <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 !text-white drop-shadow-lg'>
-                    Your Journey to Wholeness<br /> Begins Here
+                    Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
                 </h1>
 
                 <p className='text-md md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>

@@ -1,16 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useLoading } from "@/contexts/LoadingContext";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const TikTokIcon = ({ className }: { className?: string }) => (
     <svg
@@ -129,9 +121,7 @@ export default function Footer() {
                             <li className="flex flex-col gap-2">
                                 Workshops
                                   <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
-                                    <li><Link href="/programs" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">programmes</Link></li>
-                                </ul>
-                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
+                                    <li><Link href="/programs" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Programmes</Link></li>
                                     <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corprate Programmes</Link></li>
                                 </ul>
                                
