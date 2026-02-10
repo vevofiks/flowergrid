@@ -51,7 +51,7 @@ const B2bValues = () => {
         {
             icon: `/home/i4.png`,
             title: "Tailored for Every Culture",
-            desc: "We design each corporate wellbeing programme to fit your specific structure, pace, and strategic objectives."
+            desc: "We design each corporate wellbeing program to fit your specific structure, pace, and strategic objectives."
         },
         {
             icon: `/home/i1.png`,
@@ -61,7 +61,7 @@ const B2bValues = () => {
         {
             icon: `/home/i2.png`,
             title: "Sustainable Results",
-            desc: "We focus on measurable impact, not quick fixes. Our programmes help create lasting behavioural and cultural change."
+            desc: "We focus on measurable impact, not quick fixes. Our programs help create lasting behavioural and cultural change."
         }
     ];
 

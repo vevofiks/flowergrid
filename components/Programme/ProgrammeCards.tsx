@@ -7,18 +7,18 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
-interface ProgrammeCard {
+interface programCard {
     id: number;
     title: string;
     description: string;
     details?: string[];
 }
 
-interface ProgrammeCardsProps {
-    cards?: ProgrammeCard[];
+interface programCardsProps {
+    cards?: programCard[];
 }
 
-const defaultCards: ProgrammeCard[] = [
+const defaultCards: programCard[] = [
     {
         id: 1,
         title: "Medical and holistic expertise working together",
@@ -46,7 +46,7 @@ const defaultCards: ProgrammeCard[] = [
     },
     {
         id: 4,
-        title: "A programme built around your needs",
+        title: "A program built around your needs",
         description:
             "No two clients receive the same structure. Your plan is created by combining your assessment results with your goals, lifestyle and preferred pace of progress.",
     },
@@ -58,12 +58,12 @@ const defaultCards: ProgrammeCard[] = [
     },
 ];
 
-const ProgrammeCards: React.FC<ProgrammeCardsProps> = ({ cards = defaultCards }) => {
+const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => {
     return (
         <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mt-50 mb-20">
             {/* Title */}
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-center py-10 md:mb-20 text-text-heading leading-tight">
-                What Makes Flowergrid Programmes
+                What Makes Flowergrid programs
                 <br /> Different
             </h2>
 
@@ -171,4 +171,4 @@ const ProgrammeCards: React.FC<ProgrammeCardsProps> = ({ cards = defaultCards })
     );
 };
 
-export default ProgrammeCards;
+export default programCards;

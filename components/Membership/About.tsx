@@ -65,7 +65,7 @@ const MembershipAbout = () => {
 
                     <div className="connection-column space-y-6">
                         <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            Alongside personalised coaching, you receive tools to integrate mindful living into daily routines, aligning your mind, body, and spirit. Designed to empower you, the programme fosters self-awareness, confidence, and lasting transformation, enabling you to navigate challenges with clarity, maintain energy and focus, and create a healthier, more intentional life.
+                            Alongside personalised coaching, you receive tools to integrate mindful living into daily routines, aligning your mind, body, and spirit. Designed to empower you, the program fosters self-awareness, confidence, and lasting transformation, enabling you to navigate challenges with clarity, maintain energy and focus, and create a healthier, more intentional life.
 
                         </p>
                     </div>

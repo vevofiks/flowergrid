@@ -8,12 +8,12 @@ const contactFaqs = [
     {
         id: 1,
         question: "I am new to holistic wellness. Where is the best place to start?",
-        answer: "The best starting point is our complimentary discovery call. This is a relaxed, confidential conversation where we can understand your personal goals and challenges. We can then recommend the most suitable path for you, whether that is one-to-one coaching, a specific wellness programme, or joining a workshop."
+        answer: "The best starting point is our complimentary discovery call. This is a relaxed, confidential conversation where we can understand your personal goals and challenges. We can then recommend the most suitable path for you, whether that is one-to-one coaching, a specific wellness program, or joining a workshop."
     },
     {
         id: 2,
         question: "How do I book a holistic wellness consultation at Flowergrid?",
-        answer: "Booking is simple. You can schedule online, ring us on +44 7432 211096, or drop us an email at sk@flowergrid.co.uk. We offer a free 30-minute discovery session where we'll chat about what you're looking for and suggest the right holistic wellbeing programme to help you get there."
+        answer: "Booking is simple. You can schedule online, ring us on +44 7432 211096, or drop us an email at sk@flowergrid.co.uk. We offer a free 30-minute discovery session where we'll chat about what you're looking for and suggest the right holistic wellbeing program to help you get there."
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const contactFaqs = [
     },
     {
         id: 4,
-        question: "Can I combine different holistic wellbeing services in my programme?",
+        question: "Can I combine different holistic wellbeing services in my program?",
         answer: "Absolutely. Our holistic wellness approach works best when combining complementary services. Many clients benefit from pairing life and transformation coaching with stress management, or medical consultations with energy healing for complete mind body spirit wellness."
     },
     {
@@ -33,7 +33,7 @@ const contactFaqs = [
     {
         id: 6,
         question: "What are your fees for a discovery call or initial session?",
-        answer: "Our initial discovery call is offered free of charge, with no obligation. This ensures you can explore how Flowergrid can help you before making a commitment. Fees for subsequent coaching or therapy sessions vary depending on the practitioner and programme length. Please contact us for our current rate card."
+        answer: "Our initial discovery call is offered free of charge, with no obligation. This ensures you can explore how Flowergrid can help you before making a commitment. Fees for subsequent coaching or therapy sessions vary depending on the practitioner and program length. Please contact us for our current rate card."
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ const contactTestimonials = [
     },
     {
         id: 5,
-        quote: "The integrative health programme combining doctor consultations, nutritional guidance, and fitness planning was exceptional. My energy levels, physical health, and overall holistic wellbeing have improved dramatically.",
+        quote: "The integrative health program combining doctor consultations, nutritional guidance, and fitness planning was exceptional. My energy levels, physical health, and overall holistic wellbeing have improved dramatically.",
         author: "Nicole Benford-Beck, London",
         rating: 5,
     },

@@ -52,7 +52,7 @@ export default function TransformationService() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: isMobile ? "+=1500%" : "+=1000%",
+          end: "+=500%",
           scrub: 1,
           pin: true,
         },
@@ -148,15 +148,6 @@ export default function TransformationService() {
         ease: "power2.inOut"
       }, 4.5);
 
-      // Carousel animation for mobile
-      if (isMobile) {
-        tl.to(".practices-scroller", {
-          x: "-200%", // Shift all 3 cards (assuming width 100% or similar)
-          ease: "none",
-          duration: 3,
-        }, 5.5);
-      }
-
       return () => {
         window.removeEventListener("resize", positionPill);
       };
@@ -223,8 +214,8 @@ export default function TransformationService() {
           >
           </div>
 
-          <div className="practices-wrapper absolute inset-0 z-30 opacity-0 pointer-events-none flex items-center overflow-hidden">
-            <div className="w-full flex items-center justify-center md:py-20 h-full">
+          <div className="practices-wrapper absolute inset-0 z-30 opacity-0 pointer-events-none flex items-start md:items-center scrollbar-hide overflow-hidden pt-15 md:pt-0">
+            <div className="w-full flex items-center justify-center md:py-20 h-auto min-h-fit">
               <PracticesSection practices={practices} />
             </div>
           </div>

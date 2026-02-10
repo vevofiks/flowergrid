@@ -52,7 +52,7 @@ const Journey = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
                     <div className="connection-column space-y-6">
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            FlowerGrid membership offers a structured journey through self-discovery, alignment, and mastery. Our programmes combine one-to-one coaching, evidence-based mental health techniques, holistic wellbeing practices, and lifestyle guidance, 
+                            FlowerGrid membership offers a structured journey through self-discovery, alignment, and mastery. Our programs combine one-to-one coaching, evidence-based mental health techniques, holistic wellbeing practices, and lifestyle guidance,
                         </p>
                     </div>
 

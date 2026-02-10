@@ -45,7 +45,7 @@ const AboutB2b = () => {
 
                 <div className="connection-header flex items-start gap-4 mb-12">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl lg:max-w-4xl font-heading text-text-heading">
-                        About Our Corporate Wellbeing Programmes
+                        About Our Corporate Wellbeing programs
                     </h2>
                     <Image
                         src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
@@ -59,13 +59,13 @@ const AboutB2b = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
                     <div className="connection-column space-y-2">
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            At Flowergrid, we believe people are at the heart of every organization’s success. Our corporate wellbeing programmes are designed to create workplaces that are emotionally aware, purpose-driven, and resilient.
+                            At Flowergrid, we believe people are at the heart of every organisation’s success. Our corporate wellbeing programs are designed to create workplaces that are emotionally aware, purpose-driven, and resilient.
                         </p>
                     </div>
 
                     <div className="connection-column space-y-2">
                         <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            We combine coaching psychology, mindfulness practice and behavioural science to help teams perform with clarity, compassion and confidence. Each programme is tailored to your culture, goals and people.
+                            We combine coaching psychology, mindfulness practice and behavioural science to help teams perform with clarity, compassion and confidence. Each program is tailored to your culture, goals and people.
                         </p>
 
                     </div>

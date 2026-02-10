@@ -69,16 +69,16 @@ const ContactSection = () => {
                     className="text-right text-[#1C1C1C] font-sans font-medium tracking-wide leading-[0.9] opacity-0 mt-2 md:mt-4
                      text-xl md:text-8xl lg:text-[5rem] "
                 >
-                    TO YOUR ORGANIZATION
+                    TO YOUR ORGANISATION
                 </h1>
             </div>
 
-                <p
-                    ref={subtextRef}
-                    className="text-[#4A4A4A] text-center text-sm md:text-base lg:text-xl font-sans leading-relaxed max-w-2xl mb-10 md:mb-14 opacity-0 px-4"
-                >
-                    Bring clarity, compassion, and conscious growth into your workplace. Speak to our team to design corporate wellbeing programmes that truly fit your goals and culture.
-                </p>
+            <p
+                ref={subtextRef}
+                className="text-[#4A4A4A] text-center text-sm md:text-base lg:text-xl font-sans leading-relaxed max-w-2xl mb-10 md:mb-14 opacity-0 px-4"
+            >
+                Bring clarity, compassion, and conscious growth into your workplace. Speak to our team to design corporate wellbeing programs that truly fit your goals and culture.
+            </p>
 
             <Link href="/contact">
                 <button

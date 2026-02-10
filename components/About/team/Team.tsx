@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { teamTree } from '@/app/about/data'
+import Link from 'next/link'
 
 const TeamTreeSection = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
@@ -109,9 +110,11 @@ const TeamTreeSection = () => {
                           </p>
 
                           {/* Book Consultation Button */}
-                          <button className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6">
+                         <Link href="/contact">
+                         <button className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6">
                             Book Consultation
                           </button>
+                         </Link>
                         </div>
                       </div>
                     </div>
