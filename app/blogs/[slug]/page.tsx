@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import connectDB from '@/lib/db';
 import Blog from '@/models/Blog';
 import BlogPostLayout from './BlogPostLayout';
+import '@/models/Author';
 
 type Props = {
     params: Promise<{ slug: string }>

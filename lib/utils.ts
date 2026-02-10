@@ -1,7 +1,6 @@
 /**
- * Extracts plain text from Editor.js output data or returns the string if it's already text.
- * @param tldr - The TLDR content (string or Editor.js OutputData)
- * @returns extracted plain text
+ * @param tldr 
+ * @returns 
  */
 export function extractTldrText(tldr: any): string {
     if (!tldr) return '';
@@ -27,7 +26,6 @@ export function extractTldrText(tldr: any): string {
 }
 
 /**
- * Extracts all image URLs from Editor.js output data
  * @param content - Editor.js OutputData
  * @returns Array of image URLs
  */

@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import BlogRenderer from '@/components/BlogRenderer';
-import { TableOfContents, AskAI } from '@/components/blog/BlogSidebar';
+import { TableOfContents } from '@/components/blog/BlogSidebar';
+import MobileTableOfContents from '@/components/blog/MobileTableOfContents';
 import AuthorSidebar from '@/components/blog/AuthorSidebar';
 import BlogPostHero from '@/components/blog/BlogPostHero';
 import BlogFeaturedSection from '@/components/blog/BlogFeaturedSection';
@@ -17,7 +18,13 @@ function extractCoverImage(content: any): string | null {
 
 export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { blog: any; latestPost?: any; featuredPosts?: any[] }) {
     const [isFocusMode, setIsFocusMode] = useState(false);
-    const [blogUrl] = useState(() => typeof window !== 'undefined' ? window.location.href : '');
+    const [blogUrl, setBlogUrl] = useState('');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setBlogUrl(window.location.href);
+        }
+    }, []);
 
     const formattedDate = new Date(blog.createdAt).toLocaleDateString('en-GB', {
         day: '2-digit',
@@ -38,6 +45,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     readTime={blog.readTime || '5 min read'}
                     category="Holistic Health"
                     tldr={blog.tldr}
+                    url={blogUrl} // Pass URL for AI Summary links
                 />
             )}
 
@@ -70,6 +78,11 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     </button>
                 </div>
 
+                {/* Mobile Table of Contents (Visible only on small screens) */}
+                <div className="lg:hidden mb-12">
+                    <MobileTableOfContents content={blog.content} />
+                </div>
+
                 {/* Main Grid Layout */}
                 <div className={`grid gap-12 transition-all duration-500 ease-in-out ${isFocusMode ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 lg:grid-cols-12'
                     }`}>
@@ -78,7 +91,6 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     {!isFocusMode && (
                         <aside className="lg:col-span-3 hidden lg:block space-y-12 h-fit sticky top-32">
                             <TableOfContents content={blog.content} />
-                            <AskAI url={blogUrl} />
                         </aside>
                     )}
 
@@ -95,6 +107,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                         {/* Article Content */}
                         <article className="prose prose-lg prose-headings:font-heading prose-headings:font-normal prose-p:font-sans prose-p:text-[#4A4A4A] prose-p:leading-relaxed max-w-none">
+
                             <BlogRenderer data={blog.content} />
                         </article>
                     </main>
@@ -107,10 +120,11 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     )}
                 </div>
 
-                {/* Mobile Author & AI Section (Visible only on small screens) */}
-                <div className="mt-20 lg:hidden flex flex-col gap-12">
+
+
+                {/* Mobile Author Section (Visible only on small screens) */}
+                <div className="lg:hidden flex flex-col gap-12">
                     <AuthorSidebar author={blog.author} />
-                    <AskAI url={blogUrl} />
                 </div>
 
                 {/* Bottom Featured Section (Reused) */}
