@@ -15,6 +15,7 @@ export async function POST(req: Request) {
       slug: body.slug,
       content: body.content,
       tldr: body.tldr,
+      faq: body.faq,
       author: body.author
         ? new mongoose.Types.ObjectId(body.author)
         : undefined,
@@ -23,7 +24,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, data: blog }, { status: 201 });
 
   } catch (error: any) {
-    console.error("Create blog error:", error);
     return NextResponse.json(
       { success: false, error: error.message },
       { status: 500 }
@@ -52,7 +52,6 @@ export async function GET(req: Request) {
     return NextResponse.json({ success: true, data: blogs });
 
   } catch (error) {
-    console.error('Fetch blogs error:', error);
     return NextResponse.json(
       { success: false, error: 'Failed to fetch blogs' },
       { status: 500 }

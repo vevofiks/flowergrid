@@ -5,22 +5,19 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Plus } from "lucide-react";
-import { Faq, defaultFaqs } from "../../app/contact/data/faqData";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
-
-const FaqItem = ({
-    question,
-    answer,
-    isOpen,
-    onToggle
-}: {
+interface FaqItemProps {
     question: string;
     answer: string;
     isOpen: boolean;
     onToggle: () => void;
-}) => {
+}
+
+const FaqItem = ({ question, answer, isOpen, onToggle }: FaqItemProps) => {
     const answerRef = useRef<HTMLDivElement>(null);
     const iconRef = useRef<HTMLDivElement>(null);
     const tl = useRef<gsap.core.Timeline | null>(null);
@@ -31,7 +28,7 @@ const FaqItem = ({
         tl.current.to(answerRef.current, {
             height: "auto",
             opacity: 1,
-            paddingBottom: "24px",
+            paddingBottom: "1.5rem",
             duration: 0.4,
             ease: "power2.inOut",
         });
@@ -43,7 +40,6 @@ const FaqItem = ({
         }, 0);
     }, { scope: answerRef });
 
-    // Play or reverse animation based on isOpen prop
     useGSAP(() => {
         if (!tl.current) return;
         if (isOpen) {
@@ -57,47 +53,46 @@ const FaqItem = ({
         <div className="border-b border-[#1C1C1C]/20 last:border-b-0">
             <button
                 onClick={onToggle}
-                className="flex w-full items-center justify-between py-6 text-left focus:outline-none"
+                className="flex w-full items-center justify-between py-5 text-left focus:outline-none group"
             >
-                <h3 className="text-base md:text-lg font-sans text-[#1C1C1C] pr-8">
+                <h3 className="text-base md:text-lg font-sans text-[#1C1C1C] pr-8 group-hover:text-[#8C7A65] transition-colors">
                     {question}
                 </h3>
                 <div ref={iconRef} className="text-[#1C1C1C] shrink-0">
-                    <Plus size={24} strokeWidth={1.5} />
+                    <Plus size={20} strokeWidth={1.5} />
                 </div>
             </button>
             <div
                 ref={answerRef}
                 className="h-0 overflow-hidden opacity-0 text-[#4A4A4A] font-sans text-sm md:text-base leading-relaxed"
             >
-                <div className="pb-6">{answer}</div>
+                <div className="pb-2">{answer}</div>
             </div>
         </div>
     );
 };
 
-interface FaqSectionProps {
-    faqs?: Faq[];
-    title?: string;
+interface BlogFaqProps {
+    faqs: { question: string; answer: string }[];
 }
 
-export default function FaqSection({ faqs = defaultFaqs, title = "Frequently Asked Questions" }: FaqSectionProps) {
+export default function BlogFaq({ faqs }: BlogFaqProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const headerRef = useRef<HTMLHeadingElement>(null);
     const listRef = useRef<HTMLDivElement>(null);
-    const [openFaqId, setOpenFaqId] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionRef.current,
-                start: "top 80%",
+                start: "top 85%",
                 toggleActions: "play none none reverse",
             },
         });
 
         tl.from(headerRef.current, {
-            y: 30,
+            y: 20,
             opacity: 0,
             duration: 0.8,
             ease: "power3.out",
@@ -105,44 +100,41 @@ export default function FaqSection({ faqs = defaultFaqs, title = "Frequently Ask
 
         if (listRef.current) {
             tl.from(listRef.current.children, {
-                y: 20,
+                y: 15,
                 opacity: 0,
                 duration: 0.6,
-                stagger: 0.1,
+                stagger: 0.08,
                 ease: "power3.out",
             }, "-=0.4");
         }
     }, { scope: sectionRef });
 
-    const handleToggle = (id: number) => {
-        setOpenFaqId(openFaqId === id ? null : id);
+    const handleToggle = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
-        <section
-            ref={sectionRef}
-            className="w-full bg-[#F3EAD8] px-6 py-16 md:px-12 md:py-24 lg:px-20"
-        >
-            <div className="max-w-4xl mx-auto flex flex-col gap-10 md:gap-16">
+        <div ref={sectionRef} className="mt-16 md:mt-24 border-t border-[#8C7A65]/20 pt-16">
+            <div className="flex flex-col gap-8 md:gap-12">
                 <h2
                     ref={headerRef}
-                    className={`text-[#1C1C1C] font-heading font-normal ${titleClassName}`}
+                    className="text-[#1C1C1C] text-2xl md:text-3xl lg:text-4xl font-heading font-medium"
                 >
-                    {title}
+                    Frequently Asked Questions
                 </h2>
 
                 <div ref={listRef} className="flex flex-col">
-                    {faqs.map((faq) => (
+                    {faqs.map((faq, index) => (
                         <FaqItem
-                            key={faq.id}
+                            key={index}
                             question={faq.question}
                             answer={faq.answer}
-                            isOpen={openFaqId === faq.id}
-                            onToggle={() => handleToggle(faq.id)}
+                            isOpen={openIndex === index}
+                            onToggle={() => handleToggle(index)}
                         />
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

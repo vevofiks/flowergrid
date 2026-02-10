@@ -122,10 +122,9 @@ export default function Footer() {
                                 Workshops
                                   <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/programs" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Programmes</Link></li>
-                                    <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corprate Programmes</Link></li>
+                                    <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corporate Programmes</Link></li>
                                 </ul>
-                               
-
+                         
                             </li>
                             <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
                             <li><Link href="/contact" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>

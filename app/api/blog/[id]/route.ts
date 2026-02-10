@@ -41,7 +41,6 @@ export async function PUT(
         const resolvedParams = await params;
         const { id } = resolvedParams;
         const body = await req.json();
-        console.log('Update blog data:', body);
 
         const existingBlog = await Blog.findById(id);
         if (!existingBlog) {
@@ -57,6 +56,7 @@ export async function PUT(
 
         const newContentImages = extractImageUrls(body.content);
         const newTldrImages = typeof body.tldr === 'object' ? extractImageUrls(body.tldr) : [];
+
         const allNewImages = new Set([...newContentImages, ...newTldrImages]);
 
         const removedImages = allOldImages.filter(imgUrl => !allNewImages.has(imgUrl));
@@ -79,7 +79,6 @@ export async function PUT(
 
         return NextResponse.json({ success: true, data: blog });
     } catch (error) {
-        console.error('Update blog error:', error);
         return NextResponse.json(
             { success: false, error: 'Failed to update blog' },
             { status: 500 }
@@ -107,7 +106,6 @@ export async function DELETE(
 
         return NextResponse.json({ success: true, data: blog });
     } catch (error) {
-        console.error('Delete blog error:', error);
         return NextResponse.json(
             { success: false, error: 'Failed to delete blog' },
             { status: 500 }

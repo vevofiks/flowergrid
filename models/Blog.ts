@@ -6,6 +6,7 @@ export interface IBlog extends Document {
     content: any; // Editor.js JSON data
     author?: any; // Can be ObjectId or populated Author object
     tldr: any;
+    faq?: { question: string; answer: string }[];
     createdAt: Date;
     updatedAt: Date;
 }
@@ -36,6 +37,12 @@ const BlogSchema: Schema = new Schema(
             type: Schema.Types.Mixed,
             required: [true, 'Please provide a TLDR summary.'],
         },
+        faq: [
+            {
+                question: { type: String, required: true },
+                answer: { type: String, required: true },
+            },
+        ],
     },
     {
         timestamps: true,
@@ -43,6 +50,6 @@ const BlogSchema: Schema = new Schema(
 );
 
 const Blog: Model<IBlog> =
-    mongoose.models.Blog || mongoose.model<IBlog>('Blog', BlogSchema);
+    mongoose.models.BlogV2 || mongoose.model<IBlog>('BlogV2', BlogSchema, 'blogs');
 
 export default Blog;

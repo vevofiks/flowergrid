@@ -8,6 +8,7 @@ import MobileTableOfContents from '@/components/blog/MobileTableOfContents';
 import AuthorSidebar from '@/components/blog/AuthorSidebar';
 import BlogPostHero from '@/components/blog/BlogPostHero';
 import BlogFeaturedSection from '@/components/blog/BlogFeaturedSection';
+import BlogFaq from '@/components/blog/BlogFaq';
 import { ArrowLeft, Maximize2, Minimize2 } from 'lucide-react';
 
 function extractCoverImage(content: any): string | null {
@@ -96,7 +97,6 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                     {/* CENTER COLUMN: Content */}
                     <main className={isFocusMode ? 'w-full' : 'lg:col-span-6'}>
-                        {/* Title Section (Only visible in Focus Mode to give context) */}
                         {isFocusMode && (
                             <div className="mb-10 text-center">
                                 <h1 className="text-3xl md:text-5xl font-heading font-medium text-[#1C1C1C] leading-tight mb-4">
@@ -110,6 +110,11 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                             <BlogRenderer data={blog.content} />
                         </article>
+
+                        {/* Dedicated Blog FAQ Section */}
+                        {blog.faq && blog.faq.length > 0 && (
+                            <BlogFaq faqs={blog.faq} />
+                        )}
                     </main>
 
                     {/* RIGHT COLUMN: Author (Hidden in Focus Mode) */}
@@ -126,6 +131,8 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                 <div className="lg:hidden flex flex-col gap-12">
                     <AuthorSidebar author={blog.author} />
                 </div>
+
+
 
                 {/* Bottom Featured Section (Reused) */}
                 {!isFocusMode && latestPost && featuredPosts && (
