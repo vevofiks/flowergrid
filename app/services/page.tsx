@@ -78,6 +78,44 @@ const ServiceTestimonials = [
  
 ]
 
+const faqs = [
+  {
+    "id": 1,
+    "question": "What holistic wellness services do you offer at Flowergrid?",
+    "answer": "We offer a fully integrated range of holistic wellness services, including life and transformation coaching, therapeutic mental wellness (NLP, Hypnotherapy), energy healing (Reiki, Meditation), and medical aesthetic support. Each service is designed to align your mind, body, and spirit."
+  },
+  {
+    "id": 2,
+    "question": "How do I know if I need life and transformation coaching or therapy?",
+    "answer": "This is a common question. Life and transformation coaching is generally future-focused, helping you build goals, resilience, and habits. Therapeutic support (like counselling or hypnotherapy) often addresses deeper emotional roots or past trauma. In your discovery call, we will guide you to the right choice."
+  },
+  {
+    "id": 3,
+    "question": "Do you offer holistic wellness services online or only in Croydon?",
+    "answer": "We offer both. While our physical centre provides holistic wellness services in Croydon, many of our coaching, NLP, and consultation sessions are available online via secure video call, supporting clients across the UK and globally."
+  },
+  {
+    "id": 4,
+    "question": "Can I combine medical treatments with holistic therapies?",
+    "answer": "Yes. Our unique approach integrates medical science with holistic wellness services. For example, you might combine nutritional consulting (medical) with Reiki or mindfulness (holistic) to support your complete wellbeing."
+  },
+  {
+    "id": 5,
+    "question": "Are your practitioners qualified to deliver these services?",
+    "answer": "Absolutely. Flowergrid is led by qualified professionals. Our team includes doctors, certified life and transformation coaches, NLP practitioners, and clinical hypnotherapists. We ensure high standards of care across all our holistic wellness services."
+  },
+  {
+    "id": 6,
+    "question": "Are your practitioners qualified?",
+    "answer": "Yes. Our team includes doctors, therapists and certified practitioners with expertise in medicine, psychology, hypnotherapy, NLP, counselling and complementary therapies. Every professional meets the required standards for safe, effective care."
+  },
+  {
+    "id": 7,
+    "question": "How long does a typical programme last?",
+    "answer": "Programme length depends on your goals. One-to-one coaching is often delivered in 6 or 12-week formats, while therapy and medical plans are tailored individually. Your practitioner will outline a clear structure during your consultation."
+  }
+]
+
 const page = () => {
   return (
     <>
@@ -86,7 +124,7 @@ const page = () => {
       <MeetExperts />
       <CoreValues values={coreValues} />
       <HeroTestimonials title='Testimonials' testimonials={ServiceTestimonials} />
-      <FaqSection />
+      <FaqSection faqs={faqs} />
       <Connect image={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/5.png`} title='Ready to explore our holistic wellness services?' description='Book a conversation today to find the path that supports your transformation best.' btnText='Book a Consultation' />
     </>
   )

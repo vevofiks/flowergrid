@@ -131,10 +131,13 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
 
         <div
           className="
-            absolute bottom-0 right-4 sm:right-8 md:right-6 lg:right-16 xl:right-24
+            absolute bottom-0 right-0 sm:right-0 md:right-6 lg:right-16 xl:right-24
             z-20
             w-[160px] sm:w-[220px] md:w-[260px] lg:w-[340px] xl:w-[400px]
           "
+          style={{
+            marginLeft: "34px"
+          }}
         >
           <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
 

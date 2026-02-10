@@ -82,7 +82,7 @@ export default function CurvedPathAnimation() {
           trigger: containerRef.current,
           start: "top center",
           end: "bottom center",
-          scrub: 1,
+          scrub: 0.5,
         }
       });
 
@@ -101,7 +101,7 @@ export default function CurvedPathAnimation() {
                   trigger: step,
                   start: "top 80%",
                   end: "top 50%",
-                  scrub: 1,
+                  scrub: 0.5,
                 }
               }
             );
@@ -117,7 +117,7 @@ export default function CurvedPathAnimation() {
                   trigger: step,
                   start: "top 75%",
                   end: "top 45%",
-                  scrub: 1,
+                  scrub: 0.5,
                 }
               }
             );
@@ -140,7 +140,7 @@ export default function CurvedPathAnimation() {
               trigger: containerRef.current,
               start: "top center",
               end: "bottom center",
-              scrub: 1,
+              scrub: 0.5,
             },
           }
         );
@@ -170,7 +170,7 @@ export default function CurvedPathAnimation() {
                 trigger: stepElement,
                 start: "top 70%",
                 end: "top 30%",
-                scrub: 1,
+                scrub: 0.5,
               },
             }
           );
@@ -191,7 +191,7 @@ export default function CurvedPathAnimation() {
                 trigger: stepElement,
                 start: "top 75%",
                 end: "top 40%",
-                scrub: 1,
+                scrub: 0.5,
               },
             }
           );
@@ -252,6 +252,7 @@ export default function CurvedPathAnimation() {
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
+            style={{ willChange: "stroke-dashoffset" }}
           />
           <circle ref={(el) => { dotsRef.current[0] = el; }} cx="300" cy="40" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
           <circle ref={(el) => { dotsRef.current[1] = el; }} cx="800" cy="430" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
@@ -279,7 +280,8 @@ export default function CurvedPathAnimation() {
                   left: pos.left,
                   right: pos.right,
                   top: pos.top,
-                  width: 'min(320px, 35vw)'
+                  width: 'min(320px, 35vw)',
+                  willChange: "opacity, transform"
                 }}
               >
                 <div className={`step-content ${pos.mt || ''} ${pos.align || ''}`}>
