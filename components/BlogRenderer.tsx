@@ -17,8 +17,21 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ data }) => {
                     case 'header':
                         const Tag = `h${block.data.level}` as keyof React.JSX.IntrinsicElements;
                         const id = block.data.text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+                        // Define classes based on level
+                        let headingClasses = "font-heading font-medium text-[#1C1C1C] my-6 scroll-mt-32";
+                        if (block.data.level === 1) {
+                            headingClasses += " text-4xl md:text-5xl"; // Increased
+                        } else if (block.data.level === 2) {
+                            headingClasses += " text-3xl md:text-4xl"; // Increased
+                        } else if (block.data.level === 3) {
+                            headingClasses += " text-2xl md:text-3xl"; // Increased
+                        } else {
+                            headingClasses += " text-xl md:text-2xl"; // Increased
+                        }
+
                         return (
-                            <Tag key={block.id} id={id} className="font-bold my-4 scroll-mt-32">
+                            <Tag key={block.id} id={id} className={headingClasses}>
                                 {block.data.text}
                             </Tag>
                         );

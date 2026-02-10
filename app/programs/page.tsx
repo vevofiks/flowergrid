@@ -1,19 +1,20 @@
-import programCards from '@/components/program/programCards'
 import React from 'react'
-import programIntro from '@/components/program/programIntro'
-import CurvedPathAnimation from '@/components/program/CurvedPathAnimation'
-import ProgramCarousel from '@/components/program/ProgramCarousal'
 import { myPrograms } from './data'
-import HeaderSecrtion from '@/components/program/HeaderSecrtion'
-import Achievement from '@/components/program/Achievement'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import Connect from '@/components/About/person/Connect'
 import FaqSection from '@/components/Contact/FAQSection'
+import CurvedPathAnimation from '@/components/Programme/CurvedPathAnimation'
+import HeaderSecrtion from '@/components/Programme/HeaderSecrtion'
+import ProgramCarousel from '@/components/Programme/ProgramCarousal'
+import Achievement from '@/components/Programme/Achievement'
+import ProgramCards from '@/components/Programme/ProgrammeCards'
+import ProgramIntro from '@/components/Programme/ProgrammeIntro'
+
 const page = () => {
   return (
     <>
-      <programIntro />
-      <programCards />
+      <ProgramIntro />
+      <ProgramCards />
       <HeroTestimonials />
       <ProgramCarousel programs={myPrograms} />
       <HeaderSecrtion />

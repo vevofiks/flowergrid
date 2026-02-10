@@ -1,78 +1,69 @@
-"use client"
+"use client";
 
-import React, { useRef, useState, useEffect } from 'react'
-import { useGSAP } from '@gsap/react'
-import { gsap } from 'gsap'
+import Image from "next/image";
+import { motion, type Variants } from "framer-motion";
 
-const programIntro = () => {
-    const introRef = useRef<HTMLDivElement>(null)
-    const [isMobile, setIsMobile] = useState(false);
+export default function ProgramIntro() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.6,
+      },
+    },
+  };
 
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 640);
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  const itemVariants: Variants = {
+    hidden: { y: -60, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6 },
+    },
+  };
 
+  return (
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/p1.jpg`}
+          alt="Programs Hero"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
-    useGSAP(() => {
-        // Staggered child animation for text elements
-        const textElements = introRef.current?.querySelectorAll('h1, p')
+      {/* Content */}
+      <motion.div
+        className="relative z-10 h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="max-w-6xl">
 
-        if (textElements) {
-            gsap.fromTo(
-                textElements,
-                {
-                    opacity: 0,
-                    y: -50,
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.2,
-                    ease: 'power3.out',
-                    stagger: 0.5,
-                    delay: 1.5,
-                }
-            )
-        }
-    }, { scope: introRef })
-    return (
-        <div
-            style={{ background: `url('/program/p1.jpg') no-repeat center center/cover` }}
-            // 1. Changed min-h-screen to min-h-[60vh] for mobile so it doesn't take up too much vertical space
-            // 2. Added overflow-hidden to prevent scrollbars
-            className='relative flex items-center h-screen md:min-h-screen w-full overflow-hidden'
-        >
-            {/* Overlay: Changed to standard 'bg-gradient-to-r' and increased darkness on the left for readability */}
-            <div className='absolute inset-0 bg-linear-to-r from-black/60 to-transparent'></div>
+          <motion.h1
+            variants={itemVariants}
+            className="!text-white text-3xl md:text-6xl lg:text-[5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
+          >
+            Programs designed to support your mind, body and sense of self
+          </motion.h1>
 
-            {/* Content Wrapper */}
-            {/* 3. Replaced fixed ml-12 with responsive padding (px-6 md:px-12) */}
-            <div
-                ref={introRef} className='relative z-10 w-full px-6 md:px-12 lg:pl-20 max-w-5xl'
-                style={{
-                    marginTop: isMobile ? "98px" : "30px",
-                    padding: isMobile ? "30px" : "70px",
-                }}
-            >
-
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 !text-white drop-shadow-lg'>
-                    programs designed to <br /> support your mind, body <br /> and sense of self
-                </h1>
-
-                <p className='text-md md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>
-                    Our programs are created by a multidisciplinary team who
-                    combine medical understanding, therapeutic practice and
-                    holistic methods. Every journey is adapted around your needs
-                    and your pace.
-
-                </p>
-            </div>
+          <motion.p
+            variants={itemVariants}
+            className="!text-white/90 text-lg md:text-2xl font-sans font-light tracking-wide max-w-3xl"
+          >
+            Our programs are created by a multidisciplinary team who combine
+            medical understanding, therapeutic practice and holistic methods.
+            Every journey is adapted around your needs and your pace.
+          </motion.p>
 
         </div>
-    )
+      </motion.div>
+    </section>
+  );
 }
-
-export default programIntro

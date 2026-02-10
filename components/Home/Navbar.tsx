@@ -41,11 +41,11 @@ const navLinks = [
     href: "/programs",
     subLinks: [
       {
-        title: "Programs",
+        title: "Programmmes",
         href: "/programs",
       },
       {
-        title: "Corporate Programs",
+        title: "Corporate Programmes",
         href: "/programs/b2b",
         image: `/b2b/1.jpg`,
       },

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -58,12 +58,10 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
             const content = section.querySelector('.program-content');
             const decoratives = section.querySelectorAll('.decorative-element');
 
-            // Set initial states
             gsap.set(image, { opacity: 0, scale: 0.95 });
             gsap.set(content, { opacity: 0, y: 30 });
             gsap.set(decoratives, { opacity: 0, scale: 0.8, rotation: -10 });
 
-            // Create scroll trigger animation
             ScrollTrigger.create({
                 trigger: section,
                 start: "top center",
@@ -99,7 +97,6 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
             });
         });
 
-        // Global ScrollTrigger for navigation visibility
         ScrollTrigger.create({
             trigger: containerRef.current,
             start: "top center",

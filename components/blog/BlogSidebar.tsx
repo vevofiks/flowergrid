@@ -50,7 +50,7 @@ export function TableOfContents({ content }: { content: any }) {
         if (!content?.blocks) return;
 
         const extractedHeadings = content.blocks
-            .filter((block: any) => block.type === 'header' && block.data.level === 2) // Only H2
+            .filter((block: any) => block.type === 'header' && [1, 2, 3].includes(block.data.level))
             .map((block: any) => ({
                 id: block.data.text.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
                 text: block.data.text,
@@ -93,7 +93,9 @@ export function TableOfContents({ content }: { content: any }) {
                             document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to center
                         }}
                         className={`block text-sm py-2 pr-4 transition-all duration-300 leading-relaxed rounded-r-lg
-                            ${level === 3 ? 'pl-6' : 'pl-4'}
+                            ${level === 1 ? 'pl-4 font-semibold' : ''}
+                            ${level === 2 ? 'pl-6' : ''}
+                            ${level === 3 ? 'pl-8 text-xs' : ''}
                             ${activeId === id
                                 ? 'bg-[#8C7A65] text-white font-medium shadow-md -ml-[1px] border-l-2 border-[#1C1C1C]'
                                 : 'text-[#4A4A4A] hover:text-[#8C7A65] hover:bg-[#ECDDC4]/30 border-l-2 border-transparent -ml-[1px]'

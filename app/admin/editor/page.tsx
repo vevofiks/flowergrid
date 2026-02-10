@@ -109,7 +109,6 @@ function EditorPageContent() {
                     body: JSON.stringify(payload),
                 });
             } else {
-                // Create new
                 res = await fetch('/api/blog', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -122,8 +121,6 @@ function EditorPageContent() {
                 alert('Blog saved successfully!');
                 if (!id) {
                     localStorage.removeItem('blog-draft');
-                    // Optional: redirect to edit mode or clear form
-                    // router.push(`/blogs/editor?id=${data.data._id}`);
                 }
             } else {
                 alert('Failed to save: ' + (data.error || 'Unknown error'));
