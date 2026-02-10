@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 import gsap from "gsap";

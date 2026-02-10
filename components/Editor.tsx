@@ -63,10 +63,8 @@ const Editor: React.FC<EditorProps> = ({ data, onChange, holder, config }) => {
                                 byFile: '/api/upload',
                                 byUrl: '/api/upload',
                             },
-                            // Disable caption input
                             captionPlaceholder: '',
                         },
-                        // Disable caption feature completely
                         features: {
                             caption: false,
                         }
@@ -89,13 +87,59 @@ const Editor: React.FC<EditorProps> = ({ data, onChange, holder, config }) => {
                 ref.current = null;
             }
         };
-    }, [isMounted, holder]); // Re-init if holder changes
+    }, [isMounted, holder]);
 
     return (
         <div
             id={holder}
             className={`prose prose-lg prose-p:font-serif prose-headings:font-serif prose-headings:font-bold prose-blockquote:border-l-4 prose-blockquote:border-gray-900 prose-blockquote:italic max-w-full ${config?.className || ''}`}
-        />
+        >
+            <style jsx global>{`
+                #${holder} h1 {
+                    font-size: 2.25rem; /* text-4xl */
+                    line-height: 2.5rem;
+                }
+                @media (min-width: 768px) {
+                    #${holder} h1 {
+                        font-size: 3rem; /* md:text-5xl */
+                        line-height: 1;
+                    }
+                }
+
+                #${holder} h2 {
+                    font-size: 1.875rem; /* text-3xl */
+                    line-height: 2.25rem;
+                }
+                @media (min-width: 768px) {
+                    #${holder} h2 {
+                        font-size: 2.25rem; /* md:text-4xl */
+                        line-height: 2.5rem;
+                    }
+                }
+
+                #${holder} h3 {
+                    font-size: 1.5rem; /* text-2xl */
+                    line-height: 2rem;
+                }
+                @media (min-width: 768px) {
+                    #${holder} h3 {
+                        font-size: 1.875rem; /* md:text-3xl */
+                        line-height: 2.25rem;
+                    }
+                }
+
+                #${holder} h4, #${holder} h5, #${holder} h6 {
+                    font-size: 1.25rem; /* text-xl */
+                    line-height: 1.75rem;
+                }
+                @media (min-width: 768px) {
+                    #${holder} h4, #${holder} h5, #${holder} h6 {
+                        font-size: 1.5rem; /* md:text-2xl */
+                        line-height: 2rem;
+                    }
+                }
+            `}</style>
+        </div>
     );
 };
 
