@@ -43,7 +43,7 @@ export default function BlogPostHero({
                         alt={title}
                         fill
                         priority
-                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className="object-cover"
                     />
                 ) : (
                     <div className="w-full h-full bg-[#E6D7C3] flex items-center justify-center text-[#8C7A65]">

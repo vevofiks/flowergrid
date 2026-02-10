@@ -37,6 +37,7 @@ function EditorPageContent() {
     const [title, setTitle] = useState('');
     const [slug, setSlug] = useState('');
     const [authorId, setAuthorId] = useState('');
+    const [faq, setFaq] = useState<{ question: string; answer: string }[]>([]);
 
     // TLDR is now OutputData (JSON)
     const [tldr, setTldr] = useState<OutputData>({
@@ -83,6 +84,7 @@ function EditorPageContent() {
                         setTitle(data.data.title);
                         setSlug(data.data.slug);
                         setAuthorId(data.data.author?._id || '');
+                        setFaq(data.data.faq || []);
 
                         // Handle TLDR: if string (legacy), convert to block; if object, use as is
                         if (typeof data.data.tldr === 'string') {
@@ -114,6 +116,7 @@ function EditorPageContent() {
                     setTitle(parsed.title || '');
                     setSlug(parsed.slug || '');
                     setAuthorId(parsed.authorId || '');
+                    setFaq(parsed.faq || []);
                     setTldr(parsed.tldr || { time: new Date().getTime(), blocks: [] });
                     if (parsed.content) setContent(parsed.content);
                 } catch (e) {
@@ -127,10 +130,10 @@ function EditorPageContent() {
     // Autosave to local storage
     useEffect(() => {
         if (!id && isLoaded) {
-            const draft = { title, slug, authorId, tldr, content };
+            const draft = { title, slug, authorId, tldr, content, faq };
             localStorage.setItem('blog-draft', JSON.stringify(draft));
         }
-    }, [title, slug, authorId, tldr, content, id, isLoaded]);
+    }, [title, slug, authorId, tldr, content, faq, id, isLoaded]);
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const newTitle = e.target.value;
@@ -160,6 +163,7 @@ function EditorPageContent() {
                 author: authorId || undefined,
                 tldr,
                 content,
+                faq,
             };
 
             const url = id ? `/api/blog/${id}` : '/api/blog';
@@ -251,6 +255,61 @@ function EditorPageContent() {
                             </option>
                         ))}
                     </select>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="mb-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
+                    <label className="block text-xs text-gray-500 uppercase tracking-wide mb-4">
+                        FAQs (Optional)
+                    </label>
+
+                    <div className="space-y-4 mb-4">
+                        {faq.map((item: any, index: number) => (
+                            <div key={index} className="flex gap-4 items-start bg-white p-4 rounded-lg border border-gray-200 shadow-sm relative group">
+                                <div className="flex-1 space-y-3">
+                                    <input
+                                        type="text"
+                                        placeholder="Question"
+                                        value={item.question}
+                                        onChange={(e) => {
+                                            const newFaq = [...faq];
+                                            newFaq[index].question = e.target.value;
+                                            setFaq(newFaq);
+                                        }}
+                                        className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm font-medium focus:ring-1 focus:ring-black focus:border-black outline-none"
+                                    />
+                                    <textarea
+                                        placeholder="Answer"
+                                        value={item.answer}
+                                        onChange={(e) => {
+                                            const newFaq = [...faq];
+                                            newFaq[index].answer = e.target.value;
+                                            setFaq(newFaq);
+                                        }}
+                                        className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm focus:ring-1 focus:ring-black focus:border-black outline-none resize-y min-h-[80px]"
+                                    />
+                                </div>
+                                <button
+                                    onClick={() => {
+                                        const newFaq = faq.filter((_, i) => i !== index);
+                                        setFaq(newFaq);
+                                    }}
+                                    className="absolute top-2 right-2 text-gray-400 hover:text-red-500 p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                                    title="Remove FAQ"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 18 12" /></svg>
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+
+                    <button
+                        onClick={() => setFaq([...faq, { question: '', answer: '' }])}
+                        className="flex items-center gap-2 text-sm text-black font-medium hover:opacity-75 transition-opacity px-4 py-2 border border-gray-200 rounded-lg bg-white shadow-sm"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg>
+                        Add FAQ
+                    </button>
                 </div>
 
                 {/* TLDR Editor */}

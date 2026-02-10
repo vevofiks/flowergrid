@@ -12,23 +12,9 @@ async function getBlog(slug: string) {
     try {
         await connectDB();
         const blog = await Blog.findOne({ slug }).populate('author').lean();
-        console.log('Fetched blog:', blog);
-
         if (!blog) return null;
 
-        return {
-            ...blog,
-            _id: blog._id.toString(),
-            author: blog.author && typeof blog.author === 'object' && blog.author._id ? {
-                _id: blog.author._id.toString(),
-                name: blog.author.name,
-                bio: blog.author.bio || '',
-                avatar: blog.author.avatar || '',
-                title: blog.author.title || 'Contributor'
-            } : null,
-            createdAt: blog.createdAt.toISOString(),
-            updatedAt: blog.updatedAt.toISOString(),
-        };
+        return JSON.parse(JSON.stringify(blog));
     } catch (error) {
         console.error('Failed to fetch blog:', error);
         return null;
@@ -44,19 +30,7 @@ async function getFeaturedBlogs(excludeSlug: string) {
             .limit(4)
             .lean();
 
-        return blogs.map(blog => ({
-            ...blog,
-            _id: blog._id.toString(),
-            author: blog.author && typeof blog.author === 'object' && blog.author._id ? {
-                _id: blog.author._id.toString(),
-                name: blog.author.name,
-                bio: blog.author.bio || '',
-                avatar: blog.author.avatar || '',
-                title: blog.author.title || 'Contributor'
-            } : null,
-            createdAt: blog.createdAt.toISOString(),
-            updatedAt: blog.updatedAt.toISOString(),
-        }));
+        return JSON.parse(JSON.stringify(blogs));
     } catch (error) {
         console.error('Failed to fetch featured blogs:', error);
         return [];
