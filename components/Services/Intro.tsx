@@ -47,7 +47,7 @@ const Intro = () => {
             bg-top md:bg-center
             "
             style={{
-            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMGURL}services/intro.jpg')`,
+            backgroundImage: `url('${process.env.NEXT_PUBLIC_IMGURL}services/intro.jpg')`,
             }}
         >
             {/* Overlay: Changed to standard 'bg-gradient-to-r' and increased darkness on the left for readability */}
