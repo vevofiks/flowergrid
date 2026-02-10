@@ -120,9 +120,15 @@ interface Faq {
 
 interface FaqSectionProps {
     faqs?: Faq[];
+    title?: string;
+    titleClassName?: string;
 }
 
-export default function FaqSection({ faqs = faqData }: FaqSectionProps) {
+export default function FaqSection({
+    faqs = faqData,
+    title = "Frequently Asked Questions",
+    titleClassName = "text-center text-3xl md:text-5xl lg:text-6xl"
+}: FaqSectionProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const headerRef = useRef<HTMLHeadingElement>(null);
     const listRef = useRef<HTMLDivElement>(null);
@@ -167,9 +173,9 @@ export default function FaqSection({ faqs = faqData }: FaqSectionProps) {
             <div className="max-w-4xl mx-auto flex flex-col gap-10 md:gap-16">
                 <h2
                     ref={headerRef}
-                    className="text-[#1C1C1C] text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-center"
+                    className={`text-[#1C1C1C] font-heading font-normal ${titleClassName}`}
                 >
-                    Frequently Asked Questions
+                    {title}
                 </h2>
 
                 <div ref={listRef} className="flex flex-col">

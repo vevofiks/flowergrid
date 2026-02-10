@@ -41,7 +41,7 @@ const navLinks = [
     href: "/programs",
     subLinks: [
       {
-        title: "Programmmes",
+        title: "Programmes",
         href: "/programs",
       },
       {
