@@ -14,7 +14,7 @@ const TeamHero = () => {
       className="
         relative w-full overflow-hidden
         min-h-[65vh] md:min-h-screen
-        flex items-center
+        flex items-center sm:bg-contain
       "
     >
       {/* Overlay */}

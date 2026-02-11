@@ -40,6 +40,7 @@ const PersonPage = () => {
       <PersonHero
         imageSrc={personData.hero.imageSrc}
         text={personData.hero.text}
+        imageClassName={personData.hero.imageSize}
       />
       <PersonBio
         imageSrc={personData.bio.imageSrc}
@@ -51,7 +52,7 @@ const PersonPage = () => {
           phrases={personData.scrollingText.phrases}
         />
       )}
-      
+
       <WorkIncludes
         description={personData.workIncludes.description}
         steps={personData.workIncludes.steps}
@@ -69,7 +70,7 @@ const PersonPage = () => {
       {isPerson2 && (
         <WorkSpecifications />
       )}
-      
+
       {personData?.journeySection && (
         <JourneySection
           title={personData.journeySection.title}
@@ -83,7 +84,7 @@ const PersonPage = () => {
       {isPerson2 && (
         <Vision />
       )}
-      
+
       <Support data={personData.support} />
 
       <Connect
