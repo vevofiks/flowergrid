@@ -109,14 +109,10 @@ const ServiceCards: React.FC = ( ) => {
 
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300" />
 
-                            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 lg:p-10 flex flex-col items-start justify-end h-full z-10">
+                            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-start justify-end h-full z-10">
                                 <h3 className="text-2xl md:text-3xl lg:text-[32px] !text-white font-heading font-normal leading-[1.2] mb-8 lg:mb-10 w-[90%]">
                                     {item.title}
                                 </h3>
-
-                                <button className="px-8 py-3 border border-white/60 rounded-full text-white text-sm uppercase tracking-widest hover:bg-[#A68653] hover:text-black hover:w-full hover:py-4 hover:scale-105 transition-all duration-300 backdrop-blur-[2px] hover:border-black!">
-                                    Learn more
-                                </button>
                             </div>
                         </div>
                     ))}
