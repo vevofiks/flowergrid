@@ -37,11 +37,11 @@ const navLinks = [
   { title: "Services", href: "/services" },
   { title: "Membership", href: "/membership" },
   {
-    title: "Workshops",
+    title: "Programmes",
     href: "/programs",
     subLinks: [
       {
-        title: "Programmes",
+        title: "Workshops",
         href: "/programs",
       },
       {
