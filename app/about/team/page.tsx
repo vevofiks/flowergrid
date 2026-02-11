@@ -6,9 +6,9 @@ import { lines } from '../data'
 const page = () => {
   return (
     <>
-        <TeamHero/>
-        <Team/>
-        <LeafScrollText lines={lines}/>
+      <TeamHero/>
+      <Team/>
+      <LeafScrollText lines={lines}/>
     </>
   )
 }

@@ -42,7 +42,7 @@ const Intro = () => {
         <div
             className="
             relative w-full overflow-hidden flex items-center
-            min-h-[60vh] md:min-h-screen
+            min-h-[50vh] md:min-h-screen
             bg-no-repeat bg-cover
             bg-top md:bg-center
             "

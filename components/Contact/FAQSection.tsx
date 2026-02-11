@@ -174,7 +174,7 @@ export default function FaqSection({
             <div className="max-w-4xl mx-auto flex flex-col gap-10 md:gap-16">
                 <h2
                     ref={headerRef}
-                    className={`text-[#1C1C1C] font-heading font-normal ${titleClassName}`}
+                    className='text-[#1C1C1C] text-3xl md:text-4xl lg:text-5xl font-heading font-normal'
                 >
                     {title}
                 </h2>

@@ -70,7 +70,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 relative">
 
                     {/* Left Column */}
-                    <div  className="lg:col-span-5 flex flex-col justify-between relative h-[400px] lg:h-auto order-3 lg:order-1 mt-10 lg:mt-0">
+                    <div className="lg:col-span-5 flex flex-col justify-between relative h-[400px] lg:h-auto order-3 lg:order-1 mt-10 lg:mt-0">
                         <div className="absolute bottom-[-40px] z-20 left-[17px] md:left-11 w-[280px] md:w-[350px] lg:w-[450px] pointer-events-none opacity-90">
                             <Image
                                 src={`${process.env.NEXT_PUBLIC_IMGURL}logo/footer flower.png`}
@@ -104,12 +104,12 @@ export default function Footer() {
 
                     {/* Middle Column (Links) */}
                     <div
-                        className="lg:col-span-3 flex flex-col justify-center items-center lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
+                        className="lg:col-span-3 flex flex-col justify-center sm:justify-start items-center sm:items-left lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
                     >
-                        <ul className="flex flex-col gap-4 md:gap-6 text-center lg:text-left">
+                        <ul className="flex flex-col gap-4 md:gap-6 text-left sm:text-left lg:text-left">
                             <li><Link href="/" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Home</Link></li>
                             <li className="flex flex-col gap-2">
-                             About
+                                About
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/about/person1" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
                                     <li><Link href="/about/person2" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
@@ -120,11 +120,10 @@ export default function Footer() {
                             <li><Link href="/membership" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Membership</Link></li>
                             <li className="flex flex-col gap-2">
                                 Workshops
-                                  <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
+                                <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/programs" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Programmes</Link></li>
                                     <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corporate Programmes</Link></li>
                                 </ul>
-                         
                             </li>
                             <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
                             <li><Link href="/contact" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
