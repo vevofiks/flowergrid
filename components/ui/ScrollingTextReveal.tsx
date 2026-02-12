@@ -33,12 +33,11 @@ export default function ScrollingTextReveal({ phrases }: ScrollingTextRevealProp
         // Final State (After scrolling into view)
         y: 0,        // Back to its original position
         opacity: 1,  // Fully visible
-        duration: 1, // Animation takes 1 second
-        ease: "power3.out", // A smooth, natural-feeling easing
+        duration: 0.6, // Animation takes 0.6 seconds (faster)
+        ease: "power2.out", // A smooth, natural-feeling easing
 
         // 5. The Stagger Effect
-        stagger: 0.4, // Wait 0.3s between each phrase starting its animation
-        delay: 0.5,
+        stagger: 0.04, // Stagger each phrase by 0.04s (faster)
 
         // 6. The ScrollTrigger Configuration
         scrollTrigger: {

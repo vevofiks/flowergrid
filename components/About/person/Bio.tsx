@@ -32,33 +32,45 @@ export default function PersonBio({
         toggleActions: "play none none reverse",
       }
     });
-    tl.from('.bio-card', {
-      x: 100,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out"
-    })
-
-    .from('.bio-image', {
-      x: 0,
-      opacity: 0,
-      scale: 0.9,
-      duration: 1,
-      ease: "power3.out"
-    }, "<0.2") 
-    .from('.bio-text', {
-      y: 20,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.8
-    }, "-=0.5");
+    tl.fromTo('.bio-card',
+      {
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out"
+      }
+    )
+      .fromTo('.bio-image',
+        {
+          opacity: 0,
+          scale: 0.9,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out"
+        }, "<0.2")
+      .fromTo('.bio-text',
+        {
+          y: 20,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.8
+        }, "-=0.5");
 
     tl.fromTo('.bio-heading', {
       y: 20,
       opacity: 0,
-      duration: 0.5
-
-    },{
+    }, {
       y: 0,
       opacity: 1,
       duration: 0.5,
@@ -82,7 +94,7 @@ export default function PersonBio({
             </h2>
           </div>
 
-          <div className="flex justify-center md:hidden mb-8">
+          <div className="bio-heading flex justify-center md:hidden mb-8">
             <h2 className="text-4xl font-heading text-heading text-center">{title}</h2>
           </div>
 
