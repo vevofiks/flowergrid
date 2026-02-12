@@ -63,11 +63,11 @@ const Intro = () => {
                 }}
             >
 
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 !text-white drop-shadow-lg'>
+                <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 text-white! drop-shadow-lg'>
                     Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
                 </h1>
 
-                <p className='text-md md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide !text-white/95 max-w-3xl drop-shadow-md'>
+                <p className='text-md md:text-xl lg:text-2xl font-normal leading-relaxed tracking-wide text-white/95! max-w-3xl drop-shadow-md'>
                     Our holistic wellness services combine medical science, holistic therapies and coaching
                     expertise to help you create lasting transformation. Each program is designed to support
                     your physical health, emotional balance and personal growth.

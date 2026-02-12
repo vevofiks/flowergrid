@@ -19,44 +19,44 @@ const navLinks = [
     { title: "Home", href: "/" },
     {
         title: "About",
-        href: "/about",
+        href: "/our-team",
         subLinks: [
             {
                 title: "Samina Khan",
-                href: "/about/person1",
+                href: "/samina-khan-holistic-life-coach",
                 image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
             },
             {
                 title: "Monira",
-                href: "/about/person2",
+                href: "/monira-ahmed-hypnotherapist",
                 image: `/about/person2/1.png`,
             },
             {
                 title: "Team",
-                href: "/about/team",
+                href: "/our-team",
                 image: `/b2b/4.jpg`,
             },
         ],
     },
     { title: "Services", href: "/services" },
-    { title: "Membership", href: "/membership" },
+    { title: "Membership", href: "/holistic-wellness-membership" },
     {
         title: "Workshops",
-        href: "/programs",
+        href: "/holistic-wellness-programme",
         subLinks: [
             {
                 title: "Programs",
-                href: "/programs",
+                href: "/holistic-wellness-programme",
             },
             {
                 title: "Corporate Programs",
-                href: "/programs/b2b",
+                href: "/corporate-wellbeing-programmes",
                 image: `/b2b/1.jpg`,
             },
         ],
     },
     { title: "Journals", href: "/blogs" },
-    { title: "Contact Us", href: "/contact" },
+    { title: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Footer() {
@@ -111,22 +111,23 @@ export default function Footer() {
                             <li className="flex flex-col gap-2">
                                 About
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
-                                    <li><Link href="/about/person1" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
-                                    <li><Link href="/about/person2" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
-                                    <li><Link href="/about/team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
+                                    <li><Link href="/samina-khan-holistic-life-coach" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
+                                    <li><Link href="/monira-ahmed-hypnotherapist" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
+                                    <li><Link href="/our-team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
                                 </ul>
                             </li>
                             <li><Link href="/services" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Services</Link></li>
-                            <li><Link href="/membership" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Membership</Link></li>
+                            <li><Link href="/holistic-wellness-membership" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Membership</Link></li>
                             <li className="flex flex-col gap-2">
-                                Workshops
+                                Programmes
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
-                                    <li><Link href="/programs" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Programmes</Link></li>
-                                    <li><Link href="/programs/b2b" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corporate Programmes</Link></li>
+                                    <li><Link href="/holistic-wellness-programme" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Workshops</Link></li>
+                                    <li><Link href="/corporate-wellbeing-programmes" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Corporate Programmes</Link></li>
                                 </ul>
+
                             </li>
                             <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
-                            <li><Link href="/contact" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
+                            <li><Link href="/contact-us" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 

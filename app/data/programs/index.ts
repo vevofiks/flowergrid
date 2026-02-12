@@ -56,7 +56,7 @@ export const myPrograms: ProgramData[] = [
         id: 3,
         title: "1-Day Workshops",
         description: "Immerse yourself in a full-day workshop designed to restore balance to mind, body, and spirit. Learn practical techniques to manage stress, heal emotionally, enhance communication, and cultivate self-awareness for a more confident, vibrant, and connected life.",
-        benefits: ["Holistic approach to trauma, anxiety, and emotional healing", "Practical skills in communication, self-image, and relationships","Breathwork and meditation techniques for lasting calm","Boost self-awareness, self-worth, and personal growth"],
+        benefits: ["Holistic approach to trauma, anxiety, and emotional healing", "Practical skills in communication, self-image, and relationships", "Breathwork and meditation techniques for lasting calm", "Boost self-awareness, self-worth, and personal growth"],
         buttonText: "View Workshop Schedule",
         buttonLink: "/your-link",
         imageUrl: `/programme/p4.jpg`,
@@ -82,7 +82,7 @@ export const myPrograms: ProgramData[] = [
         id: 5,
         title: "Tailored Coaching Programs (6 & 12 Weeks)",
         description: "Experience deep, lasting transformation with personalised coaching. Our 6- and 12-week programmes combine life coaching, reflective exercises, and integrated support to help you build new habits, align mind, body, and spirit, and achieve meaningful, measurable change.",
-        benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment","Sustainable habit formation and long-term transformation"],
+        benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment", "Sustainable habit formation and long-term transformation"],
         buttonText: "Start Your Transformation Journey",
         buttonLink: "/your-link",
         imageUrl: `${imgurl}programme/p5.jpg`,
@@ -102,29 +102,29 @@ export const myPrograms: ProgramData[] = [
             }
             // Add more decorations...
         ]
-        
+
     },
     {
-        id:6,
-        title:"Corporate & Community Programs",
-        description:"Empower your teams and communities with workshops designed to enhance leadership, communication, resilience, and overall wellbeing. Our expert-led sessions foster a conscious, collaborative culture, boost productivity, and develop emotional intelligence for lasting impact in any organisation or group.",
-        benefits:["Tailored workshops for organisations, schools, NHS, and community groups","Practical strategies to enhance leadership and teamwork","Tools for stress management, resilience, and wellbeing","Cultivates conscious, supportive, and high-performing workplace culture"],
-        buttonText:"Learn More about Corporate Programs",
-        buttonLink:"/programs/corporate",
-        imageUrl:`/programme/p6.jpg`,
-        imageAlt:"Corporate & Community Programs",
-        decorativeImages:[
+        id: 6,
+        title: "Corporate & Community Programs",
+        description: "Empower your teams and communities with workshops designed to enhance leadership, communication, resilience, and overall wellbeing. Our expert-led sessions foster a conscious, collaborative culture, boost productivity, and develop emotional intelligence for lasting impact in any organisation or group.",
+        benefits: ["Tailored workshops for organisations, schools, NHS, and community groups", "Practical strategies to enhance leadership and teamwork", "Tools for stress management, resilience, and wellbeing", "Cultivates conscious, supportive, and high-performing workplace culture"],
+        buttonText: "Learn More about Corporate Programs",
+        buttonLink: "/corporate-wellbeing-programmes",
+        imageUrl: `/programme/p6.jpg`,
+        imageAlt: "Corporate & Community Programs",
+        decorativeImages: [
             {
-                src:`${imgurl}programme/decorations/flower8.png`,
-                alt:"Decorative element",
-                position:"top-left", 
-                className:"rotate-45"
+                src: `${imgurl}programme/decorations/flower8.png`,
+                alt: "Decorative element",
+                position: "top-left",
+                className: "rotate-45"
             },
             {
-                src:`${imgurl}programme/decorations/flower9.png`,
-                alt:"Decorative element",
-                position:"bottom-right", 
-                className:"rotate-45"
+                src: `${imgurl}programme/decorations/flower9.png`,
+                alt: "Decorative element",
+                position: "bottom-right",
+                className: "rotate-45"
             }
         ]
     }

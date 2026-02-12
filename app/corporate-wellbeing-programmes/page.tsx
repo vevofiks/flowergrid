@@ -8,7 +8,7 @@ import ProgramFormat from '@/components/B2B/ProgramFormat'
 import FaqSection from '@/components/Contact/FAQSection'
 import ConsultationSection from '@/components/Home/ConsultationSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
-import React from 'react'
+import { myPrograms } from '../data/programs'
 
 
 const B2BFaqs = [

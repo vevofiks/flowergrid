@@ -104,7 +104,7 @@ export default function Founders() {
                         </div>
                     </div>
 
-                    <div className="content-block flex-1 order-2 text-center lg:text-left lg:text-right">
+                    <div className="content-block flex-1 order-2 text-center lg:text-right">
                         <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
                             Meet <span className="font-medium">Monira Ahmed</span>
                         </h2>
