@@ -30,7 +30,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
         opacity: 1,
         duration: 1.6,
         ease: 'power3.out',
-        delay: 1.8,
+        delay: 0.4,
       }
     );
 
@@ -41,7 +41,6 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
         y: 120,
         opacity: 0,
         scale: 0.95,
-        delay: 1.5,
       },
       {
         y: 0,
@@ -49,7 +48,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
         scale: 1,
         duration: 1.8,
         ease: 'power3.out',
-        delay: 1.5,
+        delay: 0.2,
       }
     );
 
@@ -59,7 +58,6 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
         y: 100,
         opacity: 0,
         scale: 0.95,
-        delay: 0.5,
       },
       {
         y: 0,
@@ -67,7 +65,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
         scale: 1,
         duration: 1.8,
         ease: 'power3.out',
-        delay: 1.5,
+        delay: 0.6,
       }
     );
   }, { scope: sectionRef });
@@ -76,7 +74,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
     <section
       ref={sectionRef}
       className="relative min-h-[850px] w-full overflow-hidden
-                  bg-gradient-to-r from-[#ECDDC6] to-[#a27f45]"
+                  bg-linear-to-r from-[#ECDDC6] to-[#a27f45]"
     >
 
       <div className="mx-auto flex flex-col min-h-screen max-w-7xl items-center justify-center md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
@@ -117,7 +115,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
 
         <div
           ref={imageRef}
-          className="absolute bottom-[-2.5rem] left-1/2 z-10 h-full w-full -translate-x-1/2">
+          className="absolute -bottom-10 left-1/2 z-10 h-full w-full -translate-x-1/2">
           <Image
             src={imageSrc}
             alt="trainer img"
@@ -128,7 +126,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
           />
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-24 sm:h-8 md:h-32 lg:h-36 bg-gradient-to-r from-[#ECDDC6] to-[#af8849]" />
+        <div className="absolute bottom-0 left-0 w-full h-24 sm:h-8 md:h-32 lg:h-36 bg-linear-to-r from-[#ECDDC6] to-[#af8849]" />
 
         <div
           className="

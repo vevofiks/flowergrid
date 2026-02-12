@@ -41,18 +41,17 @@ const WorkIncludes = ({
         const textElements = textRef.current?.children;
         if (textElements) {
             gsap.fromTo(textElements,
-                { y: -50, opacity: 0 },
+                { y: -30, opacity: 0 },
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 1,
-                    stagger: 0.3,
+                    duration: 0.8,
+                    stagger: 0.15,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: textRef.current,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none none", 
+                        start: "top 85%",
+                        toggleActions: "play none none none",
                     }
                 }
             );
@@ -61,17 +60,16 @@ const WorkIncludes = ({
         const cards = cardsRef.current?.children;
         if (cards) {
             gsap.fromTo(cards,
-                { x: 100, opacity: 0 },
+                { x: 50, opacity: 0 },
                 {
                     x: 0,
                     opacity: 1,
-                    duration: 0.8,
-                    stagger: 0.3,
+                    duration: 0.6,
+                    stagger: 0.15,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: cardsRef.current,
-                        start: "top 80%",
-                        end: "bottom 20%",
+                        start: "top 85%",
                         toggleActions: "play none none none",
                     }
                 }
@@ -99,7 +97,7 @@ const WorkIncludes = ({
                             {title2}
                         </h2>
                         <p className='text-lg sm:text-xl md:text-2xl leading-relaxed text-[#5B5B5B] font-light'>
-                            {description2} 
+                            {description2}
                         </p>
                     </div>
                 </div>

@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import FlowerSVG from './FlowerSVG';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { usePathname } from 'next/navigation';
 import FlowerSvg2 from './FlowerSvg2';
@@ -16,13 +17,11 @@ interface FlowerGridSectionProps {
 export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
     const svgRef = useRef<HTMLDivElement>(null);
 
-      const pathname = usePathname();
-      const slug = pathname.split('/').pop();
-      const isPerson2 = slug === 'person2';
+    const pathname = usePathname();
+    const slug = pathname.split('/').pop();
+    const isPerson2 = slug === 'person2';
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
+    useGSAP(() => {
         if (!svgRef.current) return;
 
         const allPaths = Array.from(svgRef.current.querySelectorAll<SVGPathElement>('path.draw-path')).filter(p => p instanceof SVGPathElement);
@@ -42,32 +41,28 @@ export default function FlowerGridSection({ text }: FlowerGridSectionProps) {
         const masterTl = gsap.timeline({
             scrollTrigger: {
                 trigger: svgRef.current,
-                start: "top 65%", 
+                start: "top 65%",
                 end: "bottom center",
-                scrub: 1, 
+                scrub: 1,
             }
         });
 
         masterTl.to(mainPath, {
             strokeDashoffset: 0,
             duration: 10,
-            ease: "power4.in" 
+            ease: "power4.in"
         });
         masterTl.to(detailPaths, {
             strokeDashoffset: 0,
-            duration: 2.5, 
+            duration: 2.5,
             ease: "expo.out",
             stagger: {
                 amount: 0.2,
-                from: "random" 
+                from: "random"
             }
         }, "-=0.6");
 
-        return () => {
-            masterTl.kill();
-            ScrollTrigger.getAll().forEach(t => t.kill());
-        };
-    }, [])
+    }, { scope: svgRef })
 
     return (
         <section className="min-h-screen flex items-center justify-center py-10 overflow-hidden">
