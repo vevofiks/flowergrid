@@ -15,44 +15,44 @@ const navLinks = [
   { title: "Home", href: "/" },
   {
     title: "About",
-    href: "/about",
+    href: "/our-team",
     subLinks: [
       {
         title: "Samina Khan",
-        href: "/about/person1",
+        href: "/samina-khan-holistic-life-coach",
         image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
       },
       {
         title: "Monira",
-        href: "/about/person2",
+        href: "/monira-ahmed-hypnotherapist",
         image: `/about/person2/1.png`,
       },
       {
         title: "Team",
-        href: "/about/team",
+        href: "/our-team",
         image: `/b2b/4.jpg`,
       },
     ],
   },
   { title: "Services", href: "/services" },
-  { title: "Membership", href: "/membership" },
+  { title: "Membership", href: "/holistic-wellness-membership" },
   {
     title: "Programmes",
-    href: "/programs",
+    href: "/holistic-wellness-programme",
     subLinks: [
       {
         title: "Workshops",
-        href: "/programs",
+        href: "/holistic-wellness-programme",
       },
       {
         title: "Corporate Programmes",
-        href: "/programs/b2b",
+        href: "/corporate-wellbeing-programmes",
         image: `/b2b/1.jpg`,
       },
     ],
   },
   { title: "Journals", href: "/blogs" },
-  { title: "Contact Us", href: "/contact" },
+  { title: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -281,9 +281,8 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div className="w-full h-full max-w-400 mx-auto flex flex-col lg:flex-row">
 

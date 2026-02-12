@@ -13,6 +13,7 @@ import HeroTestimonials from "@/components/Home/HeroTestimonials";
 import Vision from "@/components/Home/Vision";
 import BlogSection from "@/components/Home/BlogSection";
 import Connect from "@/components/About/person/Connect";
+import DesktopOnlyFadeInText from "@/components/ui/DesktopOnlyFadeInText";
 
 const lines = [
   "YOU ARE NOT JUST A MIND TO BE UNDERSTOOD.",
@@ -94,7 +95,7 @@ export default function Home() {
       <CoreValues values={coreValues} />
       <TransformationServices />
       <LeafScrollText lines={lines} />
-      <FadeInText />
+      <DesktopOnlyFadeInText />
       <CorporateProgram />
       <HeroTestimonials />
       <Vision />
