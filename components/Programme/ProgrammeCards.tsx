@@ -46,7 +46,7 @@ const defaultCards: programCard[] = [
     },
     {
         id: 4,
-        title: "A program built around your needs",
+        title: "A programme built around your needs",
         description:
             "No two clients receive the same structure. Your plan is created by combining your assessment results with your goals, lifestyle and preferred pace of progress.",
     },
@@ -64,7 +64,7 @@ const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => 
         <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mb-20">
             {/* Title */}
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-center py-10 md:mb-20 text-text-heading leading-tight">
-                What Makes Flowergrid programs
+                What Makes Flowergrid programmes
                 <br /> Different
             </h2>
 

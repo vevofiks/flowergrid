@@ -67,7 +67,7 @@ const Connections = () => {
                         At Flowergrid, we believe in Flower of Life healing for personal growth and spiritual balance, harnessing the power of this sacred geometry to guide conscious living. As a modern holistic wellness centre, the Flowergrid approach blends medical science with sacred geometry-based holistic wellness practices to create complete mind body spirit wellness.
                     </p>
                     <p className="text-text-body text-base md:text-lg leading-relaxed">
-                        Our programs help individuals manage physical conditions, support mental health, improve aesthetics, reduce anxiety, and cultivate mind body spirit wellness through integrative holistic methods. Discover how this ancient symbol can illuminate your journey, shaping your path toward personal growth, self-awareness, and lasting transformation.
+                        Our programmes help individuals manage physical conditions, support mental health, improve aesthetics, reduce anxiety, and cultivate mind body spirit wellness through integrative holistic methods. Discover how this ancient symbol can illuminate your journey, shaping your path toward personal growth, self-awareness, and lasting transformation.
                     </p>
                 </div>
 

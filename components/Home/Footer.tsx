@@ -45,11 +45,11 @@ const navLinks = [
         href: "/holistic-wellness-programme",
         subLinks: [
             {
-                title: "Programs",
+                title: "Programmes",
                 href: "/holistic-wellness-programme",
             },
             {
-                title: "Corporate Programs",
+                title: "Corporate Programmes",
                 href: "/corporate-wellbeing-programmes",
                 image: `/b2b/1.jpg`,
             },

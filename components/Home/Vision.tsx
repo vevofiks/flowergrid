@@ -66,7 +66,7 @@ const Vision = () => {
         ref={textRef}
         className="text-[#4A4A4A] text-sm sm:text-base md:text-lg leading-relaxed max-w-md md:max-w-lg mb-8"
       >
-        Flowergrid exists to guide individuals and organisations towards holistic wellbeing through mind, body, and spirit integration. We provide personalised programs that foster growth, resilience, and conscious living.
+        Flowergrid exists to guide individuals and organisations towards holistic wellbeing through mind, body, and spirit integration. We provide personalised programmes that foster growth, resilience, and conscious living.
       </p>
 
       {/* <Link href="/vision">

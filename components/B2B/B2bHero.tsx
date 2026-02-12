@@ -67,15 +67,15 @@ export default function B2bHero() {
         <div className="max-w-220">
           <h1
             ref={headingRef}
-            className="text-white! text-4xl md:text-6xl lg:text-[50px] font-heading font-normal leading-tight mb-6"
+            className="text-white! text-4xl md:text-4xl lg:text-6xl font-heading font-medium leading-tight mb-6"
           >
-            Transform Your Organisation with Corporate Wellbeing programs & Leadership Coaching.
+            Transform Your Organisation with Corporate Wellbeing programmes & Leadership Coaching.
           </h1>
           <p
             ref={textRef}
             className="text-white/90! text-[14px] md:text-lg font-light! leading-snug tracking-wide mb-10 max-w-2xl"
           >
-            Flowergrid helps businesses, universities, and institutions build resilient, emotionally intelligent teams through tailored coaching and evidence-based corporate wellbeing programs.
+            Flowergrid helps businesses, universities, and institutions build resilient, emotionally intelligent teams through tailored coaching and evidence-based corporate wellbeing programmes.
 
           </p>
 
@@ -85,7 +85,7 @@ export default function B2bHero() {
               Book a Discovery Session
             </button>
             <button className="border text-white hover:bg-[#C19A6B]/10 font-medium text-md md:text-lg py-4 px-8 max-w-full md:max-w-120 rounded-full transition-colors duration-300">
-              Download program Brochure
+              Download programme Brochure
             </button>
           </div>
         </div>

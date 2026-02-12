@@ -20,7 +20,7 @@ const workshops = [
   },
   {
     id: 3,
-    title: "Wellbeing Programs",
+    title: "Wellbeing Programmes",
     desc: "Support staff and students to achieve mental, emotional, and physical balance. Our holistic approach integrates relaxation, stress management, and wellness practices to boost energy, focus, and sustained performance.",
     image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 c.png`
   },
@@ -100,7 +100,7 @@ export default function CorporateProgram() {
 
           <div className="mt-6 lg:mt-10 flex justify-end">
             <Link href="/holistic-wellness-programme" className="group flex items-center gap-3 px-6 py-2 md:px-8 md:py-3 rounded-full border border-[#D6CFC2]/30 text-[#F3EAD8] text-xs md:text-sm uppercase tracking-widest hover:bg-[#F3EAD8] hover:text-[#4E351A] transition-all duration-300">
-              Explore Corporate Programs
+              Explore Corporate Programmes
               <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

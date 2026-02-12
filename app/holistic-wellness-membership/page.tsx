@@ -13,27 +13,27 @@ import React from 'react'
 const membershipFaqs = [
   {
     id: 1,
-    question: "What makes the Flowergrid programs different from other wellness courses?",
-    answer: "Our programs integrate mind, body, and spirit with both holistic and medical-informed practices. You’ll benefit from coaching, hypnotherapy, energy work, and lifestyle guidance in one seamless, personalised journey."
+    question: "What makes the Flowergrid programmes different from other wellness courses?",
+    answer: "Our programmes integrate mind, body, and spirit with both holistic and medical-informed practices. You’ll benefit from coaching, hypnotherapy, energy work, and lifestyle guidance in one seamless, personalised journey."
   },
   {
     id: 2,
-    question: "How long are the programs, and how do I choose the right one for me?",
+    question: "How long are the programmes, and how do I choose the right one for me?",
     answer: "We offer three levels: Self Discovery (6 weeks), Self Alignment (12 weeks), and Self Mastery (16–20 weeks). Your choice depends on your current needs, goals, and readiness for transformation. We can guide you in selecting the best fit."
   },
   {
     id: 3,
     question: "Are the sessions one-on-one or in groups?",
-    answer: "Our programs combine private 1:1 coaching with group workshops and Flowergrid Hub access. This ensures personalised attention while benefiting from community support and shared learning."
+    answer: "Our programmes combine private 1:1 coaching with group workshops and Flowergrid Hub access. This ensures personalised attention while benefiting from community support and shared learning."
   },
   {
     id: 4,
     question: "Can I join if I have no prior experience with coaching or holistic practices?",
-    answer: "Absolutely. Our programs are designed to guide beginners and experienced participants alike. Each step is structured, supportive, and adapted to your unique journey."
+    answer: "Absolutely. Our programmes are designed to guide beginners and experienced participants alike. Each step is structured, supportive, and adapted to your unique journey."
   },
   {
     id: 5,
-    question: "What kind of results can I expect from joining a program?",
+    question: "What kind of results can I expect from joining a programme?",
     answer: "You can expect clarity, confidence, improved emotional balance, better lifestyle habits, and sustainable transformation in mind, body, and spirit. Specific outcomes will depend on your personal goals and commitment."
   },
   {
@@ -44,7 +44,7 @@ const membershipFaqs = [
   {
     id: 7,
     question: "Do you offer flexible payment options?",
-    answer: "Yes. programs can be paid in full or via instalments, making it easier to invest in your personal growth at a pace that suits you."
+    answer: "Yes. programmes can be paid in full or via instalments, making it easier to invest in your personal growth at a pace that suits you."
   }
 ];
 

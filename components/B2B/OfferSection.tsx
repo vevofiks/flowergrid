@@ -54,7 +54,7 @@ export default function OfferSection() {
           What We Offer
         </h1>
         <p className="text-white! text-lg font-sans font-light tracking-wide mt-4 max-w-2xl opacity-90">
-          Our corporate and educational programs address both individual growth and team dynamics.
+          Our corporate and educational programmes address both individual growth and team dynamics.
         </p>
       </div>
 

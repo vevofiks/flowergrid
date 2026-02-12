@@ -13,7 +13,7 @@ const plans = [
   {
     price: "£350",
     title: "Self Discovery",
-    subtitle: "(Foundational program – 6 Weeks)",
+    subtitle: "(Foundational programme – 6 Weeks)",
     purpose:
       "To help individuals reconnect with themselves, understand their current health and emotional state, and build the foundation for inner and outer wellbeing.",
     included: [
@@ -32,7 +32,7 @@ const plans = [
   {
     price: "£600",
     title: "Self Alignment",
-    subtitle: "(Intermediate program – 12 Weeks)",
+    subtitle: "(Intermediate programme – 12 Weeks)",
     purpose:
       "To align the body, mind, and spirit by integrating learned practices into a structured daily routine, supported by coaching and holistic therapies.",
     included: [
@@ -51,7 +51,7 @@ const plans = [
   {
     price: "£900",
     title: "Self Mastery",
-    subtitle: "(Advanced program – 16-20 Weeks)",
+    subtitle: "(Advanced programme – 16-20 Weeks)",
     purpose:
       "To sustain long-term wellbeing, integrate longevity science, and embody holistic mastery through personalised transformation and advanced wellness strategies.",
     included: [
@@ -171,7 +171,7 @@ export default function Plans() {
       <div className="max-w-[1400px] mx-auto">
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-6">
-            Flowergrid Longevity & Transformation programs
+            Flowergrid Longevity & Transformation programmes
           </h2>
           <p className="text-base md:text-lg font-sans">
             Through this journey, FlowerGrid helps you reconnect, heal, and grow into the most aligned, empowered version of yourself.

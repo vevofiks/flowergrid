@@ -189,7 +189,7 @@ export const personsData = {
             bioText: [
                 "My journey has taken me through the worlds of business, education, and community development. I began my career with a degree in International Business and Economics, which opened my eyes to how people learn, lead, and adapt in different cultures.",
                 "Today, I work as a hypnotherapist in Croydon and global strategist. Along the way, I trained as a Master NLP Coach and became a certified trainer in nutrition and soft skills. These disciplines gave me the tools to understand human behaviour and guide others through meaningful transformation.",
-                "My career has been shaped by one idea: progress happens when people grow together. Whether I am mentoring young adults, supporting women settling into new environments, or leading wellbeing programs, I aim to help people feel confident, capable, and connected."
+                "My career has been shaped by one idea: progress happens when people grow together. Whether I am mentoring young adults, supporting women settling into new environments, or leading wellbeing programmes, I aim to help people feel confident, capable, and connected."
             ]
         },
 
@@ -225,7 +225,7 @@ export const personsData = {
         // JourneySection component data
         journeySection: {
             title: "Community and Impact",
-            description: "Community work is central to what I do. I have collaborated with schools, charities and local organisations to design programs that make a lasting difference. These include:",
+            description: "Community work is central to what I do. I have collaborated with schools, charities and local organisations to design programmes that make a lasting difference. These include:",
             flowerWithCard: [
                 {
                     "type": "card",
@@ -241,8 +241,8 @@ export const personsData = {
                 {
                     "type": "card",
                     "number": "02",
-                    "title": "Leadership Programs",
-                    "description": "Leadership and wellbeing programs for older adults"
+                    "title": "Leadership Programmes",
+                    "description": "Leadership and wellbeing programmes for older adults"
                 },
                 {
                     "type": "flower",
@@ -424,7 +424,7 @@ export const teamTree = [
                 "name": "Rebecca",
                 "role": "The Nutrition And Fitness Coach",
                 "image": `${imageUrl}about/team/rebecca.png`,
-                "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programs, and specializing in fitness and body strength still being individual."
+                "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programmes, and specializing in fitness and body strength still being individual."
             },
             {
                 "name": "Husna Hoque",
