@@ -105,7 +105,9 @@ const Support: React.FC<SupportProps> = ({ data }) => {
           {/* Navigation Controls - Left */}
           <button
             onClick={() => handleManualScroll('left')}
-            className="absolute left-2 lg:-left-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full border border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white transition-all duration-300 group flex items-center justify-center shadow-lg"
+            className="absolute left-2 lg:-left-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full border 
+            border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white 
+            transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
             aria-label="Previous slide"
           >
             <ChevronLeft size={20} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
@@ -114,7 +116,9 @@ const Support: React.FC<SupportProps> = ({ data }) => {
           {/* Navigation Controls - Right */}
           <button
             onClick={() => handleManualScroll('right')}
-            className="absolute right-2 lg:-right-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full border border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white transition-all duration-300 group flex items-center justify-center shadow-lg"
+            className="absolute right-2 lg:-right-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full
+             border border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653]
+             hover:text-white transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
             aria-label="Next slide"
           >
             <ChevronRight size={20} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />

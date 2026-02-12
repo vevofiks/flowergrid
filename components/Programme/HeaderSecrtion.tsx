@@ -7,7 +7,7 @@ function HeaderSecrtion() {
             How You Will Experience a <br className="hidden md:block" /> Flowergrid Program
         </h1>
         <p className="text-lg md:text-xl text-text-body max-w-2xl mb-10 leading-relaxed opacity-80">
-            Take the guesswork out of your transformation. FlowerGrid guides you through a clear, personalised journey that nurtures your mind, body, and spirit, ensuring measurable growth and lasting change.
+            Take the guesswork out of your transformation. Flowergrid holistic wellness programmes guide you through a clear, personalised journey that nurtures your mind, body, and spirit.
         </p>
 
         <div className="flex flex-col items-center gap-8">

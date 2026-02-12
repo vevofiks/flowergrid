@@ -98,7 +98,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
           text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
-          md:px-20 lg:mt-20 mb-24 sm:mb-32 md:py-16 md:ml-4"
+          md:px-20 lg:mt-14 mb-24 sm:mb-32 md:py-16 md:ml-4"
           >
             {text}
           </h1>

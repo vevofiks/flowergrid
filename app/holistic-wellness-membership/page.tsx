@@ -57,7 +57,7 @@ const MembershipPage = () => {
       <MembershipHelp />
       <FlowergridJourney />
       <Plans />
-      <HeroTestimonials />
+      <HeroTestimonials title='Stories from Our Members' />
       <Founders />
       <FaqSection faqs={membershipFaqs} />
       <Connect image={`/membership/connection.jpg`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />

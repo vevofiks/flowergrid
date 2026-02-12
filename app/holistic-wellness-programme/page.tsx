@@ -48,12 +48,56 @@ const faqs = [
     "answer": "We use a robust combination of health assessments, biomarker tracking, and reflective exercises. This data-driven approach allows you to see tangible improvements in both mental clarity and physical health throughout your Flowergrid holistic wellness programme."
   }
 ]
+
+const ProgramTestimonials = [
+  {
+   id : 1,
+   quote : "I arrived at the 5 Day Inner Transform overwhelmed and scattered. The structure, assessments and calm guidance helped me slow down, notice my patterns and reset my routines. I left with a clearer head, better sleep and a plan that actually feels doable.",
+   author : "Emma, Operations Manager, London",
+   image : "/home/H5 a.png",
+   rating : 5
+
+  },
+  {
+   id : 2,
+   quote : "I joined a six week Flowergrid holistic wellness programme after years of starting and abandoning self help plans. The mix of coaching, reflection and practical tools helped me build simple habits and keep them. I feel steadier, more organised and less at war with myself.",
+   author : "Tom, Financial Analyst, Manchester",
+   image : "/home/H5 b.png",
+   rating : 5
+
+  },
+  {
+   id : 3,
+   quote : "“I booked a Power Hour because I was stuck on one decision that was eating up all my energy. In that one session I felt properly listened to, and left with clear options, next steps and a lot less noise in my head.",
+   author : "Rina, Freelance Designer, Birmingham",
+   image : "/home/H5 c.png",
+   rating : 5
+
+  },
+  {
+   id : 4,
+   quote : "“I went to a one day workshop expecting theory. Instead I left with three or four specific practices I now use when stress spikes at work and at home. The day was honest, grounded and surprisingly practical, not just talk about wellbeing.”",
+   author : "Hassan, Team Leader, Croydon",
+   image : "/home/H5 d.png",
+   rating : 4
+
+  },
+  {
+   id : 5,
+   quote : "“Our team was burnt out and communication had become tense. The Flowergrid holistic wellness programmes for our organisation gave us a shared language for stress, simple regulation tools and space to speak honestly. Meetings feel calmer and people seem more human with each other again.”",
+   author : "Laura, Head of People, Surrey",
+   image : "/home/H5 c.png",
+   rating : 5
+
+  },
+  
+]
 const page = () => {
   return (
     <>
       <ProgramIntro />
       <ProgramCards />
-      <HeroTestimonials />
+      <HeroTestimonials title='Client Experiences with Flowergrid Holistic Wellness Programmes' testimonials={ProgramTestimonials} />
       <ProgramCarousel programs={myPrograms} />
       <HeaderSecrtion />
       <CurvedPathAnimation />

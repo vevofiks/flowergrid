@@ -38,9 +38,9 @@ export default function VisionSection() {
       className="w-full bg-[#F3E5CB] py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-
         {/* Header */}
-        <div className="vision-animate flex items-start justify-between gap-6 mb-16 flex-wrap">
+        <div className="vision-animate flex items-start mb-16 flex-wrap">
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl max-w-3xl font-heading text-[#171717] leading-tight tracking-wide">
             A Vision for Conscious Leadership
           </h2>
@@ -50,7 +50,7 @@ export default function VisionSection() {
             alt="Flowergrid Logo"
             width={100}
             height={100}
-            className="object-contain opacity-80"
+            className="object-contain opacity-80 "
           />
         </div>
 

@@ -52,7 +52,6 @@ export default function Founders() {
             }, "<");
 
     }, { scope: sectionRef });
-
     return (
         <section
             ref={sectionRef}
@@ -60,12 +59,10 @@ export default function Founders() {
         >
             <div className="max-w-[1400px] mx-auto flex flex-col gap-20 lg:gap-32">
 
-
                 <div ref={saminaRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
                     <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[450px] aspect-square md:aspect-[3/4] max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
-                            <Image
+                        <div className="relative w-full max-w-[450px] aspect-[3/5] md:aspect-[3/4] lg:aspect-[6/8] md:max-h-[600px] lg:mb-0">                            <Image
                                 src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
                                 alt="Samina Khan"
                                 fill
