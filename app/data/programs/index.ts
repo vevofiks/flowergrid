@@ -38,7 +38,7 @@ export const myPrograms: ProgramData[] = [
         imageAlt: "power hour session",
         decorativeImages: [
             {
-                src: `${imgurl}programme/decorations/flower3.png`,
+                src: `/programme/decorations/flower3.png`,
                 alt: "Decorative element",
                 position: "top-left", // top-left, top-right, bottom-left, bottom-right
                 className: "rotate-45" // optional Tailwind classes

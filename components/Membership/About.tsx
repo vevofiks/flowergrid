@@ -59,14 +59,12 @@ const MembershipAbout = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
                     <div className="connection-column space-y-6">
                         <p className="text-text-body font-heading text-base md:text-lg leading-relaxed">
-                            The Flowergrid Membership offers structured guidance and expert support to help you cultivate clarity, resilience, and balance in your life. Through evidence-based techniques and holistic practices, you develop practical skills to manage stress, strengthen emotional wellbeing, and build sustainable habits. The membership provides a supportive community where you can share experiences and gain encouragement, ensuring you never feel alone on your journey.
-                        </p>
+                            The Flowergrid Holistic Wellness Membership offers structured guidance and expert support to help you cultivate clarity, resilience, and balance in your life. Through evidence-based techniques and holistic practices, you develop practical skills to manage stress, strengthen emotional wellbeing, and build sustainable habits that fit your real day-to-day reality.                        </p>
                     </div>
 
                     <div className="connection-column space-y-6">
                         <p className="text-text-body text-base md:text-lg leading-relaxed">
-                            Alongside personalised coaching, you receive tools to integrate mindful living into daily routines, aligning your mind, body, and spirit. Designed to empower you, the program fosters self-awareness, confidence, and lasting transformation, enabling you to navigate challenges with clarity, maintain energy and focus, and create a healthier, more intentional life.
-
+                            This holistic wellness membership provides a supportive community where you can share experiences, feel understood, and receive encouragement, so you never feel alone on your journey. Alongside personalised coaching, you receive tools to integrate mindful living into daily routines, aligning your mind, body, and spirit and creating change that lasts beyond the sessions themselves.
                         </p>
                     </div>
                 </div>
