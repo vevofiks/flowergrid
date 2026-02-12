@@ -37,7 +37,7 @@ const HomeFaqs = [
   {
     id: 2,
     question: "How does Flowergrid support mind body spirit wellness?",
-    answer: "Our approach brings together medical insight, emotional support and gentle energy practices to encourage mind body spirit wellness. Each program is designed to help you feel grounded, centred and more aware of your personal needs."
+    answer: "Our approach brings together medical insight, emotional support and gentle energy practices to encourage mind body spirit wellness. Each programme is designed to help you feel grounded, centred and more aware of your personal needs."
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const HomeFaqs = [
   {
     id: 4,
     question: "Do you offer services that support mental and emotional wellbeing?",
-    answer: "Yes. Flowergrid provides programs that address anxiety, stress, confidence and emotional balance. Techniques such as NLP, hypnotherapy and mindfulness help you understand your patterns and develop healthier ways of responding to daily challenges."
+    answer: "Yes. Flowergrid provides programmes that address anxiety, stress, confidence and emotional balance. Techniques such as NLP, hypnotherapy and mindfulness help you understand your patterns and develop healthier ways of responding to daily challenges."
   },
   {
     id: 5,
@@ -61,8 +61,8 @@ const HomeFaqs = [
   },
   {
     id: 7,
-    question: "Who can benefit from holistic wellbeing programs at Flowergrid?",
-    answer: "Our programs are suitable for anyone seeking clarity, improved emotional balance, better physical health or deeper personal growth. Whether you are starting a new chapter or rebuilding your energy, holistic wellbeing can support steady and meaningful progress."
+    question: "Who can benefit from holistic wellbeing programmes at Flowergrid?",
+    answer: "Our programmes are suitable for anyone seeking clarity, improved emotional balance, better physical health or deeper personal growth. Whether you are starting a new chapter or rebuilding your energy, holistic wellbeing can support steady and meaningful progress."
   },
 ];
 

@@ -79,7 +79,7 @@ export default function Founders() {
                             Co-Founder & Wellness Strategist
                         </h3>
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programs, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
+                            Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
                         </p>
                         <Link href="/about/samina-khan">
                             <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
@@ -109,7 +109,7 @@ export default function Founders() {
                             Co-Founder & Leadership Life Coach
                         </h3>
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programs, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
+                            Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
                         </p>
                         <Link href="/about/monira-ahmed">
                             <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">

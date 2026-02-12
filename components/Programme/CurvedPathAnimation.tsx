@@ -19,7 +19,7 @@ const steps: Step[] = [
   {
     id: 1,
     title: "Initial Assessment & Consultation",
-    description: "Explore your goals, challenges, and personal needs with our experts. Your program is designed specifically around you.",
+    description: "Explore your goals, challenges, and personal needs with our experts. Your programme is designed specifically around you.",
     position: "left"
   },
   {
@@ -43,7 +43,7 @@ const steps: Step[] = [
   {
     id: 5,
     title: "Ongoing Support for Sustainable Transformation",
-    description: "Continued guidance ensures new habits, skills, and energy alignment last well beyond the program.",
+    description: "Continued guidance ensures new habits, skills, and energy alignment last well beyond the programme.",
     position: "left"
   }
 ];

@@ -4,10 +4,10 @@ const imgurl = process.env.NEXT_PUBLIC_IMGURL;
 export const myPrograms: ProgramData[] = [
     {
         id: 1,
-        title: "5-Day Inner Transform Program",
-        description: "Dive deep into a complete mind-body-spirit transformation. Our expert-led 5-day programme combines assessments, personalised planning, and ongoing support to create measurable, lasting change, giving you clarity, balance, and the tools to thrive both online or onsite.",
+        title: "5-Day Inner Transform Programme",
+        description: "Dive deep into a complete mind-body-spirit transformation. Our expert-led 5-day meme combines assessments, personalised planning, and ongoing support to create measurable, lasting change, giving you clarity, balance, and the tools to thrive both online or onsite.",
         benefits: ["Personalised transformation plan", "Expert guidance across mind, body, and spirit", "Biomarker tracking and progress check-ins", "Flexible online or onsite participation"],
-        buttonText: "Enquire About the 5-Day Program",
+        buttonText: "Enquire About the 5-Day Programme",
         buttonLink: "/your-link", // optional
         imageUrl: `/programme/p2.jpg`,
         imageAlt: "Description for accessibility",
@@ -80,12 +80,12 @@ export const myPrograms: ProgramData[] = [
     },
     {
         id: 5,
-        title: "Tailored Coaching Programs (6 & 12 Weeks)",
+        title: "Tailored Coaching Programmes (6 & 12 Weeks)",
         description: "Experience deep, lasting transformation with personalised coaching. Our 6- and 12-week programmes combine life coaching, reflective exercises, and integrated support to help you build new habits, align mind, body, and spirit, and achieve meaningful, measurable change.",
         benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment", "Sustainable habit formation and long-term transformation"],
         buttonText: "Start Your Transformation Journey",
         buttonLink: "/your-link",
-        imageUrl: `${imgurl}programme/p5.jpg`,
+        imageUrl: `${imgurl}programme/p5.jpgprogram`,
         imageAlt: "Tailored coaching program",
         decorativeImages: [
             {
@@ -106,13 +106,13 @@ export const myPrograms: ProgramData[] = [
     },
     {
         id: 6,
-        title: "Corporate & Community Programs",
+        title: "Corporate & Community programmes",
         description: "Empower your teams and communities with workshops designed to enhance leadership, communication, resilience, and overall wellbeing. Our expert-led sessions foster a conscious, collaborative culture, boost productivity, and develop emotional intelligence for lasting impact in any organisation or group.",
         benefits: ["Tailored workshops for organisations, schools, NHS, and community groups", "Practical strategies to enhance leadership and teamwork", "Tools for stress management, resilience, and wellbeing", "Cultivates conscious, supportive, and high-performing workplace culture"],
-        buttonText: "Learn More about Corporate Programs",
+        buttonText: "Learn More about Corporate programmes",
         buttonLink: "/corporate-wellbeing-programmes",
         imageUrl: `/programme/p6.jpg`,
-        imageAlt: "Corporate & Community Programs",
+        imageAlt: "Corporate & Community programmes",
         decorativeImages: [
             {
                 src: `${imgurl}programme/decorations/flower8.png`,

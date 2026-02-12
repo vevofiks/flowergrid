@@ -39,10 +39,10 @@ export default function VisionSection() {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="vision-animate flex items-start gap-4 mb-16">
+        <div className="vision-animate flex items-start mb-16">
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl max-w-3xl font-heading text-[#171717] leading-tight tracking-wide flex-1">
-            A Vision for Conscious Leadership
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-[#171717] leading-tight tracking-wide">
+            A Vision for Conscious <br /> Leadership
           </h2>
 
           <Image
