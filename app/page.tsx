@@ -6,7 +6,6 @@ import CoreValues from "@/components/Home/CoreValues";
 import TransformationServices from "@/components/Home/TransformationServices";
 import LeafScrollText from "@/components/Home/LeafScrollText";
 import BodyMindSpirit from "@/components/Home/BodyMindSpirit";
-import LadyScroll from "@/components/LadyScroll";
 import FadeInText from "@/components/Home/FadeInText";
 import CorporateProgram from "@/components/Home/CorporateProgram";
 import HeroTestimonials from "@/components/Home/HeroTestimonials";

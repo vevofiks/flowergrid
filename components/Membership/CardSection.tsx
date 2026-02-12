@@ -53,7 +53,7 @@ const CardSection = () => {
             points: [
                 "You want guidance you can trust from experienced practitioners",
                 "You want structure, accountability and techniques that genuinely work",
-                "You prefer an approach that respects both your medical insights and holistic wellbeing",
+                "You prefer a holistic transformation programme that respects both medical insight and spiritual wellbeing.",
             ]
         }
     ];

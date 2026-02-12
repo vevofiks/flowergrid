@@ -60,7 +60,7 @@ const defaultCards: programCard[] = [
 
 const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => {
     return (
-        <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mt-50 mb-20">
+        <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mb-20">
             {/* Title */}
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-center py-10 md:mb-20 text-text-heading leading-tight">
                 What Makes Flowergrid programs

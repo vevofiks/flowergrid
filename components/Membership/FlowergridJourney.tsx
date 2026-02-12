@@ -37,7 +37,11 @@ export default function FlowergridJourney() {
             description:
                 "Adopt new habits, behaviours, and perspectives. Build confidence, clarity, and direction to move forward with purpose.",
             image: "/membership/f4.png",
-        },
+        }, {
+            title: "Integration",
+            description: "Embed sustainable change into your daily life. Maintain long-term wellbeing, conscious living, and a sense of empowered alignment Through this journey, the Flowergrid Holistic Transformation Programme helps you reconnect, heal, and grow into the most aligned, empowered version of yourself.",
+            image: "/membership/f1.png",
+        }
     ];
 
     useGSAP(() => {

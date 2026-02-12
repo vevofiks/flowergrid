@@ -57,9 +57,7 @@ export default function ProgramIntro() {
             variants={itemVariants}
             className="text-white/90! text-lg md:text-2xl font-sans font-light tracking-wide max-w-3xl"
           >
-            Our holistic wellness programmes are created by a multidisciplinary team who combine
-            medical understanding, therapeutic practice and holistic methods.
-            Every journey is adapted around your needs and your pace.
+            Our holistic wellness programmes are created by a multidisciplinary team who combine medical understanding, therapeutic practice and holistic methods. Every journey is adapted around your needs and your pace.
           </motion.p>
 
 

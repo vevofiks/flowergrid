@@ -31,6 +31,8 @@ const SaminaPage = () => {
             <PersonHero
                 imageSrc={personData.hero.imageSrc}
                 text={personData.hero.text}
+                imageClassName={personData.hero.imageSize}
+
             />
             <PersonBio
                 imageSrc={personData.bio.imageSrc}
