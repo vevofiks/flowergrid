@@ -39,11 +39,11 @@ export default function BlogPostHero({
                 {/* Background Image */}
                 {coverImage ? (
                     <Image
-                        src={'/blog/individualbloghero.png'}
+                        src={'/blog/individualblogpost.png'}
                         alt={title}
                         fill
                         priority
-                        className="object-cover"
+                        className="object-cover object-[center_20%]"
                     />
                 ) : (
                     <div className="w-full h-full bg-[#E6D7C3] flex items-center justify-center text-[#8C7A65]">
