@@ -9,6 +9,7 @@ const page = () => {
       <TeamHero />
       <Team />
       <LeafScrollText lines={lines} />
+
     </>
   )
 }

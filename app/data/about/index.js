@@ -10,7 +10,7 @@ export const personsData = {
         // PersonHero component data
         hero: {
             imageSrc: `${imageUrl}about/person1/Samina.png`,
-            text: "Hi, I'm Samina Khan, wellbeing coach with expertise in integrated holistic practices for mind & body"
+            text: "Hi, I’m Samina Khan, a holistic life coach in Croydon, specialising in integrative mind and body wellbeing practices."
         },
 
         // PersonBio component data
@@ -18,9 +18,9 @@ export const personsData = {
             title: "A Little About Me",
             imageSrc: `${imageUrl}about/person1/saminahalf.png`,
             bioText: [
-                "Over the past 12 years, I've supported individuals through mental health and wellness initiatives, helping them navigate life's challenges. Alongside this, I have more than 20 years of experience in business and startups, bringing people and ideas together in meaningful ways.",
-                "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to help my clients do the same.",
-                "I specialize in guiding you to uncover your true desires, confront your fears, and take practical steps towards creating the life you want. Whether your focus is health, career, relationships, or overall well-being, I'm here to help you turn challenges into opportunities for growth."
+                "ver the past 12 years, I've supported individuals through mental health initiatives, helping them navigate life's challenges with clarity. Based in South London, I work as a Holistic Life Coach in Croydon and online, bringing over 20 years of experience in business and startups to help people and ideas come together in meaningful ways.",
+                "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to provide holistic wellbeing support that helps my clients do the same.",
+                "I specialise in guiding you to uncover your true desires, confront your fears, and take practical steps towards creating the life you want. Whether you are looking for life and transformation coaching, career strategy, or relationship healing, I am here to help you turn challenges into opportunities for growth."
             ]
         },
 
@@ -59,9 +59,9 @@ export const personsData = {
             ]
         },
 
-        flowerWithText : {
+        flowerWithText: {
             image: `${imageUrl}about/person1/4.png`,
-            description: "I'm proud to be part of Flowergrid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together we offer coaching, counselling, nutrition guidance, exercise plans, Reiki spiritual direction, and medical Support."
+            description: "I'm proud to be part of Flowergrid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together, we offer coaching, counselling, nutrition guidance, and medical support alongside my work as a Holistic Life Coach in Croydon."
         },
         // JourneySection component data
         journeySection: {
@@ -85,7 +85,7 @@ export const personsData = {
                     "title": "Reflection",
                     "description": "We examine fears and limiting beliefs using holistic life coaching techniques"
                 },
-                {   
+                {
                     "type": "flower",
                     "image": `${imageUrl}about/person1/3b.png`,
                     "alt": "Coneflower Sketch"
@@ -117,7 +117,7 @@ export const personsData = {
         connect: {
             image: `${imageUrl}about/person1/5.png`,
             title: "Take The First Step",
-            description: "If you're ready to find balance, clarity, and personal growth, I'd love to work with you"
+            description: "If you're ready to find balance, clarity, and personal growth through life and transformation coaching, I'd love to work with you."
         },
 
 
@@ -146,7 +146,7 @@ export const personsData = {
             "NLP Practitioner – Neuro-Linguistic Programming",
             "Mental Health First Aider – LSBU University"
         ],
-        support : [
+        support: [
             {
                 image: `${imageUrl}about/person1/s1.jpg`,
                 title: "Personal & Professional Growth Coaching",
@@ -157,7 +157,7 @@ export const personsData = {
             },
             {
                 image: `${imageUrl}about/person1/s3.jpg`,
-                title: "Neuro-Linguistic Programming",  
+                title: "Neuro-Linguistic Programming",
             },
             {
                 image: `${imageUrl}about/person1/s4.jpg`,
@@ -178,7 +178,8 @@ export const personsData = {
         // PersonHero component data
         hero: {
             imageSrc: `${imageUrl}about/person2/monira.png`,
-            text: "Hi, I'm Monira Ahmed, a global strategist and hypnotherapist in Croydon specialising in conscious leadership and subconscious transformation."
+            text: "Hi, I'm Monira Ahmed, a global strategist and hypnotherapist in Croydon specialising in conscious leadership and subconscious transformation.",
+            imageSize: "w-[300px] sm:w-[380px] md:w-[420px] lg:w-[460px] xl:w-[500px]"
         },
 
         // PersonBio component data
@@ -217,7 +218,7 @@ export const personsData = {
                 }
             ]
         },
-        flowerWithText : {
+        flowerWithText: {
             image: `${imageUrl}about/person2/4.png`,
             description: "I believe leadership should feel fair as well as successful. My work bridges minds, markets and generations, rooting growth in empathy and real wellbeing. Through Flowergrid, I help people lead with clarity and courage, uplifting themselves and their communities."
         },
@@ -292,21 +293,21 @@ export const personsData = {
 
         // Qualifications component data
         qualifications: [
-           {
-            period: "2023 - Present",
-            title: "Strategic Leadership & Community Impact",
-            description: "Founder · Trustee · Strategic Partnerships"
-           },
-            {   
-            period: "2020 - 2023",
-            title: "Wellness & Social Consultancy",
-            description: "Management Consultant · Senior Consultant · Head of Business Development"
-           },
-           {
-            period: "2000 – 2018",
-            title: "Corporate Strategy & Change Management",
-            description: "Promotions Manager · Change Management Manager · Senior Service Delivery Manager"
-           }
+            {
+                period: "2023 - Present",
+                title: "Strategic Leadership & Community Impact",
+                description: "Founder · Trustee · Strategic Partnerships"
+            },
+            {
+                period: "2020 - 2023",
+                title: "Wellness & Social Consultancy",
+                description: "Management Consultant · Senior Consultant · Head of Business Development"
+            },
+            {
+                period: "2000 – 2018",
+                title: "Corporate Strategy & Change Management",
+                description: "Promotions Manager · Change Management Manager · Senior Service Delivery Manager"
+            }
         ],
         educations: [
             "MA Business Management – Kingston University",
@@ -315,7 +316,7 @@ export const personsData = {
             "NLP Practitioner – Neuro-Linguistic Programming",
             "Mental Health First Aider – LSBU University"
         ],
-        support : [
+        support: [
 
             {
                 image: `${imageUrl}about/person2/ps3.jpg`,

@@ -104,9 +104,9 @@ export default function Footer() {
 
                     {/* Middle Column (Links) */}
                     <div
-                        className="lg:col-span-3 flex flex-col justify-center items-center lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
+                        className="lg:col-span-3 flex flex-col justify-center sm:justify-start items-center sm:items-left lg:items-start order-1 lg:order-2 lg:border-r lg:border-[#F3EAD8]/20 lg:pl-16 py-8"
                     >
-                        <ul className="flex flex-col gap-4 md:gap-6 text-center lg:text-left">
+                        <ul className="flex flex-col gap-4 md:gap-6 text-left sm:text-left lg:text-left">
                             <li><Link href="/" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Home</Link></li>
                             <li className="flex flex-col gap-2">
                                 About

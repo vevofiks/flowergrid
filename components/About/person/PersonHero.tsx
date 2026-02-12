@@ -8,9 +8,10 @@ import { useGSAP } from '@gsap/react';
 interface IntroProps {
   imageSrc: string;
   text: string;
+  imageClassName?: string;
 }
 
-export default function PersonHero({ imageSrc, text }: IntroProps) {
+export default function PersonHero({ imageSrc, text, imageClassName }: IntroProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -97,7 +98,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
           text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
-          md:px-28 lg:mt-20 mb-24 sm:mb-32 "
+          md:px-20 lg:mt-20 mb-24 sm:mb-32 md:py-16 md:ml-4"
           >
             {text}
           </h1>
@@ -122,7 +123,7 @@ export default function PersonHero({ imageSrc, text }: IntroProps) {
             alt="trainer img"
             width={450}
             height={450}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[250px] object-contain object-bottom sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px]"
+            className={`absolute bottom-0 left-1/2 -translate-x-1/2 object-contain object-bottom ${imageClassName || "w-[250px] sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px]"}`}
             priority
           />
         </div>
