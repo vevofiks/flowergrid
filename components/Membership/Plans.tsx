@@ -24,7 +24,7 @@ const plans = [
       "Energy Healing & Reiki – enhancing alignment and emotional flow",
       "Relationship Coaching – strengthening communication and emotional intelligence",
       "Nutrition & Lifestyle Plan – optimising diet, sleep, and daily vitality",
-      "Group Workshops / FlowerGrid Hub Access – community growth and peer connection",
+      "Group Workshops / Flowergrid Hub Access – community growth and peer connection",
     ],
     outcome:
       "You leave with greater clarity, balance, and a personalised self-care roadmap for your next phase.",
@@ -43,7 +43,7 @@ const plans = [
       "Energy Healing & Reiki – enhancing alignment and emotional flow",
       "Relationship Coaching – strengthening communication and emotional intelligence",
       "Nutrition & Lifestyle Plan – optimising diet, sleep, and daily vitality",
-      "Group Workshops / FlowerGrid Hub Access – community growth and peer connection",
+      "Group Workshops / Flowergrid Hub Access – community growth and peer connection",
     ],
     outcome:
       "You cultivate balanced energy, improved focus, and an aligned life that supports emotional and physical longevity.",
@@ -174,7 +174,7 @@ export default function Plans() {
             Flowergrid Longevity & Transformation programmes
           </h2>
           <p className="text-base md:text-lg font-sans">
-            Through this journey, FlowerGrid helps you reconnect, heal, and grow into the most aligned, empowered version of yourself.
+            Through this journey, Flowergrid helps you reconnect, heal, and grow into the most aligned, empowered version of yourself.
           </p>
         </div>
 
