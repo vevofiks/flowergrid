@@ -14,7 +14,7 @@ const TeamHero = () => {
       className="
         relative w-full overflow-hidden
         min-h-[65vh] md:min-h-screen
-        flex items-center
+        flex items-center sm:bg-contain
       "
     >
       {/* Overlay */}
@@ -39,7 +39,7 @@ const TeamHero = () => {
         <h1
           className="
             text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-            font-normal !text-white
+            font-normal text-white!
             mb-4 md:mb-6
             drop-shadow-lg
           "
@@ -51,7 +51,7 @@ const TeamHero = () => {
           className="
             text-sm sm:text-base md:text-xl lg:text-2xl
             leading-relaxed tracking-wide
-            !text-white/95
+            text-white/95!
             max-w-3xl
             drop-shadow-md
           "

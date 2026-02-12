@@ -5,7 +5,7 @@ import PersonBio from '@/components/About/person/Bio'
 import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
 import WorkIncludes from '@/components/About/person/WorkIncludes'
 import { usePathname } from 'next/navigation'
-import { getPersonBySlug } from '../data'
+import { getPersonBySlug } from '@/app/data/about'
 import FlowerGridSection from '@/components/About/person/FlowerGridSection'
 import JourneySection from '@/components/About/person/JourneySection'
 import Connect from '@/components/About/person/Connect'
@@ -40,6 +40,7 @@ const PersonPage = () => {
       <PersonHero
         imageSrc={personData.hero.imageSrc}
         text={personData.hero.text}
+        imageClassName={personData.hero.imageSize}
       />
       <PersonBio
         imageSrc={personData.bio.imageSrc}
@@ -51,7 +52,7 @@ const PersonPage = () => {
           phrases={personData.scrollingText.phrases}
         />
       )}
-      
+
       <WorkIncludes
         description={personData.workIncludes.description}
         steps={personData.workIncludes.steps}
@@ -69,7 +70,7 @@ const PersonPage = () => {
       {isPerson2 && (
         <WorkSpecifications />
       )}
-      
+
       {personData?.journeySection && (
         <JourneySection
           title={personData.journeySection.title}
@@ -83,7 +84,7 @@ const PersonPage = () => {
       {isPerson2 && (
         <Vision />
       )}
-      
+
       <Support data={personData.support} />
 
       <Connect

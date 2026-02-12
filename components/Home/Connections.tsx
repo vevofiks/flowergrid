@@ -47,18 +47,18 @@ const Connections = () => {
 
                 <div className="connection-header flex items-center gap-4 mb-12">
                     <div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading">
-                        Understanding the Flowergrid Connection
-                    </h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading">
+                            Understanding the Flowergrid Connection
+                        </h2>
                     </div>
                     <div>
-                    <Image
-                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
-                        alt="Flowergrid Logo"
-                        width={100}
-                        height={100}
-                        className="object-contain"
-                    />
+                        <Image
+                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
+                            alt="Flowergrid Logo"
+                            width={100}
+                            height={100}
+                            className="object-contain"
+                        />
                     </div>
                 </div>
 
@@ -72,7 +72,8 @@ const Connections = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <Link href="/about/team" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:bg-primary/90 transition-colors inline-block">
+
+                    <Link href="/our-team" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:bg-primary/90 transition-colors inline-block">
                         Discover The Flowergrid Philosophy
                     </Link>
                 </div>

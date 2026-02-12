@@ -17,7 +17,7 @@ const practices = [
   {
     "id": "body",
     "title": "Body",
-    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/body.jpg`
+    "image": `/home/body.jpeg`
   },
   {
     "id": "spirit",

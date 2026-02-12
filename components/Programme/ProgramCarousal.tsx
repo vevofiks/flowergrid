@@ -198,7 +198,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
 
                             {/* Image Section */}
                             <div className="program-image w-full md:w-3/5 lg:w-1/2">
-                                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                                <div className="relative aspect-4/5 rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
                                         src={program.imageUrl}
                                         alt={program.imageAlt}
