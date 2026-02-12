@@ -94,11 +94,10 @@ export default function BlogSection() {
       ref={containerRef}
       className="relative w-full min-h-screen bg-[#F3EAD8] flex flex-col py-5 px-6 md:px-12 lg:px-20"
     >
-
       {/* Header */}
       <div
         ref={headerRef}
-        className="flex-none flex items-center justify-center gap-3 md:gap-4 mb-7"
+        className="flex-none flex items-center justify-center gap-3 md:gap-4 py-10"
       >
         <div className="relative w-6 h-6 md:w-20 md:h-20">
           <Image
@@ -118,7 +117,6 @@ export default function BlogSection() {
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-
           {loading && (
             <div className="col-span-full text-center py-20 text-[#8C7A65]">
               Loading blogs...

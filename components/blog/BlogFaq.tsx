@@ -114,7 +114,7 @@ export default function BlogFaq({ faqs }: BlogFaqProps) {
     };
 
     return (
-        <div ref={sectionRef} className="mt-16 md:mt-24 border-t border-[#8C7A65]/20 pt-16">
+        <div ref={sectionRef} className="m-6 mt-12 md:mt-16 border-t border-[#8C7A65]/20 pt-10">
             <div className="flex flex-col gap-8 md:gap-12">
                 <h2
                     ref={headerRef}

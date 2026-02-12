@@ -32,7 +32,7 @@ export default function BlogHero() {
                     <div className="absolute inset-0">
                         <Image
                             src={`${process.env.NEXT_PUBLIC_IMGURL}blog/bloghero.png`}
-                            alt="Membership Hero"
+                            alt="blog page Hero Image"
                             fill
                             className="object-cover"
                             priority
