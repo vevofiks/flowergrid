@@ -83,22 +83,22 @@ const Intro = () => {
                             >
                                 <div className="max-w-6xl">
                 
-                                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-normal mb-6 md:mb-8 text-white! drop-shadow-lg'>
-                    Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
-                </h1>
-                
+                                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-medium mb-6 md:mb-8 text-white! drop-shadow-lg'>
+                                        Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
+                                    </h1>
+                            
                                     <motion.p
                                         variants={itemVariants}
                                         className="text-white/90! text-lg md:text-2xl mb-10 tracking-wide font-sans font-light"
                                     >
-   Our holistic wellness services combine medical science, holistic therapies and coaching
-                    expertise to help you create lasting transformation. Each program is designed to support
-                    your physical health, emotional balance and personal growth.
-             </motion.p>
-            
+                                        Our holistic wellness services combine medical science, holistic therapies and coaching
+                                        expertise to help you create lasting transformation. Each programme is designed to support
+                                        your physical health, emotional balance and personal growth.
+                                    </motion.p>
+                                                
                 
-                                </div>
-                            </motion.div>
+                                    </div>
+                                </motion.div>
                         </section>
     )
 }

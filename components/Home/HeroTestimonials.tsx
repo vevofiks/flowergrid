@@ -11,7 +11,7 @@ export interface Testimonial {
 const defaultTestimonials: Testimonial[] = [
     {
         id: 1,
-        quote: "Before coming to Flowergrid, I struggled with daily stress and imbalance. Their holistic wellness programs helped me restore harmony in my life and feel truly supported.",
+        quote: "Before coming to Flowergrid, I struggled with daily stress and imbalance. Their holistic wellness programmes helped me restore harmony in my life and feel truly supported.",
         author: "Sarah Thompson, Surrey",
         image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`,
         rating: 5,
@@ -39,7 +39,7 @@ const defaultTestimonials: Testimonial[] = [
     },
     {
         id: 5,
-        quote: "I had tried several holistic wellness programs before, but Flowergrid was different. The personalised approach helped me make real, lasting changes in my life.",
+        quote: "I had tried several holistic wellness programmes before, but Flowergrid was different. The personalised approach helped me make real, lasting changes in my life.",
         author: "Olivia Bennett, Kent",
         image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`,
         rating: 5,

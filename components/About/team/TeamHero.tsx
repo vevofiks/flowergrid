@@ -1,7 +1,9 @@
 import React from 'react'
 
+
 const TeamHero = () => {
   const imageUrl = process.env.NEXT_PUBLIC_IMGURL
+
 
   return (
     <section
@@ -13,7 +15,7 @@ const TeamHero = () => {
       }}
       className="
         relative w-full overflow-hidden
-        min-h-[65vh] md:min-h-screen
+        min-h-screen md:min-h-screen
         flex items-center sm:bg-contain
       "
     >
@@ -27,6 +29,7 @@ const TeamHero = () => {
         "
       />
 
+
       {/* Content */}
       <div
         className="
@@ -38,14 +41,15 @@ const TeamHero = () => {
       >
         <h1
           className="
-            text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-            font-normal text-white!
+            text-4xl sm:text-4xl md:text-5xl lg:text-6xl
+            font-medium text-white!
             mb-4 md:mb-6
             drop-shadow-lg
           "
         >
           Our Panel Of Experts
         </h1>
+
 
         <p
           className="
@@ -64,5 +68,6 @@ const TeamHero = () => {
     </section>
   )
 }
+
 
 export default TeamHero

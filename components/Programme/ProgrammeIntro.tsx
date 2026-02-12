@@ -30,7 +30,7 @@ export default function ProgramIntro() {
             <div className="absolute inset-0">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_IMGURL}programme/p1.jpg`}
-                    alt="Programs Hero"
+                    alt="Programmes Hero"
                     fill
                     priority
                     className="object-cover"
@@ -48,7 +48,7 @@ export default function ProgramIntro() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-white! text-3xl md:text-6xl lg:text-[5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
+            className="text-white! text-4xl md:text-4xl lg:text-6xl font-heading font-medium leading-[1.1] mb-6 tracking-wide"
           >
             Flowergrid Holistic Wellness Programmes Support for Mind, Body & Self
         </motion.h1>

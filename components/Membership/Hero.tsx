@@ -50,7 +50,7 @@ export default function Hero() {
 
                     <motion.h1
                         variants={itemVariants}
-                        className="text-white! text-3xl md:text-7xl lg:text-[5.5rem] font-heading font-medium leading-[1.1] mb-6 tracking-wide"
+                        className="text-white! text-4xl md:text-4xl lg:text-6xl font-heading font-medium leading-[1.1] mb-6 tracking-wide"
                     >
                         Flowergrid Holistic Wellness Membership
                     </motion.h1>

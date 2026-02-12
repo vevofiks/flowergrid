@@ -140,7 +140,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
             {/* Section Heading */}
             <div className="text-center pt-16 md:pt-20 pb-8 md:pb-12">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal">
-                    Explore Our Transformational <br /> programs
+                    Explore Our Transformational <br /> programmes
                 </h2>
             </div>
 

@@ -20,7 +20,7 @@ const sections = [
             { title: "Medical Checks, Treatments & Aesthetics", desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals." },
             { title: "Nutritional Consulting", desc: "Tailored plans to optimize nutrition, metabolism, and energy." },
             { title: "Doctor Consultations", desc: "Access our network of integrative practitioners for personalised health insights." },
-            { title: "Integrative Health & Fitness Plans", desc: "Custom wellness programs combining fitness, nutrition, and mindfulness." },
+            { title: "Integrative Health & Fitness Plans", desc: "Custom wellness programmes combining fitness, nutrition, and mindfulness." },
         ],
     },
     {
@@ -53,7 +53,7 @@ const sections = [
     {
         id: "transformation",
         title: "Life Coaching & Transformation",
-        desc: "Discover powerful coaching programs that help you redefine your path, strengthen relationships, and unlock your fullest potential.",
+        desc: "Discover powerful coaching programmes that help you redefine your path, strengthen relationships, and unlock your fullest potential.",
         thumb: `/services/s1.png`,
         full: `/services/s3.jpg`,
         details: [

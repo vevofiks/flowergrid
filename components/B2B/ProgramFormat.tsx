@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const sections = [
     {
         id: "intensive",
-        title: "5-Day Intensive program",
+        title: "5-Day Intensive Programme",
         thumb: `/b2b/7.png`,
         details: "A guided wellbeing and leadership experience for teams seeking sustainable transformation. Includes personalised assessments, group coaching, and integrated mind-body workshops."
     },
@@ -66,7 +66,7 @@ export default function ProgramFormat() {
         >
             <div className="intro-text text-center max-w-5xl mb-8 lg:mb-10 relative z-10">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-black! mb-4">
-                    program Formats
+                    Programme Formats
                 </h2>
                 <p className="text-base md:text-xl lg:text-2xl font-sans text-black/70! leading-relaxed">
                     Choose a format that suits your organisation&apos;s needs and time frame.
