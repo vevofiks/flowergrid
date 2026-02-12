@@ -43,7 +43,7 @@ export default function MobileTableOfContents({ content }: { content: any }) {
     if (headings.length === 0) return null;
 
     return (
-        <div className="lg:hidden mb-8 border-b border-[#8C7A65]/20 pb-8">
+        <div className="lg:hidden mb-2 border-b border-[#8C7A65]/20 pb-6">
             <h3 className="font-heading text-lg text-[#1C1C1C] mb-4">Table of Contents</h3>
             <nav className="space-y-1">
                 {headings.map(({ id, text, level }) => (

@@ -72,7 +72,7 @@ const Connections = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <Link href="/about/teams" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:bg-primary/90 transition-colors inline-block">
+                    <Link href="/about/team" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:bg-primary/90 transition-colors inline-block">
                         Discover The Flowergrid Philosophy
                     </Link>
                 </div>

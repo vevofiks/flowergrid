@@ -36,7 +36,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
     const coverImage = extractCoverImage(blog.content);
 
     return (
-        <div className="min-h-screen bg-[#F3EAD8] pb-20">
+        <div className="min-h-screen bg-[#F3EAD8]">
             {/* HERO SECTION - Full Width */}
             {!isFocusMode && (
                 <BlogPostHero
@@ -46,15 +46,17 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     readTime={blog.readTime || '5 min read'}
                     category="Holistic Health"
                     tldr={blog.tldr}
-                    url={blogUrl} // Pass URL for AI Summary links
+                    url={blogUrl}
                 />
             )}
 
             {/* Main Content Container */}
-            <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
 
                 {/* Back Button & Focus Toggle */}
-                <div className="flex justify-between items-center mb-8 pt-24 md:pt-28">
+                <div
+                    className={`flex justify-between items-center mb-6 ${isFocusMode ? 'pt-24' : ''}`}                  
+                >
                     <Link
                         href="/blogs"
                         className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
@@ -80,9 +82,12 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                 </div>
 
                 {/* Mobile Table of Contents (Visible only on small screens) */}
-                <div className="lg:hidden mb-12">
-                    <MobileTableOfContents content={blog.content} />
-                </div>
+                {!isFocusMode && (
+                    <div className="lg:hidden mb-8">
+                        <MobileTableOfContents content={blog.content} />
+                    </div>
+                )}
+
 
                 {/* Main Grid Layout */}
                 <div className={`grid gap-12 transition-all duration-500 ease-in-out ${isFocusMode ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 lg:grid-cols-12'
@@ -97,17 +102,9 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                     {/* CENTER COLUMN: Content */}
                     <main className={isFocusMode ? 'w-full' : 'lg:col-span-6'}>
-                        {isFocusMode && (
-                            <div className="mb-10 text-center">
-                                <h1 className="text-3xl md:text-5xl font-heading font-medium text-[#1C1C1C] leading-tight mb-4">
-                                    {blog.title}
-                                </h1>
-                            </div>
-                        )}
 
                         {/* Article Content */}
                         <article className="prose prose-lg prose-headings:font-heading prose-headings:font-normal prose-p:font-sans prose-p:text-[#4A4A4A] prose-p:leading-relaxed max-w-none">
-
                             <BlogRenderer data={blog.content} />
                         </article>
 
@@ -136,7 +133,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                 {/* Bottom Featured Section (Reused) */}
                 {!isFocusMode && latestPost && featuredPosts && (
-                    <div className="mt-32 pt-16 border-t border-[#8C7A65]/20">
+                    <div className="mt-10 pt-12 border-t border-[#8C7A65]/20">
                         <h2 className="text-3xl font-serif text-[#1C1C1C] mb-12 text-center">More to Explore</h2>
                         <BlogFeaturedSection latestPost={latestPost} featuredPosts={featuredPosts} />
                     </div>

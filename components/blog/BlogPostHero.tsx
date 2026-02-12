@@ -39,7 +39,7 @@ export default function BlogPostHero({
                 {/* Background Image */}
                 {coverImage ? (
                     <Image
-                        src={coverImage}
+                        src={'/blog/individualbloghero.png'}
                         alt={title}
                         fill
                         priority
