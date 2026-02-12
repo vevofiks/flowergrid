@@ -23,7 +23,7 @@ interface JourneySectionProps {
 export default function JourneySection({ title, description, items }: JourneySectionProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const pathname = usePathname();
-    const isPerson2 = pathname === '/about/person2';
+    const isPerson2 = pathname === '/monira-ahmed-hypnotherapist';
 
 
     useGSAP(() => {
@@ -44,7 +44,7 @@ export default function JourneySection({ title, description, items }: JourneySec
     }, { scope: containerRef });
 
     return (
-        <section className="py-24"> 
+        <section className="py-24">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="text-center mb-20">
@@ -56,7 +56,7 @@ export default function JourneySection({ title, description, items }: JourneySec
                     </p>
                 </div>
 
-        
+
                 <div
                     ref={containerRef}
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"
@@ -65,8 +65,8 @@ export default function JourneySection({ title, description, items }: JourneySec
                         <div key={index} className="journey-item flex justify-center items-center w-full h-full">
 
                             {item.type === 'card' ? (
-                                <div className="w-full max-w-[280px] aspect-[3/4] border-2 border-[#C4A484] rounded-2xl p-3 flex flex-col">
-                                    <div className="w-full h-full !bg-[#E5CCA1] rounded-xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
+                                <div className="w-full max-w-[280px] aspect-3/4 border-2 border-[#C4A484] rounded-2xl p-3 flex flex-col">
+                                    <div className="w-full h-full bg-[#E5CCA1]! rounded-xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
 
                                         <span className="text-4xl font-heading text-[#171717] mb-4">
                                             {item.number}
@@ -83,7 +83,7 @@ export default function JourneySection({ title, description, items }: JourneySec
                                 </div>
                             ) : (
 
-                                <div className="w-full max-w-[250px] aspect-[3/4] flex items-center justify-center relative">
+                                <div className="w-full max-w-[250px] aspect-3/4 flex items-center justify-center relative">
                                     <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-500">
                                         <Image
                                             src={item.image || "/assets/flower-placeholder.svg"}
@@ -101,12 +101,12 @@ export default function JourneySection({ title, description, items }: JourneySec
 
                 <p className='text-center font-xl mt-12 p-10 text-[#5B5B5B] max-w-2xl mx-auto font-light' >
 
-                   {
-                    isPerson2 && (
-                        
-                     "I believe education and fairness are the foundation of progress. My aim is always to help people grow in ways that benefit both themselves and those around them." 
-                    )
-                   }
+                    {
+                        isPerson2 && (
+
+                            "I believe education and fairness are the foundation of progress. My aim is always to help people grow in ways that benefit both themselves and those around them."
+                        )
+                    }
                 </p>
 
             </div>

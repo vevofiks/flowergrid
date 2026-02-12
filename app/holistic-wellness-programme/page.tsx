@@ -1,5 +1,5 @@
 import React from 'react'
-import { myPrograms } from './data'
+import { myPrograms } from '../data/programs'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import Connect from '@/components/About/person/Connect'
 import FaqSection from '@/components/Contact/FAQSection'
@@ -58,7 +58,7 @@ const page = () => {
       <HeaderSecrtion />
       <CurvedPathAnimation />
       <Achievement />
-      <FaqSection title='Your Questions About Flowergrid Programmes Answered' faqs={faqs}/>
+      <FaqSection title='Your Questions About Flowergrid Programmes Answered' faqs={faqs} />
       <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </>
   )

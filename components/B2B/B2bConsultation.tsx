@@ -80,7 +80,7 @@ const ContactSection = () => {
                 Bring clarity, compassion, and conscious growth into your workplace. Speak to our team to design corporate wellbeing programs that truly fit your goals and culture.
             </p>
 
-            <Link href="/contact">
+            <Link href="/contact-us">
                 <button
                     ref={buttonRef}
                     className="bg-primary text-white font-medium rounded-full tracking-wider transition-all duration-300 opacity-0 shadow-lg hover:shadow-xl hover:scale-105
