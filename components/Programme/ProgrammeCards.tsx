@@ -54,7 +54,7 @@ const defaultCards: programCard[] = [
         id: 5,
         title: "One place, many forms of support",
         description:
-            "Whether you join online or onsite, you have access to the full panel of experts and the complete FlowerGrid method.",
+            "Whether you join online or onsite, you have access to the full panel of experts and the complete Flowergrid method.",
     },
 ];
 
