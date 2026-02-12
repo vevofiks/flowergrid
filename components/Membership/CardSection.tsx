@@ -96,8 +96,8 @@ const CardSection = () => {
     }, { scope: sectionRef });
 
     return (
-        <section ref={sectionRef} className='w-full py-20 px-6 md:px-12 lg:px-20'>
-            <div className="max-w-[1600px] mx-auto">
+        <section ref={sectionRef} className='w-full px-6 md:px-14 lg:px-20'>
+            <div className="max-w-[1400px] mx-auto">
 
 
                 <h2
@@ -134,10 +134,10 @@ const CardSection = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div> </div>
+                            </div> 
+                        </div>
                     ))}
                 </div>
-
             </div>
         </section>
     )

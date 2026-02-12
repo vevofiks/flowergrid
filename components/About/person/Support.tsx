@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface SupportItem {
   image: string;
@@ -171,6 +172,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
                       flex: `0 0 calc((100% - ${(visibleCards - 1) * (visibleCards >= 3 ? 32 : 24)}px) / ${visibleCards})`,
                     }}
                     className="group relative h-[450px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-[2rem] cursor-pointer"
+                    
                   >
                     <div className="absolute inset-0 w-full h-full">
                       <Image
@@ -192,7 +194,9 @@ const Support: React.FC<SupportProps> = ({ data }) => {
                       </h3>
 
                       <button className="px-8 py-3 border border-white/60 rounded-full text-white text-sm uppercase tracking-widest hover:bg-[#A68653] hover:text-black hover:w-full hover:py-4 hover:scale-105 transition-all duration-300 backdrop-blur-[2px] hover:border-black!">
+                        <Link href="/services">
                         Learn more
+                        </Link>
                       </button>
                     </div>
                   </motion.div>

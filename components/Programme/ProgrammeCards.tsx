@@ -59,6 +59,7 @@ const defaultCards: programCard[] = [
 ];
 
 const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => {
+    
     return (
         <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mb-20">
             {/* Title */}
