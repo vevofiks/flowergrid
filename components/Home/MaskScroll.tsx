@@ -176,10 +176,6 @@ const MaskScroll = () => {
                 <h2 className="reveal-text absolute text-3xl md:text-5xl lg:text-7xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
                     for Balance
                 </h2>
-                {/* <h2 className="reveal-text absolute text-3xl md:text-5xl lg:text-7xl font-bold text-white! leading-[0.9] text-center max-w-7xl opacity-0 font-gilroy-black">
-                    so that your energy, purpose, and peace are perfectly aligned.
-                </h2> */}
-
                 <div className="reveal-text absolute flex flex-col items-center justify-center gap-6 opacity-0">
                     <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white! leading-[0.9] text-center max-w-7xl font-gilroy-black">
                         See How We Help You Transform

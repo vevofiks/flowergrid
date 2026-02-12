@@ -222,7 +222,7 @@ export default function Navbar() {
     >
       <Link href="/" className="z-50 relative w-16 h-16 md:w-20 md:h-20">
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
+          src={`/home/fulllogo.png`}
           alt="Luna Logo"
           width={58}
           height={58}

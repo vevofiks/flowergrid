@@ -31,7 +31,7 @@ export default function BlogHero() {
         
                     <div className="absolute inset-0">
                         <Image
-                            src={`${process.env.NEXT_PUBLIC_IMGURL}blog/bloghero.png`}
+                            src={`/blog/bloghero.png`}
                             alt="blog page Hero Image"
                             fill
                             className="object-cover"
