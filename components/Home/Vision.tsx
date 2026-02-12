@@ -47,7 +47,7 @@ const Vision = () => {
     return (
       <section
   ref={containerRef}
-  className="relative w-full bg-[#F3EAD8] py-16 md:py-24 lg:py-32 overflow-hidden"
+  className="relative w-full bg-[#F3EAD8] py-6 overflow-hidden"
 >
   <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -69,14 +69,14 @@ const Vision = () => {
         Flowergrid exists to guide individuals and organisations towards holistic wellbeing through mind, body, and spirit integration. We provide personalised programs that foster growth, resilience, and conscious living.
       </p>
 
-      <Link href="/vision">
+      {/* <Link href="/vision">
         <button
           ref={btnRef}
           className="bg-primary text-white text-xs md:text-sm uppercase tracking-wider font-medium rounded-full px-8 py-3 md:px-10 md:py-4 hover:bg-[#8F7A52] transition-colors duration-300 shadow-md"
         >
           Discover Our Vision
         </button>
-      </Link>
+      </Link> */}
 
     </div>
 
