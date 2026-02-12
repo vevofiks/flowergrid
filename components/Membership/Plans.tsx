@@ -166,7 +166,7 @@ export default function Plans() {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-20 px-6 md:px-12 lg:px-20 mb-20"
+      className="w-full px-6 md:px-12 lg:px-20 mb-20"
     >
       <div className="max-w-[1400px] mx-auto">
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
