@@ -5,7 +5,7 @@ export const myPrograms: ProgramData[] = [
     {
         id: 1,
         title: "5-Day Inner Transform Programme",
-        description: "Dive deep into a complete mind-body-spirit transformation. Our expert-led 5-day meme combines assessments, personalised planning, and ongoing support to create measurable, lasting change, giving you clarity, balance, and the tools to thrive both online or onsite.",
+        description: "Dive deep into a complete mind-body-spirit transformation. Our expert-led 5-day programme combines assessments, personalised planning, and ongoing support to create measurable, lasting change, giving you clarity, balance, and the tools to thrive both online or onsite.",
         benefits: ["Personalised transformation plan", "Expert guidance across mind, body, and spirit", "Biomarker tracking and progress check-ins", "Flexible online or onsite participation"],
         buttonText: "Enquire About the 5-Day Programme",
         buttonLink: "/your-link", // optional
@@ -85,7 +85,7 @@ export const myPrograms: ProgramData[] = [
         benefits: ["One-to-one coaching tailored to your personal journey", "Weekly sessions with ongoing WhatsApp support", "Reflective exercises to foster self-awareness and accountability", "Integration of values, ego deconstruction, and soul alignment", "Sustainable habit formation and long-term transformation"],
         buttonText: "Start Your Transformation Journey",
         buttonLink: "/your-link",
-        imageUrl: `${imgurl}programme/p5.jpgprogram`,
+        imageUrl: `${imgurl}programme/p5.jpg`,
         imageAlt: "Tailored coaching program",
         decorativeImages: [
             {

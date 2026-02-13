@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const navLinks = [
-  { title: "Home", href: "/" },
+  { title: "Home", href: "/", image: `/n1.png` },
   {
     title: "About",
     href: "/our-team",
@@ -34,8 +34,8 @@ const navLinks = [
       },
     ],
   },
-  { title: "Services", href: "/services" },
-  { title: "Membership", href: "/holistic-wellness-membership" },
+  { title: "Services", href: "/services", image: `/n2.jpeg` },
+  { title: "Membership", href: "/holistic-wellness-membership", image: `/n3.png` },
   {
     title: "Programmes",
     href: "/holistic-wellness-programme",
@@ -43,16 +43,17 @@ const navLinks = [
       {
         title: "Workshops",
         href: "/holistic-wellness-programme",
+        image: `/n4.png`,
       },
       {
         title: "Corporate Programmes",
         href: "/corporate-wellbeing-programmes",
-        image: `/b2b/1.jpg`,
+        image: `/n5.png`,
       },
     ],
   },
-  { title: "Journals", href: "/blogs" },
-  { title: "Contact Us", href: "/contact-us" },
+  { title: "Journals", href: "/blogs", image: `/n6.png` },
+  { title: "Contact Us", href: "/contact-us", image: `/n7.png` },
 ];
 
 export default function Navbar() {
@@ -234,10 +235,10 @@ export default function Navbar() {
       <div className="z-50 relative flex items-center gap-3 md:gap-6">
 
         {/* Luna Chat Button */}
-        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 px-2 md:pl-4 md:pr-12 py-1 h-10 md:h-auto rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 px-2 md:pl-4 md:pr-12 py-1 h-12 md:h-auto rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
           <span className="hidden md:inline text-xs md:text-sm font-sans tracking-wide">Chat with Luna</span>
           <div
-            className="relative md:absolute md:-right-3 md:top-1/2 md:-translate-y-1/2 w-8 h-8 md:w-14 md:h-13 rounded-full flex items-center justify-center cursor-pointer"
+            className="relative md:absolute md:-right-3 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-14 md:h-13 rounded-full flex items-center justify-center cursor-pointer"
             onMouseEnter={() => setIsLunaHovered(true)}
             onMouseLeave={() => setIsLunaHovered(false)}
           >
@@ -259,22 +260,22 @@ export default function Navbar() {
         <Link
           href="https://calendly.com/flowergridmarketing/30min?month=2026-02"
           target="_blank"
-          className="flex items-center gap-2 px-3 py-2 md:px-6 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white"
+          className="flex items-center gap-2 px-3 py-2.5 md:px-6 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white"
         >
-          <Calendar className="w-5 h-5 md:hidden" />
+          <Calendar className="w-6 h-6 md:hidden" />
           <span className="hidden md:inline text-sm font-sans tracking-wide">Book Consultation</span>
         </Link>
 
 
         <button
           onClick={toggleMenu}
-          className="focus:outline-none hover:opacity-70 transition-opacity"
+          className="focus:outline-none hover:opacity-70 transition-opacity p-1"
           aria-label="Toggle Menu"
         >
           {isOpen ? (
-            <X size={28} strokeWidth={1.5} />
+            <X size={32} strokeWidth={1.5} className="w-7 h-7 md:w-8 md:h-8" />
           ) : (
-            <Menu size={28} strokeWidth={1.5} />
+            <Menu size={32} strokeWidth={1.5} className="w-7 h-7 md:w-8 md:h-8" />
           )}
         </button>
       </div>
@@ -308,7 +309,8 @@ export default function Navbar() {
                       }
                     }}
                     className="font-heading text-3xl sm:text-4xl md:text-5xl hover:text-[#A7683A] transition-colors duration-300 block w-fit"
-                    onMouseEnter={() => setActiveImage(null)}
+                    onMouseEnter={() => handleLinkHover(link.image)}
+                    onMouseLeave={handleLinkLeave}
                   >
                     {link.title}
                   </Link>

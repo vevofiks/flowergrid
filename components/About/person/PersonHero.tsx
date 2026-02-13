@@ -16,6 +16,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const lampRef = useRef<HTMLDivElement>(null);
+  console.log(imageClassName,'image width')
 
   useGSAP(() => {
     // TEXT ANIMATION

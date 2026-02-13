@@ -65,41 +65,41 @@ const Intro = () => {
     return (
                <section className="relative h-screen w-full overflow-hidden">
                 
-                            <div className="absolute inset-0">
-                                <Image
-                                    src={`${process.env.NEXT_PUBLIC_IMGURL}services/intro.jpg`}
-                                    alt="service page Hero Image"
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
-                
-                            <motion.div
-                                className="relative z-10 h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center"
-                                variants={containerVariants}
-                                initial="hidden"
-                                animate="visible"
+                    <div className="absolute inset-0">
+                        <Image
+                            src={`${process.env.NEXT_PUBLIC_IMGURL}services/intro.jpg`}
+                            alt="service page Hero Image"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+        
+                    <motion.div
+                        className="relative z-10 h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        <div className="max-w-6xl">
+        
+                            <h1 className='text-4xl md:text-5xl lg:text-6xl font-medium mb-6 md:mb-8 text-white! drop-shadow-lg'>
+                                Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
+                            </h1>
+                    
+                            <motion.p
+                                variants={itemVariants}
+                                className="text-white/90! text-lg md:text-2xl mb-10 tracking-wide font-sans font-light"
                             >
-                                <div className="max-w-6xl">
-                
-                                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-medium mb-6 md:mb-8 text-white! drop-shadow-lg'>
-                                        Your Journey to Wholeness <br className="hidden sm:block" /> Begins Here
-                                    </h1>
-                            
-                                    <motion.p
-                                        variants={itemVariants}
-                                        className="text-white/90! text-lg md:text-2xl mb-10 tracking-wide font-sans font-light"
-                                    >
-                                        Our holistic wellness services combine medical science, holistic therapies and coaching
-                                        expertise to help you create lasting transformation. Each programme is designed to support
-                                        your physical health, emotional balance and personal growth.
-                                    </motion.p>
-                                                
-                
-                                    </div>
-                                </motion.div>
-                        </section>
+                                Our holistic wellness services combine medical science, holistic therapies and coaching
+                                expertise to help you create lasting transformation. Each programme is designed to support
+                                your physical health, emotional balance and personal growth.
+                            </motion.p>
+                                        
+        
+                            </div>
+                    </motion.div>
+                </section>
     )
 }
 

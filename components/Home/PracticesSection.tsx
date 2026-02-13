@@ -37,7 +37,7 @@ const Card = ({ practice }: { practice: Practice }) => (
             </div>
 
             <div className="absolute bottom-2.5 left-2.5 md:bottom-3 md:left-3 lg:bottom-4 lg:left-4 z-10">
-                <div className="bg-[#432A0F]/50 backdrop-blur-md px-3 py-1.5 md:px-4 md:py-2 lg:px-4 lg:py-2 rounded-full">
+                <div className="bg-[#432A0F]/50 backdrop-blur-md px-3 py-2 md:px-4 md:py-2 lg:px-4 lg:py-2 rounded-full">
                     <span className="text-white text-xs md:text-sm lg:text-sm font-medium font-heading tracking-wide">
                         {practice.title}
                     </span>
