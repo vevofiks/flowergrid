@@ -111,7 +111,8 @@ export default function PersonBio({
                   md:mx-0 md:max-w-none
                   md:w-[45%] lg:w-[55%] xl:w-[55%]
                   md:mb-0
-                  md:-ml-8 lg:-mr-16 xl:-ml-18
+                  mr-18
+                  md:-ml-8 lg:-mr-10 xl:-ml-10
                 "
               >
                 <Image

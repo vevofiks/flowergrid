@@ -51,7 +51,7 @@ export default function BlogHero() {
                                 variants={itemVariants}
                                 className="text-white! text-3xl md:text-4xl lg:text-6xl font-heading font-medium leading-[1.1] mb-6 tracking-wide"
                             >
-                                Holisitic Journals
+                                Holistic Journals
                             </motion.h1>
         
                             <motion.p
