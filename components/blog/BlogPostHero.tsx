@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Clock, Calendar } from 'lucide-react';
+import { Clock, Calendar, Brain, Bot, Rocket, Search } from 'lucide-react';
 import BlogRenderer from '@/components/BlogRenderer';
 
 interface BlogPostHeroProps {
@@ -26,10 +26,10 @@ export default function BlogPostHero({
     const encodedUrl = encodeURIComponent(url);
 
     const aiLinks = [
-        { name: 'ChatGPT', icon: '🧠', href: `https://chat.openai.com?q=Summarize+this+article:+${encodedUrl}` },
-        { name: 'Claude', icon: '🤖', href: `https://claude.ai/new?q=Summarize+this+article:+${encodedUrl}` },
-        { name: 'Grok', icon: '🚀', href: `https://twitter.com/i/grok?text=Summarize+this+article:+${encodedUrl}` },
-        { name: 'Perplexity', icon: '🔍', href: `https://www.perplexity.ai/?q=Summarize+this+article:+${encodedUrl}` },
+        { name: 'ChatGPT', icon: Brain, href: `https://chat.openai.com?q=Summarize+this+article:+${encodedUrl}` },
+        { name: 'Claude', icon: Bot, href: `https://claude.ai/new?q=Summarize+this+article:+${encodedUrl}` },
+        { name: 'Grok', icon: Rocket, href: `https://twitter.com/i/grok?text=Summarize+this+article:+${encodedUrl}` },
+        { name: 'Perplexity', icon: Search, href: `https://www.perplexity.ai/?q=Summarize+this+article:+${encodedUrl}` },
     ];
 
     return (
@@ -113,7 +113,7 @@ export default function BlogPostHero({
                                             className="flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-widest text-[#8C7A65] hover:text-[#1C1C1C] hover:scale-105 transition-all duration-300 bg-[#ECDDC4]/50 hover:bg-[#ECDDC4] p-2 rounded-full md:px-4 md:py-2 md:rounded-full"
                                             title={`Summarize with ${link.name}`}
                                         >
-                                            <span className="text-sm leading-none">{link.icon}</span>
+                                            <span className="text-sm leading-none"><link.icon/></span>
                                             <span className="hidden md:inline-block leading-none">{link.name}</span>
                                         </a>
                                     ))}

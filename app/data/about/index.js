@@ -18,7 +18,7 @@ export const personsData = {
             title: "A Little About Me",
             imageSrc: `${imageUrl}about/person1/saminahalf.png`,
             bioText: [
-                "ver the past 12 years, I've supported individuals through mental health initiatives, helping them navigate life's challenges with clarity. Based in South London, I work as a Holistic Life Coach in Croydon and online, bringing over 20 years of experience in business and startups to help people and ideas come together in meaningful ways.",
+                "Over the past 12 years, I've supported individuals through mental health initiatives, helping them navigate life's challenges with clarity. Based in South London, I work as a Holistic Life Coach in Croydon and online, bringing over 20 years of experience in business and startups to help people and ideas come together in meaningful ways.",
                 "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to provide holistic wellbeing support that helps my clients do the same.",
                 "I specialise in guiding you to uncover your true desires, confront your fears, and take practical steps towards creating the life you want. Whether you are looking for life and transformation coaching, career strategy, or relationship healing, I am here to help you turn challenges into opportunities for growth."
             ]
@@ -179,7 +179,7 @@ export const personsData = {
         hero: {
             imageSrc: `${imageUrl}about/person2/monira.png`,
             text: "Hi, I'm Monira Ahmed, a global strategist and hypnotherapist in Croydon specialising in conscious leadership and subconscious transformation.",
-            imageSize: "w-[300px] sm:w-[380px] md:w-[420px] lg:w-[460px] xl:w-[500px]"
+            imageSize: "mb-10 w-[300px] sm:w-[480px] md:w-[520px] lg:w-[580px] xl:w-[650px]"
         },
 
         // PersonBio component data

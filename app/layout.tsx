@@ -5,6 +5,7 @@ import Navbar from "@/components/Home/Navbar";
 import Preloader from "@/components/Preloader";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import Footer from "@/components/Home/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { headers } from "next/headers";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default async function RootLayout({
           {!isAdminRoute && <Navbar />}
           {children}
           {!isAdminRoute && <Footer />}
+          {!isAdminRoute && <ScrollToTop />}
         </LoadingProvider>
       </body>
     </html>

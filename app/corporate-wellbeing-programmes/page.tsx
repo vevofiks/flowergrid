@@ -10,7 +10,6 @@ import ConsultationSection from '@/components/Home/ConsultationSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import { myPrograms } from '../data/programs'
 
-
 const B2BFaqs = [
     {
         id: 1,
