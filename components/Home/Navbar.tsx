@@ -34,7 +34,7 @@ const navLinks = [
       },
     ],
   },
-  { title: "Services", href: "/services", image: `/n2.jpeg` },
+  { title: "Services", href: "/holistic-wellness-services", image: `/n2.jpeg` },
   { title: "Membership", href: "/holistic-wellness-membership", image: `/n3.png` },
   {
     title: "Programmes",

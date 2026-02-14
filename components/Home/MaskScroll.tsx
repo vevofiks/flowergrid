@@ -189,7 +189,7 @@ const MaskScroll = () => {
                     <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white! leading-[0.9] text-center max-w-7xl font-gilroy-black">
                         See How We Help You Transform
                     </h2>
-                    <Link href="/services" className="explore-button pointer-events-auto px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-primary border text-white rounded-full font-medium cursor-pointer hover:bg-primary/90 transition-colors">
+                    <Link href="/holistic-wellness-services" className="explore-button pointer-events-auto px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-primary border text-white rounded-full font-medium cursor-pointer hover:bg-primary/90 transition-colors">
                         Explore Our Services
                     </Link>
                 </div>

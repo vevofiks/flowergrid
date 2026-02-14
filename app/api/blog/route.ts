@@ -13,6 +13,7 @@ export async function POST(req: Request) {
     const blog = await Blog.create({
       title: body.title,
       slug: body.slug,
+      description: body.description,
       content: body.content,
       tldr: body.tldr,
       faq: body.faq,

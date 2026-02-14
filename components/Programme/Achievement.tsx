@@ -73,7 +73,7 @@ export default function Achievement() {
                 </p>
                 <div className="mt-8">
 
-                    <Link href={`/services`} >
+                    <Link href={`/holistic-wellness-services`} >
 
                         <button
                             className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"

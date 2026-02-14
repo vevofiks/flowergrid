@@ -38,7 +38,7 @@ const navLinks = [
             },
         ],
     },
-    { title: "Services", href: "/services" },
+    { title: "Services", href: "/holistic-wellness-services" },
     { title: "Membership", href: "/holistic-wellness-membership" },
     {
         title: "Workshops",
@@ -116,7 +116,7 @@ export default function Footer() {
                                     <li><Link href="/our-team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href="/services" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Services</Link></li>
+                            <li><Link href="/holistic-wellness-services" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Services</Link></li>
                             <li><Link href="/holistic-wellness-membership" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Membership</Link></li>
                             <li className="flex flex-col gap-2">
                                 Programmes

@@ -21,8 +21,8 @@ interface PracticesSectionProps {
 }
 
 const Card = ({ practice }: { practice: Practice }) => (
-    <Link href={'/services'}>
-        <div className="relative overflow-hidden sm:aspect-2/3 rounded-[24px] md:rounded-[32px] aspect-4/5 md:aspect-3/3 cursor-pointer shadow-lg shadow-black/5">
+    <Link href={'/holistic-wellness-services'}>
+        <div className="relative overflow-hidden rounded-[24px] md:rounded-[32px] aspect-4/5 md:aspect-3/3 cursor-pointer shadow-lg shadow-black/5">
             <Image
                 src={practice.image}
                 alt={practice.title}

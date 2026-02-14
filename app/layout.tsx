@@ -8,10 +8,55 @@ import Footer from "@/components/Home/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { headers } from "next/headers";
 
-export const metadata: Metadata = {
-  title: "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
-  description: "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = headers();
+  const host = (await headersList).get("host") || "";
+
+  const isUK = host.includes("flowergrid.co.uk");
+
+  const baseUrl = isUK
+    ? "https://flowergrid.co.uk"
+    : "https://flowergriid.com";
+
+  return {
+    metadataBase: new URL(baseUrl),
+
+    title:
+      "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
+
+    description: isUK
+      ? "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity in Croydon, UK."
+      : "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity worldwide.",
+
+    alternates: {
+      canonical: baseUrl,
+      languages: {
+        "en": "https://flowergriid.com",
+        "en-GB": "https://flowergrid.co.uk",
+      },
+    },
+
+    openGraph: {
+      title:
+        "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
+      description: isUK
+        ? "Holistic wellness and transformation coaching in Croydon, UK."
+        : "Global holistic wellness and transformation coaching.",
+      url: baseUrl,
+      siteName: "Flowergrid",
+      locale: isUK ? "en_GB" : "en_US",
+      type: "website",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+
+
 
 export default async function RootLayout({
   children,

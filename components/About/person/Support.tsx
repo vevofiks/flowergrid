@@ -197,7 +197,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
                       </h3>
 
                       <button className="px-8 py-3 border border-white/60 rounded-full text-white text-sm uppercase tracking-widest hover:bg-[#A68653] hover:text-black hover:w-full hover:py-4 hover:scale-105 transition-all duration-300 backdrop-blur-[2px] hover:border-black!">
-                        <Link href="/services">
+                        <Link href="/holistic-wellness-services">
                           Learn more
                         </Link>
                       </button>

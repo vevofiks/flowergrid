@@ -16,6 +16,7 @@ export interface BlogPost {
     title: string;
     slug: string;
     tldr: any;
+    description?: string;
     content: any;
     author: {
         name: string;
@@ -25,7 +26,7 @@ export interface BlogPost {
 
 export default function BlogCard({ post }: { post: BlogPost }) {
     const imageUrl = extractCoverImage(post.content);
-    const excerpt = extractTldrText(post.tldr);
+    const excerpt = post.description || extractTldrText(post.tldr);
     const date = new Date(post.createdAt).toLocaleDateString('en-US', {
         month: 'short',
         day: 'numeric',
@@ -75,9 +76,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-[#4A4A4A] text-sm leading-relaxed mb-8 line-clamp-3 flex-grow font-sans">
-                    {excerpt}
-                </p>
+                {/* Excerpt Removed */}
 
                 {/* Explore Link */}
                 <Link
