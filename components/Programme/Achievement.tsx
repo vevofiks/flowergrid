@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,12 +73,16 @@ export default function Achievement() {
                 </p>
                 <div className="mt-8">
 
-                    <button
-                        className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
-                    >
-                        Explore How We Support You
+                    <Link href={`/services`} >
 
-                    </button>
+                        <button
+                            className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+                        >
+                            Explore How We Support You
+
+                        </button>
+                    
+                    </Link>
 
                 </div>
             </div>
