@@ -3,7 +3,7 @@ import Team from '@/components/About/team/Team'
 import TeamHero from '@/components/About/team/TeamHero'
 import LeafScrollText from '@/components/Home/LeafScrollText'
 import { lines } from '../data/about'
-const page = () => {
+const page = () => {  
   return (
     <>
       <TeamHero />
