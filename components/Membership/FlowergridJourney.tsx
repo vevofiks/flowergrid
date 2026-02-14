@@ -175,7 +175,7 @@ export default function FlowergridJourney() {
                         <div className="absolute left-0 md:left-1/2 top-8 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10">
                             <div className="step-dot w-3 h-3 md:w-6 md:h-6 bg-[#F3EAD8] rounded-full border-2 md:border-[3px] border-[#8c5e35] transition-all duration-300"></div>
                         </div>
-                        <div className={`w-full md:w-1/2 flex items-center pl-12 md:pl-0 ${index % 2 === 1 ? "md:justify-end md:pr-8 lg:pr-20" : "md:justify-start md:pl-8 lg:pl-20"
+                        <div className={`w-full md:w-1/2 flex items-center pl-12 md:m-8 md:pl-0 ${index % 2 === 1 ? "md:justify-end md:pr-8 lg:pr-20" : "md:justify-start md:pl-8 lg:pl-20"
                             }`}>
                             <div className="step-text max-w-md text-left pr-4 md:pr-0">
                                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading text-[#3a3a3a] mb-3 md:mb-4">

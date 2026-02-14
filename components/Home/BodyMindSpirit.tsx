@@ -86,6 +86,12 @@ export default function BodyMindSpirit() {
         if (!thumbEl || !overlayRef.current || !overlayImageRef.current || !detailContentRef.current) return;
 
         const rect = thumbEl.getBoundingClientRect();
+
+        // Calculate scale needed to fill viewport
+        const scaleX = window.innerWidth / rect.width;
+        const scaleY = window.innerHeight / rect.height;
+        const scale = Math.max(scaleX, scaleY);
+
         gsap.set(overlayRef.current, {
             position: "fixed",
             top: rect.top,
@@ -95,6 +101,7 @@ export default function BodyMindSpirit() {
             borderRadius: "50%",
             zIndex: 50,
             autoAlpha: 1,
+            transformOrigin: "center center",
         });
 
         overlayImageRef.current.src = sections[index].full;
@@ -103,14 +110,15 @@ export default function BodyMindSpirit() {
             onComplete: () => setIsAnimating(false)
         });
 
+        // ✅ Use scale transform instead of width/height for GPU acceleration
         tl.to(overlayRef.current, {
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
+            x: (window.innerWidth / 2) - (rect.left + rect.width / 2),
+            y: (window.innerHeight / 2) - (rect.top + rect.height / 2),
+            scale: scale,
             borderRadius: "0px",
             duration: 1,
-            ease: "expo.inOut"
+            ease: "expo.inOut",
+            force3D: true,
         });
 
         tl.set(detailContentRef.current, { autoAlpha: 1 });
@@ -160,21 +168,22 @@ export default function BodyMindSpirit() {
             onComplete: () => {
                 setIsAnimating(false);
                 setActiveSection(null);
-                gsap.set(overlayRef.current, { autoAlpha: 0 });
+                gsap.set(overlayRef.current, { autoAlpha: 0, clearProps: "all" });
             }
         });
 
         tl.to(detailContentRef.current, { autoAlpha: 0, duration: 0.3 });
 
         if (rect) {
+            // ✅ Use scale transform to shrink back
             tl.to(overlayRef.current, {
-                top: rect.top,
-                left: rect.left,
-                width: rect.width,
-                height: rect.height,
+                x: (rect.left + rect.width / 2) - (window.innerWidth / 2),
+                y: (rect.top + rect.height / 2) - (window.innerHeight / 2),
+                scale: 0.01,
                 borderRadius: "50%",
                 duration: 0.8,
-                ease: "expo.inOut"
+                ease: "expo.inOut",
+                force3D: true,
             });
         } else {
             tl.to(overlayRef.current, { opacity: 0, duration: 0.5 });
