@@ -60,6 +60,7 @@ export default function NotFound() {
 
         // Parallax effect on mouse move
         const handleMouseMove = (e: MouseEvent) => {
+            if (typeof window === 'undefined') return;
             const { clientX, clientY } = e;
             const xPos = (clientX / window.innerWidth - 0.5) * 40;
             const yPos = (clientY / window.innerHeight - 0.5) * 40;

@@ -22,7 +22,7 @@ interface PracticesSectionProps {
 
 const Card = ({ practice }: { practice: Practice }) => (
     <Link href={'/services'}>
-        <div className="relative overflow-hidden rounded-[24px] md:rounded-[32px] aspect-4/5 md:aspect-3/3 cursor-pointer shadow-lg shadow-black/5">
+        <div className="relative overflow-hidden sm:aspect-2/3 rounded-[24px] md:rounded-[32px] aspect-4/5 md:aspect-3/3 cursor-pointer shadow-lg shadow-black/5">
             <Image
                 src={practice.image}
                 alt={practice.title}
@@ -36,8 +36,9 @@ const Card = ({ practice }: { practice: Practice }) => (
                 </button>
             </div>
 
-            <div className="absolute bottom-2.5 left-2.5 md:bottom-3 md:left-3 lg:bottom-4 lg:left-4 z-10">
-                <div className="bg-[#432A0F]/50 backdrop-blur-md px-3 py-2 md:px-4 md:py-2 lg:px-4 lg:py-2 rounded-full">
+
+            <div className="absolute bottom-2.5 left-0 right-0 md:left-2.5 md:right-auto md:bottom-3 lg:left-4 lg:bottom-4 z-10 flex justify-center md:justify-start px-2.5 md:px-0">
+                <div className="bg-[#432A0F]/50 md:backdrop-blur-md px-3 py-2 md:px-4 md:py-2 lg:px-4 lg:py-2 rounded-full">
                     <span className="text-white text-xs md:text-sm lg:text-sm font-medium font-heading tracking-wide">
                         {practice.title}
                     </span>
@@ -119,6 +120,8 @@ export default function PracticesSection({
                 duration: 1,
                 ease: "power3.out"
             }, "-=0.7");
+
+        return () => tl.revert();
 
     }, { scope: sectionRef });
 

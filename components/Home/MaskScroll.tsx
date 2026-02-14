@@ -137,7 +137,7 @@ const MaskScroll = () => {
             );
         }, container);
 
-        return () => ctx.revert(); // ✅ Cleanup ScrollTriggers
+        return () => ctx.revert();
     }, { scope: container });
 
     return (
