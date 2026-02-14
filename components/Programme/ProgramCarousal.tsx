@@ -49,70 +49,69 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
     const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
-        const sections = sectionsRef.current;
+        const ctx = gsap.context(() => {
+            const sections = sectionsRef.current;
+            sections.forEach((section, index) => {
+                if (!section) return;
 
-        sections.forEach((section, index) => {
-            if (!section) return;
+                const image = section.querySelector('.program-image');
+                const content = section.querySelector('.program-content');
+                const decoratives = section.querySelectorAll('.decorative-element');
 
-            const image = section.querySelector('.program-image');
-            const content = section.querySelector('.program-content');
-            const decoratives = section.querySelectorAll('.decorative-element');
+                gsap.set(image, { opacity: 0, scale: 0.95 });
+                gsap.set(content, { opacity: 0, y: 30 });
+                gsap.set(decoratives, { opacity: 0, scale: 0.8, rotation: -10 });
 
-            gsap.set(image, { opacity: 0, scale: 0.95 });
-            gsap.set(content, { opacity: 0, y: 30 });
-            gsap.set(decoratives, { opacity: 0, scale: 0.8, rotation: -10 });
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: "top center",
+                    end: "bottom center",
+                    onEnter: () => {
+                        gsap.to(image, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.8,
+                            ease: "power2.out",
+                            force3D: false
+                        });
+                        gsap.to(content, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            delay: 0.2,
+                            ease: "power2.out",
+                            force3D: false
+                        });
+                        gsap.to(decoratives, {
+                            opacity: 0.7,
+                            scale: 1,
+                            rotation: 0,
+                            duration: 1,
+                            delay: 0.4,
+                            stagger: 0.1,
+                            ease: "power2.out",
+                            force3D: false
+                        });
+                        setCurrentSection(index);
+                    },
+                    onEnterBack: () => {
+                        setCurrentSection(index);
+                    }
+                });
+            });
 
             ScrollTrigger.create({
-                trigger: section,
+                trigger: containerRef.current,
                 start: "top center",
                 end: "bottom center",
-                onEnter: () => {
-                    gsap.to(image, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        force3D: false
-                    });
-                    gsap.to(content, {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.8,
-                        delay: 0.2,
-                        ease: "power2.out",
-                        force3D: false
-                    });
-                    gsap.to(decoratives, {
-                        opacity: 0.7,
-                        scale: 1,
-                        rotation: 0,
-                        duration: 1,
-                        delay: 0.4,
-                        stagger: 0.1,
-                        ease: "power2.out",
-                        force3D: false
-                    });
-                    setCurrentSection(index);
-                },
-                onEnterBack: () => {
-                    setCurrentSection(index);
-                }
+                onEnter: () => setIsNavVisible(true),
+                onLeave: () => setIsNavVisible(false),
+                onEnterBack: () => setIsNavVisible(true),
+                onLeaveBack: () => setIsNavVisible(false),
             });
         });
 
-        ScrollTrigger.create({
-            trigger: containerRef.current,
-            start: "top center",
-            end: "bottom center",
-            onEnter: () => setIsNavVisible(true),
-            onLeave: () => setIsNavVisible(false),
-            onEnterBack: () => setIsNavVisible(true),
-            onLeaveBack: () => setIsNavVisible(false),
-        });
-
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
+        return () => ctx.revert();
     }, [programs]);
 
     const scrollToSection = (index: number) => {
