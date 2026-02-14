@@ -85,7 +85,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#F3EAD8]"
+            className="relative w-full h-[100vh] overflow-hidden flex flex-col items-center justify-center bg-[#F3EAD8]"
         >
             <div className="relative z-10 flex flex-col items-center justify-center gap-6 md:gap-8 max-w-[90%] md:max-w-6xl px-4 text-center">
                 {lines.map((line, i) => (
@@ -97,16 +97,6 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                         {line}
                     </p>
                 ))}
-
-                {isOurTeam && (
-                    <div ref={ctaRef} className="mt-10 md:pt-10 w-full flex justify-center">
-                        <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" className="w-full sm:w-auto">
-                            <button className="w-full sm:min-w-[280px] px-8 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:opacity-90 transition-all active:scale-95 shadow-lg">
-                                Book a Discovery Session
-                            </button>
-                        </Link>
-                    </div>
-                )}
             </div>
 
             <div
