@@ -29,7 +29,7 @@ const MaskScroll = () => {
         tl.addLabel("start");
 
         tl.to(maskRef.current, {
-            scale: 100,
+            scale: 60,
             transformOrigin: "center center",
             ease: "power1.inOut",
             duration: 2,
@@ -143,7 +143,7 @@ const MaskScroll = () => {
                 fill
                 priority
                 className='object-cover object-[50%_60%]'
-            style={{ transformOrigin: "center center" }}
+                style={{ transformOrigin: "center center" }}
             />
 
 

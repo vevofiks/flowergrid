@@ -90,7 +90,6 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                     <p
                         key={i}
                         className="reveal-line text-sm md:text-xl lg:text-4xl tracking-widest uppercase font-normal font-heading"
-                        style={{ willChange: 'opacity' }}
                     >
                         {line}
                     </p>
@@ -100,7 +99,6 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
             <div
                 ref={leafRef}
                 className="absolute left-1/2 -translate-x-1/2 z-20 w-12 md:w-16 lg:w-20 pointer-events-none"
-                style={{ willChange: 'top, transform' }}
             >
                 <Image
                     src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}

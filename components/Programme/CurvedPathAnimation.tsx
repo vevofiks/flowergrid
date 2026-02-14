@@ -252,7 +252,6 @@ export default function CurvedPathAnimation() {
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
-            style={{ willChange: "stroke-dashoffset" }}
           />
           <circle ref={(el) => { dotsRef.current[0] = el; }} cx="300" cy="40" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
           <circle ref={(el) => { dotsRef.current[1] = el; }} cx="800" cy="430" r="12" fill="#9C7D4D" stroke="#F3E5CB" strokeWidth="4" />
@@ -320,7 +319,7 @@ export default function CurvedPathAnimation() {
           >
             {/* Dot - positioned exactly on the line */}
             <div
-              className="absolute flex-shrink-0"
+              className="absolute shrink-0"
               style={{
                 left: '20px',
                 top: '50%',

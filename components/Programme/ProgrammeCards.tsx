@@ -3,9 +3,9 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(useGSAP); // Not a plugin, it's a hook
 
 interface programCard {
     id: number;
@@ -59,7 +59,7 @@ const defaultCards: programCard[] = [
 ];
 
 const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => {
-    
+
     return (
         <section className="relative py-16 px-4 md:px-8 lg:px-16 lg:mt-24 overflow-hidden mb-20">
             {/* Title */}
@@ -72,7 +72,7 @@ const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => 
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
                 {/* Decorative curved lines - Behind the cards */}
 
-                <svg className="absolute inset-0 w-screen -left-82 top-100 md:-top-[65rem] pointer-events-none opacity-40 -z-10" width="170%" height="200%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="absolute inset-0 w-full top-0 md:-top-40 pointer-events-none opacity-40 -z-10" width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M-50 400 
                         C 150 150, 450 150, 720 400  
@@ -84,7 +84,7 @@ const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => 
                 </svg>
 
                 <svg
-                    className="absolute inset-0 w-[1900px] left-[-20rem] top-[17rem]  h-full pointer-events-none opacity-40 -z-10"
+                    className="absolute inset-0 w-full top-1/4 h-full pointer-events-none opacity-40 -z-10"
                     viewBox="0 0 1725 639"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
