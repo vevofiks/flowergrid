@@ -116,8 +116,8 @@ export default function TransformationService() {
         x: 0,
         xPercent: -50,
         yPercent: -50,
-        width: "100vw",
-        height: "100vh",
+        width: "100.1vw", // Use 100.1 to avoid tiny cracks
+        height: "100.1vh",
         borderRadius: "0px",
         borderWidth: '0px',
         duration: 2,

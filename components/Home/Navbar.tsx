@@ -282,7 +282,7 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className={`fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full will-change-transform overflow-y-auto lg:overflow-hidden transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`fixed top-0 left-0 w-full h-screen bg-[#1a1a1a] text-[#F3E5CB] flex flex-col lg:flex-row -translate-y-full overflow-y-auto lg:overflow-hidden transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
       >
         <div className="w-full h-full max-w-400 mx-auto flex flex-col lg:flex-row">

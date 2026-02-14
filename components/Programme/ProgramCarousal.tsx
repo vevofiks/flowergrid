@@ -71,14 +71,16 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                         opacity: 1,
                         scale: 1,
                         duration: 0.8,
-                        ease: "power2.out"
+                        ease: "power2.out",
+                        force3D: false
                     });
                     gsap.to(content, {
                         opacity: 1,
                         y: 0,
                         duration: 0.8,
                         delay: 0.2,
-                        ease: "power2.out"
+                        ease: "power2.out",
+                        force3D: false
                     });
                     gsap.to(decoratives, {
                         opacity: 0.7,
@@ -87,7 +89,8 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                         duration: 1,
                         delay: 0.4,
                         stagger: 0.1,
-                        ease: "power2.out"
+                        ease: "power2.out",
+                        force3D: false
                     });
                     setCurrentSection(index);
                 },

@@ -65,7 +65,7 @@ export default function Achievement() {
                     What You Will Achieve
                 </h2>
                 <p className="text-base md:text-lg lg:text-xl font-sans text-black/70! leading-relaxed">
-                
+
                     Experience transformation that touches every part of your being.
                     <br />
                     Holistic wellness programmes at Flowergrid are designed to create measurable impact.
@@ -93,7 +93,7 @@ export default function Achievement() {
                                 src={section.thumb}
                                 alt={section.title}
                                 fill
-                                className="object-contain drop-shadow-xl"
+                                className="object-contain"
                             />
                         </div>
 
