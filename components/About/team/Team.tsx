@@ -57,14 +57,13 @@ const TeamTreeSection = () => {
           {teamTree.map((row, index) => (
             <div
               key={row.id}
-              // MOBILE FIX: Use flex-wrap and justify-center by default for mobile.
-              // Only apply justify-between on MD screens and up.
               className={`
                 flex w-full flex-wrap md:flex-nowrap items-center
                 justify-center gap-8 md:gap-0
                 ${row.type === 'single' ? 'md:justify-center' : 'md:justify-between'}
               `}
             >
+              
               {row.members.map((member, mIndex) => {
                 const cardId = `${row.id}-${mIndex}`
                 const isExpanded = expandedCard === cardId

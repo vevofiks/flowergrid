@@ -65,7 +65,7 @@ export default function CurvedPathAnimation() {
   useGSAP(() => {
     if (!isMounted) return;
 
-    const isMobile = window.innerWidth < 1024;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
 
     // Desktop curved path animation
     if (pathRef.current && !isMobile) {

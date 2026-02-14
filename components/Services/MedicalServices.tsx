@@ -236,7 +236,7 @@ export default function MedicalServices() {
                                 src={section.thumb}
                                 alt={section.title}
                                 fill
-                                className="object-contain drop-shadow-xl"
+                                className="object-contain shadow-xl"
                             />
                         </div>
                         <div className="text-center max-w-[260px] sm:max-w-[280px] px-2">

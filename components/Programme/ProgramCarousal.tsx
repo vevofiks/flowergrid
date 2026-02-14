@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Image from 'next/image';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -256,12 +257,14 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                                     </div>
 
                                     <div className="flex justify-center">
-                                        <button
-                                            onClick={() => handleButtonClick(program.id)}
-                                            className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
-                                        >
-                                            {program.buttonText}
-                                        </button>
+                                        <Link href={`https://calendly.com/flowergridmarketing/30min?month=2026-02`}>
+                                            <button
+                                                onClick={() => handleButtonClick(program.id)}
+                                                className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+                                            >
+                                                {program.buttonText}
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
