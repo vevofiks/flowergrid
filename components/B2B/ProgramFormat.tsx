@@ -99,7 +99,7 @@ export default function ProgramFormat() {
                                 src={section.thumb}
                                 alt={section.title}
                                 fill
-                                className="object-contain drop-shadow-xl"
+                                className="object-contain shadow-xl"
                             />
                         </div>
 

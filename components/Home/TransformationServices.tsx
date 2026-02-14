@@ -42,7 +42,7 @@ export default function TransformationService() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const isMobile = window.innerWidth < 768;
+      const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
       const stretchWidth = isMobile ? 120 : 180;
       const pushDist = isMobile ? 40 : 90;

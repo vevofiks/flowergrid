@@ -151,7 +151,7 @@ export default function ContactForm() {
       }
     }, containerRef);
 
-    return () => ctx.revert(); // ✅ Cleanup ScrollTriggers
+    return () => ctx.revert(); 
   }, { scope: containerRef });
 
   return (

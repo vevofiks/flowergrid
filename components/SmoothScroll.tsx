@@ -25,8 +25,12 @@ export default function SmoothScroll() {
         rafId = requestAnimationFrame(raf);
 
         return () => {
+            // ✅ CRITICAL: Cancel RAF BEFORE destroying Lenis
+            // Otherwise RAF callback tries to access destroyed instance
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+            }
             lenis.destroy();
-            cancelAnimationFrame(rafId);
         };
     }, []);
 

@@ -25,6 +25,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
 
   useEffect(() => {
     const handleResize = () => {
+      if (typeof window === 'undefined') return;
       if (window.innerWidth < 768) {
         setVisibleCards(1);
       } else if (window.innerWidth < 1024) {
@@ -109,7 +110,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
           <button
             onClick={() => handleManualScroll('left')}
             className="absolute left-2 lg:-left-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full border 
-            border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white 
+            border-text-heading/20 bg-white/80 md:backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white 
             transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
             aria-label="Previous slide"
           >
@@ -120,7 +121,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
           <button
             onClick={() => handleManualScroll('right')}
             className="absolute right-2 lg:-right-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full
-             border border-text-heading/20 bg-white/80 backdrop-blur-md text-text-heading hover:bg-[#A68653]
+             border border-text-heading/20 bg-white/80 md:backdrop-blur-md text-text-heading hover:bg-[#A68653]
              hover:text-white transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
             aria-label="Next slide"
           >

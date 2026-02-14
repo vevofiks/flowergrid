@@ -45,7 +45,7 @@ export default function FlowergridJourney() {
     ];
 
     useGSAP(() => {
-        const isMobile = window.innerWidth < 768;
+        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
         gsap.fromTo(
             beamRef.current,
             { height: "0%" },
@@ -167,7 +167,7 @@ export default function FlowergridJourney() {
                                     src={step.image}
                                     alt={step.title}
                                     fill
-                                    className="object-contain drop-shadow-xl"
+                                    className="object-contain shadow-xl"
                                 />
                             </div>
                         </div>

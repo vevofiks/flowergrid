@@ -74,6 +74,7 @@ export default function BodyMindSpirit() {
             stagger: 0.2,
             ease: "back.out(1.7)"
         }, "-=0.4");
+
     }, { scope: containerRef });
 
 
@@ -84,6 +85,7 @@ export default function BodyMindSpirit() {
         const thumbEl = thumbRefs.current[index];
 
         if (!thumbEl || !overlayRef.current || !overlayImageRef.current || !detailContentRef.current) return;
+        if (typeof window === 'undefined') return;
 
         const rect = thumbEl.getBoundingClientRect();
 
@@ -222,10 +224,10 @@ export default function BodyMindSpirit() {
                                 src={section.thumb}
                                 alt={section.title}
                                 fill
-                                className="object-contain drop-shadow-xl"
+                                className="object-contain shadown-xl"
                             />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase drop-shadow-md">
+                                <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase shadow-md">
                                     {section.title}
                                 </span>
                             </div>
@@ -254,7 +256,7 @@ export default function BodyMindSpirit() {
             >
                 <div className="relative w-full max-w-[90vw] h-full max-h-screen overflow-y-auto flex flex-col justify-between pointer-events-auto py-10 md:py-12 no-scrollbar">
 
-                    <h2 className="detail-title text-white! text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center mt-4 md:mt-10 mb-8 md:mb-0 drop-shadow-lg shrink-0">
+                    <h2 className="detail-title text-white! text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center mt-4 md:mt-10 mb-8 md:mb-0 shadow-lg shrink-0">
                         {currentData.title}
                     </h2>
 
@@ -262,7 +264,7 @@ export default function BodyMindSpirit() {
                         {currentData.details.map((detail, idx) => (
                             <div
                                 key={idx}
-                                className="detail-card bg-black/30 backdrop-blur-md border border-white/30 p-5 md:p-8 rounded-[30px] text-white! hover:bg-black/50 transition-colors duration-300 h-full flex flex-col justify-center text-center"
+                                className="detail-card bg-black/30 md:backdrop-blur-md border border-white/30 p-5 md:p-8 rounded-[30px] text-white! hover:bg-black/50 transition-colors duration-300 h-full flex flex-col justify-center text-center"
                             >
                                 <h3 className="text-white! text-lg md:text-2xl font-bold mb-2 md:mb-3">{detail.title}</h3>
                                 <p className="text-white! text-sm md:text-base opacity-90 leading-relaxed">{detail.desc}</p>

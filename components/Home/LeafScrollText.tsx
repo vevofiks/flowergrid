@@ -98,7 +98,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                     </p>
                 ))}
 
-                {isOurTeam && (
+                {/* {isOurTeam && (
                     <div ref={ctaRef} className="mt-8 md:mt-12 w-full flex justify-center">
                         <Link href="/contact-us" className="w-full sm:w-auto">
                             <button className="w-1/2 sm:min-w-[280px] px-8 py-4 bg-primary text-white rounded-full font-medium text-sm md:text-base hover:opacity-90 transition-all active:scale-95 shadow-lg">
@@ -106,7 +106,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                             </button>
                         </Link>
                     </div>
-                )}
+                )} */}
             </div>
 
             <div
