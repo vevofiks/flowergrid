@@ -442,7 +442,7 @@ export const teamTree = [
             {
                 "name": "Samin Khan",
                 "role": "Lifecoach & Reiki Healer",
-                "image": `${imageUrl}about/team/samina.png`,
+                "image": `${imageUrl}about/person1/saminahalf.png`,
                 "description": "Simmi, your dedicated life coach councilor, healer & holistic therapist specializing in integrating personalized plans into your daily routine. With a focus on holistic modalities, she selects practices to support your overall health and mental well-being. Simmi brings a unique approach to inner healing, consciousness, and mindfulness, guiding you towards a more balanced and mindful lifestyle. Trust in Simmi to help you cultivate inner peace, develop greater self-awareness, and foster positive habits for sustainable well-being."
             },
             {
