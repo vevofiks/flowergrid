@@ -15,18 +15,19 @@ const MaskScroll = () => {
     const textRef = useRef(null);
 
     useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: container.current,
-                start: "top top",
-                end: "+=500%",
-                scrub: 1,
-                pin: true,
-                anticipatePin: 1
-            }
-        });
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: container.current,
+                    start: "top top",
+                    end: "+=500%",
+                    scrub: 1,
+                    pin: true,
+                    anticipatePin: 1
+                }
+            });
 
-        tl.addLabel("start");
+            tl.addLabel("start");
 
         tl.to(maskRef.current, {
             scale: 60,
@@ -36,99 +37,107 @@ const MaskScroll = () => {
             force3D: true,
         }, "start");
 
-        tl.to(bgImageRef.current, {
-            scale: 1.05,
-            duration: 2,
-            ease: "power1.inOut"
-        }, "start");
+            tl.to(bgImageRef.current, {
+                scale: 1.05,
+                duration: 2,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "start");
 
-        tl.addLabel("scene1", "-=0.5");
+            tl.addLabel("scene1", "-=0.5");
 
-        const q = gsap.utils.selector(container);
-        const texts = q(".reveal-text") as HTMLElement[];
+            const q = gsap.utils.selector(container);
+            const texts = q(".reveal-text") as HTMLElement[];
 
-        tl.to(bgImageRef.current, {
-            xPercent: 3,
-            yPercent: 3,
-            scale: 1.1,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene1");
+            tl.to(bgImageRef.current, {
+                xPercent: 3,
+                yPercent: 3,
+                scale: 1.1,
+                duration: 1.5,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "scene1");
 
-        tl.fromTo(texts[0],
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene1"
-        );
+            tl.fromTo(texts[0],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", force3D: true },
+                "scene1"
+            );
 
-        tl.addLabel("scene2");
-        tl.to(texts[0], { y: -30, opacity: 0, duration: 0.5 }, "scene2");
+            tl.addLabel("scene2");
+            tl.to(texts[0], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene2");
 
-        tl.to(bgImageRef.current, {
-            xPercent: -3,
-            yPercent: 3,
-            scale: 1.15,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene2");
+            tl.to(bgImageRef.current, {
+                xPercent: -3,
+                yPercent: 3,
+                scale: 1.15,
+                duration: 1.5,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "scene2");
 
-        tl.fromTo(texts[1],
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene2+=0.2"
-        );
+            tl.fromTo(texts[1],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", force3D: true },
+                "scene2+=0.2"
+            );
 
-        tl.addLabel("scene3");
-        tl.to(texts[1], { y: -30, opacity: 0, duration: 0.5 }, "scene3");
+            tl.addLabel("scene3");
+            tl.to(texts[1], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene3");
 
-        tl.to(bgImageRef.current, {
-            xPercent: 3,
-            yPercent: 3,
-            scale: 1.12,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene3");
+            tl.to(bgImageRef.current, {
+                xPercent: 3,
+                yPercent: 3,
+                scale: 1.12,
+                duration: 1.5,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "scene3");
 
-        tl.fromTo(texts[2],
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene3+=0.2"
-        );
+            tl.fromTo(texts[2],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", force3D: true },
+                "scene3+=0.2"
+            );
 
-        tl.addLabel("scene4");
-        tl.to(texts[2], { y: -30, opacity: 0, duration: 0.5 }, "scene4");
+            tl.addLabel("scene4");
+            tl.to(texts[2], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene4");
 
-        tl.to(bgImageRef.current, {
-            xPercent: 2,
-            yPercent: -3,
-            scale: 1.15,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene4");
+            tl.to(bgImageRef.current, {
+                xPercent: 2,
+                yPercent: -3,
+                scale: 1.15,
+                duration: 1.5,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "scene4");
 
-        tl.fromTo(texts[3],
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene4+=0.2"
-        );
+            tl.fromTo(texts[3],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", force3D: true },
+                "scene4+=0.2"
+            );
 
-        tl.addLabel("scene5");
-        tl.to(texts[3], { y: -30, opacity: 0, duration: 0.5 }, "scene5");
+            tl.addLabel("scene5");
+            tl.to(texts[3], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene5");
 
-        tl.to(bgImageRef.current, {
-            xPercent: 0,
-            yPercent: 0,
-            scale: 1.02,
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "scene5");
+            tl.to(bgImageRef.current, {
+                xPercent: 0,
+                yPercent: 0,
+                scale: 1.02,
+                duration: 1.5,
+                ease: "power1.inOut",
+                force3D: true,
+            }, "scene5");
 
-        tl.fromTo(texts[4],
-            { y: 50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" },
-            "scene5+=0.2"
-        );
+            tl.fromTo(texts[4],
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, ease: "power2.out", force3D: true },
+                "scene5+=0.2"
+            );
+        }, container);
 
+        return () => ctx.revert(); // ✅ Cleanup ScrollTriggers
     }, { scope: container });
 
     return (

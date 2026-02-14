@@ -122,31 +122,36 @@ export default function ContactForm() {
   };
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top center",
-        toggleActions: "play none none reverse",
-      },
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+          toggleActions: "play none none reverse",
+        },
+      });
 
-    tl.from(imageRef.current, {
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-    });
-
-    if (contentRef.current) {
-      tl.from(contentRef.current.children, {
-        y: 30,
+      tl.from(imageRef.current, {
+        xPercent: -10,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
+        duration: 1,
         ease: "power3.out",
-      }, "-=0.5");
-    }
+        force3D: true,
+      });
 
+      if (contentRef.current) {
+        tl.from(contentRef.current.children, {
+          yPercent: 5,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          force3D: true,
+        }, "-=0.5");
+      }
+    }, containerRef);
+
+    return () => ctx.revert(); // ✅ Cleanup ScrollTriggers
   }, { scope: containerRef });
 
   return (

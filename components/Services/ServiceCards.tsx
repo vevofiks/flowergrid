@@ -1,6 +1,7 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { title } from 'process';
 
 const serviceCardData = [
     {
@@ -96,7 +97,16 @@ const serviceCardData = [
     }
 ]
 
+// ... serviceCardData remains the same ...
+
 const ServiceCards: React.FC = () => {
+    // Track which specific card is open (null means all closed)
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+    const handleTouch = (index: number) => {
+        // Toggle: if same index is clicked, close it. Otherwise, open new one.
+        setActiveIndex(activeIndex === index ? null : index);
+    };
 
     return (
         <section className="bg-background py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -106,39 +116,60 @@ const ServiceCards: React.FC = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    {serviceCardData.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-[2rem] cursor-pointer touch-manipulation"
-                        >
-                            <div className="absolute inset-0 w-full h-full">
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-active:scale-105"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                                    priority={index < 3}
+                    {serviceCardData.map((item, index) => {
+                        const isThisOpen = activeIndex === index;
+
+                        return (
+                            <div
+                                key={index}
+                                onClick={() => handleTouch(index)}
+                                // Mouse events for desktop hover
+                                onMouseEnter={() => setActiveIndex(index)}
+                                onMouseLeave={() => setActiveIndex(null)}
+                                className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-[2rem] cursor-pointer touch-manipulation"
+                            >
+                                <div className="absolute inset-0 w-full h-full">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className={`object-cover transition-transform duration-700 ease-out 
+                                            ${isThisOpen ? 'scale-105' : 'scale-100'}`}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                                        priority={index < 3}
+                                    />
+                                </div>
+
+                                {/* Gradient overlay */}
+                                <div className={`absolute inset-0 transition-all duration-300 bg-gradient-to-t 
+                                    ${isThisOpen 
+                                        ? 'from-black/95 via-black/40 to-transparent' 
+                                        : 'from-black/90 via-black/30 to-transparent'}`} 
                                 />
+
+                                <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-start justify-end h-full z-10">
+                                    <h3 className="text-2xl md:text-3xl lg:text-[32px] !text-white font-heading font-normal leading-[1.2] mb-3 w-[90%] transition-all duration-300">
+                                        {item.title}
+                                    </h3>
+
+                                    {item.desc && (
+                                        <p className={`text-sm md:text-base lg:text-lg !text-white/90 font-light leading-relaxed w-[90%] transition-all duration-500 ease-out overflow-hidden
+                                            ${isThisOpen 
+                                                ? 'max-h-40 opacity-100 mb-6' 
+                                                : 'max-h-0 opacity-0 mb-0'
+                                            }`}
+                                        >
+                                            {item.desc}
+                                        </p>
+                                    )}
+                                    
+                                    <div className={`md:hidden text-white/50 text-xs uppercase tracking-widest transition-opacity duration-300 ${isThisOpen ? 'opacity-0' : 'opacity-100'}`}>
+                                        Tap to learn more
+                                    </div>
+                                </div>
                             </div>
-
-                            {/* Gradient overlay - darkens more on hover/touch */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent group-hover:from-black/60 group-hover:via-black/50 group-active:from-black/95 group-active:via-black/50 transition-all duration-300" />
-
-                            <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-start justify-end h-full z-10">
-                                <h3 className="text-2xl md:text-3xl lg:text-[32px] !text-white font-heading font-normal leading-[1.2] mb-3 w-[90%] transition-all duration-300">
-                                    {item.title}
-                                </h3>
-
-                                {/* Description - shows on hover/touch */}
-                                {item.desc && (
-                                    <p className="text-sm md:text-base lg:text-lg !text-white/90 font-light leading-relaxed w-[90%] max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 group-hover:mb-6 group-active:max-h-40 group-active:opacity-100 group-active:mb-6 transition-all duration-500 ease-out">
-                                        {item.desc}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

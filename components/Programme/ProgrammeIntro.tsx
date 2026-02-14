@@ -29,7 +29,7 @@ export default function ProgramIntro() {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}programme/p1.jpg`}
+                    src={`/programme/h1.png`}
                     alt="Programmes Hero"
                     fill
                     priority
