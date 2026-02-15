@@ -62,7 +62,7 @@ export default function Founders() {
                 <div ref={saminaRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
                     <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[450px] aspect-[3/5] md:aspect-[3/4] lg:aspect-[6/8] md:max-h-[600px] lg:mb-0">                            <Image
+                        <div className="relative w-full max-w-[450px] aspect-3/5 md:aspect-3/4 lg:aspect-6/8 md:max-h-[600px] lg:mb-0">                            <Image
                                 src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
                                 alt="Samina Khan"
                                 fill
@@ -81,17 +81,15 @@ export default function Founders() {
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
                             Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
                         </p>
-                        <Link href="/about/samina-khan">
-                            <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
-                                Learn more about Samina
-                            </button>
+                        <Link href="/samina-khan-holistic-life-coach" className="bg-primary text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
+                            Learn more about Samina Khan
                         </Link>
                     </div>
                 </div>
                 <div ref={moniraRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
 
                     <div className="image-block w-full lg:flex-1 order-1 flex justify-center lg:justify-start">
-                        <div className="relative w-full max-w-[450px] aspect-square md:aspect-[3/4] max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
+                        <div className="relative w-full max-w-[450px] aspect-square md:aspect-3/4 max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
                             <Image
                                 src={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/monira.png`}
                                 alt="Monira Ahmed"
@@ -111,10 +109,8 @@ export default function Founders() {
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
                             Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
                         </p>
-                        <Link href="/about/monira-ahmed">
-                            <button className="bg-[#9C8255] hover:bg-[#856E46] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
-                                Learn more about Monira
-                            </button>
+                        <Link href="/monira-ahmed-hypnotherapist" className="bg-primary text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
+                            Learn more about Monira Ahmed
                         </Link>
                     </div>
                 </div>

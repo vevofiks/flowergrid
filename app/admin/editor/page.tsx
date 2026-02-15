@@ -17,6 +17,7 @@ function EditorPageContent() {
 
     const [title, setTitle] = useState('');
     const [slug, setSlug] = useState('');
+    const [description, setDescription] = useState('');
     const [author, setAuthor] = useState('');
     const [tldr, setTldr] = useState('');
     const [content, setContent] = useState<OutputData>({
@@ -45,6 +46,7 @@ function EditorPageContent() {
                     if (data.success) {
                         setTitle(data.data.title);
                         setSlug(data.data.slug);
+                        setDescription(data.data.description || '');
                         setAuthor(data.data.author || '');
                         setTldr(data.data.tldr || '');
                         setContent(data.data.content);
@@ -67,6 +69,7 @@ function EditorPageContent() {
                     const parsed = JSON.parse(savedDraft);
                     setTitle(parsed.title || '');
                     setSlug(parsed.slug || '');
+                    setDescription(parsed.description || '');
                     setAuthor(parsed.author || '');
                     setTldr(parsed.tldr || '');
                     if (parsed.content) setContent(parsed.content);
@@ -80,14 +83,14 @@ function EditorPageContent() {
 
     useEffect(() => {
         if (!id && isLoaded) {
-            const draft = { title, slug, author, tldr, content };
+            const draft = { title, slug, description, author, tldr, content };
             localStorage.setItem('blog-draft', JSON.stringify(draft));
         }
-    }, [title, slug, author, tldr, content, id, isLoaded]);
+    }, [title, slug, description, author, tldr, content, id, isLoaded]);
 
     const handleSave = async () => {
-        if (!title || !slug || !tldr) {
-            alert('Title, Slug, and TLDR are required');
+        if (!title || !slug || !description || !tldr) {
+            alert('Title, Slug, Description, and TLDR are required');
             return;
         }
 
@@ -96,6 +99,7 @@ function EditorPageContent() {
             const payload = {
                 title,
                 slug,
+                description,
                 author,
                 tldr,
                 content,
@@ -184,6 +188,21 @@ function EditorPageContent() {
                         onChange={(e) => setSlug(e.target.value)}
                         className="bg-transparent border-b border-transparent group-hover:border-gray-100 outline-none w-full font-mono text-gray-400 focus:border-gray-200 focus:text-gray-500 transition-all text-xs"
                         placeholder="url-slug"
+                    />
+                </div>
+
+                {/* Description Input */}
+                {/* Description Input */}
+                <div className="mb-6">
+                    <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                        Short Description
+                    </label>
+                    <textarea
+                        placeholder="Write a short description for SEO and preview cards..."
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        className="w-full text-lg font-serif text-gray-800 placeholder-gray-400 border-l-4 border-blue-500 bg-blue-50/50 pl-4 py-3 outline-none resize-none focus:bg-blue-50 transition-colors"
+                        rows={3}
                     />
                 </div>
 

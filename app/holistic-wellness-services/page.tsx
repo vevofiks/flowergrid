@@ -1,10 +1,10 @@
-import Intro from '@/components/Services/Intro'
-import MeetExperts from '@/components/Services/MeetExperts'
 import CoreValues from '@/components/Home/CoreValues'
 import FaqSection from '@/components/Contact/FAQSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
-import ServiceCards from '@/components/Services/ServiceCards'
 import Connect from '@/components/About/person/Connect'
+import Intro from '@/components/Services/Intro'
+import ServiceCards from '@/components/Services/ServiceCards'
+import MeetExperts from '@/components/Services/MeetExperts'
 
 // const phrases = [
 //   "The Flower of Life reminds us that everything in the universe is connected, including our own journey of transformation"

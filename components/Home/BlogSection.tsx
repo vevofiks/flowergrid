@@ -154,9 +154,7 @@ export default function BlogSection() {
                     {blog.title}
                   </h3>
 
-                  <p className="text-[#4A4A4A] text-sm font-sans leading-relaxed flex-1 mb-6">
-                    {tldrText}
-                  </p>
+                  {/* Excerpt Removed */}
 
                   <div className="mt-auto pt-4 border-t border-[#8C7A65]/20 flex justify-end items-center">
                     <span className="text-[#1C1C1C] text-xs font-bold uppercase tracking-widest hover:text-[#8C7A65] transition-colors flex items-center gap-2">

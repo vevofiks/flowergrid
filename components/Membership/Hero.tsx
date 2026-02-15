@@ -73,8 +73,9 @@ export default function Hero() {
                                 }
                             }
                         }}
-                        className="bg-[#C19A6B] hover:bg-[#A8865A] text-white font-medium text-base md:text-lg px-8 py-4 rounded-full shadow-lg"
+                        className="bg-primary hover:scale-105 transition-all duration-300 text-white font-medium text-base md:text-lg px-8 py-4 rounded-full shadow-lg"
                         whileTap={{ scale: 0.95 }}
+                        onClick={() => window.open('https://calendly.com/flowergridmarketing/30min?month=2026-02', '_blank')}
                     >
                         Join the Flowergrid Membership
                     </motion.button>

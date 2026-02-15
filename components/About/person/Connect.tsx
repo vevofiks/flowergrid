@@ -28,7 +28,7 @@ const Connect = ({ image, title, description, btnText = "Schedule Appointment" }
                         {description}
                     </p>
                 )}
-                <Link href='https://calendly.com/flowergridmarketing/30min?month=2026-02' >
+                <Link href='https://calendly.com/flowergridmarketing/30min?month=2026-02' target='_blank' rel='noopener noreferrer' >
                     <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 mt-8 rounded-full text-sm md:text-base shadow-md">
                         {btnText}
                     </button>

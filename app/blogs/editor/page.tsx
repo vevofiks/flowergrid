@@ -36,6 +36,7 @@ function EditorPageContent() {
 
     const [title, setTitle] = useState('');
     const [slug, setSlug] = useState('');
+    const [description, setDescription] = useState('');
     const [authorId, setAuthorId] = useState('');
     const [faq, setFaq] = useState<{ question: string; answer: string }[]>([]);
 
@@ -83,6 +84,7 @@ function EditorPageContent() {
                     if (data.success) {
                         setTitle(data.data.title);
                         setSlug(data.data.slug);
+                        setDescription(data.data.description || '');
                         setAuthorId(data.data.author?._id || '');
                         setFaq(data.data.faq || []);
 
@@ -115,6 +117,7 @@ function EditorPageContent() {
                     const parsed = JSON.parse(savedDraft);
                     setTitle(parsed.title || '');
                     setSlug(parsed.slug || '');
+                    setDescription(parsed.description || '');
                     setAuthorId(parsed.authorId || '');
                     setFaq(parsed.faq || []);
                     setTldr(parsed.tldr || { time: new Date().getTime(), blocks: [] });
@@ -130,10 +133,10 @@ function EditorPageContent() {
     // Autosave to local storage
     useEffect(() => {
         if (!id && isLoaded) {
-            const draft = { title, slug, authorId, tldr, content, faq };
+            const draft = { title, slug, description, authorId, tldr, content, faq };
             localStorage.setItem('blog-draft', JSON.stringify(draft));
         }
-    }, [title, slug, authorId, tldr, content, faq, id, isLoaded]);
+    }, [title, slug, description, authorId, tldr, content, faq, id, isLoaded]);
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const newTitle = e.target.value;
@@ -149,8 +152,8 @@ function EditorPageContent() {
     };
 
     const handleSave = async () => {
-        if (!title || !slug || !tldr.blocks.length) {
-            setToast({ show: true, message: 'Title, Slug, and TLDR are required', type: 'error' });
+        if (!title || !slug || !description || !tldr.blocks.length) {
+            setToast({ show: true, message: 'Title, Slug, Description, and TLDR are required', type: 'error' });
             return;
         }
 
@@ -160,6 +163,7 @@ function EditorPageContent() {
             const payload = {
                 title,
                 slug,
+                description,
                 author: authorId || undefined,
                 tldr,
                 content,
@@ -235,6 +239,20 @@ function EditorPageContent() {
                         onChange={(e) => setSlug(e.target.value)}
                         className="bg-transparent border-b border-transparent group-hover:border-gray-100 outline-none w-full font-mono text-gray-400 focus:border-gray-200 focus:text-gray-500 transition-all text-xs"
                         placeholder="url-slug"
+                    />
+                </div>
+
+                {/* Description Input */}
+                <div className="mb-6">
+                    <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                        Short Description
+                    </label>
+                    <textarea
+                        placeholder="Write a short description for SEO and preview cards..."
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        className="w-full text-lg font-serif text-gray-800 placeholder-gray-400 border-l-4 border-blue-500 bg-blue-50/50 pl-4 py-3 outline-none resize-none focus:bg-blue-50 transition-colors"
+                        rows={3}
                     />
                 </div>
 
@@ -354,7 +372,7 @@ function EditorPageContent() {
                 type={toast.type}
                 onClose={() => setToast({ ...toast, show: false })}
             />
-        </div>
+        </div >
     );
 }
 

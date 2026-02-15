@@ -6,6 +6,7 @@ export interface IBlog extends Document {
     content: any; // Editor.js JSON data
     author?: any; // Can be ObjectId or populated Author object
     tldr: any;
+    description?: string;
     faq?: { question: string; answer: string }[];
     createdAt: Date;
     updatedAt: Date;
@@ -24,6 +25,10 @@ const BlogSchema: Schema = new Schema(
             unique: true,
             trim: true,
             lowercase: true,
+        },
+        description: {
+            type: String,
+            required: [true, 'Please provide a description for this blog post.'],
         },
         content: {
             type: Schema.Types.Mixed,
