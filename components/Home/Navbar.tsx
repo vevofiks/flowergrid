@@ -23,7 +23,7 @@ const navLinks = [
         image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
       },
       {
-        title: "Monira",
+        title: "Monira Ahmed",
         href: "/monira-ahmed-hypnotherapist",
         image: `/about/person2/1.png`,
       },

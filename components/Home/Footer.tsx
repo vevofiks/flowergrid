@@ -27,7 +27,7 @@ const navLinks = [
                 image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
             },
             {
-                title: "Monira",
+                title: "Monira Ahmed",
                 href: "/monira-ahmed-hypnotherapist",
                 image: `/about/person2/1.png`,
             },
@@ -112,7 +112,7 @@ export default function Footer() {
                                 About
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/samina-khan-holistic-life-coach" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
-                                    <li><Link href="/monira-ahmed-hypnotherapist" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira</Link></li>
+                                    <li><Link href="/monira-ahmed-hypnotherapist" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira Ahmed</Link></li>
                                     <li><Link href="/our-team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
                                 </ul>
                             </li>
@@ -137,7 +137,7 @@ export default function Footer() {
                             <a href="tel:+447432211096" className="hover:text-white transition-colors block">+44 7432 211096</a>
                             <a href="mailto:sk@flowergrid.co.uk" className="hover:text-white transition-colors block">sk@flowergrid.co.uk</a>
                             <p className="mt-6 text-[#D6CFC2]/80!">Coulsdon CR5 2JA</p>
-                            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" className="mt-6 hover:text-white transition-colors block font-medium text-[#F3EAD8]">Book a Discovery Call</Link>
+                            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target='_blank' rel='noopener noreferrer' className="mt-6 hover:text-white transition-colors block font-medium text-[#F3EAD8]">Book a Discovery Call</Link>
                         </div>
                         <div className="flex items-center gap-6 text-[#D6CFC2]">
                             <Link href="https://www.instagram.com/flowergridwellness/" target="_blank" className="hover:text-[#A58E62] transition-colors"><Instagram className="w-6 h-6" strokeWidth={1.5} /></Link>

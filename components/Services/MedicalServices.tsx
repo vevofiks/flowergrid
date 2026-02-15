@@ -46,7 +46,7 @@ const sections = [
         details: [
             { title: "Meditation & Mindfulness & Breathing", desc: "Restore presence and balance through guided stillness" },
             { title: "Reiki Healing", desc: "Channel universal energy to clear blockages and renew your emotional state." },
-            { title: "Colour Therapy / Auricular Acupuncture", desc: "Experience subtle energy realignment for mind–body rejuvenation."},
+            { title: "Colour Therapy / Auricular Acupuncture", desc: "Experience subtle energy realignment for mind–body rejuvenation." },
             { title: "Soul Reflection & Transformation Work", desc: "Dive deep into self-awareness, ego work, and soul growth" }
         ],
     },
@@ -246,7 +246,7 @@ export default function MedicalServices() {
                     </div>
                 ))}
             </div>
-    {/* 
+            {/* 
             <div
                 ref={overlayRef}
                 className="fixed z-60 overflow-hidden invisible"

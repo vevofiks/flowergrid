@@ -143,7 +143,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
             {/* Section Heading */}
             <div className="text-center pt-16 md:pt-20 pb-8 md:pb-12">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal">
-                    Explore Our Transformational <br /> programmes
+                    Explore Our Transformational <br /> Programmes
                 </h2>
             </div>
 
@@ -257,7 +257,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                                     </div>
 
                                     <div className="flex justify-center">
-                                        <Link href={`https://calendly.com/flowergridmarketing/30min?month=2026-02`}>
+                                        <Link href={`https://calendly.com/flowergridmarketing/30min?month=2026-02`} target="_blank" rel="noopener noreferrer">
                                             <button
                                                 onClick={() => handleButtonClick(program.id)}
                                                 className="px-8 py-3 bg-[#A67C52] hover:bg-[#8B6844] text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"

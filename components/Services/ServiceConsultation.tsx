@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,13 +65,15 @@ const ServiceConsultation = () => {
                 </h1>
             </div>
 
-            <button
-                ref={buttonRef}
-                className="bg-[#A58E62] text-white font-medium rounded-full tracking-wider hover:bg-[#8F7A52] transition-colors duration-300 opacity-0 shadow-lg cursor-pointer
-                   text-xs px-8 py-3 
-                   md:text-base md:px-12 md:py-4"
-            >
-                Book a Consultation
+            <button ref={buttonRef}>
+                <Link
+                    href="/contact-us"
+                    className="bg-[#A58E62] text-white font-medium rounded-full tracking-wider hover:bg-[#8F7A52] transition-colors duration-300 opacity-0 shadow-lg cursor-pointer
+                text-xs px-8 py-3 
+                md:text-base md:px-12 md:py-4"
+                >
+                    Book a Consultation
+                </Link>
             </button>
         </section>
     );
