@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <MaskScroll />
+      {/* <MaskScroll /> */}
       <Connections />
       <CoreValues values={coreValues} />
       <TransformationServices />
