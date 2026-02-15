@@ -55,7 +55,7 @@ const MembershipPage = () => {
       <MembershipAbout />
       <CardSection />
       <MembershipHelp />
-      <FlowergridJourney />
+      {/* <FlowergridJourney /> */}
       <Plans />
       <HeroTestimonials title='Stories from Our Members' />
       <Founders />
