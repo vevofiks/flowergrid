@@ -109,10 +109,8 @@ const TeamTreeSection = () => {
                           </p>
 
                           {/* Book Consultation Button */}
-                          <Link href="/contact-us">
-                            <button className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6">
-                              Book Consultation
-                            </button>
+                          <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target="_blank" rel="noopener noreferrer" className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6">
+                            Book Consultation
                           </Link>
                         </div>
                       </div>

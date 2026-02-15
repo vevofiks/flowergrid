@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 export default function B2bHero() {
   const containerVariants: Variants = {
@@ -71,14 +72,9 @@ export default function B2bHero() {
 
           <motion.div variants={itemVariants} className="flex flex-col gap-5">
             {/* FIXED: Both buttons now use 'text-lg' and explicit leading-none to ensure identical height alignment */}
-            <button className="bg-[#C19A6B] hover:bg-[#A8865A] text-white font-medium text-lg leading-none py-5 px-8 max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
+            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target='_blank' rel='noopener noreferrer' className="bg-[#C19A6B] hover:bg-[#A8865A] text-white font-medium text-lg leading-none py-5 px-8 max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
               Book a Discovery Session
-            </button>
-            
-            {/* FIXED: Changed text-md (invalid) to text-lg (valid) so it matches the button above exactly */}
-            <button className="border text-white hover:bg-[#C19A6B]/10 font-medium text-lg leading-none py-5 px-8 max-w-full md:max-w-120 rounded-full transition-colors duration-300">
-              Download programme Brochure
-            </button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

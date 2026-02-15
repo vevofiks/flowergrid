@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -72,9 +73,9 @@ export default function VisionSection() {
         </div>
         {/* Button */}
         <div className="vision-animate flex justify-center">
-          <button className="px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
+          <Link href="/holistic-wellness-membership" className="px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
             Discover The Flowergrid Philosophy
-          </button>
+          </Link>
         </div>
 
       </div>

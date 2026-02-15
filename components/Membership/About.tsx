@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,9 +71,9 @@ const MembershipAbout = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <button className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
+                    <Link href="/holistic-wellness-membership" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
                         Discover The Flowergrid Philosophy
-                    </button>
+                    </Link>
                 </div>
 
             </div>
